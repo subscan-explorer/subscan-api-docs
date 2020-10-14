@@ -624,6 +624,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/now' \
 
 `POST /api/now`
 
+
 > Example Response
 
 ```json
@@ -983,7 +984,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/events' \
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/event' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "event_index": "1825126-2"
+    "event_index": "2013673-2"
 }'
 ```
 
@@ -1024,6 +1025,16 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/event' \
 ```
 
 ## search
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/search' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "key": "15",
+    "row": 20,
+    "page": 1
+}'
+```
 
 ### URL Request
 
@@ -1094,6 +1105,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## transfers
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/transfer' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/transfers`
@@ -1132,6 +1152,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## check-hash
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/check_hash' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "hash": "0x859baa1b6d5e4763db6a166f35a8f759fefc38867c6779ef5c65d2d02ae7219a"
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/check_hash`
@@ -1158,6 +1186,16 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## staking-history
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking_history' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+     "row": 20,
+     "page": 0,
+     "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22"
+}'
+```
 
 ### URL Request
 
@@ -1200,6 +1238,17 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## bond-list
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/wallet/bond_list' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+     "row": 20,
+     "page": 1,
+     "status":"bonded",
+     "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22"
+}'
+```
+
 ### URL Request
 
 `POST /api/wallet/bond_list`
@@ -1219,6 +1268,16 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## mapping-history
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/wallet/mapping_history' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+     "row": 20,
+     "page": 1,
+     "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22"
+}'
+```
+
 ### URL Request
 
 `POST /api/wallet/mapping_history`
@@ -1229,6 +1288,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 | ------------- | ------ | ------- |
 | row | int | yes     |
 | page| int | yes     |
+| address| string | yes     |
 
 
 > Example Response
@@ -1257,6 +1317,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## accounts
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/accounts' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1
+}'
+```
 
 ### URL Request
 
@@ -1302,6 +1371,11 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## token
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/token' \
+--header 'Content-Type: application/json' 
+```
+
 ### URL Request
 
 `POST /api/scan/token`
@@ -1337,6 +1411,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## validators
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/validators' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "key": 20
+}'
+```
 
 ### URL Request
 
@@ -1375,6 +1457,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## waiting-validator
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/waiting' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "key": 20
+}'
+```
 
 ### URL Request
 
@@ -1418,6 +1508,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## voted
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/voted' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "address": "15fTw39Ju2jJiHeGe1fJ5DtgugUauy9tr2HZuiRNFwqnGQ1Q"
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/staking/voted`
@@ -1458,6 +1556,16 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## nominators
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/nominators' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 0,
+    "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22"
+}'
+```
 
 ### URL Request
 
@@ -1504,6 +1612,16 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## era-stat
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/era_stat' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 0,
+    "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22"
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/staking/era_stat`
@@ -1547,6 +1665,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## validator
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/validator' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "stash": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22"
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/staking/validator`
@@ -1586,6 +1712,13 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## runtime-list
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/runtime/list' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/runtime/list`
@@ -1618,6 +1751,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## runtime-info
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/runtime/metadata' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "spec": 25,
+    "module": "Balances"
+}'
+```
 
 ### URL Request
 
@@ -1669,6 +1811,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## treasury-proposals
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/proposals' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 0
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/treasury/proposals`
@@ -1716,6 +1867,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## treasury-proposal
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/proposal' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "proposal_id": 0
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/treasury/proposal`
@@ -1730,6 +1889,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 -----
 
 ## techcomm-proposals
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/techcomm/proposals' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 0
+}'
+```
 
 ### URL Request
 
@@ -1777,6 +1945,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## techcomm-proposal
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/techcomm/proposal' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "proposal_id": 1
+}'
+```
 
 ### URL Request
 
@@ -1835,6 +2011,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## council-proposals
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/council/proposals' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/council/proposals`
@@ -1872,6 +2057,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## council-proposal
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/council/proposal' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "proposal_id": 31
+}'
+```
 
 ### URL Request
 
@@ -1930,6 +2123,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## democracy-referendums
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/referendums' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/democracy/referendums`
@@ -1965,6 +2167,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ```
 
 ## democracy-referendum
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/referendum' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "referendum_index": 0
+}'
+```
 
 ### URL Request
 
@@ -2003,6 +2213,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 
 ## democracy-votes
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/votes' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1
+}'
+```
 
 ### URL Request
 
@@ -2061,6 +2280,16 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## reward-slash
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/account/reward_slash' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1,
+    "address": "15fTw39Ju2jJiHeGe1fJ5DtgugUauy9tr2HZuiRNFwqnGQ1Q"
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/account/reward_slash`
@@ -2113,6 +2342,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## democracy-proposals
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/proposals' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/democracy/proposals`
@@ -2128,6 +2366,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 -----
 
 ## democracy-proposal
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/proposal' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "democracy_id": 20
+}'
+```
 
 ### URL Request
 
@@ -2182,6 +2428,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## price-history
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/price/history' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "start": "2019-07-04",
+    "end": "2020-07-05"
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/price/history`
@@ -2216,6 +2471,15 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## tips
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/tips' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 20,
+    "page": 1
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/treasury/tips`
@@ -2232,6 +2496,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 ## tip
 
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/tip' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "hash": "0x6bf9d1bd28c5e88693a7b86548d9f05ead2813195f4d4771cd44e2b5ed31d181"
+}'
+```
+
 ### URL Request
 
 `POST /api/scan/treasury/tip`
@@ -2246,6 +2518,14 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 
 
 ## tippers
+
+```shell
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/tippers' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "hash": "0x6bf9d1bd28c5e88693a7b86548d9f05ead2813195f4d4771cd44e2b5ed31d181"
+}'
+```
 
 ### URL Request
 
