@@ -3,7 +3,6 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell: cURL
-  - javascript
 
 includes:
   - errors
@@ -17,7 +16,7 @@ code_clipboard: true
 
 Welcome to the Subscan API! You can use our API to access Subscan API endpoints.
 
-We have language bindings in Shell and Javascript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have language bindings in Shell! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 This API documentation page was created with [Slate](https://github.com/slatedocs/slate). 
 
@@ -31,28 +30,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/block' \
 --data-raw '{
 	"block_num": 1665107
 }'
-```
-
-```javascript
-var axios = require('axios');
-var data = JSON.stringify({"block_num":1665107});
-
-var config = {
-  method: 'post',
-  url: 'https://polkadot.subscan.io/api/open/block',
-  headers: { 
-    'Content-Type': 'application/json'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
 ```
 
 > EXAMPLE RESPONSE:
@@ -97,28 +74,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/account' \
 }'
 ```
 
-```javascript
-var axios = require('axios');
-var data = JSON.stringify({"address":"E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"});
-
-var config = {
-  method: 'post',
-  url: 'https://polkadot.subscan.io/api/open/account',
-  headers: { 
-    'Content-Type': 'application/json'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
-```
-
 > EXAMPLE RESPONSE:
 
 ```json
@@ -153,28 +108,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/account/ext
 	"address": "E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb",
 	"row": 20
 }'
-```
-
-```javascript
-var axios = require('axios');
-var data = JSON.stringify({"address":"E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb","row":20});
-
-var config = {
-  method: 'post',
-  url: 'https://polkadot.subscan.io/api/open/account/extrinsics',
-  headers: { 
-    'Content-Type': 'application/json'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
 ```
 
 > EXAMPLE RESPONSE:
@@ -224,28 +157,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/extrinsic' 
 --data-raw '{
 	"hash": "0xef9d91a8b78f8401e81b1d7d03e995626123fc72a9437e5f8f33d82c6ffcb011"
 }'
-```
-
-```javascript
-var axios = require('axios');
-var data = JSON.stringify({"hash":"0xef9d91a8b78f8401e81b1d7d03e995626123fc72a9437e5f8f33d82c6ffcb011"});
-
-var config = {
-  method: 'post',
-  url: 'https://polkadot.subscan.io/api/open/extrinsic',
-  headers: { 
-    'Content-Type': 'application/json'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
 ```
 
 > EXAMPLE RESPONSE:
@@ -422,28 +333,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/currencies'
 --data-raw ''
 ```
 
-```javascript
-var axios = require('axios');
-var data = '';
-
-var config = {
-  method: 'post',
-  url: 'https://polkadot.subscan.io/api/open/currencies',
-  headers: { 
-    'Content-Type': 'application/json'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
-```
-
 > EXAMPLE RESPONSE:
 
 ```json
@@ -475,28 +364,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/price' \
 --data-raw '{
 	"time": 1665107
 }'
-```
-
-```javascript
-var axios = require('axios');
-var data = JSON.stringify({"time":1665107});
-
-var config = {
-  method: 'post',
-  url: 'https://polkadot.subscan.io/api/open/price',
-  headers: { 
-    'Content-Type': 'application/json'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
 ```
 
 > EXAMPLE RESPONSE:
@@ -547,28 +414,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/price_conve
 	"from":"USD",
 	"quote":"DOT"
 }'
-```
-
-```javascript
-var axios = require('axios');
-var data = JSON.stringify({"time":594309,"value":1000,"from":"USD","quote":"DOT"});
-
-var config = {
-  method: 'post',
-  url: 'https://polkadot.subscan.io/api/open/price_converter',
-  headers: { 
-    'Content-Type': 'application/json'
-  },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
 ```
 
 > EXAMPLE RESPONSE:
