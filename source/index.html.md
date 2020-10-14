@@ -1054,11 +1054,11 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/search' \
 ## daily
 
 ```shell
-curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/daily' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "start": "2019-07-04",
-    "end": "2019-07-04",
+    "end": "2020-07-04",
     "format": "day",
     "category": "transfer"
 }'
@@ -1106,7 +1106,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/dialy' \
 ## transfers
 
 ```shell
-curl --location --request POST 'https://polkadot.subscan.io/api/scan/transfer' \
+curl --location --request POST 'https://polkadot.subscan.io/api/scan/transfers' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "row": 20,
