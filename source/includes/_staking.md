@@ -79,8 +79,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/wallet/bond_list
 | address| string | yes     |
 | locked| int | no (1,0)    |
 
------
-
 ## validators
 
 ```shell
@@ -395,8 +393,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/val
 | row | int | yes     |
 | page| int | yes     |
 | stash  | string | yes     |
-
------
 
 ## reward-slash
 

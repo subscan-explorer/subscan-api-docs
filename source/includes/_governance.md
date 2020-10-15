@@ -77,8 +77,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/pr
 | proposal_id | int | yes     |
 
 
------
-
 ## techcomm-proposals
 
 ```shell
@@ -475,9 +473,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/p
 | row | int | yes     |
 | page| int | yes     |
 
-
------
-
 ## democracy-proposal
 
 ```shell
@@ -561,9 +556,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 | row | int | yes     |
 | page| int | yes     |
 
-
------
-
 ## tip
 
 ```shell
@@ -584,9 +576,6 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 | ------------- | ------ | ------- |
 | hash | string | yes     |
 
------
-
-
 ## tippers
 
 ```shell
@@ -606,5 +595,3 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 | Name          | Type   | Require |
 | ------------- | ------ | ------- |
 | hash | string | yes     |
-
------
