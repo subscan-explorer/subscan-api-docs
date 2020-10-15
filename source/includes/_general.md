@@ -28,7 +28,7 @@ Get Subscan server timestamp
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/metadata' \
---header 'Content-Type: application/json' | python -m json.tool
+--header 'Content-Type: application/json' 
 ```
 
 ### URL Request
@@ -75,7 +75,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/blocks' \
 --data-raw '{
 	"row": 10,
     "page": 0
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -152,7 +152,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/block' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "block_hash": "0x68a27df5a52ff2251df2cc8368f7dcefb305a13bb3d89b65c8fb070f23877f2c"
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -261,7 +261,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/extrinsics'
 --data-raw '{
     "row": 1,
     "page": 1
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -318,7 +318,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/extrinsic' 
 --header 'Content-Type: application/json' \
 --data-raw '{
     "extrinsic_index": "2028659-2"
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -450,7 +450,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/events' \
 --data-raw '{
     "row": 10,
     "page": 1
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -501,7 +501,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/event' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "event_index": "2013673-2"
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -545,7 +545,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/search' \
     "key": "15",
     "row": 20,
     "page": 1
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -673,7 +673,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/daily' \
     "end": "2020-07-04",
     "format": "day",
     "category": "transfer"
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -730,7 +730,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/transfers' 
 --data-raw '{
     "row": 10,
     "page": 1
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -800,7 +800,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/check_hash'
 --header 'Content-Type: application/json' \
 --data-raw '{
     "hash": "0x859baa1b6d5e4763db6a166f35a8f759fefc38867c6779ef5c65d2d02ae7219a"
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -837,7 +837,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/wallet/mapping_h
      "row": 20,
      "page": 1,
      "address": "1t8SpsoGckWBT7rdG7mpFdXxcT3hiQZEH3bGga6vi1wnm7h"
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -886,7 +886,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/accounts' \
 --data-raw '{
     "row": 1,
     "page": 1
-}' | python -m json.tool
+}' 
 ```
 
 ### URL Request
@@ -941,7 +941,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/accounts' \
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/token' \
---header 'Content-Type: application/json' | python -m json.tool
+--header 'Content-Type: application/json' 
 ```
 
 ### URL Request
