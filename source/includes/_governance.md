@@ -49,7 +49,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/pr
                         "account_index": "49QEo",
                         "address": "J1D51EQN7wq9eBm7VCM9f1sw9Uai2dLKrNDgN9feyomLArg"
                     }
-                },
+                }
             ]
         }
     }
@@ -241,7 +241,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/council/pro
                     "member_count": 2,
                     "aye_votes": 1,
                     "nay_votes": 0
-                },
+                }
             ]
         }
     }

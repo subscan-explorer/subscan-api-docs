@@ -120,7 +120,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/val
                     "nominator_stash": "a960aaa0a8c07792120d95ac8831739cbe4290be9b20659a5dfa02e8c26b6329",
                     "bonded": "21027084300",
                     "hash": ""
-                },
+                }
             ]
         }
     }
@@ -169,7 +169,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/wai
                     "bonded_owner": "500000000000",
                     "count_nominators": 24,
                     "validator_prefs_value": 1000000000
-                },
+                }
             ],
             "count":124
         }
@@ -219,7 +219,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/vot
                     "count_nominators": 21,
                     "validator_prefs_value": 1889624577,
                     "bonded": "21027084300"
-                },
+                }
             ]
         }
     }
@@ -272,8 +272,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/nom
                     "bonded_owner": "500000000000",
                     "count_nominators": 24,
                     "validator_prefs_value": 1000000000
-                },
-            ]
+                }
+            ],
             "count":"1111"
         }
     }
@@ -375,7 +375,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/staking/val
                     "bonded_owner": "500000000000",
                     "count_nominators": 24,
                     "validator_prefs_value": 1000000000
-                },
+                }
             ]
         }
     }
