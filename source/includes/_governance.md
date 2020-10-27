@@ -6,9 +6,9 @@
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/proposals' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "row": 20,
+    "row": 2,
     "page": 0
-}'
+}' 
 ```
 
 ### URL Request
@@ -29,29 +29,91 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/pr
 
     {
         "code": 0,
-        "message": "Success",
-        "ttl": 1,
         "data": {
-            "count": 14,
+            "count": 16,
             "list": [
                 {
-                    "proposal_id": 13,
-                    "created_block": 1032773,
-                    "status": "rejected",
-                    "reward": "888000000000000",
                     "beneficiary": {
-                        "display": "md",
-                        "account_index": "49QEo",
-                        "address": "J1D51EQN7wq9eBm7VCM9f1sw9Uai2dLKrNDgN9feyomLArg"
+                        "account_index": "",
+                        "address": "1629Shw6w88GnyXyyUbRtX7YFipQnjScGKcWr1BaRiMhvmAg",
+                        "display": "Patract Labs",
+                        "identity": true,
+                        "judgements": [
+                            {
+                                "index": 1,
+                                "judgement": "Reasonable"
+                            }
+                        ],
+                        "parent": "",
+                        "parent_display": ""
                     },
+                    "created_block": 1987642,
+                    "proposal_id": 16,
                     "proposer": {
-                        "display": "md",
-                        "account_index": "49QEo",
-                        "address": "J1D51EQN7wq9eBm7VCM9f1sw9Uai2dLKrNDgN9feyomLArg"
-                    }
+                        "account_index": "16eQvjDK",
+                        "address": "13DgX3GSb1tAGCWjW4dcSnNZZDEaKrFceYtAMaEBMFfQH9rz",
+                        "display": "Lipeng",
+                        "identity": true,
+                        "judgements": [
+                            {
+                                "index": 0,
+                                "judgement": "FeePaid"
+                            },
+                            {
+                                "index": 1,
+                                "judgement": "Reasonable"
+                            }
+                        ],
+                        "parent": "",
+                        "parent_display": ""
+                    },
+                    "reward": "86000000000000",
+                    "reward_extra": "0",
+                    "status": "awarded"
+                },
+                {
+                    "beneficiary": {
+                        "account_index": "",
+                        "address": "1629Shw6w88GnyXyyUbRtX7YFipQnjScGKcWr1BaRiMhvmAg",
+                        "display": "Patract Labs",
+                        "identity": true,
+                        "judgements": [
+                            {
+                                "index": 1,
+                                "judgement": "Reasonable"
+                            }
+                        ],
+                        "parent": "",
+                        "parent_display": ""
+                    },
+                    "created_block": 1920117,
+                    "proposal_id": 15,
+                    "proposer": {
+                        "account_index": "16eQvjDK",
+                        "address": "13DgX3GSb1tAGCWjW4dcSnNZZDEaKrFceYtAMaEBMFfQH9rz",
+                        "display": "Lipeng",
+                        "identity": true,
+                        "judgements": [
+                            {
+                                "index": 0,
+                                "judgement": "FeePaid"
+                            },
+                            {
+                                "index": 1,
+                                "judgement": "Reasonable"
+                            }
+                        ],
+                        "parent": "",
+                        "parent_display": ""
+                    },
+                    "reward": "94500000000000",
+                    "reward_extra": "0",
+                    "status": "awarded"
                 }
             ]
-        }
+        },
+        "message": "Success",
+        "ttl": 1
     }
 ```
 
@@ -63,7 +125,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/pr
 --header 'Content-Type: application/json' \
 --data-raw '{
     "proposal_id": 0
-}'
+}' 
 ```
 
 ### URL Request
@@ -76,6 +138,75 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/pr
 | ------------- | ------ | ------- |
 | proposal_id | int | yes     |
 
+> Example Response
+
+```json
+   {
+       "code": 0,
+       "data": {
+           "info": {
+               "beneficiary": {
+                   "account_index": "",
+                   "address": "1629Shw6w88GnyXyyUbRtX7YFipQnjScGKcWr1BaRiMhvmAg",
+                   "display": "Patract Labs",
+                   "identity": true,
+                   "judgements": [
+                       {
+                           "index": 1,
+                           "judgement": "Reasonable"
+                       }
+                   ],
+                   "parent": "",
+                   "parent_display": ""
+               },
+               "council": {
+                   "aye_votes": 6,
+                   "created_block": 1233220,
+                   "member_count": 8,
+                   "nay_votes": 0,
+                   "proposal_hash": "0x0ef205a930527a8eba28d4a598b915a0263aa55b5028c7021ac38c7d75f36d0e",
+                   "proposal_id": 7,
+                   "proposer": {
+                       "account_index": "1Jmx",
+                       "address": "15aKvwRqGVAwuBMaogtQXhuz9EQqUWsZJSAzomyb5xYwgBXA",
+                       "display": "JAM \u2620\ufe0f\ud83d\udc0d",
+                       "identity": true,
+                       "judgements": null,
+                       "parent": "",
+                       "parent_display": ""
+                   },
+                   "status": "executed",
+                   "updated_block": 1278467
+               },
+               "created_block": 1142221,
+               "proposal_id": 0,
+               "proposer": {
+                   "account_index": "16eQvjDK",
+                   "address": "13DgX3GSb1tAGCWjW4dcSnNZZDEaKrFceYtAMaEBMFfQH9rz",
+                   "display": "Lipeng",
+                   "identity": true,
+                   "judgements": [
+                       {
+                           "index": 0,
+                           "judgement": "FeePaid"
+                       },
+                       {
+                           "index": 1,
+                           "judgement": "Reasonable"
+                       }
+                   ],
+                   "parent": "",
+                   "parent_display": ""
+               },
+               "reward": "100000000000000",
+               "reward_extra": "0",
+               "status": "awarded"
+           }
+       },
+       "message": "Success",
+       "ttl": 1
+   }
+```
 
 ## techcomm-proposals
 
@@ -457,7 +588,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/v
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/proposals' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "row": 20,
+    "row": 2,
     "page": 1
 }'
 ```
@@ -472,6 +603,32 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/p
 | ------------- | ------ | ------- |
 | row | int | yes     |
 | page| int | yes     |
+
+> Example Response
+
+```json
+
+    {
+        "code": 0,
+        "data": {
+            "count": 12,
+            "list": [
+                {
+                    "created_block": 1692250,
+                    "proposal_id": 9,
+                    "status": "tabled"
+                },
+                {
+                    "created_block": 1678201,
+                    "proposal_id": 8,
+                    "status": "proposed"
+                }
+            ]
+        },
+        "message": "Success",
+        "ttl": 1
+    }
+```
 
 ## democracy-proposal
 
@@ -540,9 +697,9 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/democracy/p
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/tips' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "row": 20,
+    "row": 2,
     "page": 1
-}'
+}' 
 ```
 
 ### URL Request
@@ -556,6 +713,88 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 | row | int | yes     |
 | page| int | yes     |
 
+> Example Response
+
+```json
+
+    {
+        "code": 0,
+        "data": {
+            "count": 53,
+            "list": [
+                {
+                    "amount": "0",
+                    "beneficiary": {
+                        "account_index": "",
+                        "address": "164tG1eWdbY4HfaUfLp1pPTRRj9Hfj82D24YBQib7crat1QB",
+                        "display": "VAL-1",
+                        "identity": true,
+                        "judgements": [
+                            {
+                                "index": 1,
+                                "judgement": "Reasonable"
+                            }
+                        ],
+                        "parent": "a849437f5f8b602fc9a4210d6a9834af4adc6ce7492861bd0f5b88d11919cd7b",
+                        "parent_display": "CRYPTO PLAZA"
+                    },
+                    "block_num": 2131734,
+                    "close_block_num": 2131737,
+                    "extrinsic_index": "2131734-1",
+                    "finder": {
+                        "account_index": "",
+                        "address": "1hCMdtRsaRA4ZTEKpPKPvEjK9rZpGhyFnRHSDhqFMCEayRL",
+                        "display": "RTTI-5220 (POLKADOT)",
+                        "identity": true,
+                        "judgements": [
+                            {
+                                "index": 0,
+                                "judgement": "KnownGood"
+                            }
+                        ],
+                        "parent": "",
+                        "parent_display": ""
+                    },
+                    "hash": "0x8b750b6c5e3ad200506fb0f82caa57a7be7842ae12c32427c98ef23d18409487",
+                    "reason": "Statink on Polkadot with Ledger tutorial: https://youtu.be/-jxJ7jursA4",
+                    "status": "retract",
+                    "tipper_num": 0
+                },
+                {
+                    "amount": "0",
+                    "beneficiary": {
+                        "account_index": "",
+                        "address": "13fifm1SRPnbMyGV8MS1knKPjNcctmfKSyPS4B6C6yVKzyDo",
+                        "display": "",
+                        "identity": false,
+                        "judgements": null,
+                        "parent": "",
+                        "parent_display": ""
+                    },
+                    "block_num": 2091893,
+                    "close_block_num": 0,
+                    "extrinsic_index": "2091893-2",
+                    "finder": {
+                        "account_index": "",
+                        "address": "13fifm1SRPnbMyGV8MS1knKPjNcctmfKSyPS4B6C6yVKzyDo",
+                        "display": "",
+                        "identity": false,
+                        "judgements": null,
+                        "parent": "",
+                        "parent_display": ""
+                    },
+                    "hash": "0x2bc70afd0e7864505bafe342e8dcfd1b4ce377fd7743e2c9033e3f99b66ff55a",
+                    "reason": "Access the Acala Mandala App : https://youtu.be/AifEASVetJ8",
+                    "status": "proposed",
+                    "tipper_num": 2
+                }
+            ]
+        },
+        "message": "Success",
+        "ttl": 1
+    }
+```
+
 ## tip
 
 ```shell
@@ -563,7 +802,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 --header 'Content-Type: application/json' \
 --data-raw '{
     "hash": "0x6bf9d1bd28c5e88693a7b86548d9f05ead2813195f4d4771cd44e2b5ed31d181"
-}'
+}' 
 ```
 
 ### URL Request
@@ -576,6 +815,47 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 | ------------- | ------ | ------- |
 | hash | string | yes     |
 
+> Example Response
+
+```json
+
+    {
+        "code": 0,
+        "data": {
+            "info": {
+                "amount": "75000000000",
+                "beneficiary": {
+                    "account_index": "",
+                    "address": "16YBdgR2NXVfcgVx8vmGimJMo8CFzULktruh1bTDUnY2Ss6Q",
+                    "display": "RHEE",
+                    "identity": true,
+                    "judgements": null,
+                    "parent": "",
+                    "parent_display": ""
+                },
+                "block_num": 1525546,
+                "close_block_num": 1973069,
+                "extrinsic_index": "1525546-3",
+                "finder": {
+                    "account_index": "",
+                    "address": "16YBdgR2NXVfcgVx8vmGimJMo8CFzULktruh1bTDUnY2Ss6Q",
+                    "display": "RHEE",
+                    "identity": true,
+                    "judgements": null,
+                    "parent": "",
+                    "parent_display": ""
+                },
+                "hash": "0x6bf9d1bd28c5e88693a7b86548d9f05ead2813195f4d4771cd44e2b5ed31d181",
+                "reason": "Supporting Polkadot Ambassador(Hyungsuk) as a community manager in Polkadot Eco-partners' Telegram and Discord Communities",
+                "status": "closed",
+                "tipper_num": 4
+            }
+        },
+        "message": "Success",
+        "ttl": 1
+    }
+```
+
 ## tippers
 
 ```shell
@@ -583,7 +863,7 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 --header 'Content-Type: application/json' \
 --data-raw '{
     "hash": "0x6bf9d1bd28c5e88693a7b86548d9f05ead2813195f4d4771cd44e2b5ed31d181"
-}'
+}' 
 ```
 
 ### URL Request
@@ -595,3 +875,89 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/treasury/ti
 | Name          | Type   | Require |
 | ------------- | ------ | ------- |
 | hash | string | yes     |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "amount": "75000000000",
+                "extrinsic_index": "1939573-1",
+                "rewarder": {
+                    "account_index": "",
+                    "address": "12xGDBh6zSBc3D98Jhw9jgUVsK8jiwGWHaPTK21Pgb7PJyPn",
+                    "display": "Hypersphere",
+                    "identity": true,
+                    "judgements": [
+                        {
+                            "index": 0,
+                            "judgement": "KnownGood"
+                        }
+                    ],
+                    "parent": "",
+                    "parent_display": ""
+                }
+            },
+            {
+                "amount": "80000000000",
+                "extrinsic_index": "1853811-1",
+                "rewarder": {
+                    "account_index": "",
+                    "address": "16UJBPHVqQ3xYXnmhEpaQtvSRnrP9k1XeE7WxoyCxsrL9AvV",
+                    "display": "Jack",
+                    "identity": true,
+                    "judgements": [
+                        {
+                            "index": 0,
+                            "judgement": "KnownGood"
+                        }
+                    ],
+                    "parent": "",
+                    "parent_display": ""
+                }
+            },
+            {
+                "amount": "50000000000",
+                "extrinsic_index": "1549962-3",
+                "rewarder": {
+                    "account_index": "1kk",
+                    "address": "1363HWTPzDrzAQ6ChFiMU6mP4b6jmQid2ae55JQcKtZnpLGv",
+                    "display": "Jaco",
+                    "identity": true,
+                    "judgements": [
+                        {
+                            "index": 1,
+                            "judgement": "Reasonable"
+                        }
+                    ],
+                    "parent": "",
+                    "parent_display": ""
+                }
+            },
+            {
+                "amount": "100000000000",
+                "extrinsic_index": "1548505-3",
+                "rewarder": {
+                    "account_index": "",
+                    "address": "1hCMdtRsaRA4ZTEKpPKPvEjK9rZpGhyFnRHSDhqFMCEayRL",
+                    "display": "RTTI-5220 (POLKADOT)",
+                    "identity": true,
+                    "judgements": [
+                        {
+                            "index": 0,
+                            "judgement": "KnownGood"
+                        }
+                    ],
+                    "parent": "",
+                    "parent_display": ""
+                }
+            }
+        ]
+    },
+    "message": "Success",
+    "ttl": 1
+}
+```
