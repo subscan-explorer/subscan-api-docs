@@ -2,6 +2,8 @@
 
 ## Current Timestamp
 
+Subscan server timestamp
+
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/now' \
 --header 'Content-Type: application/json' 
@@ -22,9 +24,10 @@ curl --location --request POST 'https://polkadot.subscan.io/api/now' \
         "data": 1559545576
     }
 ```
-Get Subscan server timestamp
 
 ## metadata
+
+Subscan global stats
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/metadata' \
@@ -67,7 +70,35 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/metadata' \
     }
 ```
 
+### Response Description
+
+| Attr/Prop     | Description   |
+| ------------- | ------ | 
+| addressType   | substrate ss58 prefix | 
+| blockNum      | best block num |
+| blockTime     | output block time(fixed)|
+| commissionAccuracy| staking commission accuracy |
+| count_account| account count |
+| count_event| event count |
+| count_extrinsic| extrinsic count |
+| count_signed_extrinsic| signed extrinsic count |
+| count_transfer| transfer count |
+| current_validator_count| session validator count |
+| eraLength| number of block nums per era |
+| eraProcess| current era progress |
+| exist_roles| current network exist role |
+| finalized_blockNum| finalized blockNum |
+| networkNode| network name |
+| specVersion| current runtime spec version |
+| unbondDuration|number of block nums unbond duration |
+| validator_count| current storage staking.validatorCount  |
+| waiting_validator| waiting validator count  |
+ 
+
 ## blocks
+
+Block list
+
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/blocks' \
@@ -146,6 +177,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/blocks' \
 ```
 
 ## block
+
+Block detail
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/block' \
@@ -255,6 +288,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/block' \
 
 ## extrinsics
 
+Extrinsic list
+
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/extrinsics' \
 --header 'Content-Type: application/json' \
@@ -312,6 +347,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/extrinsics'
 ```
 
 ## extrinsic
+
+Extrinsic detail
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/extrinsic' \
@@ -444,6 +481,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/extrinsic' 
 
 ## events
 
+Event list
+
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/events' \
 --header 'Content-Type: application/json' \
@@ -496,6 +535,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/events' \
 
 ## event
 
+Event detail
+
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/event' \
 --header 'Content-Type: application/json' \
@@ -537,6 +578,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/event' \
 ```
 
 ## search
+
+Search block, account, extrinsic 
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/search' \
@@ -665,6 +708,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/search' \
 
 ## daily
 
+Statistics by time 
+
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/daily' \
 --header 'Content-Type: application/json' \
@@ -723,6 +768,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/daily' \
 
 
 ## transfers
+
+Transfer list
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/transfers' \
@@ -795,6 +842,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/transfers' 
 
 ## check-hash
 
+Judgment hash is a block | extrinsic
+
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/check_hash' \
 --header 'Content-Type: application/json' \
@@ -828,57 +877,9 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/check_hash'
     }
 ```
 
-## mapping-history
-
-```shell
-curl --location --request POST 'https://polkadot.subscan.io/api/wallet/mapping_history' \
---header 'Content-Type: application/json' \
---data-raw '{
-     "row": 20,
-     "page": 1,
-     "address": "1t8SpsoGckWBT7rdG7mpFdXxcT3hiQZEH3bGga6vi1wnm7h"
-}' 
-```
-
-### URL Request
-
-`POST /api/wallet/mapping_history`
-
-### payload
-
-| Name          | Type   | Require |
-| ------------- | ------ | ------- |
-| row | int | yes     |
-| page| int | yes     |
-| address| string | yes     |
-
-
-> Example Response
-
-```json
-
-    {
-        "code": 0,
-        "message": "Success",
-        "ttl": 1,
-        "data": {
-            "count": 1,
-            "list": [
-                {
-                    "Id": 1,
-                    "account": "62f5d14418553c943dbaf24e3ed90bf811f353c89c5b8e712abe25b037a8f85a",
-                    "block_num": 214965,
-                    "extrinsic_index": "214965-2",
-                    "amount": "8888880000",
-                    "mapping_type": "RedeemRing",
-                    "from_tx": "0x2807754982b305aaa17a999f454716c49eedea610e1922676fcaac68e0e2da6f"
-                }
-            ]
-        }
-    }
-```
-
 ## accounts
+
+Account list
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/accounts' \
@@ -938,6 +939,8 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/accounts' \
 ```
 
 ## token
+
+Current network tokens detail
 
 ```shell
 curl --location --request POST 'https://polkadot.subscan.io/api/scan/token' \
