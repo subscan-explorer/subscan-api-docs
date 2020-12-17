@@ -30,7 +30,11 @@ jobs:
           trigger_token: ${{ secrets.ITERING_DEPLOYMENT_TRIGGER_TOKEN }}
           trigger_endpoint: ${{ secrets.ITERING_DEPLOYMENT_TRIGGER_ENDPOINT }}
 
-      - uses: ./.github/actions/dingtalk-notify
+      - uses: 8398a7/action-slack@v3
         if: failure()
         with:
-          dingtalk_bot_token: ${{ secrets.DINGTALK_BOT_TOKEN }}
+          status: ${{ job.status }}
+          fields: repo,author,eventName,workflow,ref,commit
+          channel: ${{ secrets.SLACK_CHANNEL_ID }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
