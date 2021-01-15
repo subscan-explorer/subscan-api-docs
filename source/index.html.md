@@ -37,11 +37,13 @@ Live network
 - Kusama         https://Kusama.subscan.io/
 - Darwinia       https://darwinia-cc1.subscan.io/
 - Darwinia Crab  https://crab.subscan.io/
+- ChainX         https://chainx.subscan.io/
 - Edgeware       https://edgeware.subscan.io/
 - Centrifuge     https://centrifuge.subscan.io/
 - Plasm          https://plasm.subscan.io/
 - Kulupu         https://kulupu.subscan.io/
 - Stafi          https://stafi.subscan.io/
+- equilibrium    https://equilibrium.subscan.io/
 
 Test network
 
@@ -50,6 +52,7 @@ Test network
 - Phala Rorschach https://phala.subscan.io/
 - Bifrost Asgard https://bifrost.subscan.io/
 - Crust Maxwell  https://crust.subscan.io/
+- laminar TC2 https://laminar-testnet.subscan.io/
 
 
 # Version History
