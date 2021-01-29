@@ -44,7 +44,7 @@ The endpoints corresponding to the following networks are all available.
 | Plasm         | <https://plasm.api.subscan.io/>        |
 | Kulupu        | <https://kulupu.api.subscan.io/>       |
 | Stafi         | <https://stafi.api.subscan.io/>        |
-| equilibrium   | <https://equilibrium.api.subscan.io/>  |
+| Equilibrium   | <https://equilibrium.api.subscan.io/>  |
 
 **Test network**
 
