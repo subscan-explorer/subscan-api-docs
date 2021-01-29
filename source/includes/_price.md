@@ -1,16 +1,29 @@
-# Price
+# Price API
 
 ## price
 
+Historical price query
+
 ```shell
-curl --location --request POST 'https://polkadot.subscan.io/api/open/price' \
---header 'Content-Type: application/json' \
---data-raw '{
-	"time": 1665107
-}'
+curl -X POST 'https://polkadot.api.subscan.io/api/open/price' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "time": 1665107
+  }'
 ```
 
-> EXAMPLE RESPONSE:
+### Request URL
+
+`POST /api/open/price`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| time      | int  | yes     |         | unix timestamp or block num |
+
+> Example Response
 
 ```json
 {
@@ -32,35 +45,37 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/price' \
 }
 ```
 
-### Description
-
-Historical price query
-
-### HTTP Request
-
-`POST https://polkadot.subscan.io/api/open/price`
-
-### Query Parameters
-
-Parameter | Type | Require | Default | Description
---------- | ------- | ----------- | ----- | -----
-time | int | yes | | unix timestamp or block num
-
 
 ## price-converter
 
+The conversion calculator returns the amount of the target currency base on the amount of source currency given historical price
+
 ```shell
-curl --location --request POST 'https://polkadot.subscan.io/api/open/price_converter' \
---header 'Content-Type: application/json' \
---data-raw '{
-	"time":594309,
-	"value":1000,
-	"from":"USD",
-	"quote":"DOT"
-}'
+curl -X POST 'https://polkadot.api.subscan.io/api/open/price_converter' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "time":594309,
+    "value":1000,
+    "from":"USD",
+    "quote":"DOT"
+  }'
 ```
 
-> EXAMPLE RESPONSE:
+### Request URL
+
+`POST /api/open/price_converter`
+
+### Payload
+
+| Parameter | Type    | Require | Default | Description                                  |
+| --------- | ------- | ------- | ------- | -------------------------------------------- |
+| value     | decimal | yes     |         | currency amount to convert                   |
+| from      | string  | yes     |         | Base Currency, USD or current network token  |
+| quote     | string  | yes     |         | Quote Currency, USD or current network token |
+| time      | int     | no      |         | unix timestamp or block num                  |
+
+> Example Response
 
 ```json
 {
@@ -84,47 +99,30 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/price_conve
     }
 }
 ```
-### Description
-
-The conversion calculator returns the amount of the target currency base on the amount of source currency given historical price
-
-### HTTP Request
-
-`POST https://polkadot.subscan.io/api/open/price_converter`
-
-### Query Parameters
-
-Parameter | Type | Require | Default | Description
---------- | ------- | ----------- | ----- | -----
-value | decimal | yes | | currency amount to convert
-from | string | yes | | Base Currency, USD or current network token
-quote | string | yes | | Quote Currency, USD or current network token
-time | int | no | | unix timestamp or block num
-
 
 
 ## price-history
 
 ```shell
-curl --location --request POST 'https://polkadot.subscan.io/api/scan/price/history' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
     "start": "2019-07-04",
     "end": "2020-07-05"
-}'
+  }'
 ```
 
-### URL Request
+### Request URL
 
 `POST /api/scan/price/history`
 
-### payload
+### Payload
 
-| Name          | Type   | Require |
-| ------------- | ------ | ------- |
+| Name  | Type             | Require |
+| ----- | ---------------- | ------- |
 | start | Date(2019-07-04) | yes     |
-| end | Date(2019-07-04) | yes     |
-
+| end   | Date(2019-07-04) | yes     |
 
 > Example Response
 
@@ -148,13 +146,19 @@ curl --location --request POST 'https://polkadot.subscan.io/api/scan/price/histo
 
 ## currencies
 
+List of currencies that support price query and conversion
+
 ```shell
-curl --location --request POST 'https://polkadot.subscan.io/api/open/currencies' \
---header 'Content-Type: application/json' \
---data-raw ''
+curl -X POST 'https://polkadot.api.subscan.io/api/open/currencies' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
 ```
 
-> EXAMPLE RESPONSE:
+### Request URL
+
+`POST /api/open/currencies`
+
+> Example Response
 
 ```json
 {
@@ -168,11 +172,3 @@ curl --location --request POST 'https://polkadot.subscan.io/api/open/currencies'
     }
 }
 ```
-
-### Description
-
-List of currencies that support price query and conversion
-
-### HTTP Request
-
-`POST https://polkadot.subscan.io/api/open/currencies`

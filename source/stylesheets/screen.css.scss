@@ -636,3 +636,15 @@ html, body {
 .copy-clipboard:hover {
   opacity: 0.8;
 }
+
+// Hack copied from https://github.com/slatedocs/slate/issues/855
+.content {
+  .center-column + .highlight {
+    background-color: transparent;
+    pre {
+      position: static;
+      float: none;
+      clear: none;
+    }
+  }
+}

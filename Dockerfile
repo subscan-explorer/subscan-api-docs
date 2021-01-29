@@ -13,7 +13,7 @@ RUN gem install bundler \
     && bundle install
 
 COPY . .
-RUN bundle exec middleman build --clean
+RUN bundle exec middleman build --clean --verbose
 
 FROM nginx:mainline-alpine
 COPY ./nginx-http.conf /etc/nginx/conf.d/default.conf

@@ -1,10 +1,6 @@
-# Subscan-api-docs
+# Subscan API Docs
 
-Welcome to the Subscan API docs! You can use our API to access Subscan API endpoints. Check it out at [Subscan API docs site](https://docs.api.subscan.io/).
+Welcome to the Subscan API! Using our APIs, we provide a simple way to access chain data of more than 10+ substrate-based networks! Check out our live docs at <https://docs.api.subscan.io/>.
 
-This API reference includes all technical documentation developers need to integrate third-party applications and platforms.
-
-Subscan API docs is built on [Slate](https://github.com/slatedocs/slate).
-
-To get started with Slate, please check out the [Getting Started](https://github.com/slatedocs/slate/wiki#getting-started)
+This documentation was created with [Slate](https://github.com/slatedocs/slate). To get started with Slate, please check out the [Getting Started](https://github.com/slatedocs/slate/wiki#getting-started)
 section in [Slate wiki](https://github.com/slatedocs/slate/wiki).
