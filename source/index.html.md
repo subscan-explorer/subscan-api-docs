@@ -11,7 +11,6 @@ includes:
   - price
   - governance
   - runtime
-  - errors
 
 search: false
 
