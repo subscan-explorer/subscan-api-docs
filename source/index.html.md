@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Subscan API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell: cURL
@@ -19,17 +19,16 @@ code_clipboard: true
 
 # Introduction
 
-Welcome to the Subscan API! You can use our API to access Subscan API endpoints.
-We have language bindings in Shell! You can view code examples in the dark area to the right.
+Welcome to the Subscan API! Using our APIs, we provide a simple way to access chain data of more than 10+ substrate-based networks!
 
-This API reference includes all technical documentation developers need to integrate third-party applications and platforms
+This API reference includes all technical documentation developers need to integrate with Subscan. We have language bindings in Shell and the cURL command. You can view code examples in the dark area to the right.
 
-This API documentation page was created with [Slate](https://github.com/slatedocs/slate). 
+This documentation was created with [Slate](https://github.com/slatedocs/slate).
 
 
 # Endpoints
 
-The endpoints corresponding to the following networks are all available
+The endpoints corresponding to the following networks are all available.
 
 **Live network**
 
@@ -58,9 +57,6 @@ The endpoints corresponding to the following networks are all available
 | Crust Maxwell   | <https://crust.api.subscan.io/>           |
 | Laminar TC2     | <https://laminar-testnet.api.subscan.io/> |
 
+# Service Level Agreement
 
-# Version History
-
-**v0.3.10 on 2020.10.15**
-
-Initial
+We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us for more detail.

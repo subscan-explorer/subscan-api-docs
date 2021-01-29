@@ -1,6 +1,6 @@
 # General
 
-## Current Timestamp
+## timestamp
 
 Subscan server timestamp
 
@@ -108,8 +108,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/blocks' \
     "row": 10,
     "page": 0
   }'
-}' 
-  }'
 ```
 
 ### Request URL
@@ -188,8 +186,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/block' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
     "block_hash": "0x68a27df5a52ff2251df2cc8368f7dcefb305a13bb3d89b65c8fb070f23877f2c"
-  }'
-}' 
   }'
 ```
 
@@ -301,8 +297,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsics' \
     "row": 1,
     "page": 1
   }'
-}' 
-  }'
 ```
 
 ### Request URL
@@ -361,8 +355,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
     "extrinsic_index": "2028659-2"
-  }'
-}' 
   }'
 ```
 
@@ -498,8 +490,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/events' \
     "row": 10,
     "page": 1
   }'
-}' 
-  }'
 ```
 
 ### Request URL
@@ -552,8 +542,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/event' \
   --data-raw '{
     "event_index": "2013673-2"
   }'
-}' 
-  }'
 ```
 
 ### Request URL
@@ -599,8 +587,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/search' \
     "key": "15",
     "row": 20,
     "page": 1
-  }'
-}' 
   }'
 ```
 
@@ -792,8 +778,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
     "row": 10,
     "page": 1
   }'
-}' 
-  }'
 ```
 
 ### Request URL
@@ -865,8 +849,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/check_hash' \
   --data-raw '{
     "hash": "0x859baa1b6d5e4763db6a166f35a8f759fefc38867c6779ef5c65d2d02ae7219a"
   }'
-}' 
-  }'
 ```
 
 ### Request URL
@@ -904,8 +886,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
   --data-raw '{
     "row": 1,
     "page": 1
-  }'
-}' 
   }'
 ```
 

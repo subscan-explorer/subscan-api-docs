@@ -4,13 +4,17 @@
 
 The `X-API-Key` or `x-api-key` (case-insensitive) request header is the authentication method that Subscan API uses to determine the identity and rate limits.
 
-Every individual request to Subscan API must be attached with the header and the correct key, otherwise a `401 Unauthorized` response will be returned. For example:
+Every individual request to Subscan API must be attached with the header and the correct key, otherwise a `401 Unauthorized` response will be returned. For example, if the key was invaild:
+
+<div class="center-column"></div>
 
 ```shell
 curl -X POST -H "x-api-key: invalid" https://kusama.api.subscan.io/api/now
 ```
 
-> Example Response
+An example of response body:
+
+<div class="center-column"></div>
 
 ```json
 {
@@ -30,13 +34,17 @@ For instance, if an API key has a quota of *10* requests per second:
 - Simultaneously, client *B* requests `https://kusama.api.subscan.io/api/scan/metadata` with the same API key.
 - After these *2* requests, only *8* requests with the same API key are allowed in that second.
 
-Subscan API respects the Internet-Draft [RateLimit Header Fields for HTTP](https://tools.ietf.org/html/draft-polli-ratelimit-headers-01). It is easy to retrieve the limit, remaining quota, and reset time of your key, from headers of every response. For example:
+Subscan API respects the Internet-Draft [RateLimit Header Fields for HTTP](https://tools.ietf.org/html/draft-polli-ratelimit-headers-01). Through the headers of any response, it is simple to retrieve the limit (`ratelimit-limit`), remaining quota (`ratelimit-remaining`), and the seconds until the limit resets (`ratelimit-reset`) of your key. For example, send any request:
+
+<div class="center-column"></div>
 
 ```shell
-curl -isS -X POST -H "x-api-key: YOUR_KEY" https://kusama.api.subscan.io/api/now | grep "^ratelimit-"
+curl -isS -X POST -H "x-api-key: YOUR_KEY" https://kusama.api.subscan.io/api/now
 ```
 
-> Example Output
+An example of partial response headers:
+
+<div class="center-column"></div>
 
 ```
 ratelimit-remaining: 7
@@ -44,22 +52,32 @@ ratelimit-limit: 10
 ratelimit-reset: 22
 ```
 
-If the client reached the rate limit, all other requests in the time slot will be throttled with an HTTP `429 Too Many Requests` response that contains a [`retry-after` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After). For example:
+If the client reached the rate limit, all other requests in the time slot will be throttled with an HTTP `429 Too Many Requests` response that contains a [`retry-after` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After).
+
+An example of partial response headers:
+
+<div class="center-column"></div>
 
 ```
-HTTP/2 429
 retry-after: 4
 ratelimit-remaining: 0
 ratelimit-limit: 10
 ratelimit-reset: 4
-...<other headers>...
+```
 
+An example of response body:
+
+<div class="center-column"></div>
+
+```json
 {
   "message":"API rate limit exceeded"
 }
 ```
 
-It is highly recommended to build your client with a backoff strategy to wait for `<retry-after>` seconds when hitting rate limits.
+<aside class="notice">
+It is highly recommended to build your client with a backoff strategy to wait for <code>"retry-after"</code> seconds when hitting rate limits.
+</aside>
 
 ## HTTP Status Codes
 
@@ -74,7 +92,3 @@ The table down below lists several HTTP status codes that Subscan might respond.
 | 500 Internal Server Error | The servers could not respond your request due to probably a bug.                                                         |
 | 502 Bad Gateway           | The servers could not respond your request due to probably a bug.                                                         |
 | 503 Service Unavailable   | The services were under maintenance. Please try again later.                                                              |
-
-## Service Level Agreement
-
-We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us for more detail.
