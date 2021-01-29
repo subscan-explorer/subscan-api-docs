@@ -59,4 +59,4 @@ The endpoints corresponding to the following networks are all available.
 
 # Service Level Agreement
 
-We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us for more detail.
+We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us ([hello@subscan.io](mailto:hello@subscan.io)) for more detail.

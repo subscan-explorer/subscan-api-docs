@@ -24,7 +24,7 @@ An example of response body:
 
 ## Rate Limiting
 
-Each Subscan API key has a request quota, for example, 30 requests per second at most. Please contact us for the plans and pricing.
+Each Subscan API key has a request quota, for example, 30 requests per second at most. Please contact us ([hello@subscan.io](mailto:hello@subscan.io)) for the plans and pricing.
 
 Currently, the quotas are global - shared across all APIs, all networks, and all client IP addresses as well.
 
