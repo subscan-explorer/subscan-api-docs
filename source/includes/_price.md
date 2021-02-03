@@ -133,6 +133,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
     "message": "Success",
     "ttl": 1,
     "data": {
+        "average": "153.1241241",
         "list": [
             {
                 "feed_at": 1594857864,
