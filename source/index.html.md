@@ -23,8 +23,9 @@ Welcome to the Subscan API! Using our APIs, we provide a simple way to access ch
 
 This API reference includes all technical documentation developers need to integrate with Subscan. We have language bindings in Shell and the cURL command. You can view code examples in the dark area to the right.
 
-This documentation was created with [Slate](https://github.com/slatedocs/slate).
+If you have any question or suggestion, please do not hesitate to contact our API support: [api@subscan.io](mailto:api@subscan.io)!
 
+This documentation was created with [Slate](https://github.com/slatedocs/slate). Help us improve the docs on [GitHub](https://github.com/itering/subscan-api-docs).
 
 # Endpoints
 
@@ -59,4 +60,4 @@ The endpoints corresponding to the following networks are all available.
 
 # Service Level Agreement
 
-We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us ([hello@subscan.io](mailto:hello@subscan.io)) for more detail.
+We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us ([api@subscan.io](mailto:api@subscan.io)) for more detail.
