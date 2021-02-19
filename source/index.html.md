@@ -12,6 +12,7 @@ includes:
   - governance
   - runtime
   - v2
+  - para
 
 search: false
 
