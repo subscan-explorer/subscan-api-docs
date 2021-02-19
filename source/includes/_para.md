@@ -43,7 +43,6 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/chains' \
 
 ## proposals
 
-
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
   --header 'Content-Type: application/json' \
@@ -104,5 +103,32 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
     },
     ...
   ]
+}
+```
+
+## meta
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/meta`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": {
+    "proposed_count": 0,
+    "approved_count": 0,
+    "registered_count": 1
+  }
 }
 ```
