@@ -56,7 +56,7 @@ header {
     }
   }
   .right-menu {
-    margin-right: 15px;
+    margin-right: 100px;
     display: flex;
     align-items: center;
     a {
@@ -64,6 +64,7 @@ header {
     "WenQuanYi Micro Hei", sans-serif;
       font-size: 14px;
       font-weight: 600;
+      margin-left: 20px;
       color: #fff;
       text-decoration: none;
     }
@@ -649,6 +650,15 @@ header {
 }
 
 @media (max-width: $phone-width) {
+  header {
+    height: 60px;
+    .right-menu {
+      margin-right: 0;
+      a {
+        margin-left: 8px;
+      }
+    }
+  }
   .dark-box {
     display: none;
   }
