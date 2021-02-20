@@ -36,6 +36,40 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+header {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: linear-gradient(315deg, #FE3876 0%, #7C30DD 71%, #3A30DD 100%);
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      height: 25px;
+    }
+  }
+  .right-menu {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    a {
+      font: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -54,13 +88,15 @@ html, body {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  top: 0;
+  top: 50px;
   left: 0;
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
   font-size: 13px;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
 
   // language selector for mobile devices
   .lang-selector {
@@ -144,7 +180,7 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 28px;
+    line-height: 40px;
   }
 
   li {
@@ -164,6 +200,11 @@ html, body {
   .toc-link.active-parent {
     background-color: $nav-active-parent-bg;
     color: $nav-active-parent-text;
+  }
+
+  .toc-list-h1 {
+    flex: 1 1 auto;
+    overflow: auto;
   }
 
   .toc-list-h2 {
@@ -195,6 +236,23 @@ html, body {
       font-size: 0.8em;
       line-height: 1.7;
       text-decoration: none;
+    }
+  }
+
+  .contact {
+    height: 40px;
+    margin-top: 16px;
+    display: flex;
+    padding: 0 24px;
+    justify-content: space-between;
+    .contact-item {
+      font-size: 24px;
+      color: transparent;
+      display: inline-flex;
+      img {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
@@ -252,6 +310,7 @@ html, body {
 
 .page-wrapper {
   margin-left: $nav-width;
+  margin-top: 50px;
   position: relative;
   z-index: 10;
   background-color: $main-bg;
@@ -597,9 +656,12 @@ html, body {
   %left-col {
     margin-right: 0;
   }
-
+  .toc-wrapper {
+    top: 0;
+    z-index: 41;
+  }
   .toc-wrapper .lang-selector {
-    display: block;
+    display: none;
   }
 
   .page-wrapper .lang-selector {
