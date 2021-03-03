@@ -4,27 +4,11 @@
 
 The `X-API-Key` or `x-api-key` (case-insensitive) request header is the authentication method that Subscan API uses to determine the identity and rate limits.
 
-Every individual request to Subscan API must be attached with the header and the correct key, otherwise a `401 Unauthorized` response will be returned. For example, if the key was invaild:
-
-<div class="center-column"></div>
-
-```shell
-curl -X POST -H "x-api-key: invalid" https://kusama.api.subscan.io/api/now
-```
-
-An example of response body:
-
-<div class="center-column"></div>
-
-```json
-{
-  "message":"Invalid authentication credentials"
-}
-```
-
 ## Rate Limiting
 
 Each Subscan API key has a request quota, for example, 30 requests per second at most.
+
+> If the API key is incorrect or doesn't exist in the request, it then fallbacks to your public IP address. The quotas of no-key access are relatively lower and designed for testing purposes only. Contact us to get a free API key that includes higher quotas or start your trial with other subscriptions!
 
 Currently, the quotas are global - shared across all APIs, all networks, and all client IP addresses as well. For instance, if an API key has a quota of *10* requests per second:
 
