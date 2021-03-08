@@ -25,6 +25,8 @@ Welcome to the Subscan API! Using our APIs, we provide a simple way to access ch
 
 This API reference includes all technical documentation developers need to integrate with Subscan. We have language bindings in Shell and the cURL command. You can view code examples in the dark area to the right.
 
+You can apply by the [form](https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform) here.
+
 If you have any question or suggestion, please do not hesitate to contact our API support: [api@subscan.io](mailto:api@subscan.io)!
 
 This documentation was created with [Slate](https://github.com/slatedocs/slate). Help us improve the docs on [GitHub](https://github.com/itering/subscan-api-docs).
