@@ -1,10 +1,43 @@
 # ParaChain API
 
-## parachains
+## meta
 
 
 ```shell
-curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/chains' \
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/meta`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": {
+    "total_slot_num": 100,
+    "proposed_count": 0,
+    "approved_count": 0,
+    "registered_count": 0,
+    "auction_count": 2,
+    "fund_count": 1
+  }
+}
+```
+
+
+## proposals 
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY'
   --data-raw '{
@@ -14,7 +47,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/chains' \
 
 ### Request URL
 
-`POST /api/scan/parachain/chains`
+`POST /api/scan/parachain/proposals`
 
 ### Payload
 
@@ -41,17 +74,24 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/chains' \
 }
 ```
 
-## proposals
+## auctions
 
 ```shell
-curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY'
 ```
 
 ### Request URL
 
-`POST /api/scan/parachain/proposals`
+`POST /api/scan/parachain/auction`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| status      | int  | no     |    0     | Enum(1:Started&#124;2:Closed&#124;3:Online) |
+
 
 > Example Response
 
@@ -62,61 +102,44 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
   "ttl": 1,
   "data": [
     {
-      "para_id": 82406,
-      "name": "HydraDX Hydrate",
-      "proposer": "5D9f9sNeWckuicjnN4NK4oXc6HVR1bR99xXKztieDqEoTndt",
-      "validators": [
-        "5D9f9sNeWckuicjnN4NK4oXc6HVR1bR99xXKztieDqEoTndt",
-        "5FUECwwDKe2GqXDseVixfjDt8P3aidQApEh5aVPpwLPuKRfx"
-      ],
-      "balance": "1000000000000000"
+      "auction_index": 2,
+      "lease_index": 1,
+      "start_block": 102,
+      "end_block": 152,
+      "extinguish_block": 0,
+      "status": 1
     },
     {
-      "para_id": 777,
-      "name": "Unit Network",
-      "proposer": "5FnJizBEEraXQdQyQL9iJ6jtACxMPDPYFC9KrtnsFYAZaJNu",
-      "validators": [
-        "5FnJizBEEraXQdQyQL9iJ6jtACxMPDPYFC9KrtnsFYAZaJNu",
-        "5GKxCfoF9sANpKSH5K7cRx6kJrvvkchfnaZbKUYFge3N8rqv"
-      ],
-      "balance": "1000000000000000"
-    },
-    {
-      "para_id": 1617,
-      "name": "Starks Network",
-      "proposer": "5FHCaBgXVmj4iStBArBgPKubNJGRZCjja1j1SfdaKMu5KA2X",
-      "validators": [
-        "5G3zwZ72e6rbJgx6cfmpKac3yBPsLM1hC173U6XNeMexqMhS",
-        "5GCc7JDdXQ8QKnm8itDBd7hbKCKziS8eDrTTFeXmj6HhKTHk"
-      ],
-      "balance": "1000000000000000"
-    },
-    {
-      "para_id": 59,
-      "name": "ChainX",
-      "proposer": "5CdP9o2qTCPe26e3J5kWXm1XDrT9G9eQ6NquiYGtqZaEG7aw",
-      "validators": [
-        "5ExnkKkHG1xfgoCLjQ2DTHBkRxdoUrsnCsVorWKPsESrtpmd",
-        "5F7aGEQ3HgUxmJb7z8DVSth2nfkAFBKyXKsgSEhPcV1crfF7"
-      ],
-      "balance": "1000000000000000"
-    },
-    ...
+      "auction_index": 1,
+      "lease_index": 0,
+      "start_block": 30,
+      "end_block": 80,
+      "extinguish_block": 0,
+      "status": 2
+    }
   ]
 }
 ```
 
-## meta
+## bids
 
 ```shell
-curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY'
 ```
 
 ### Request URL
 
-`POST /api/scan/parachain/meta`
+`POST /api/scan/parachain/bids`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| status      | int  | no     |    0     | Enum(1:Reserved&#124;2:WonDeploy&#124;3:Renewal) |
+| source| int  | no     |    0     |  Enum(1:Slot&#124;2:Crowdloan) |
+| auction_index| int  | no     |    0     |
 
 > Example Response
 
@@ -125,10 +148,134 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
   "code": 0,
   "message": "Success",
   "ttl": 1,
-  "data": {
-    "proposed_count": 0,
-    "approved_count": 0,
-    "registered_count": 1
-  }
+  "data": [
+    {
+      "auction_index": 2,
+      "first_slot": 10,
+      "last_slot": 12,
+      "bidder_account": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
+      "bidder_sub_id": 0,
+      "amount": "5000000000000",
+      "source": 1,
+      "para_id": 0,
+      "slot_range": "ZeroTwo",
+      "status": 1
+    },
+    {
+      "auction_index": 1,
+      "first_slot": 1,
+      "last_slot": 3,
+      "bidder_account": "dd31c61141abd04a000000000000000000000000000000000",
+      "bidder_sub_id": 0,
+      "amount": "3000000000000",
+      "source": 2,
+      "para_id": 200,
+      "slot_range": "OneThree",
+      "status": 2
+    },
+    {
+      "auction_index": 1,
+      "first_slot": 1,
+      "last_slot": 2,
+      "bidder_account": "ab43333kjf558854ccde39a5684e7a56000000000000000000000000000000000",
+      "bidder_sub_id": 0,
+      "amount": "10000000000000",
+      "source": 2,
+      "para_id": 0,
+      "slot_range": "OneTwo",
+      "status": 1
+    },
+    {
+      "auction_index": 1,
+      "first_slot": 0,
+      "last_slot": 1,
+      "bidder_account": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
+      "bidder_sub_id": 0,
+      "amount": "5000000000000",
+      "source": 1,
+      "para_id": 199,
+      "slot_range": "ZeroOne",
+      "status": 2
+    }
+  ]
+}
+```
+
+## funds
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/funds`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| status      | int  | no     |    0     | Enum(1:Created&#124;2:Onboard&#124;3:Dissolved) |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": [
+    {
+      "fund_index": 0,
+      "auction_index": 1,
+      "para_id": 200,
+      "owner": "8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48",
+      "first_slot": 1,
+      "last_slot": 3,
+      "cap": "10000000000000",
+      "end_block": 120,
+      "raised": "1000000000000",
+      "status": 2
+    }
+  ]
+}
+```
+
+## fund contributes
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/contributes`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| fund_index      | int  | no     |    0     | |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": [
+    {
+      "fund_index": 1,
+      "who": "8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48",
+      "contributed": "6000000000000"
+    }
+  ]
 }
 ```
