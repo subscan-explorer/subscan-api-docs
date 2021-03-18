@@ -90,7 +90,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
-| status      | int  | no     |    0     | Enum(1:Started&#124;2:Closed&#124;3:Online) |
+| status      | int  | no     |    0     | Enum(1:Started&#124;2:Closed) |
 
 
 > Example Response
