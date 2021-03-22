@@ -27,8 +27,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
     "proposed_count": 0,
     "approved_count": 0,
     "registered_count": 0,
-    "auction_count": 2,
-    "fund_count": 1
+    "auction_count": 1,
+    "fund_count": 2,
+    "lease_period": 50,
+    "ending_period": 20,
+    "retirement_period": 20
   }
 }
 ```
@@ -154,11 +157,9 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
       "first_slot": 10,
       "last_slot": 12,
       "bidder_account": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
-      "bidder_sub_id": 0,
       "amount": "5000000000000",
       "source": 1,
-      "para_id": 0,
-      "slot_range": "ZeroTwo",
+      "para_id": 199,
       "status": 1
     },
     {
@@ -166,35 +167,9 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
       "first_slot": 1,
       "last_slot": 3,
       "bidder_account": "dd31c61141abd04a000000000000000000000000000000000",
-      "bidder_sub_id": 0,
       "amount": "3000000000000",
       "source": 2,
       "para_id": 200,
-      "slot_range": "OneThree",
-      "status": 2
-    },
-    {
-      "auction_index": 1,
-      "first_slot": 1,
-      "last_slot": 2,
-      "bidder_account": "ab43333kjf558854ccde39a5684e7a56000000000000000000000000000000000",
-      "bidder_sub_id": 0,
-      "amount": "10000000000000",
-      "source": 2,
-      "para_id": 0,
-      "slot_range": "OneTwo",
-      "status": 1
-    },
-    {
-      "auction_index": 1,
-      "first_slot": 0,
-      "last_slot": 1,
-      "bidder_account": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
-      "bidder_sub_id": 0,
-      "amount": "5000000000000",
-      "source": 1,
-      "para_id": 199,
-      "slot_range": "ZeroOne",
       "status": 2
     }
   ]
@@ -229,15 +204,27 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
   "ttl": 1,
   "data": [
     {
-      "fund_index": 0,
+      "fund_index": 199,
+      "para_id": 199,
       "auction_index": 1,
-      "para_id": 200,
       "owner": "8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48",
       "first_slot": 1,
       "last_slot": 3,
       "cap": "10000000000000",
       "end_block": 120,
       "raised": "1000000000000",
+      "status": 1
+    },
+    {
+      "fund_index": 200,
+      "para_id": 200,
+      "auction_index": 0,
+      "owner": "8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48",
+      "first_slot": 0,
+      "last_slot": 1,
+      "cap": "10000000000000",
+      "end_block": 50,
+      "raised": "500000000000",
       "status": 2
     }
   ]
@@ -272,9 +259,14 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
   "ttl": 1,
   "data": [
     {
-      "fund_index": 1,
+      "fund_index": 199,
       "who": "8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48",
       "contributed": "6000000000000"
+    },
+    {
+      "fund_index": 200,
+      "who": "90b5ab205c6974c9ea841be688864633dc9ca8a357843eeacf2314649965fe22",
+      "contributed": "5000000000000"
     }
   ]
 }
