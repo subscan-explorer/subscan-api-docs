@@ -25,7 +25,15 @@ Welcome to the Subscan API! Using our APIs, we provide a simple way to access ch
 
 This API reference includes all technical documentation developers need to integrate with Subscan. We have language bindings in Shell and the cURL command. You can view code examples in the dark area to the right.
 
-You can apply by the [form](https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform) here.
+<aside class="info">
+In order to provide better reliability and responsiveness, Subscan recently upgraded the backend architecture and the new API endpoints are now available on https://[NETWORK].api.subscan.io/
+<br/>
+<br/>
+The legacy endpoints have been deprecated and will be removed by June 1st, 2021. Please update your apps that use the legacy endpoints so as to avoid any service interruption.
+<br/>
+<br/>
+You can apply by the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform">form</a> to get a free API key that includes higher quotas or start your trial with other subscriptions!
+</aside>
 
 If you have any question or suggestion, please do not hesitate to contact our API support: [api@subscan.io](mailto:api@subscan.io)!
 
