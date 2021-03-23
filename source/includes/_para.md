@@ -271,3 +271,37 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
   ]
 }
 ```
+
+## lifecycles
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/lifecycles' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/lifecycles`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| status      | string  | no     |    0     | Enum(Onboarding&#124;Parathread&#124;Parachain) |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": {
+    "199": "Parathread",
+    "200": "Parachain"
+  }
+}
+```
