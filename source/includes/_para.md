@@ -359,3 +359,69 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
   ]
 }
 ```
+
+## chain info detail
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/infoDetail' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/infoDetail`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| para_id      | int  | yes     |         | |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": {
+        "para_id": 199,
+        "status": "Parathread",
+        "genesis_head": "000000000000000000000000000000000000000000000000000000000000000000e8401a2c15ad8f78a875cfcbe190c738ce6620e57ed78afd784c727d96a5754b03170a2e7597b7b7e3d84c05391d139a62b157e78786d8c082f29dcf4c11131400",
+        "manager": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
+        "deposit": "47756200000000",
+        "validation_code": "0061736d0100000001b2022e60037f7f7f017f60027f7f017f60017f00600...",
+        "bids": [
+            {
+                "auction_index": 1,
+                "first_slot": 1,
+                "last_slot": 3,
+                "para_id": 199,
+                "bidder_account": "6d6f646c70792f6366756e64c700000000000000000000000000000000000000",
+                "amount": "5000000000000",
+                "source": 2,
+                "status": 2,
+                "block_num": 81,
+                "block_timestamp": 1616599896,
+                "extrinsic_index": "96-0"
+            },
+            {
+                "auction_index": 1,
+                "first_slot": 1,
+                "last_slot": 4,
+                "para_id": 199,
+                "bidder_account": "90b5ab205c6974c9ea841be688864633dc9ca8a357843eeacf2314649965fe22",
+                "amount": "30000000000000",
+                "source": 1,
+                "status": 1,
+                "block_num": 93,
+                "block_timestamp": 1616599944,
+                "extrinsic_index": "93-2"
+            }
+        ]
+    }
+}
+```
