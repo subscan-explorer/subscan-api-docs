@@ -153,6 +153,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 | status      | int  | no     |    0     | Enum(1:Accepted&#124;2:Leased&#124;3:Renewal) |
 | source| int  | no     |    0     |  Enum(1:Slot&#124;2:Crowdloan) |
 | from_history| bool  | no     |    false     |   |
+| bidder| string  | no     |         |   |
 | row     | int    | yes     |
 | page    | int    | yes     |
 |order   |string  |no| block_num desc|
@@ -217,7 +218,6 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 | from_block      | int  | no     |    0     | start blockNum of range query|
 | to_block      | int  | no     |    0     | end blockNum of range query|
 | status      | int  | no     |    0     | Enum(1:Created&#124;2:Leased&#124;3:Dissolved) |
-| source| int  | no     |    0     |  Enum(1:Slot&#124;2:Crowdloan) |
 | from_history| bool  | no     |    false     |   |
 | row     | int    | yes     |
 | page    | int    | yes     |
