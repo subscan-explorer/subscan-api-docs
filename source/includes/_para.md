@@ -87,13 +87,17 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 
 ### Request URL
 
-`POST /api/scan/parachain/auction`
+`POST /api/scan/parachain/auctions`
 
 ### Payload
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
+| auction_index      | int  | no     |    0     | |
 | status      | int  | no     |    0     | Enum(1:Started&#124;2:Closed) |
+| row     | int    | yes     |
+| page    | int    | yes     |
+|order   |string  |no| auction_index desc|
 
 
 > Example Response
@@ -107,16 +111,18 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
     {
       "auction_index": 2,
       "lease_index": 1,
-      "start_block": 102,
+      "start_block": 92,
+      "early_end_block": 102,
       "end_block": 152,
       "extinguish_block": 0,
       "status": 1
     },
     {
       "auction_index": 1,
-      "lease_index": 0,
-      "start_block": 30,
-      "end_block": 80,
+      "lease_index": 1,
+      "start_block": 66,
+      "early_end_block": 76,
+      "end_block": 96,
       "extinguish_block": 0,
       "status": 2
     }
@@ -140,9 +146,16 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
-| status      | int  | no     |    0     | Enum(1:Reserved&#124;2:WonDeploy&#124;3:Renewal) |
+| auction_index      | int  | no     |    0     | |
+| para_id      | int  | no     |    0     | |
+| from_block      | int  | no     |    0     | start blockNum of range query|
+| to_block      | int  | no     |    0     | end blockNum of range query|
+| status      | int  | no     |    0     | Enum(1:Accepted&#124;2:Leased&#124;3:Renewal) |
 | source| int  | no     |    0     |  Enum(1:Slot&#124;2:Crowdloan) |
-| auction_index| int  | no     |    0     |
+| from_history| bool  | no     |    false     |   |
+| row     | int    | yes     |
+| page    | int    | yes     |
+|order   |string  |no| block_num desc|
 
 > Example Response
 
@@ -156,21 +169,27 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
       "auction_index": 2,
       "first_slot": 10,
       "last_slot": 12,
-      "bidder_account": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
-      "amount": "5000000000000",
-      "source": 1,
       "para_id": 199,
-      "status": 1
+      "bidder_account": "90b5ab205c6974c9ea841be688864633dc9ca8a357843eeacf2314649965fe22",
+      "amount": "30000000000000",
+      "source": 1,
+      "status": 1,
+      "block_num": 193,
+      "block_timestamp:": 1616599944,
+      "extrinsic_index": "193-2"
     },
     {
       "auction_index": 1,
       "first_slot": 1,
       "last_slot": 3,
-      "bidder_account": "dd31c61141abd04a000000000000000000000000000000000",
-      "amount": "3000000000000",
+      "para_id": 199,
+      "bidder_account": "6d6f646c70792f6366756e64c700000000000000000000000000000000000000",
+      "amount": "5000000000000",
       "source": 2,
-      "para_id": 200,
-      "status": 2
+      "status": 2,
+      "block_num": 81,
+      "block_timestamp:": 1616599896,
+      "extrinsic_index": "96-0"
     }
   ]
 }
@@ -192,7 +211,18 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
-| status      | int  | no     |    0     | Enum(1:Created&#124;2:Onboard&#124;3:Dissolved) |
+| fund_index      | int  | no     |    0     | |
+| auction_index      | int  | no     |    0     | |
+| para_id      | int  | no     |    0     | |
+| from_block      | int  | no     |    0     | start blockNum of range query|
+| to_block      | int  | no     |    0     | end blockNum of range query|
+| status      | int  | no     |    0     | Enum(1:Created&#124;2:Leased&#124;3:Dissolved) |
+| source| int  | no     |    0     |  Enum(1:Slot&#124;2:Crowdloan) |
+| from_history| bool  | no     |    false     |   |
+| row     | int    | yes     |
+| page    | int    | yes     |
+|order   |string  |no| last_change_block desc|
+
 
 
 > Example Response
@@ -207,13 +237,16 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
       "fund_index": 199,
       "para_id": 199,
       "auction_index": 1,
-      "owner": "8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48",
+      "owner": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
       "first_slot": 1,
       "last_slot": 3,
-      "cap": "10000000000000",
+      "cap": "50000000000000",
       "end_block": 120,
-      "raised": "1000000000000",
-      "status": 1
+      "raised": "5000000000000",
+      "status": 2,
+      "start_block": 76,
+      "last_change_block": 80,
+      "last_change_timestamp": 1616599892
     },
     {
       "fund_index": 200,
@@ -225,7 +258,10 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
       "cap": "10000000000000",
       "end_block": 50,
       "raised": "500000000000",
-      "status": 2
+      "status": 1,
+      "start_block": 15,
+      "last_change_block": 25,
+      "last_change_timestamp": 1616337852
     }
   ]
 }
@@ -248,6 +284,9 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
 | fund_index      | int  | no     |    0     | |
+| row     | int    | yes     |
+| page    | int    | yes     |
+|order   |string  |no| block_num desc|
 
 
 > Example Response
@@ -261,21 +300,27 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
     {
       "fund_index": 199,
       "who": "8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48",
-      "contributed": "6000000000000"
+      "contributed": "50000000000000",
+      "block_num": 80,
+      "block_timestamp": 1616599892,
+      "extrinsic_index": "80-1"
     },
     {
       "fund_index": 200,
       "who": "90b5ab205c6974c9ea841be688864633dc9ca8a357843eeacf2314649965fe22",
-      "contributed": "5000000000000"
+      "contributed": "5000000000000",
+      "block_num": 120,
+      "block_timestamp": 1617792892,
+      "extrinsic_index": "120-1"
     }
   ]
 }
 ```
 
-## lifecycles
+## chain info
 
 ```shell
-curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/lifecycles' \
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY'
   --data-raw '{
@@ -284,13 +329,17 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/lifecycles' \
 
 ### Request URL
 
-`POST /api/scan/parachain/lifecycles`
+`POST /api/scan/parachain/info`
 
 ### Payload
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
+| para_id      | int  | no     |    0     | |
 | status      | string  | no     |    0     | Enum(Onboarding&#124;Parathread&#124;Parachain) |
+| row     | int    | yes     |
+| page    | int    | yes     |
+|order   |string  |no| |
 
 > Example Response
 
@@ -299,9 +348,14 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/lifecycles' \
   "code": 0,
   "message": "Success",
   "ttl": 1,
-  "data": {
-    "199": "Parathread",
-    "200": "Parachain"
-  }
+  "data": [
+    {
+      "para_id": 199,
+      "status": "Parathread",
+      "genesis_head": "000000000000000000000000000000000000000000000000000000000000000000e8401a2c15ad8f78a875cfcbe190c738ce6620e57ed78afd784c727d96a5754b03170a2e7597b7b7e3d84c05391d139a62b157e78786d8c082f29dcf4c11131400",
+      "manager": "d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
+      "deposit": "47756200000000"
+    }
+  ]
 }
 ```
