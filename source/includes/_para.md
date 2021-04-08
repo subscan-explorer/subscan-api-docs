@@ -502,7 +502,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
 
 ### Request URL
 
-`POST /api/scan/parachain/parachain/list`
+`POST /api/scan/parachain/list`
 
 ### Payload
 
