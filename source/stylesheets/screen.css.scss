@@ -437,11 +437,40 @@ header {
 
     background-color: #f8e8c7 !important;
   }
-
+  h1{
+    position: relative;
+    border-top: 50px solid transparent !important;
+    margin-top: -50px !important;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
+  h1::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+  }
+  h2{
+    position: relative;
+    border-top: 50px solid transparent !important;
+    margin-top: -50px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
+  h2::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+  }
   // h2s right after h1s should bump right up
   // against the h1s.
   h1 + h2, h1 + div + h2 {
-    margin-top: $h1-margin-bottom * -1;
+    margin-top: ($h1-margin-bottom + 50) * -1;
     border-top: none;
   }
 
@@ -658,7 +687,10 @@ header {
     .right-menu {
       margin-right: 0;
       a {
-        margin-left: 8px;
+        margin-right: 8px;
+      }
+      .hide-xs {
+        display: none;
       }
     }
   }
