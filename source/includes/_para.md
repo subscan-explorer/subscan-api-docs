@@ -27,19 +27,15 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
     "proposed_count": 0,
     "approved_count": 0,
     "registered_count": 0,
-    "auction_count": 2,
-    "auction_index": 3,
+    "auction_count": 1,
+    "auction_index": 0,
     "auction_active": false,
-    "auction_info": {
-      "lease_index": 0,
-      "ending_block": 0
-    },
     "fund_count": 2,
     "online_count": 0,
-    "upcoming_count": 2,
-    "lease_period": 14400,
+    "upcoming_count": 3,
+    "lease_period": 300,
     "ending_period": 50,
-    "retirement_period": 3600
+    "retirement_period": 0
   }
 }
 ```
@@ -115,26 +111,72 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
   "code": 0,
   "message": "Success",
   "ttl": 1,
-  "data": [
-    {
-      "auction_index": 2,
-      "lease_index": 1,
-      "start_block": 92,
-      "early_end_block": 102,
-      "end_block": 152,
-      "extinguish_block": 0,
-      "status": 1
-    },
-    {
-      "auction_index": 1,
-      "lease_index": 1,
-      "start_block": 66,
-      "early_end_block": 76,
-      "end_block": 96,
-      "extinguish_block": 0,
-      "status": 2
-    }
-  ]
+  "data": {
+    "auctions": [
+      {
+        "auction_index": 1,
+        "lease_index": 13,
+        "start_block": 4171,
+        "early_end_block": 4221,
+        "end_block": 4271,
+        "extinguish_block": 4226,
+        "status": 2,
+        "winners": [
+          {
+            "bid_id": "1-14-14",
+            "fund_id": "100-1",
+            "auction_index": 1,
+            "first_slot": 14,
+            "last_slot": 14,
+            "para_id": 100,
+            "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+            "bidder_account_display": {
+              "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+              "display": "",
+              "judgements": null,
+              "account_index": "",
+              "identity": false,
+              "parent": null
+            },
+            "bid_count": 0,
+            "amount": "160000000000000",
+            "source": 2,
+            "status": 2,
+            "block_num": 4221,
+            "block_timestamp": 1618484502,
+            "extrinsic_index": "4221-0",
+            "event_index": "4221-2"
+          },
+          {
+            "bid_id": "1-15-16",
+            "fund_id": "",
+            "auction_index": 1,
+            "first_slot": 15,
+            "last_slot": 16,
+            "para_id": 200,
+            "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+            "bidder_account_display": {
+              "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+              "display": "",
+              "judgements": null,
+              "account_index": "",
+              "identity": false,
+              "parent": null
+            },
+            "bid_count": 0,
+            "amount": "10000000000000",
+            "source": 1,
+            "status": 2,
+            "block_num": 4184,
+            "block_timestamp": 1618484274,
+            "extrinsic_index": "4184-3",
+            "event_index": "4184-9"
+          }
+        ]
+      }
+    ],
+    "count": 1
+  }
 }
 ```
 
@@ -155,6 +197,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
 | auction_index      | int  | no     |    0     | |
+| bid_id      | string  | no     |         | |
+| fund_id      | string  | no     |         | |
 | para_id      | int  | no     |    0     | |
 | from_block      | int  | no     |    0     | start blockNum of range query|
 | to_block      | int  | no     |    0     | end blockNum of range query|
@@ -176,31 +220,82 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
   "data": {
     "bids": [
       {
-        "ID": 16,
-        "fund_id": 4,
-        "auction_index": 3,
-        "first_slot": 4,
-        "last_slot": 5,
-        "para_id": 200,
-        "bidder_account": "13UVJyLnbVp77Z2t6rVmRzJSpcNoPWb3kQ5VSBvRm94eCQ2p",
+        "bid_id": "1-13-14",
+        "fund_id": "",
+        "auction_index": 1,
+        "first_slot": 13,
+        "last_slot": 14,
+        "para_id": 300,
+        "bidder_account": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
         "bidder_account_display": {
-          "address": "13UVJyLnbVp77Z2t6rVmRzJSpcNoPWb3kQ5VSBvRm94eCQ2p",
+          "address": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
           "display": "",
           "judgements": null,
-          "parent_display": "",
-          "parent": "",
           "account_index": "",
-          "identity": false
+          "identity": false,
+          "parent": null
         },
-        "amount": "10000000000000",
+        "bid_count": 2,
+        "amount": "20000000000000",
+        "source": 1,
+        "status": 3,
+        "block_num": 4224,
+        "block_timestamp": 1618484520,
+        "extrinsic_index": "4224-2",
+        "event_index": "4224-4"
+      },
+      {
+        "bid_id": "1-14-14",
+        "fund_id": "100-1",
+        "auction_index": 1,
+        "first_slot": 14,
+        "last_slot": 14,
+        "para_id": 100,
+        "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+        "bidder_account_display": {
+          "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+          "display": "modlpy/cfundd",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
+        },
+        "bid_count": 1,
+        "amount": "160000000000000",
         "source": 2,
-        "status": 1,
-        "block_num": 59039,
-        "block_timestamp": 1617036222,
-        "extrinsic_index": ""
+        "status": 2,
+        "block_num": 4221,
+        "block_timestamp": 1618484502,
+        "extrinsic_index": "4221-0",
+        "event_index": "4221-2"
+      },
+      {
+        "bid_id": "1-15-16",
+        "fund_id": "",
+        "auction_index": 1,
+        "first_slot": 15,
+        "last_slot": 16,
+        "para_id": 200,
+        "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+        "bidder_account_display": {
+          "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
+        },
+        "bid_count": 1,
+        "amount": "10000000000000",
+        "source": 1,
+        "status": 2,
+        "block_num": 4184,
+        "block_timestamp": 1618484274,
+        "extrinsic_index": "4184-3",
+        "event_index": "4184-9"
       }
     ],
-    "count": 1
+    "count": 3
   }
 }
 ```
@@ -221,7 +316,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
-| fund_index      | int  | no     |    0     | |
+| fund_id      | string  | no     |         | |
+| bid_id      | string  | no     |         | |
 | auction_index      | int  | no     |    0     | |
 | para_id      | int  | no     |    0     | |
 | from_block      | int  | no     |    0     | start blockNum of range query|
@@ -245,56 +341,58 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
     "count": 2,
     "funds": [
       {
-        "ID": 4,
-        "bid_id": 16,
-        "fund_index": 200,
-        "first_slot": 4,
-        "last_slot": 5,
-        "auction_index": 3,
-        "para_id": 200,
-        "owner": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
-        "owner_display": {
-          "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
-          "display": "",
-          "judgements": null,
-          "parent_display": "",
-          "parent": "",
-          "account_index": "",
-          "identity": false
-        },
-        "cap": "50000000000000",
-        "end_block": 59050,
-        "raised": "0",
-        "status": 3,
-        "start_block": 59015,
-        "last_change_block": 59082,
-        "last_change_timestamp": 1617036480
-      },
-      {
-        "ID": 1,
-        "bid_id": 1,
-        "fund_index": 199,
-        "first_slot": 0,
-        "last_slot": 1,
+        "fund_id": "100-1",
+        "bid_id": "1-14-14",
+        "para_id": 100,
+        "first_slot": 14,
+        "last_slot": 14,
         "auction_index": 1,
-        "para_id": 199,
         "owner": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
+        "cap": "1000000000000000",
+        "end_block": 4250,
+        "raised": "160000000000000",
+        "balance": "160000000000000",
+        "status": 2,
+        "start_block": 4207,
+        "start_block_at": 1618484418,
+        "last_change_block": 4213,
+        "last_change_timestamp": 1618484454,
+        "extrinsic_index": "4207-3",
         "owner_display": {
           "address": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
           "display": "",
           "judgements": null,
-          "parent_display": "",
-          "parent": "",
           "account_index": "",
-          "identity": false
-        },
-        "cap": "50000000000000",
-        "end_block": 1450,
+          "identity": false,
+          "parent": null
+        }
+      },
+      {
+        "fund_id": "300-0",
+        "bid_id": "",
+        "para_id": 300,
+        "first_slot": 14,
+        "last_slot": 14,
+        "auction_index": 0,
+        "owner": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
+        "cap": "1000000000000000",
+        "end_block": 4250,
         "raised": "0",
-        "status": 2,
-        "start_block": 1406,
-        "last_change_block": 57226,
-        "last_change_timestamp": 1617025344
+        "balance": "0",
+        "status": 1,
+        "start_block": 4204,
+        "start_block_at": 1618484400,
+        "last_change_block": 4204,
+        "last_change_timestamp": 1618484400,
+        "extrinsic_index": "4204-2",
+        "owner_display": {
+          "address": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
+        }
       }
     ]
   }
@@ -317,7 +415,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
-| fund_index      | int  | no     |    0     | |
+| fund_id      | string  | no     |    0     | |
 | row     | int    | yes     |
 | page    | int    | yes     |
 |order   |string  |no| block_num desc|
@@ -333,47 +431,67 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
   "data": {
     "contributes": [
       {
-        "ID": 2,
-        "fund_id": 4,
-        "fund_index": 200,
-        "who": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
-        "who_display": {
-          "address": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
-          "display": "",
-          "judgements": null,
-          "parent_display": "",
-          "parent": "",
-          "account_index": "",
-          "identity": false
-        },
-        "contributed": "10000000000000",
-        "block_num": 59022,
-        "block_timestamp": 1617036120,
-        "extrinsic_index": "59022-2",
-        "status": 2
-      },
-      {
-        "ID": 1,
-        "fund_id": 1,
-        "fund_index": 199,
+        "ID": 3,
+        "fund_id": "100-1",
+        "para_id": 100,
         "who": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
         "who_display": {
           "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
           "display": "",
           "judgements": null,
-          "parent_display": "",
-          "parent": "",
           "account_index": "",
-          "identity": false
+          "identity": false,
+          "parent": null
         },
-        "contributed": "12000000000000",
-        "block_num": 1413,
-        "block_timestamp": 1616690466,
-        "extrinsic_index": "1413-2",
-        "status": 2
+        "contributed": "50000000000000",
+        "block_num": 4213,
+        "block_timestamp": 1618484454,
+        "extrinsic_index": "4213-2",
+        "status": 1,
+        "memo": ""
+      },
+      {
+        "ID": 2,
+        "fund_id": "100-1",
+        "para_id": 100,
+        "who": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
+        "who_display": {
+          "address": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
+        },
+        "contributed": "10000000000000",
+        "block_num": 4210,
+        "block_timestamp": 1618484436,
+        "extrinsic_index": "4210-2",
+        "status": 1,
+        "memo": ""
+      },
+      {
+        "ID": 1,
+        "fund_id": "100-1",
+        "para_id": 100,
+        "who": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
+        "who_display": {
+          "address": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
+        },
+        "contributed": "100000000000000",
+        "block_num": 4208,
+        "block_timestamp": 1618484424,
+        "extrinsic_index": "4208-2",
+        "status": 1,
+        "memo": ""
       }
     ],
-    "count": 2
+    "count": 3
   }
 }
 ```
@@ -409,84 +527,174 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
   "code": 0,
   "message": "Success",
   "ttl": 1,
-  "data": 
-    {
-      "chains": [
-        {
-          "para_id": 199,
-          "status": "Onboarding",
-          "genesis_head": "000000000000000000000000000000000000000000000000000000000000000000e8401a2c15ad8f78a875cfcbe190c738ce6620e57ed78afd784c727d96a5754b03170a2e7597b7b7e3d84c05391d139a62b157e78786d8c082f29dcf4c11131400",
-          "validation_code_url": "https://subscan.oss-cn-hangzhou.aliyuncs.com/Parachain/wasm/balala/286f0aa57a9611e0061d635a69f1360c0fb98a17d158dab30838ca8d57f9cc4b",
-          "manager": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
-          "manager_display": {
-            "address": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
+  "data": {
+    "chains": [
+      {
+        "para_id": 200,
+        "status": "Parathread",
+        "genesis_head": "000000000000000000000000000000000000000000000000000000000000000000a31c4ddd6b9dc3505d91f71c40edd4bef3d96c71b5de17be07912d5c21f4ced603170a2e7597b7b7e3d84c05391d139a62b157e78786d8c082f29dcf4c11131400",
+        "validation_code_url": "",
+        "manager": "",
+        "deposit": "0",
+        "validators": "null",
+        "source": 1,
+        "first_slot": 15,
+        "last_slot": 16,
+        "auction_index": 1,
+        "manager_display": null,
+        "winner": {
+          "bid_id": "1-15-16",
+          "fund_id": "",
+          "auction_index": 1,
+          "first_slot": 15,
+          "last_slot": 16,
+          "para_id": 200,
+          "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+          "bidder_account_display": {
+            "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
             "display": "",
             "judgements": null,
-            "parent_display": "",
-            "parent": "",
             "account_index": "",
-            "identity": false
+            "identity": false,
+            "parent": null
           },
-          "deposit": "0",
-          "bids": [
-            {
-              "ID": 1,
-              "fund_id": 1,
-              "auction_index": 1,
-              "first_slot": 0,
-              "last_slot": 1,
-              "para_id": 199,
-              "bidder_account": "13UVJyLnbVp77Z2t6rVVgxkri7hbvxVB1j8ytFEbJKBuvzFq",
-              "bidder_account_display": {
-                "address": "13UVJyLnbVp77Z2t6rVVgxkri7hbvxVB1j8ytFEbJKBuvzFq",
-                "display": "",
-                "judgements": null,
-                "parent_display": "",
-                "parent": "",
-                "account_index": "",
-                "identity": false
-              },
-              "amount": "12000000000000",
-              "source": 2,
-              "status": 2,
-              "block_num": 1478,
-              "block_timestamp": 1616690856,
-              "extrinsic_index": ""
-            }
-          ],
-          "first_slot": 0,
-          "last_slot": 1,
+          "bid_count": 0,
+          "amount": "10000000000000",
+          "source": 1,
+          "status": 2,
+          "block_num": 4184,
+          "block_timestamp": 1618484274,
+          "extrinsic_index": "4184-3",
+          "event_index": "4184-9"
+        },
+        "validators_display": null
+      },
+      {
+        "para_id": 100,
+        "status": "Parathread",
+        "genesis_head": "524544495330303039fa0972656469732d76657205352e302e37fa0a72656469732d62697473c040fa056374696d65c2b901455efa08757365642d6d656dc2e0130f00fa0c616f662d707265616d626c65c000ff124071982090b917",
+        "validation_code_url": "",
+        "manager": "",
+        "deposit": "0",
+        "validators": "null",
+        "source": 2,
+        "first_slot": 14,
+        "last_slot": 14,
+        "auction_index": 1,
+        "manager_display": null,
+        "winner": {
+          "bid_id": "1-14-14",
+          "fund_id": "100-1",
+          "auction_index": 1,
+          "first_slot": 14,
+          "last_slot": 14,
+          "para_id": 100,
+          "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+          "bidder_account_display": {
+            "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+            "display": "modlpy/cfundd",
+            "judgements": null,
+            "account_index": "",
+            "identity": false,
+            "parent": null
+          },
+          "bid_count": 0,
+          "amount": "160000000000000",
           "source": 2,
-          "winner": {
-            "ID": 1,
-            "fund_id": 1,
-            "auction_index": 1,
-            "first_slot": 0,
-            "last_slot": 1,
-            "para_id": 199,
-            "bidder_account": "13UVJyLnbVp77Z2t6rVVgxkri7hbvxVB1j8ytFEbJKBuvzFq",
-            "bidder_account_display": {
-              "address": "13UVJyLnbVp77Z2t6rVVgxkri7hbvxVB1j8ytFEbJKBuvzFq",
-              "display": "",
-              "judgements": null,
-              "parent_display": "",
-              "parent": "",
-              "account_index": "",
-              "identity": false
-            },
-            "amount": "12000000000000",
-            "source": 2,
-            "status": 2,
-            "block_num": 1478,
-            "block_timestamp": 1616690856,
-            "extrinsic_index": ""
-          },
-          "validators": null
-        }
-      ],
-      "count": 1
+          "status": 2,
+          "block_num": 4221,
+          "block_timestamp": 1618484502,
+          "extrinsic_index": "4221-0",
+          "event_index": "4221-2"
+        },
+        "validators_display": null
+      }
+    ],
+    "count": 3
+  }
+}
+```
+
+
+## auction prediction
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/predict`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| auction_index      | int  | no     |    0     | |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": [
+    {
+      "bid_id": "1-14-14",
+      "fund_id": "100-1",
+      "auction_index": 1,
+      "first_slot": 14,
+      "last_slot": 14,
+      "para_id": 100,
+      "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+      "bidder_account_display": {
+        "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
+        "display": "modlpy/cfundd",
+        "judgements": null,
+        "account_index": "",
+        "identity": false,
+        "parent": null
+      },
+      "bid_count": 1,
+      "amount": "160000000000000",
+      "source": 2,
+      "status": 2,
+      "block_num": 4221,
+      "block_timestamp": 1618484502,
+      "extrinsic_index": "4221-0",
+      "event_index": "4221-2"
+    },
+    {
+      "bid_id": "1-15-16",
+      "fund_id": "",
+      "auction_index": 1,
+      "first_slot": 15,
+      "last_slot": 16,
+      "para_id": 200,
+      "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+      "bidder_account_display": {
+        "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+        "display": "",
+        "judgements": null,
+        "account_index": "",
+        "identity": false,
+        "parent": null
+      },
+      "bid_count": 1,
+      "amount": "10000000000000",
+      "source": 1,
+      "status": 2,
+      "block_num": 4184,
+      "block_timestamp": 1618484274,
+      "extrinsic_index": "4184-3",
+      "event_index": "4184-9"
     }
-  
+  ]
 }
 ```
 
