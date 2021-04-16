@@ -698,3 +698,54 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
 }
 ```
 
+## parachain list 
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/list`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| status    | string  | no     |    0     | Enum(Onboarding&#124;Parathread&#124;Parachain) |
+| row       | int    | yes     |
+| page      | int    | yes     |
+| order     |string  |no       |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": {
+        "chains": [
+            {
+                "para_id": 1983,
+                "status": "Parachain",
+                "first_slot": 12,
+                "last_slot": 13,
+                "manager_display": {
+                    "address": "5F2FJzwc8Ch6L5zejKh43DqXXCU3qSxeN8WTd3e3AwTfbCDe",
+                    "display": "",
+                    "judgements": null,
+                    "account_index": "",
+                    "identity": false,
+                    "parent": null
+                }
+            }
+        ],
+        "count": 9
+    }
+}
+```
