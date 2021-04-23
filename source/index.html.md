@@ -56,19 +56,28 @@ The endpoints corresponding to the following networks are all available.
 | Centrifuge    | <https://centrifuge.api.subscan.io/>   |
 | Plasm         | <https://plasm.api.subscan.io/>        |
 | Kulupu        | <https://kulupu.api.subscan.io/>       |
+| Clover        | <https://clover.api.subscan.io/>       |
 | Stafi         | <https://stafi.api.subscan.io/>        |
 | Equilibrium   | <https://equilibrium.api.subscan.io/>  |
+| DataHighway   | <https://datahighway.api.subscan.io/>  |
+| Dock          | <https://dock.api.subscan.io/>         |
 
 **Test network**
 
 | Network         | API Endpoint                              |
 | --------------- | ----------------------------------------- |
+| Rococo          | <https://rococo.api.subscan.io/>          |
 | Westend         | <https://westend.api.subscan.io/>         |
+| Moonbase        | <https://moonbase.api.subscan.io/>        |
+| Clover Testnet  | <https://clover-testnet.api.subscan.io/>  |
+| Gateway         | <https://gateway-testnet.api.subscan.io/> |
 | Acala Mandala   | <https://acala-testnet.api.subscan.io/>   |
 | Phala Rorschach | <https://phala.api.subscan.io/>           |
 | Bifrost Asgard  | <https://bifrost.api.subscan.io/>         |
 | Crust Maxwell   | <https://crust.api.subscan.io/>           |
+| DataHighway Harbour  | <https://datahighway-harbour.api.subscan.io/>  |
 | Laminar TC2     | <https://laminar-testnet.api.subscan.io/> |
+| Pangolin        | <https://pangolin.api.subscan.io/>        |
 
 # Service Level Agreement
 
