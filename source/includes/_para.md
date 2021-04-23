@@ -418,7 +418,9 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 | fund_id      | string  | no     |    0     | |
 | row     | int    | yes     |
 | page    | int    | yes     |
-|order   |string  |no| block_num desc|
+| order   |string  |no| block_num desc|
+| from_history   |bool  |no| false|
+
 
 
 > Example Response
@@ -747,5 +749,66 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
         ],
         "count": 9
     }
+}
+```
+
+## auction competitors
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctionCompetitors' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/auctionCompetitors`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| auction_index      | int  | no     |    0     | |
+| includingFund      | bool  | no     |    false     | |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": {
+    "1-1": [
+      {
+        "bid_id": "1-1-1",
+        "fund_id": "200-0",
+        "auction_index": 1,
+        "first_slot": 1,
+        "last_slot": 1,
+        "para_id": 200,
+        "bidder_account": "5EYCAe5ijiYdg22N9DSmHqUHxzP9hD2ufuM1Gtw5D43829Z8",
+        "bidder_account_display": {
+          "address": "5EYCAe5ijiYdg22N9DSmHqUHxzP9hD2ufuM1Gtw5D43829Z8",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
+        },
+        "bid_count": 0,
+        "amount": "25000000000000",
+        "source": 2,
+        "status": 2,
+        "block_num": 150,
+        "block_timestamp": 1619058966,
+        "extrinsic_index": "150-0",
+        "event_index": "150-4"
+      },
+      ...
+    ]
+  }
 }
 ```
