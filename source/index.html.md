@@ -13,6 +13,7 @@ includes:
   - runtime
   - v2
   - para
+  - evm
 
 search: false
 
