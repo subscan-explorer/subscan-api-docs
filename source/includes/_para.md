@@ -327,6 +327,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 | row     | int    | yes     |
 | page    | int    | yes     |
 |order   |string  |no| last_change_block desc|
+|progress   |bool  |no| Filtering in progress crowdloan|
 
 
 
