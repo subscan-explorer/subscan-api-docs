@@ -313,6 +313,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsics' \
 | address | string | no      |
 | module  | string | no      |
 | call    | string | no      |
+| block_num| int | no      |
+
 
 > Example Response
 
@@ -504,6 +506,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/events' \
 | page   | int    | yes     |
 | module | string | no      |
 | call   | string | no      |
+| block_num | int  | no      |
 
 > Example Response
 
