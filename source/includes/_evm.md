@@ -54,3 +54,137 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/block' \
     }
 }
 ```
+
+
+## transactions
+
+Get evm transactions by blockNum
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "block_num": 5226287
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/transactions`
+
+### Payload
+
+| Name | Type   | Require |
+| ---- | ------ | ------- |
+| block_num  | int | yes     |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": [
+    {
+      "hash": "0x3b9c2b978a72b1f4b220c0640ada12bcb894cf692a0e7a1faca33f0acb7d6fde",
+      "from": "0xa1511e5c683a007056caa1d9a8d6a37464826280",
+      "to": "0x7139e2b08d58987a4327b11fec388536cc65d37a",
+      "value": "0",
+      "gas_used": "0",
+      "success": true
+    }
+  ]
+}
+```
+
+
+## account tokens
+
+Get evm tokens by account address
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/account/tokens' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "address": "0x3217f36ae34aca2ce60d218af8f47d29101204a8"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/account/tokens`
+
+### Payload
+
+| Name | Type   | Require |
+| ---- | ------ | ------- |
+| address  | string | yes     |
+
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": [
+        {
+            "contract": "0x7139e2b08d58987a4327b11fec388536cc65d37a",
+            "holder": "0xbb3e51d20ca651fbe19b1a1c2a6c8b1a4d950437",
+            "balance": "9999000000000000000000"
+        }
+    ]
+}
+```
+
+
+## erc20 tokens
+
+Get evm tokens info by contract address
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "contracts": ["0x7139e2b08d58987a4327b11fec388536cc65d37a"]
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/account/tokens`
+
+### Payload
+
+| Name | Type   | Require |
+| ---- | ------ | ------- |
+| contracts  | array | yes     |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "ttl": 1,
+  "data": [
+    {
+      "contract": "0x7139e2b08d58987a4327b11fec388536cc65d37a",
+      "name": "Darwinia Network Native Token",
+      "symbol": "RING",
+      "decimals": 18,
+      "totalSupply": "1000000000000000000",
+      "holders": 14,
+      "transfer_count": 21,
+      "price": "0"
+    }
+  ]
+}
+```
