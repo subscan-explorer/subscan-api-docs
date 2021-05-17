@@ -188,3 +188,97 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
   ]
 }
 ```
+
+
+## transaction
+
+Get evm transaction
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transaction' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "hash": 0x3b9c2b978a72b1f4b220c0640ada12bcb894cf692a0e7a1faca33f0acb7d6fde
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/transaction`
+
+### Payload
+
+| Name | Type   | Require |
+| ---- | ------ | ------- |
+| hash  | string | no     |
+| extrinsic_index  | string | no     |
+
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": {
+        "block_num": 5145082,
+        "hash": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6",
+        "block_timestamp": 1620383694,
+        "success": true,
+        "error_type": "",
+        "error_msg": "Returned",
+        "from": "0xbb3e51d20ca651fbe19b1a1c2a6c8b1a4d950437",
+        "to": {
+            "address": "0xd6fc3e187da47e33774b25c3d0adc619032bf686",
+            "is_contract": true,
+            "precompile_name": ""
+        },
+        "value": "1000000000000000000",
+        "gas_limit": "3000000",
+        "gas_price": "1000000000",
+        "gas_used": "0",
+        "nonce": 18,
+        "input_data": "f305d7190000000000000000000000000eae9babe944105dd3e0d81c24ef1f6f63d463c70000000000000000000000000000000000000000000000008ac7230489e8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000de0b6b3a7640000000000000000000000000000bb3e51d20ca651fbe19b1a1c2a6c8b1a4d9504370000000000000000000000000000000000000000000000000000000060953eb4",
+        "token_transfers": [
+            {
+                "contract": "0x0eae9babe944105dd3e0d81c24ef1f6f63d463c7",
+                "hash": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6",
+                "create_at": 1620383694,
+                "from": "0xbb3e51d20ca651fbe19b1a1c2a6c8b1a4d950437",
+                "to": "0x6b0e1c0c971b998593fb9b5abd17b5ed9b0c4f8f",
+                "value": "10000000000000000000",
+                "receipt_index": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6-1"
+            },
+            {
+                "contract": "0x6b0e1c0c971b998593fb9b5abd17b5ed9b0c4f8f",
+                "hash": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6",
+                "create_at": 1620383694,
+                "from": "0x0000000000000000000000000000000000000000",
+                "to": "0x0000000000000000000000000000000000000000",
+                "value": "1000",
+                "receipt_index": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6-5"
+            },
+            {
+                "contract": "0x6b0e1c0c971b998593fb9b5abd17b5ed9b0c4f8f",
+                "hash": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6",
+                "create_at": 1620383694,
+                "from": "0x0000000000000000000000000000000000000000",
+                "to": "0xbb3e51d20ca651fbe19b1a1c2a6c8b1a4d950437",
+                "value": "3162277660168378331",
+                "receipt_index": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6-6"
+            },
+            {
+                "contract": "0xa3ee184ed6ea8fa276afa282980f83a7091b1e8c",
+                "hash": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6",
+                "create_at": 1620383694,
+                "from": "0xd6fc3e187da47e33774b25c3d0adc619032bf686",
+                "to": "0x6b0e1c0c971b998593fb9b5abd17b5ed9b0c4f8f",
+                "value": "1000000000000000000",
+                "receipt_index": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6-4"
+            }
+        ]
+    }
+}
+```
