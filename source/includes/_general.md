@@ -794,6 +794,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
 | row     | int    | yes     |
 | page    | int    | yes     |
 | address | string | no      |
+| from_block | int    | no     |
+| to_block   | int    | no     |
 
 > Example Response
 
