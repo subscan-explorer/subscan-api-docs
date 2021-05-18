@@ -158,7 +158,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
 
 ### Request URL
 
-`POST /api/scan/evm/account/tokens`
+`POST /api/scan/evm/tokens`
 
 ### Payload
 
@@ -280,5 +280,46 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transaction' \
             }
         ]
     }
+}
+```
+
+## contracts
+
+Get contracts by contract address
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contracts' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "contracts": ["0x7139e2b08d58987a4327b11fec388536cc65d37a"]
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/contracts`
+
+### Payload
+
+| Name | Type   | Require |
+| ---- | ------ | ------- |
+| contracts  | array | yes     |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": [
+        {
+            "address": "0x02c1de58fc5cd6e97385d6234fe6d95856fa1cc1",
+            "deployer": "0x0f14341a7f464320319025540e8fe48ad0fe5aec",
+            "block_num": 4998447,
+            "deploy_at": 1619496876
+        }
+    ]
 }
 ```
