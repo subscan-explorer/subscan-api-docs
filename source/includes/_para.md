@@ -1,4 +1,4 @@
-# ParaChain API
+# ParaChain API (unstable)
 
 ## meta
 
@@ -126,8 +126,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
             "bid_id": "1-14-14",
             "fund_id": "100-1",
             "auction_index": 1,
-            "first_slot": 14,
-            "last_slot": 14,
+            "first_period": 14,
+            "last_period": 14,
             "para_id": 100,
             "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
             "bidder_account_display": {
@@ -151,8 +151,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
             "bid_id": "1-15-16",
             "fund_id": "",
             "auction_index": 1,
-            "first_slot": 15,
-            "last_slot": 16,
+            "first_period": 15,
+            "last_period": 16,
             "para_id": 200,
             "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
             "bidder_account_display": {
@@ -223,8 +223,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
         "bid_id": "1-13-14",
         "fund_id": "",
         "auction_index": 1,
-        "first_slot": 13,
-        "last_slot": 14,
+        "first_period": 13,
+        "last_period": 14,
         "para_id": 300,
         "bidder_account": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
         "bidder_account_display": {
@@ -248,8 +248,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
         "bid_id": "1-14-14",
         "fund_id": "100-1",
         "auction_index": 1,
-        "first_slot": 14,
-        "last_slot": 14,
+        "first_period": 14,
+        "last_period": 14,
         "para_id": 100,
         "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
         "bidder_account_display": {
@@ -273,8 +273,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
         "bid_id": "1-15-16",
         "fund_id": "",
         "auction_index": 1,
-        "first_slot": 15,
-        "last_slot": 16,
+        "first_period": 15,
+        "last_period": 16,
         "para_id": 200,
         "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
         "bidder_account_display": {
@@ -345,8 +345,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
         "fund_id": "100-1",
         "bid_id": "1-14-14",
         "para_id": 100,
-        "first_slot": 14,
-        "last_slot": 14,
+        "first_period": 14,
+        "last_period": 14,
         "auction_index": 1,
         "owner": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
         "cap": "1000000000000000",
@@ -372,8 +372,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
         "fund_id": "300-0",
         "bid_id": "",
         "para_id": 300,
-        "first_slot": 14,
-        "last_slot": 14,
+        "first_period": 14,
+        "last_period": 14,
         "auction_index": 0,
         "owner": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
         "cap": "1000000000000000",
@@ -541,16 +541,16 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
         "deposit": "0",
         "validators": "null",
         "source": 1,
-        "first_slot": 15,
-        "last_slot": 16,
+        "first_period": 15,
+        "last_period": 16,
         "auction_index": 1,
         "manager_display": null,
         "winner": {
           "bid_id": "1-15-16",
           "fund_id": "",
           "auction_index": 1,
-          "first_slot": 15,
-          "last_slot": 16,
+          "first_period": 15,
+          "last_period": 16,
           "para_id": 200,
           "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
           "bidder_account_display": {
@@ -581,16 +581,16 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
         "deposit": "0",
         "validators": "null",
         "source": 2,
-        "first_slot": 14,
-        "last_slot": 14,
+        "first_period": 14,
+        "last_period": 14,
         "auction_index": 1,
         "manager_display": null,
         "winner": {
           "bid_id": "1-14-14",
           "fund_id": "100-1",
           "auction_index": 1,
-          "first_slot": 14,
-          "last_slot": 14,
+          "first_period": 14,
+          "last_period": 14,
           "para_id": 100,
           "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
           "bidder_account_display": {
@@ -651,8 +651,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
       "bid_id": "1-14-14",
       "fund_id": "100-1",
       "auction_index": 1,
-      "first_slot": 14,
-      "last_slot": 14,
+      "first_period": 14,
+      "last_period": 14,
       "para_id": 100,
       "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
       "bidder_account_display": {
@@ -676,8 +676,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
       "bid_id": "1-15-16",
       "fund_id": "",
       "auction_index": 1,
-      "first_slot": 15,
-      "last_slot": 16,
+      "first_period": 15,
+      "last_period": 16,
       "para_id": 200,
       "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
       "bidder_account_display": {
@@ -736,8 +736,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
             {
                 "para_id": 1983,
                 "status": "Parachain",
-                "first_slot": 12,
-                "last_slot": 13,
+                "first_period": 12,
+                "last_period": 13,
                 "manager_display": {
                     "address": "5F2FJzwc8Ch6L5zejKh43DqXXCU3qSxeN8WTd3e3AwTfbCDe",
                     "display": "",
@@ -787,8 +787,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctionCompetitor
         "bid_id": "1-1-1",
         "fund_id": "200-0",
         "auction_index": 1,
-        "first_slot": 1,
-        "last_slot": 1,
+        "first_period": 1,
+        "last_period": 1,
         "para_id": 200,
         "bidder_account": "5EYCAe5ijiYdg22N9DSmHqUHxzP9hD2ufuM1Gtw5D43829Z8",
         "bidder_account_display": {
