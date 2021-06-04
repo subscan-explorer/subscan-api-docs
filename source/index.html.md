@@ -14,6 +14,7 @@ includes:
   - v2
   - para
   - evm
+  - gateway
 
 search: false
 
