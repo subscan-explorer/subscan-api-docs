@@ -1,6 +1,6 @@
 # gateway spec
 
-## validators
+## gateway-validators
 
 validators list 
 
@@ -32,7 +32,7 @@ curl -X POST 'https://gateway-testnet.subscan.io/api/scan/cash/validators' \
 }
 ```
 
-## accounts list
+## gateway-accounts
 
 Account list
 
