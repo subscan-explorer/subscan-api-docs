@@ -23,64 +23,53 @@ code_clipboard: true
 
 # Introduction
 
-Welcome to the Subscan API! Using our APIs, we provide a simple way to access chain data of more than 10+ substrate-based networks!
+With Subscan API, we provide a simple way to access the chain data of more than 10 substrate-based networks.
 
-This API reference includes all technical documentation developers need to integrate with Subscan. We have language bindings in Shell and the cURL command. You can view code examples in the dark area to the right.
+If you have any question or suggestion, please do not hesitate to contact our API support via [api@subscan.io](mailto:api@subscan.io).
 
-<aside class="info">
-In order to provide better reliability and responsiveness, Subscan recently upgraded the backend architecture and the new API endpoints are now available on https://[NETWORK].api.subscan.io/
-<br/>
-<br/>
-The legacy endpoints have been deprecated and will be removed by June 1st, 2021. Please update your apps that use the legacy endpoints so as to avoid any service interruption.
-<br/>
-<br/>
-You can apply by the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform">form</a> to get a free API key that includes higher quotas or start your trial with other subscriptions!
-</aside>
+The documentation was created with [Slate](https://github.com/slatedocs/slate) and hosted on [GitHub](https://github.com/itering/subscan-api-docs).
 
-If you have any question or suggestion, please do not hesitate to contact our API support: [api@subscan.io](mailto:api@subscan.io)!
+## API Keys
 
-This documentation was created with [Slate](https://github.com/slatedocs/slate). Help us improve the docs on [GitHub](https://github.com/itering/subscan-api-docs).
+**[Apply this form](https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform) to get a free API key that includes higher quotas or start your trial with other subscriptions!**
 
-# Endpoints
+## Service Status
 
-The endpoints corresponding to the following networks are all available.
+The service status of Subscan API can be found on our [status page](https://subscan.statuspage.io).
 
-**Live network**
-
-| Network       | API Endpoint                           |
-| ------------- | -------------------------------------- |
-| Polkadot      | <https://polkadot.api.subscan.io/>     |
-| Kusama        | <https://kusama.api.subscan.io/>       |
-| Darwinia      | <https://darwinia-cc1.api.subscan.io/> |
-| Darwinia Crab | <https://crab.api.subscan.io/>         |
-| ChainX        | <https://chainx.api.subscan.io/>       |
-| Edgeware      | <https://edgeware.api.subscan.io/>     |
-| Centrifuge    | <https://centrifuge.api.subscan.io/>   |
-| Plasm         | <https://plasm.api.subscan.io/>        |
-| Kulupu        | <https://kulupu.api.subscan.io/>       |
-| Clover        | <https://clover.api.subscan.io/>       |
-| Stafi         | <https://stafi.api.subscan.io/>        |
-| Equilibrium   | <https://equilibrium.api.subscan.io/>  |
-| DataHighway   | <https://datahighway.api.subscan.io/>  |
-| Dock          | <https://dock.api.subscan.io/>         |
-
-**Test network**
-
-| Network         | API Endpoint                              |
-| --------------- | ----------------------------------------- |
-| Rococo          | <https://rococo.api.subscan.io/>          |
-| Westend         | <https://westend.api.subscan.io/>         |
-| Moonbase        | <https://moonbase.api.subscan.io/>        |
-| Clover Testnet  | <https://clover-testnet.api.subscan.io/>  |
-| Gateway         | <https://gateway-testnet.api.subscan.io/> |
-| Acala Mandala   | <https://acala-testnet.api.subscan.io/>   |
-| Phala Rorschach | <https://phala.api.subscan.io/>           |
-| Bifrost Asgard  | <https://bifrost.api.subscan.io/>         |
-| Crust Maxwell   | <https://crust.api.subscan.io/>           |
-| DataHighway Harbour  | <https://datahighway-harbour.api.subscan.io/>  |
-| Laminar TC2     | <https://laminar-testnet.api.subscan.io/> |
-| Pangolin        | <https://pangolin.api.subscan.io/>        |
-
-# Service Level Agreement
+## Service Level Agreement
 
 We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us ([api@subscan.io](mailto:api@subscan.io)) for more detail.
+
+## Endpoints
+
+Please notice that the list of the endpoints is maintained mannually and it might be outdated. In fact, every individual network supported on Subscan.io will have available API endpoint as well. The naming convention of the endpoints are `https://NETWORK_NAME.api.subscan.io` where the `NETWORK_NAME` is the same as the subdomain of the corresponding network on subscan.io.
+
+| Network                                 | API Endpoint                                  |
+| --------------------------------------- | --------------------------------------------- |
+| Polkadot                                | <https://polkadot.api.subscan.io/>            |
+| Kusama                                  | <https://kusama.api.subscan.io/>              |
+| Darwinia                                | <https://darwinia.api.subscan.io/>            |
+| Darwinia Crab                           | <https://crab.api.subscan.io/>                |
+| ChainX                                  | <https://chainx.api.subscan.io/>              |
+| Edgeware                                | <https://edgeware.api.subscan.io/>            |
+| Centrifuge                              | <https://centrifuge.api.subscan.io/>          |
+| Plasm                                   | <https://plasm.api.subscan.io/>               |
+| Kulupu                                  | <https://kulupu.api.subscan.io/>              |
+| Clover                                  | <https://clover.api.subscan.io/>              |
+| Stafi                                   | <https://stafi.api.subscan.io/>               |
+| Equilibrium                             | <https://equilibrium.api.subscan.io/>         |
+| DataHighway                             | <https://datahighway.api.subscan.io/>         |
+| Dock                                    | <https://dock.api.subscan.io/>                |
+| Rococo                                  | <https://rococo.api.subscan.io/>              |
+| Westend                                 | <https://westend.api.subscan.io/>             |
+| Moonbase                                | <https://moonbase.api.subscan.io/>            |
+| Clover Testnet                          | <https://clover-testnet.api.subscan.io/>      |
+| Gateway                                 | <https://gateway-testnet.api.subscan.io/>     |
+| Acala Mandala                           | <https://acala-testnet.api.subscan.io/>       |
+| Phala Rorschach                         | <https://phala.api.subscan.io/>               |
+| Bifrost Asgard                          | <https://bifrost.api.subscan.io/>             |
+| Crust Maxwell                           | <https://crust.api.subscan.io/>               |
+| DataHighway Harbour                     | <https://datahighway-harbour.api.subscan.io/> |
+| Laminar TC2                             | <https://laminar-testnet.api.subscan.io/>     |
+| Pangolin                                | <https://pangolin.api.subscan.io/>            |
