@@ -444,6 +444,7 @@ header {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
+    pointer-events: none;
   }
   h1::before {
     content: "";
@@ -459,6 +460,7 @@ header {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
+    pointer-events: none;
   }
   h2::before {
     content: "";
