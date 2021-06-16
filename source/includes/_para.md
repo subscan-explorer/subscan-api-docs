@@ -209,6 +209,9 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 | row     | int    | yes     |
 | page    | int    | yes     |
 |order   |string  |no| block_num desc|
+|first_period   |int  |no| first period |
+|last_period    |int  |no| last period |
+
 
 > Example Response
 
@@ -328,7 +331,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 | page    | int    | yes     |
 |order   |string  |no| last_change_block desc|
 |progress   |bool  |no| Filtering in progress crowdloan|
-
+|first_period   |int  |no| first period |
+|last_period    |int    |no| last period |
 
 
 > Example Response
