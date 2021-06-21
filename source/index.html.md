@@ -39,39 +39,45 @@ The service status of Subscan API can be found on our [status page](https://subs
 
 ## Service Level Agreement
 
-We can provide our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment. Please contact us ([api@subscan.io](mailto:api@subscan.io)) for more detail.
+Subscan provides our customers the Service Level Agreement (SLA), which includes **Monthly Uptime Percentage** commitment for multiple networks. Please contact us ([api@subscan.io](mailto:api@subscan.io)) for more information.
 
-## Endpoints
+## API Endpoints
 
-Please notice that the list of the endpoints is maintained mannually and it might be outdated. In fact, every individual network supported on Subscan.io will have available API endpoint as well. The naming convention of the endpoints are `https://NETWORK_NAME.api.subscan.io` where the `NETWORK_NAME` is the same as the subdomain of the corresponding network on subscan.io.
+Please notice before you get started:
 
-| Network                                 | API Endpoint                                  |
-| --------------------------------------- | --------------------------------------------- |
-| Polkadot                                | <https://polkadot.api.subscan.io/>            |
-| Kusama                                  | <https://kusama.api.subscan.io/>              |
-| Darwinia                                | <https://darwinia.api.subscan.io/>            |
-| Darwinia Crab                           | <https://crab.api.subscan.io/>                |
-| ChainX                                  | <https://chainx.api.subscan.io/>              |
-| Edgeware                                | <https://edgeware.api.subscan.io/>            |
-| Centrifuge                              | <https://centrifuge.api.subscan.io/>          |
-| Plasm                                   | <https://plasm.api.subscan.io/>               |
-| Kulupu                                  | <https://kulupu.api.subscan.io/>              |
-| Clover                                  | <https://clover.api.subscan.io/>              |
-| KILT Mashnet                            | <https://kilt-testnet.api.subscan.io/>        |
-| DeepBrain Chain                         | <https://dbc.api.subscan.io/>                 |
-| Stafi                                   | <https://stafi.api.subscan.io/>               |
-| Equilibrium                             | <https://equilibrium.api.subscan.io/>         |
-| DataHighway                             | <https://datahighway.api.subscan.io/>         |
-| Dock                                    | <https://dock.api.subscan.io/>                |
-| Rococo                                  | <https://rococo.api.subscan.io/>              |
-| Westend                                 | <https://westend.api.subscan.io/>             |
-| Moonbase                                | <https://moonbase.api.subscan.io/>            |
-| Clover Testnet                          | <https://clover-testnet.api.subscan.io/>      |
-| Gateway                                 | <https://gateway-testnet.api.subscan.io/>     |
-| Acala Mandala                           | <https://acala-testnet.api.subscan.io/>       |
-| Phala Rorschach                         | <https://phala.api.subscan.io/>               |
-| Bifrost Asgard                          | <https://bifrost.api.subscan.io/>             |
-| Crust Maxwell                           | <https://crust.api.subscan.io/>               |
-| DataHighway Harbour                     | <https://datahighway-harbour.api.subscan.io/> |
-| Laminar TC2                             | <https://laminar-testnet.api.subscan.io/>     |
-| Pangolin                                | <https://pangolin.api.subscan.io/>            |
+1. The following endpoints list is maintained mannually and it might be outdated. In fact, every individual network supported on Subscan.io will have available API endpoint as well. The endpoint naming convention is `https://$NETWORK_NAME.api.subscan.io` where the `$NETWORK_NAME` is the same as the subdomain of the corresponding network on Subscan.io.
+
+2. All the endpoints are forced to HTTPS only. Please make sure you use `https://` with the API hosts.
+
+3. The API endpoints of several networks are excluded from our SLA for now. It might because: 1) the network is a testnet, not as stable as a mainnet, or could be reset in a relatively higher chance; 2) the chain RPC that Subscan relied on is maintained by others (e.g. the chain developers). We may update the covered list in the future. Please let us know if you want to have other networks included in the SLA.
+
+| Network             | API Host                             | SLA Covered |
+| ------------------- | ------------------------------------ | ----------- |
+| Polkadot            | `polkadot.api.subscan.io`            | *           |
+| Kusama              | `kusama.api.subscan.io`              | *           |
+| Darwinia            | `darwinia.api.subscan.io`            | *           |
+| Darwinia Crab       | `crab.api.subscan.io`                | *           |
+| Edgeware            | `edgeware.api.subscan.io`            | *           |
+| ChainX              | `chainx.api.subscan.io`              | *           |
+| Kulupu              | `kulupu.api.subscan.io`              | *           |
+| Acala Mandala       | `acala-testnet.api.subscan.io`       |             |
+| Bifrost Asgard      | `bifrost.api.subscan.io`             |             |
+| Centrifuge          | `centrifuge.api.subscan.io`          |             |
+| Clover              | `clover.api.subscan.io`              |             |
+| Clover Testnet      | `clover-testnet.api.subscan.io`      |             |
+| Crust Maxwell       | `crust.api.subscan.io`               |             |
+| DataHighway         | `datahighway.api.subscan.io`         |             |
+| DataHighway Harbour | `datahighway-harbour.api.subscan.io` |             |
+| DeepBrain Chain     | `dbc.api.subscan.io`                 |             |
+| Dock                | `dock.api.subscan.io`                |             |
+| Equilibrium         | `equilibrium.api.subscan.io`         |             |
+| Gateway             | `gateway-testnet.api.subscan.io`     |             |
+| KILT Mashnet        | `kilt-testnet.api.subscan.io`        |             |
+| Laminar TC2         | `laminar-testnet.api.subscan.io`     |             |
+| Moonbase            | `moonbase.api.subscan.io`            |             |
+| Pangolin            | `pangolin.api.subscan.io`            |             |
+| Phala Rorschach     | `phala.api.subscan.io`               |             |
+| Plasm               | `plasm.api.subscan.io`               |             |
+| Rococo              | `rococo.api.subscan.io`              |             |
+| Stafi               | `stafi.api.subscan.io`               |             |
+| Westend             | `westend.api.subscan.io`             |             |
