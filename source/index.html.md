@@ -57,6 +57,8 @@ Please notice that the list of the endpoints is maintained mannually and it migh
 | Plasm                                   | <https://plasm.api.subscan.io/>               |
 | Kulupu                                  | <https://kulupu.api.subscan.io/>              |
 | Clover                                  | <https://clover.api.subscan.io/>              |
+| KILT Mashnet                            | <https://kilt-testnet.api.subscan.io/>        |
+| DeepBrain Chain                         | <https://dbc.api.subscan.io/>                 |
 | Stafi                                   | <https://stafi.api.subscan.io/>               |
 | Equilibrium                             | <https://equilibrium.api.subscan.io/>         |
 | DataHighway                             | <https://datahighway.api.subscan.io/>         |
