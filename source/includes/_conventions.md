@@ -1,14 +1,20 @@
-# Conventions
+# Global Conventions
 
 ## `X-API-Key` Header
 
 The `X-API-Key` or `x-api-key` (case-insensitive) request header is the authentication method that Subscan API uses to determine the identity and rate limits.
 
+**[Apply this form](https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform) to get a free API key that includes higher quotas or start your trial with other subscriptions!**
+
 ## Rate Limiting
 
 Each Subscan API key has a request quota, for example, 30 requests per second at most.
 
-> If the API key is incorrect or doesn't exist in the request, it then fallbacks to your public IP address. The quotas of no-key access are relatively lower and designed for testing purposes only. Contact us to get a free API key that includes higher quotas or start your trial with other subscriptions!
+<aside class="info">
+
+If the API key is incorrect or doesn't exist in the request, it then fallbacks to your public IP address. The quotas of no-key access are relatively lower and designed for testing purposes only.
+
+</aside>
 
 Currently, the quotas are global - shared across all APIs, all networks, and all client IP addresses as well. For instance, if an API key has a quota of *10* requests per second:
 
@@ -65,12 +71,13 @@ It is highly recommended to build your client with a backoff strategy to wait fo
 
 The table down below lists several HTTP status codes that Subscan might respond.
 
-| Code                      | Meaning                                                                                                                   |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 200 OK                    | The request was handled without any error.                                                                                |
-| 401 Unauthorized          | The credentials is either not found or invalid. Please refer to the `message` field in the JSON response for more detail. |
-| 404 Not Found             | The HTTP method or request URI was most likely wrong.                                                                     |
-| 429 Too Many Requests     | The requests hit the rate limit. Please refer to the HTTP headers `ratelimit-limit`, `ratelimit-reset` for more detail.   |
-| 500 Internal Server Error | The servers could not respond your request due to probably a bug.                                                         |
-| 502 Bad Gateway           | The servers could not respond your request due to probably a bug.                                                         |
-| 503 Service Unavailable   | The services were under maintenance. Please try again later.                                                              |
+| Code                      | Meaning                                                                                                                                         |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 200 OK                    | The request was handled without any error.                                                                                                      |
+| 401 Unauthorized          | The credentials is either not found or invalid. Please refer to the `message` field in the JSON response for more detail.                       |
+| 404 Not Found             | The HTTP method or request URI was most likely wrong.                                                                                           |
+| 429 Too Many Requests     | The request hits the rate limit. Please request an API key with higher quotas.                                                                  |
+| 500 Internal Server Error | The servers could not respond your request due to an internal error. Find more information on our [status page](https://subscan.statuspage.io). |
+| 502 Bad Gateway           | The servers could not respond your request due to an internal error. Find more information on our [status page](https://subscan.statuspage.io). |
+| 503 Service Unavailable   | The services were under maintenance. Please try again later.                                                                                    |
+| 504 Gateway Timeout       | The servers could not respond your request due to an internal error. Find more information on our [status page](https://subscan.statuspage.io). |
