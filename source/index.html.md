@@ -51,6 +51,7 @@ Please notice that the list of the endpoints is maintained mannually and it migh
 | Kusama                                  | <https://kusama.api.subscan.io/>              |
 | Darwinia                                | <https://darwinia.api.subscan.io/>            |
 | Darwinia Crab                           | <https://crab.api.subscan.io/>                |
+| Karura                                  | <https://karura.api.subscan.io/>              |
 | ChainX                                  | <https://chainx.api.subscan.io/>              |
 | Edgeware                                | <https://edgeware.api.subscan.io/>            |
 | Centrifuge                              | <https://centrifuge.api.subscan.io/>          |
@@ -72,6 +73,7 @@ Please notice that the list of the endpoints is maintained mannually and it migh
 | Phala Rorschach                         | <https://phala.api.subscan.io/>               |
 | Bifrost Asgard                          | <https://bifrost.api.subscan.io/>             |
 | Crust Maxwell                           | <https://crust.api.subscan.io/>               |
+| Manta                                   | <https://manta-testnet.api.subscan.io/>       |
 | DataHighway Harbour                     | <https://datahighway-harbour.api.subscan.io/> |
 | Laminar TC2                             | <https://laminar-testnet.api.subscan.io/>     |
 | Pangolin                                | <https://pangolin.api.subscan.io/>            |
