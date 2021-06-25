@@ -1,4 +1,4 @@
-# gateway spec
+# Gateway Network Specs
 
 ## gateway-validators
 

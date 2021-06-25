@@ -1,4 +1,4 @@
-# Conventions
+# Global Conventions
 
 ## `X-API-Key` Header
 
