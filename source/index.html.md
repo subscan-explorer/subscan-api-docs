@@ -72,8 +72,10 @@ Please notice before you get started:
 | Dock                | `dock.api.subscan.io`                |             |
 | Equilibrium         | `equilibrium.api.subscan.io`         |             |
 | Gateway             | `gateway-testnet.api.subscan.io`     |             |
+| Karura              | `karura.api.subscan.io`              |             |
 | KILT Mashnet        | `kilt-testnet.api.subscan.io`        |             |
 | Laminar TC2         | `laminar-testnet.api.subscan.io`     |             |
+| Manta               | `manta-testnet.api.subscan.io`       |             |
 | Moonbase            | `moonbase.api.subscan.io`            |             |
 | Pangolin            | `pangolin.api.subscan.io`            |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
