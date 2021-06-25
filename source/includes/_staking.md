@@ -445,3 +445,47 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
     }
 }
 ```
+
+
+## unbonding
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/unbonding' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "row": 20,
+    "page": 0,
+    "address": "YOUR_STASH_ADDRESS"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/staking/unbonding`
+
+### Payload
+
+| Name    | Type   | Require |
+| ------- | ------ | ------- |
+| address | string | yes     |
+
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": {
+        "native": [
+            {
+                "amount": "20000000000",
+                "until": 5849004
+            }
+        ]
+    }
+}
+
+```
