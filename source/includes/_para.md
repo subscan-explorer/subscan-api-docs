@@ -811,9 +811,51 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctionCompetitor
         "block_timestamp": 1619058966,
         "extrinsic_index": "150-0",
         "event_index": "150-4"
-      },
-      ...
+      }
     ]
   }
+}
+```
+
+
+## para fund Stat
+
+```shell
+curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/fundStat' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{"start":"2021-06-10","end":"2021-06-30","format":"hour","fund_id":"2004-6"}'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/fundStat`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| start   | bool   | Yes     |        | start time(eq:2021-06-10) |
+| end     | string | Yes     |        | end   time(eq:2021-06-30) |
+| format  | bool   | No      |   day  | hour,day,6hour            |
+| fund_id | bool   | Yes     |        | fund id(eq:2004-6 )       |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": {
+        "list": [
+            {
+                "time_utc": "2021-06-10T00:00:00Z",
+                "time_hour_utc": "2021-06-10T00:00:00Z",
+                "time_six_hour_utc": "2021-06-10T00:00:00Z",
+                "total": "0"
+            }
+        ]
+    }
 }
 ```
