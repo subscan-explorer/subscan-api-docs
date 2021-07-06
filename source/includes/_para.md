@@ -859,3 +859,50 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/fundStat' \
     }
 }
 ```
+
+
+## best bid
+
+```shell
+curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/bestBid' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{"bid_id":"1-13-20"}'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/bestBid`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| bid_id   | string   | Yes     |   no   | bid id |
+
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "ttl": 1,
+    "data": {
+        "bid_id": "1-13-20",
+        "fund_id": "2000-1",
+        "auction_index": 1,
+        "first_period": 13,
+        "last_period": 20,
+        "para_id": 2000,
+        "bidder_account": "6d6f646c70792f6366756e64d007000000000000000000000000000000000000",
+        "amount": "491752906100722948",
+        "source": 2,
+        "status": 3,
+        "block_num": 8004479,
+        "block_timestamp": 1624237734,
+        "extrinsic_index": "8004479-0",
+        "event_index": "8004479-2"
+    }
+}
+```
