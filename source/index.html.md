@@ -75,11 +75,13 @@ Please notice before you get started:
 | Karura              | `karura.api.subscan.io`              |             |
 | KILT Mashnet        | `kilt-testnet.api.subscan.io`        |             |
 | Laminar TC2         | `laminar-testnet.api.subscan.io`     |             |
+| Litentry            | `litentry.api.subscan.io`            |             |
 | Manta               | `manta-testnet.api.subscan.io`       |             |
 | Moonbase            | `moonbase.api.subscan.io`            |             |
 | Pangolin            | `pangolin.api.subscan.io`            |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
 | Plasm               | `plasm.api.subscan.io`               |             |
 | Rococo              | `rococo.api.subscan.io`              |             |
+| Sora                | `sora.api.subscan.io`                |             |
 | Stafi               | `stafi.api.subscan.io`               |             |
 | Westend             | `westend.api.subscan.io`             |             |
