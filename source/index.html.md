@@ -73,13 +73,18 @@ Please notice before you get started:
 | Equilibrium         | `equilibrium.api.subscan.io`         |             |
 | Gateway             | `gateway-testnet.api.subscan.io`     |             |
 | Karura              | `karura.api.subscan.io`              |             |
+| Khala               | `khala.api.subscan.io`               |             |
 | KILT Mashnet        | `kilt-testnet.api.subscan.io`        |             |
 | Laminar TC2         | `laminar-testnet.api.subscan.io`     |             |
+| Litentry            | `litentry.api.subscan.io`            |             |
 | Manta               | `manta-testnet.api.subscan.io`       |             |
 | Moonbase            | `moonbase.api.subscan.io`            |             |
 | Pangolin            | `pangolin.api.subscan.io`            |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
 | Plasm               | `plasm.api.subscan.io`               |             |
 | Rococo              | `rococo.api.subscan.io`              |             |
+| Shiden              | `shiden.api.subscan.io`              |             |
+| Sora                | `sora.api.subscan.io`                |             |
 | Stafi               | `stafi.api.subscan.io`               |             |
+| Uniarts             | `uniarts.api.subscan.io`             |             |
 | Westend             | `westend.api.subscan.io`             |             |
