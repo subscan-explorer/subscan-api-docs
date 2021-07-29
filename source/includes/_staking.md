@@ -1,6 +1,6 @@
 # Staking API
 
-## staking-history
+## staking reward sum
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking_history' \
@@ -34,18 +34,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking_history' \
         "message": "Success",
         "ttl": 1,
         "data": {
-            "count": 1,
-            "history": [
-                {
-                    "Id": 11,
-                    "account": "76be05272d7fea694b92d50599b36b315e7c88640f828409433e36b88ca8aa15",
-                    "era": 1,
-                    "session_id": 60595,
-                    "block_timestamp": 12119,
-                    "reward_type": "validator",
-                    "reward": "85.616438356"
-                }
-            ]
+             "sum": "...."
         }
     }
 ```
