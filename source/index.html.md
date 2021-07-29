@@ -86,5 +86,6 @@ Please notice before you get started:
 | Shiden              | `shiden.api.subscan.io`              |             |
 | Sora                | `sora.api.subscan.io`                |             |
 | Stafi               | `stafi.api.subscan.io`               |             |
+| Statemine           | `statemine.api.subscan.io`           |             |
 | Uniarts             | `uniarts.api.subscan.io`             |             |
 | Westend             | `westend.api.subscan.io`             |             |
