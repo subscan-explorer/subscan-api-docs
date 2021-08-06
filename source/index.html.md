@@ -61,6 +61,7 @@ Please notice before you get started:
 | ChainX              | `chainx.api.subscan.io`              | *           |
 | Kulupu              | `kulupu.api.subscan.io`              | *           |
 | Acala Mandala       | `acala-testnet.api.subscan.io`       |             |
+| Astar               | `astar.api.subscan.io`               |             |
 | Bifrost Asgard      | `bifrost.api.subscan.io`             |             |
 | Centrifuge          | `centrifuge.api.subscan.io`          |             |
 | Clover              | `clover.api.subscan.io`              |             |
@@ -70,6 +71,7 @@ Please notice before you get started:
 | DataHighway Harbour | `datahighway-harbour.api.subscan.io` |             |
 | DeepBrain Chain     | `dbc.api.subscan.io`                 |             |
 | Dock                | `dock.api.subscan.io`                |             |
+| Dusty               | `dusty.api.subscan.io`               |             |
 | Equilibrium         | `equilibrium.api.subscan.io`         |             |
 | Gateway             | `gateway-testnet.api.subscan.io`     |             |
 | Karura              | `karura.api.subscan.io`              |             |
