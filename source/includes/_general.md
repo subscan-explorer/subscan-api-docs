@@ -20,7 +20,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/now' \
 {
     "code": 0,
     "message": "success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": 1559545576
 }
 ```
@@ -67,7 +67,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/metadata' \
         "waiting_validator": "337"
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -172,7 +172,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/blocks' \
         "count": 2028528
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -281,7 +281,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/block' \
         "validator_name": ""
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -343,7 +343,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsics' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -476,7 +476,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
         }
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -530,7 +530,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/events' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -574,7 +574,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/event' \
         "params": "W3sidHlwZSI6IkFjY291bnRJZCIsInZhbHVlIjoiODg0NmM1M2U3ZDMyOWU4MjBkYjZhMGU4YmFjODc0MTU3Njc2MWEwY2FmNzE2MWEyMmNlYWUwYjkzMWE2NjgzMSIsInZhbHVlX3JhdyI6IiJ9XQ=="
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -702,7 +702,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/search' \
         "validator_name": ""
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -764,7 +764,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/daily' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -839,7 +839,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -876,7 +876,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/check_hash' \
         "hash_type": "block"
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -937,7 +937,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -980,6 +980,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```

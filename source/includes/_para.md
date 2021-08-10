@@ -21,7 +21,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "total_slot_num": 100,
     "proposed_count": 0,
@@ -68,7 +68,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "chains": [
       {
@@ -110,7 +110,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "auctions": [
       {
@@ -219,7 +219,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "bids": [
       {
@@ -341,7 +341,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "count": 2,
     "funds": [
@@ -434,7 +434,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "contributes": [
       {
@@ -533,7 +533,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "chains": [
       {
@@ -649,7 +649,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": [
     {
       "bid_id": "1-14-14",
@@ -734,7 +734,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "chains": [
             {
@@ -784,7 +784,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctionCompetitor
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": {
     "1-1": [
       {
@@ -846,7 +846,7 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/fundStat' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "list": [
             {
@@ -887,7 +887,7 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/bestBid' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "bid_id": "1-13-20",
         "fund_id": "2000-1",

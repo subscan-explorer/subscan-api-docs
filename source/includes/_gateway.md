@@ -21,7 +21,7 @@ curl -X POST 'https://gateway-testnet.subscan.io/api/scan/cash/validators' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": [
         {
             "eth_address": "0x24f7fa621501bd05972cb64ba8a789cd866d406a",
@@ -61,7 +61,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/v2/scan/accounts' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": [
         {
             "symbol": "BAT",

@@ -32,7 +32,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking_history' \
     {
         "code": 0,
         "message": "Success",
-        "ttl": 1,
+        "generated_at": 1628587129,
         "data": {
              "sum": "...."
         }
@@ -99,7 +99,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/validators' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "count": 21,
         "list": [
@@ -143,7 +143,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/waiting' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "list": [
             {
@@ -191,7 +191,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/voted' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "list": [
             {
@@ -244,7 +244,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/nominators' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "list": [
             {
@@ -295,7 +295,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/era_stat' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "count": 1,
         "list": [
@@ -342,7 +342,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/validator' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "list": [
             {
@@ -406,7 +406,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "count": 2,
         "list": [
@@ -466,7 +466,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/unbonding' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "native": [
             {

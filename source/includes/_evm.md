@@ -30,7 +30,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/block' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "block_num": 5012287,
         "block_hash": "0x2d1be5d00b303366b59a4b9cf930852137802297a470ec691add3aee8001427a",
@@ -86,7 +86,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": [
     {
       "hash": "0x3b9c2b978a72b1f4b220c0640ada12bcb894cf692a0e7a1faca33f0acb7d6fde",
@@ -131,7 +131,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/account/tokens' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": [
         {
             "contract": "0x7139e2b08d58987a4327b11fec388536cc65d37a",
@@ -173,7 +173,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
 {
   "code": 0,
   "message": "Success",
-  "ttl": 1,
+  "generated_at": 1628587129,
   "data": [
     {
       "contract": "0x7139e2b08d58987a4327b11fec388536cc65d37a",
@@ -221,7 +221,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transaction' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "block_num": 5145082,
         "hash": "0x97c3163c0e4779cd14f4068bc55f8cdb8fa19469fd9af388e426211607b6c7b6",
@@ -312,7 +312,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contracts' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": [
         {
             "address": "0x02c1de58fc5cd6e97385d6234fe6d95856fa1cc1",
