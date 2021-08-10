@@ -113,7 +113,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/proposals' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -205,7 +205,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/proposal' \
         }
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -239,28 +239,21 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/techcomm/proposals' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587153,
     "data": {
-        "info": {
-            "proposal_id": 0,
-            "created_block": 126165,
-            "status": "awarded",
-            "reward": "50000000000000",
-            "beneficiary": {
-                "display": "",
-                "address": "EaG2CRhJWPb7qmdcJvy3LiWdh26Jreu9Dx6R1rXxPmYXoDk"
-            },
-            "proposer": {
-                "display": "",
-                "address": "H9eSvWe34vQDJAWckeTHWSqSChRat8bgKHG39GC1fjvEm7y"
-            },
-            "council": {
-                "proposal_id": 15,
-                "status": "executed",
-                "proposal_hash": "0x59fe7bd64951667f91f36db33077b1ada93b093b363a32cf869d2a833d72ce08",
-                "member_count": 8
+        "count": 1,
+        "list": [
+            {
+                "proposal_id": 11,
+                "created_block": 4443330,
+                "status": "proposed",
+                "member_count": 5,
+                "aye_votes": 1,
+                "nay_votes": 0,
+                "call_module": "Democracy",
+                "call_name": "fast_track"
             }
-        }
+        ]
     }
 }
 ```
@@ -293,7 +286,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/techcomm/proposal' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "info": {
             "proposal_id": 0,
@@ -360,7 +353,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposals' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587151,
     "data": {
         "count": 21,
         "list": [
@@ -370,7 +363,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposals' \
                 "status": "executed",
                 "member_count": 2,
                 "aye_votes": 1,
-                "nay_votes": 0
+                "nay_votes": 0,
+                "call_module": "Treasury",
+                "call_name": "Reject_proposal"
             }
         ]
     }
@@ -405,7 +400,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "info": {
             "proposal_id": 0,
@@ -472,7 +467,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendums' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587149,
     "data": {
         "count": 28,
         "list": [
@@ -480,7 +475,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendums' \
                 "referendum_index": 29,
                 "created_block": 1209600,
                 "vote_threshold": "SuperMajorityApprove",
-                "status": "started"
+                "status": "started",
+                "call_module": "Staking",
+                "call_name": "increase_validator_count"
             },
         ]
     }
@@ -515,7 +512,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendum' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587149,
     "data": {
         "info": {
             "referendum_index": 1,
@@ -564,7 +561,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "count": 713,
         "list": [
@@ -611,23 +608,27 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/proposals' \
 ```json
 {
     "code": 0,
+    "message": "Success",
+    "generated_at": 1628587144,
     "data": {
         "count": 12,
         "list": [
             {
                 "created_block": 1692250,
                 "proposal_id": 9,
-                "status": "tabled"
+                "status": "tabled",
+                "call_module": "Staking",
+                "call_name": "increase_validator_count"
             },
             {
                 "created_block": 1678201,
                 "proposal_id": 8,
-                "status": "proposed"
+                "status": "proposed",
+                "call_module": "Staking",
+                "call_name": "increase_validator_count"
             }
         ]
-    },
-    "message": "Success",
-    "ttl": 1
+    }
 }
 ```
 
@@ -659,7 +660,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/proposal' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "info": {
             "proposal_id": 16,
@@ -792,7 +793,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tips' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -853,7 +854,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tip' \
         }
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
 
@@ -960,6 +961,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tippers' \
         ]
     },
     "message": "Success",
-    "ttl": 1
+    "generated_at": 1628587129
 }
 ```
