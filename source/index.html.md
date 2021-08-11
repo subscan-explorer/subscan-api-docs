@@ -66,7 +66,8 @@ Please notice before you get started:
 | Centrifuge          | `centrifuge.api.subscan.io`          |             |
 | Clover              | `clover.api.subscan.io`              |             |
 | Clover Testnet      | `clover-testnet.api.subscan.io`      |             |
-| Crust Maxwell       | `crust.api.subscan.io`               |             |
+| Crust               | `crust.api.subscan.io`               |             |
+| Crust Maxwell       | `maxwell.api.subscan.io`             |             |
 | DataHighway         | `datahighway.api.subscan.io`         |             |
 | DataHighway Harbour | `datahighway-harbour.api.subscan.io` |             |
 | DeepBrain Chain     | `dbc.api.subscan.io`                 |             |
