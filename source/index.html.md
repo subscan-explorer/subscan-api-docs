@@ -58,12 +58,12 @@ Please notice before you get started:
 | Darwinia            | `darwinia.api.subscan.io`            | *           |
 | Darwinia Crab       | `crab.api.subscan.io`                | *           |
 | Edgeware            | `edgeware.api.subscan.io`            | *           |
-| ChainX              | `chainx.api.subscan.io`              | *           |
 | Kulupu              | `kulupu.api.subscan.io`              | *           |
 | Acala Mandala       | `acala-testnet.api.subscan.io`       |             |
 | Astar               | `astar.api.subscan.io`               |             |
 | Bifrost Asgard      | `bifrost.api.subscan.io`             |             |
 | Centrifuge          | `centrifuge.api.subscan.io`          |             |
+| ChainX              | `chainx.api.subscan.io`              |             |
 | Clover              | `clover.api.subscan.io`              |             |
 | Clover Testnet      | `clover-testnet.api.subscan.io`      |             |
 | Crust               | `crust.api.subscan.io`               |             |
