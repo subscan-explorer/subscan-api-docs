@@ -535,3 +535,56 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/nominator' \
     }
 }
 ```
+
+
+## reward-slash-v2
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/v2/scan/account/reward_slash' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "row": 20,
+    "page": 1,
+    "address": "15fTw39Ju2jJiHeGe1fJ5DtgugUauy9tr2HZuiRNFwqnGQ1Q"
+  }'
+```
+
+### Request URL
+
+`POST /api/v2/scan/account/reward_slash`
+
+### Payload
+
+| Name    | Type   | Require |
+| ------- | ------ | ------- |
+| row     | int    | yes     |
+| page    | int    | yes     |
+| address | string | yes     |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1629105503,
+    "data": {
+        "count": 453,
+        "list": [
+            {
+                "era": 434,
+                "stash": "15fTw39Ju2jJiHeGe1fJ5DtgugUauy9tr2HZuiRNFwqnGQ1Q",
+                "account": "15fTw39Ju2jJiHeGe1fJ5DtgugUauy9tr2HZuiRNFwqnGQ1Q",
+                "amount": "372336022374",
+                "block_timestamp": 1628839056,
+                "event_index": "6361197-2",
+                "module_id": "staking",
+                "event_id": "Reward",
+                "slash_kton": "0",
+                "extrinsic_index": "6361197-1"
+            }
+        ]
+    }
+}
+```
