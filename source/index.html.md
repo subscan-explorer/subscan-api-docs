@@ -15,6 +15,7 @@ includes:
   - para
   - evm
   - gateway
+  - crust
 
 search: false
 
