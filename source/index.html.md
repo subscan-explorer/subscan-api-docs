@@ -86,7 +86,9 @@ Please notice before you get started:
 | Pangolin            | `pangolin.api.subscan.io`            |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
 | Plasm               | `plasm.api.subscan.io`               |             |
+| Robonomics          | `robonomics-testnet.api.subscan.io`  |             |
 | Rococo              | `rococo.api.subscan.io`              |             |
+| Sakura              | `sakura.api.subscan.io`              |             |
 | Shiden              | `shiden.api.subscan.io`              |             |
 | Sora                | `sora.api.subscan.io`                |             |
 | Stafi               | `stafi.api.subscan.io`               |             |
