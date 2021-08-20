@@ -219,3 +219,42 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group/member/files' \
 }
 
 ```
+
+
+## crust-daily
+
+crust daily statistics
+
+```shell
+curl -X POST 'https://crust.subscan.io/api/scan/swork/daily' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "start": "2021-08-19",
+    "end": "2021-08-20",
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/swork/daily`
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1629448624,
+    "data": {
+        "list": [
+            {
+                "time_utc": "2021-08-19T00:00:00+08:00",
+                "node_count": 1,
+                "storage": "1",
+                "file_count": 1
+            }
+        ]
+    }
+}
+```
