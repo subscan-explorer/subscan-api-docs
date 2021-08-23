@@ -62,7 +62,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group/members' \
 
 ### Request URL
 
-`POST /api/scan/swork/members`
+`POST /api/scan/swork/group/members`
 
 > Example Response
 
@@ -104,7 +104,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group/member' \
 
 ### Request URL
 
-`POST /api/scan/swork/member`
+`POST /api/scan/swork/group/member`
 
 > Example Response
 
