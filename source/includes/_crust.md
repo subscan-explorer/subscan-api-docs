@@ -44,6 +44,43 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/groups' \
 
 ```
 
+## crust-group
+
+group info 
+
+```shell
+curl -X POST 'https://crust.subscan.io/api/scan/swork/group' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "group_owner": "5EAEWGZDwj9Ext8VcG6W892x2kxNaKCxzVFsrvkfKSLyekSF"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/swork/group`
+
+> Example Response
+
+```json
+
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1629774809,
+    "data": {
+        "stash": "5EAEWGZDwj9Ext8VcG6W892x2kxNaKCxzVFsrvkfKSLyekSF",
+        "controller": "5Ctacdhp72PDbXs4h2Qdmc5d6J9uwg1zPu5Z2aFPUBaUKGwH",
+        "power": "1073792317",
+        "limit_stake": "0",
+        "total_stake": "1250000000000000000",
+        "members": 1,
+        "cap": "1073792317"
+    }
+}
+
+```
 
 ## crust-group-members
 
