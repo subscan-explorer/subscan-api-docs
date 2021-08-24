@@ -18,6 +18,15 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/groups' \
 
 `POST /api/scan/swork/groups`
 
+
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| group_owner | string | no       |
+| order       | string | no(desc,asc)|
+| order_field | string | no(power,total_stake,members,cap)|
+
 > Example Response
 
 ```json
