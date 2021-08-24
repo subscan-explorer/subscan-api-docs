@@ -182,7 +182,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/member/files' \
 
 ### Request URL
 
-`POST /api/scan/swork/group/member/files`
+`POST /api/scan/swork/member/files`
 
 > Example Response
 
@@ -218,7 +218,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/member/files' \
 group orders list
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/group/member/files' \
+curl -X POST 'https://crust.subscan.io/api/scan/swork/member/orders' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -230,7 +230,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group/member/files' \
 
 ### Request URL
 
-`POST /api/scan/swork/group/member/orders`
+`POST /api/scan/swork/member/orders`
 
 > Example Response
 
