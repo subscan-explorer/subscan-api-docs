@@ -140,7 +140,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group/members' \
 group member info 
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/group/member' \
+curl -X POST 'https://crust.subscan.io/api/scan/swork/member' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -150,7 +150,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group/member' \
 
 ### Request URL
 
-`POST /api/scan/swork/group/member`
+`POST /api/scan/swork/member`
 
 > Example Response
 
