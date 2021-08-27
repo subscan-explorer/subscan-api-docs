@@ -32,7 +32,7 @@ The documentation was created with [Slate](https://github.com/slatedocs/slate) a
 
 ## API Keys
 
-**[Apply this form](https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform) to get a free API key that includes higher quotas or start your trial with other subscriptions!**
+**Submit the form to get a free API key that includes higher quotas or start your trial with other available plans: <https://forms.gle/YegvB8S2VGhASMQi6>.**
 
 ## Service Status
 
