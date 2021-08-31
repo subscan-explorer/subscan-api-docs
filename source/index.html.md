@@ -57,9 +57,7 @@ Please notice before you get started:
 | Polkadot            | `polkadot.api.subscan.io`            | *           |
 | Kusama              | `kusama.api.subscan.io`              | *           |
 | Darwinia            | `darwinia.api.subscan.io`            | *           |
-| Darwinia Crab       | `crab.api.subscan.io`                | *           |
-| Edgeware            | `edgeware.api.subscan.io`            | *           |
-| Kulupu              | `kulupu.api.subscan.io`              | *           |
+| Crust               | `crust.api.subscan.io`               | *           |
 | Acala Mandala       | `acala-testnet.api.subscan.io`       |             |
 | Astar               | `astar.api.subscan.io`               |             |
 | Bifrost Asgard      | `bifrost.api.subscan.io`             |             |
@@ -67,16 +65,18 @@ Please notice before you get started:
 | ChainX              | `chainx.api.subscan.io`              |             |
 | Clover              | `clover.api.subscan.io`              |             |
 | Clover Testnet      | `clover-testnet.api.subscan.io`      |             |
-| Crust               | `crust.api.subscan.io`               |             |
 | Crust Maxwell       | `maxwell.api.subscan.io`             |             |
+| Darwinia Crab       | `crab.api.subscan.io`                |             |
 | DataHighway         | `datahighway.api.subscan.io`         |             |
 | DataHighway Harbour | `datahighway-harbour.api.subscan.io` |             |
 | DeepBrain Chain     | `dbc.api.subscan.io`                 |             |
 | Dock                | `dock.api.subscan.io`                |             |
 | Dusty               | `dusty.api.subscan.io`               |             |
+| Edgeware            | `edgeware.api.subscan.io`            |             |
 | Equilibrium         | `equilibrium.api.subscan.io`         |             |
 | Gateway             | `gateway-testnet.api.subscan.io`     |             |
 | Karura              | `karura.api.subscan.io`              |             |
+| Kulupu              | `kulupu.api.subscan.io`              |             |
 | Khala               | `khala.api.subscan.io`               |             |
 | KILT Mashnet        | `kilt-testnet.api.subscan.io`        |             |
 | Laminar TC2         | `laminar-testnet.api.subscan.io`     |             |
