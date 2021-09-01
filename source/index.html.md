@@ -78,19 +78,22 @@ Please notice before you get started:
 | Karura              | `karura.api.subscan.io`              |             |
 | Kulupu              | `kulupu.api.subscan.io`              |             |
 | Khala               | `khala.api.subscan.io`               |             |
-| KILT Mashnet        | `kilt-testnet.api.subscan.io`        |             |
+| KILT Peregrine      | `kilt-testnet.api.subscan.io`        |             |
 | Laminar TC2         | `laminar-testnet.api.subscan.io`     |             |
 | Litentry            | `litentry.api.subscan.io`            |             |
 | Manta               | `manta-testnet.api.subscan.io`       |             |
 | Moonbase            | `moonbase.api.subscan.io`            |             |
+| Moonriver           | `moonriver.api.subscan.io`           |             |
 | Pangolin            | `pangolin.api.subscan.io`            |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
 | Plasm               | `plasm.api.subscan.io`               |             |
+| Reef                | `reef.api.subscan.io`                |             |
 | Robonomics          | `robonomics-testnet.api.subscan.io`  |             |
 | Rococo              | `rococo.api.subscan.io`              |             |
 | Sakura              | `sakura.api.subscan.io`              |             |
 | Shiden              | `shiden.api.subscan.io`              |             |
-| Sora                | `sora.api.subscan.io`                |             |
+| SORA                | `sora.api.subscan.io`                |             |
+| Subgame             | `subgame.api.subscan.io`             |             |
 | Stafi               | `stafi.api.subscan.io`               |             |
 | Statemine           | `statemine.api.subscan.io`           |             |
 | Uniarts             | `uniarts.api.subscan.io`             |             |
