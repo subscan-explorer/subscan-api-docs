@@ -5,7 +5,7 @@
 groups list 
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/groups' \
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/groups' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -58,7 +58,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/groups' \
 group info 
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/group' \
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/group' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -96,7 +96,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group' \
 group members 
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/group/members' \
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/group/members' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -140,7 +140,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/group/members' \
 group member info 
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/member' \
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -179,7 +179,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/member' \
 group member info 
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/member/files' \
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/files' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -222,12 +222,12 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/member/files' \
 
 
 
-## crust-orders
+## crust-member-orders
 
 group orders list
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/member/orders' \
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/orders' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -272,7 +272,7 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/member/orders' \
 crust daily statistics
 
 ```shell
-curl -X POST 'https://crust.subscan.io/api/scan/swork/daily' \
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/daily' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -299,6 +299,62 @@ curl -X POST 'https://crust.subscan.io/api/scan/swork/daily' \
                 "node_count": 1,
                 "storage": "1",
                 "file_count": 1
+            }
+        ]
+    }
+}
+```
+
+
+## crust-orders
+
+crust daily statistics
+
+```shell
+curl -X POST 'https://crust.api.subscan.io/api/scan/swork/orders' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "row": 100,
+    "page": 0,
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/swork/orders`
+
+
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| row  | int  | yes     |
+| page | int  | yes     |
+| address     | array  | no       |
+| order       | string | no(desc,asc)|
+| expired_status | int | 1(not expired),2(expired less than 15 day),3(expired more than 15 day)|
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1631172734,
+    "data": {
+        "count": 397,
+        "list": [
+            {
+                "cid": "QmPyXuL5vnbjSxjMKcKc1GVLz6FjWe1aBKURjWAD37U1Ko",
+                "stash": "cTHczioKf8SVgQoi6YuzWcGxA7DcHFgqoyg2vT2hV3GpUE52w",
+                "file_size": "8111111111",
+                "expired_at": 0,
+                "block_timestamp": 1631171958,
+                "replicas": 0,
+                "status": "",
+                "prepaid": "0",
+                "amount": "14102030"
             }
         ]
     }
