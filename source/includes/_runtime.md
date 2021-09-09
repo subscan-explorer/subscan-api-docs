@@ -19,7 +19,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/runtime/list' \
     {
         "code": 0,
         "message": "Success",
-        "ttl": 1,
+        "generated_at": 1628587129,
         "data": {
             "list": [
                 {
@@ -68,7 +68,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/runtime/metadata' \
 {
     "code": 0,
     "message": "Success",
-    "ttl": 1,
+    "generated_at": 1628587129,
     "data": {
         "info": {
             "name": "RandomnessCollectiveFlip",
