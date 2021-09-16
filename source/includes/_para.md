@@ -86,7 +86,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -185,7 +189,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -308,7 +316,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -409,7 +421,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -509,8 +525,10 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
+    "page": 0,
+    "row": 2
   }'
 ```
 
