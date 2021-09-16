@@ -70,6 +70,12 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/group' \
 
 `POST /api/scan/swork/group`
 
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| group_owner | string | no        |
+
 > Example Response
 
 ```json
@@ -109,6 +115,14 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/group/members' \
 ### Request URL
 
 `POST /api/scan/swork/group/members`
+
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| group_owner | string | no        |
+| row         | int    | yes       |
+| page        | int    | yes       |
 
 > Example Response
 
@@ -152,6 +166,12 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member' \
 
 `POST /api/scan/swork/member`
 
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| address     | string | yes        |
+
 > Example Response
 
 ```json
@@ -193,6 +213,14 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/files' \
 
 `POST /api/scan/swork/member/files`
 
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| address     | string | yes       |
+| row         | int    | yes       |
+| page        | int    | yes       |
+
 > Example Response
 
 ```json
@@ -220,8 +248,6 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/files' \
 
 ```
 
-
-
 ## crust-member-orders
 
 group orders list
@@ -240,6 +266,14 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/orders' \
 ### Request URL
 
 `POST /api/scan/swork/member/orders`
+
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| address     | string | yes       |
+| row         | int    | yes       |
+| page        | int    | yes       |
 
 > Example Response
 
@@ -284,6 +318,14 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/daily' \
 ### Request URL
 
 `POST /api/scan/swork/daily`
+
+### Payload
+
+| Name        | Type   | Require   |
+| ----------- | ------ | --------- |
+| start       | string | yes       |
+| end         | string | yes       |
+| category    | string | yes(nodes,storage,files)       |
 
 > Example Response
 
