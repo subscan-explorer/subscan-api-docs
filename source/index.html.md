@@ -71,7 +71,6 @@ Please notice before you get started:
 | DataHighway Harbour | `datahighway-harbour.api.subscan.io` |             |
 | DeepBrain Chain     | `dbc.api.subscan.io`                 |             |
 | Dock                | `dock.api.subscan.io`                |             |
-| Dusty               | `dusty.api.subscan.io`               |             |
 | Edgeware            | `edgeware.api.subscan.io`            |             |
 | Equilibrium         | `equilibrium.api.subscan.io`         |             |
 | Gateway             | `gateway-testnet.api.subscan.io`     |             |
@@ -91,6 +90,7 @@ Please notice before you get started:
 | Robonomics          | `robonomics-testnet.api.subscan.io`  |             |
 | Rococo              | `rococo.api.subscan.io`              |             |
 | Sakura              | `sakura.api.subscan.io`              |             |
+| Shibuya             | `shibuya.api.subscan.io`             |             |
 | Shiden              | `shiden.api.subscan.io`              |             |
 | SORA                | `sora.api.subscan.io`                |             |
 | Subgame             | `subgame.api.subscan.io`             |             |
