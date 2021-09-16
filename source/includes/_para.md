@@ -711,8 +711,10 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
+    "page": 0,
+    "row": 2
   }'
 ```
 
