@@ -370,6 +370,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
 | --------------- | ------ | ------- |
 | extrinsic_index | string | no      |
 | hash            | string | no      |
+| events_limit    | int    | no      |
 
 > Example Response
 
@@ -507,6 +508,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/events' \
 | module | string | no      |
 | call   | string | no      |
 | block_num | int  | no      |
+| extrinsic_index | string | no      |
 
 > Example Response
 
