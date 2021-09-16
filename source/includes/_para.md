@@ -420,11 +420,12 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
-| fund_id      | string  | no     |    0     | |
-| row     | int    | yes     |
-| page    | int    | yes     |
-| order   |string  |no| block_num desc|
-| from_history   |bool  |no| false|
+| fund_id | string  | no     |    0    | |
+| row     | int     | yes    |         | |
+| page    | int     | yes    |         | |
+| order   |string   | no     | block_num desc| |
+| who     |string   | no     |         |filter by contributor |
+| from_history |bool| no     | false   | |
 
 
 
