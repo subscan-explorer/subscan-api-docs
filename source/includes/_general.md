@@ -370,6 +370,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
 | --------------- | ------ | ------- |
 | extrinsic_index | string | no      |
 | hash            | string | no      |
+| events_limit    | int    | no      |
 
 > Example Response
 
@@ -427,6 +428,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
                 "params": "[{\"type\":\"AccountId\",\"value\":\"a0dbf685db6681f3d704f4a2c6890f965d5cf1f2d7fa169a6fb5c25f8a4265bf\",\"value_raw\":\"\"},{\"type\":\"Balance\",\"value\":\"31200000\",\"value_raw\":\"\"}]"
             }
         ],
+        "event_count": 3,
         "extrinsic_hash": "0x3d944ee0f1aead94a50730eec73aba16c930ca9f468a63d11415c73c80e325ba",
         "extrinsic_index": "2028659-2",
         "fee": "156000000",
@@ -507,6 +509,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/events' \
 | module | string | no      |
 | call   | string | no      |
 | block_num | int  | no      |
+| extrinsic_index | string | no      |
 
 > Example Response
 
