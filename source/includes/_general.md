@@ -578,6 +578,56 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/event' \
 }
 ```
 
+## logs
+
+Event list
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "row": 100,
+    "page": 0,
+    "engine": "BABE",
+    "type": "PreRuntime"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/logs`
+
+### Payload
+
+| Name   | Type   | Require |
+| ------ | ------ | ------- |
+| row    | int    | yes     |
+| page   | int    | yes     |
+| engine | string | no      |
+| type   | string | no      |
+| block_num | int  | no      |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1633758492,
+    "data": [
+        {
+            "block_num": 421396,
+            "log_index": "421396-0",
+            "log_type": "PreRuntime",
+            "origin_type": "PreRuntime",
+            "engine": "BABE",
+            "data": "{\"data\":\"0x02010000003b91cf0f00000000\",\"engine\":1161969986}"
+        }
+    ]
+}
+```
+
 ## search
 
 Search block, account, extrinsic 
