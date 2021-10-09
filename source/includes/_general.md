@@ -609,6 +609,8 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
 | type   | string | no      |
 | block_num | int  | no      |
 | block_range | string | no |
+| from   | int    | no      |
+| to     | int    | no      |
 
 > Example Response
 
