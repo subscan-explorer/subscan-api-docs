@@ -590,7 +590,8 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
     "row": 100,
     "page": 0,
     "engine": "BABE",
-    "type": "PreRuntime"
+    "type": "PreRuntime",
+    "block_range": "421396-421396"
   }'
 ```
 
@@ -607,6 +608,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
 | engine | string | no      |
 | type   | string | no      |
 | block_num | int  | no      |
+| block_range | string | no |
 
 > Example Response
 
@@ -614,15 +616,17 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
 {
     "code": 0,
     "message": "Success",
-    "generated_at": 1633758492,
+    "generated_at": 1633768374,
     "data": [
         {
             "block_num": 421396,
             "log_index": "421396-0",
             "log_type": "PreRuntime",
-            "origin_type": "PreRuntime",
             "engine": "BABE",
-            "data": "{\"data\":\"0x02010000003b91cf0f00000000\",\"engine\":1161969986}"
+            "data": {
+                "data": "0x02010000003b91cf0f00000000",
+                "engine": "BABE"
+            }
         }
     ]
 }
