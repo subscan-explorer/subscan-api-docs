@@ -580,7 +580,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/event' \
 
 ## logs
 
-Event list
+Logs list
 
 ```shell
 curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
