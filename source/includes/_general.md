@@ -616,19 +616,19 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
 {
     "code": 0,
     "message": "Success",
-    "generated_at": 1633768374,
-    "data": [
-        {
-            "block_num": 421396,
-            "log_index": "421396-0",
-            "log_type": "PreRuntime",
-            "engine": "BABE",
-            "data": {
-                "data": "0x02010000003b91cf0f00000000",
-                "engine": "BABE"
+    "generated_at": 1633769920,
+    "data": {
+        "count": 1,
+        "logs": [
+            {
+                "block_num": 421396,
+                "log_index": "421396-0",
+                "log_type": "PreRuntime",
+                "engine": "BABE",
+                "data": "{\"data\":\"0x02010000003b91cf0f00000000\",\"engine\":\"BABE\"}"
             }
-        }
-    ]
+        ]
+    }
 }
 ```
 
