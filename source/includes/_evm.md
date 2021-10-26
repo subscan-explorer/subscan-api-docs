@@ -323,3 +323,55 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contracts' \
     ]
 }
 ```
+
+
+## erc20 transfers
+
+Get erc20 transfers by address
+
+```shell
+curl -X POST 'https://shibuya.api.subscan.io/api/scan/evm/erc20/transfer' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "address": ["0x7139e2b08d58987a4327b11fec388536cc65d37a"]
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/contracts`
+
+### Payload
+
+| Name | Type   | Require |
+| ---- | ------ | ------- |
+| address  | string | yes     |
+| row  | int | yes     |
+| page  | int | no     |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1635239251,
+    "data": {
+        "count": 10,
+        "list": [
+            {
+                "contract": "0x878f2bd833e2986faafe5eb3216cf34bda51849b",
+                "hash": "0x5ade0e525aa29ca3bafe92cd08ef91c34370bad6784602ca5297b251eac7e56f",
+                "create_at": 1631719386,
+                "from": "0x870a26caadb927c7bf94abbb40a2121a20fe1bf8",
+                "to": "0x4bc5bda0908a786616c0f4d52a403113cb9cf71f",
+                "value": "212140000000000",
+                "decimals": 18,
+                "symbol": "PLP",
+                "name": "PolkaEx LP Token"
+            }
+        ]
+    }
+}
+```
