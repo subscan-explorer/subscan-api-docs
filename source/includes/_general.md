@@ -581,9 +581,11 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/event' \
 }
 ```
 
-## search
+## search (deprecated)
 
-Search block, account, extrinsic 
+~~Search block, account, extrinsic~~
+
+NOTICE: This was been deprecated, please using `v2/scan/search` instead
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/search' \
