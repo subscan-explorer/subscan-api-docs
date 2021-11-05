@@ -991,7 +991,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
 
 ## raw extrinsic
 
-Current network tokens detail
+Get Raw data of Extrinsic
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/getRawTx' \
