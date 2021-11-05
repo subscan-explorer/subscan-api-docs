@@ -989,7 +989,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
 }
 ```
 
-## Raw Extrinsic
+## raw extrinsic
 
 Current network tokens detail
 
