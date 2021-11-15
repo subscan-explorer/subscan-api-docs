@@ -86,6 +86,8 @@ Please notice before you get started:
 | Pangolin            | `pangolin.api.subscan.io`            |             |
 | Pangoro             | `pangoro.api.subscan.io`             |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
+| Polkadex            | `polkadex.api.subscan.io`            |             |
+| Polymesh            | `polymesh.api.subscan.io`            |             |
 | Polymesh            | `polymesh-testnet.api.subscan.io`    |             |
 | Plasm               | `plasm.api.subscan.io`               |             |
 | Reef                | `reef.api.subscan.io`                |             |
