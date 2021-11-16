@@ -399,6 +399,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
 | row     | int    | yes     |
 | page    | int    | yes     |
 | address | string | yes     |
+| is_stash| bool   | no      |
 
 > Example Response
 
