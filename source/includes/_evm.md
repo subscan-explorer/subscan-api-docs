@@ -1,4 +1,4 @@
-# EVM API (Crab Network Only)
+# EVM API
 
 ## evm block
 
