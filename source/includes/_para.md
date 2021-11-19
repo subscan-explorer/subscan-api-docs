@@ -34,6 +34,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
     "online_count": 0,
     "upcoming_count": 3,
     "lease_period": 300,
+    "lease_offset": 0,
     "ending_period": 50,
     "retirement_period": 0
   }
