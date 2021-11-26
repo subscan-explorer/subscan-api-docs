@@ -74,6 +74,7 @@ Please notice before you get started:
 | Edgeware            | `edgeware.api.subscan.io`            |             |
 | Equilibrium         | `equilibrium.api.subscan.io`         |             |
 | Gateway             | `gateway-testnet.api.subscan.io`     |             |
+| IntegriTEE          | `integritee.api.subscan.io`          |             |
 | Karura              | `karura.api.subscan.io`              |             |
 | Kulupu              | `kulupu.api.subscan.io`              |             |
 | Khala               | `khala.api.subscan.io`               |             |
