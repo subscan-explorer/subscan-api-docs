@@ -86,6 +86,7 @@ Please notice before you get started:
 | Moonriver           | `moonriver.api.subscan.io`           |             |
 | Pangolin            | `pangolin.api.subscan.io`            |             |
 | Pangoro             | `pangoro.api.subscan.io`             |             |
+| Parallel Heiko      | `parallel-heiko.api.subscan.io`      |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
 | Polkadex            | `polkadex.api.subscan.io`            |             |
 | Polymesh            | `polymesh.api.subscan.io`            |             |
