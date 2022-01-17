@@ -60,6 +60,7 @@ Please notice before you get started:
 | Crust               | `crust.api.subscan.io`               | \*          |
 | Acala               | `acala.api.subscan.io`               |             |
 | Acala Mandala       | `acala-testnet.api.subscan.io`       |             |
+| Alephzero           | `alephzero.api.subscan.io`           |             |
 | Astar               | `astar.api.subscan.io`               |             |
 | Bifrost Asgard      | `bifrost.api.subscan.io`             |             |
 | Calamari            | `calamari.api.subscan.io`            |             |
@@ -69,6 +70,7 @@ Please notice before you get started:
 | Clover Parachain    | `clv.api.subscan.io`                 |             |
 | Clover Testnet      | `clover-testnet.api.subscan.io`      |             |
 | Crust Maxwell       | `maxwell.api.subscan.io`             |             |
+| Crust Shadow        | `shadow.api.subscan.io`              |             |
 | Darwinia Crab       | `crab.api.subscan.io`                |             |
 | DataHighway         | `datahighway.api.subscan.io`         |             |
 | DataHighway Harbour | `datahighway-harbour.api.subscan.io` |             |
@@ -95,6 +97,7 @@ Please notice before you get started:
 | Parallel            | `parallel.api.subscan.io`            |             |
 | Parallel Heiko      | `parallel-heiko.api.subscan.io`      |             |
 | Phala Rorschach     | `phala.api.subscan.io`               |             |
+| Picasso             | `picasso.api.subscan.io`             |             |
 | Polkadex            | `polkadex.api.subscan.io`            |             |
 | Polymesh            | `polymesh.api.subscan.io`            |             |
 | Polymesh Testnet    | `polymesh-testnet.api.subscan.io`    |             |
