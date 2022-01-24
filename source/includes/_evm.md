@@ -164,7 +164,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
 
 | Name      | Type   | Require                   |
 |-----------|--------|---------------------------|
-| contracts | array  | yes                       |
+| contracts | array  | no                       |
 | page      | int    | no                        |
 | row       | int    | no                        |
 | search    | string | no (erc20 symbol or name) |
