@@ -125,9 +125,49 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/account/tokens' \
 | Name    | Type   | Require                   |
 |---------|--------|---------------------------|
 | address | string | yes                       |
-| page    | int    | no                        |
-| row     | int    | no                        |
-| search  | string | no (erc20 symbol or name) |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1628587129,
+  "data": [
+    {
+      "contract": "0x7139e2b08d58987a4327b11fec388536cc65d37a",
+      "holder": "0xbb3e51d20ca651fbe19b1a1c2a6c8b1a4d950437",
+      "balance": "9999000000000000000000"
+    }
+  ]
+}
+```
+
+## erc20 tokens
+
+Get evm tokens info by contract address
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "contracts": ["0x7139e2b08d58987a4327b11fec388536cc65d37a"]
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/tokens`
+
+### Payload
+
+| Name      | Type   | Require                   |
+|-----------|--------|---------------------------|
+| contracts | array  | yes                       |
+| page      | int    | no                        |
+| row       | int    | no                        |
+| search    | string | no (erc20 symbol or name) |
 
 > Example Response
 
@@ -151,51 +191,6 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/account/tokens' \
       }
     ]
   }
-}
-```
-
-## erc20 tokens
-
-Get evm tokens info by contract address
-
-```shell
-curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
-  --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY' \
-  --data-raw '{
-    "contracts": ["0x7139e2b08d58987a4327b11fec388536cc65d37a"]
-  }'
-```
-
-### Request URL
-
-`POST /api/scan/evm/tokens`
-
-### Payload
-
-| Name      | Type  | Require |
-|-----------|-------|---------|
-| contracts | array | yes     |
-
-> Example Response
-
-```json
-{
-  "code": 0,
-  "message": "Success",
-  "generated_at": 1628587129,
-  "data": [
-    {
-      "contract": "0x7139e2b08d58987a4327b11fec388536cc65d37a",
-      "name": "Darwinia Network Native Token",
-      "symbol": "RING",
-      "decimals": 18,
-      "totalSupply": "1000000000000000000",
-      "holders": 14,
-      "transfer_count": 21,
-      "price": "0"
-    }
-  ]
 }
 ```
 
