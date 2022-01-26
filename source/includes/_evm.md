@@ -164,7 +164,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
 
 | Name      | Type   | Require                   |
 |-----------|--------|---------------------------|
-| contracts | array  | no                       |
+| contracts | array  | no                        |
 | page      | int    | no                        |
 | row       | int    | no                        |
 | search    | string | no (erc20 symbol or name) |
@@ -378,7 +378,6 @@ curl -X POST 'https://shibuya.api.subscan.io/api/scan/evm/erc20/transfer' \
 }
 ```
 
-
 ## erc20 token holders
 
 Get erc20 transfers by address
@@ -479,6 +478,38 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contract/list' \
         "verify_time": 0
       }
     ]
+  }
+}
+```
+
+
+## EVM meta
+
+```shell
+curl -X POST 'https://crab.webapi.subscan.io/api/scan/evm/meta' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{}'
+```
+
+### Request URL
+
+`POST /api/scan/evm/meta`
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1643178109,
+  "data": {
+    "ERC20_count": 12,
+    "account_count": 3249,
+    "contracts_count": 189,
+    "transaction_count": 8411,
+    "verified_contracts_count": 11
   }
 }
 ```
