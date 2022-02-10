@@ -15,6 +15,7 @@ includes:
   - para
   - evm
   - gateway
+  - crust
 
 search: false
 
@@ -31,7 +32,7 @@ The documentation was created with [Slate](https://github.com/slatedocs/slate) a
 
 ## API Keys
 
-**[Apply this form](https://docs.google.com/forms/d/e/1FAIpQLSfEDvsn-v7c5jshKFNaqBd20-SPAHLJw3Ua7IRUL8esrTgWPA/viewform) to get a free API key that includes higher quotas or start your trial with other subscriptions!**
+**Submit the form to get a free API key that includes higher quotas or start your trial with other available plans: <https://forms.gle/YegvB8S2VGhASMQi6>.**
 
 ## Service Status
 
@@ -49,45 +50,67 @@ Please notice before you get started:
 
 2. All the endpoints are forced to HTTPS only. Please make sure you use `https://` with the API hosts.
 
-3. The API endpoints of several networks are excluded from our SLA for now. It might because: 1) the network is a testnet, not as stable as a mainnet, or could be reset in a relatively higher chance; 2) the chain RPC that Subscan relied on is maintained by others (e.g. the chain developers). We may update the covered list in the future. Please let us know if you want to have other networks included in the SLA.
+3. SLA covered endpoints are shown on our [service status page](https://subscan.statuspage.io/). Several networks are excluded from our SLA for now. It might because: 1) the network is a testnet, not as stable as a mainnet, or could be reset in a relatively higher chance; 2) the chain RPC that Subscan relied on is maintained by others (e.g. the chain developers). We may update the covered list in the future. Please let us know if you want to have other networks included in the SLA.
 
-| Network             | API Host                             | SLA Covered |
-| ------------------- | ------------------------------------ | ----------- |
-| Polkadot            | `polkadot.api.subscan.io`            | *           |
-| Kusama              | `kusama.api.subscan.io`              | *           |
-| Darwinia            | `darwinia.api.subscan.io`            | *           |
-| Darwinia Crab       | `crab.api.subscan.io`                | *           |
-| Edgeware            | `edgeware.api.subscan.io`            | *           |
-| ChainX              | `chainx.api.subscan.io`              | *           |
-| Kulupu              | `kulupu.api.subscan.io`              | *           |
-| Acala Mandala       | `acala-testnet.api.subscan.io`       |             |
-| Astar               | `astar.api.subscan.io`               |             |
-| Bifrost Asgard      | `bifrost.api.subscan.io`             |             |
-| Centrifuge          | `centrifuge.api.subscan.io`          |             |
-| Clover              | `clover.api.subscan.io`              |             |
-| Clover Testnet      | `clover-testnet.api.subscan.io`      |             |
-| Crust Maxwell       | `crust.api.subscan.io`               |             |
-| DataHighway         | `datahighway.api.subscan.io`         |             |
-| DataHighway Harbour | `datahighway-harbour.api.subscan.io` |             |
-| DeepBrain Chain     | `dbc.api.subscan.io`                 |             |
-| Dock                | `dock.api.subscan.io`                |             |
-| Dusty               | `dusty.api.subscan.io`               |             |
-| Equilibrium         | `equilibrium.api.subscan.io`         |             |
-| Gateway             | `gateway-testnet.api.subscan.io`     |             |
-| Karura              | `karura.api.subscan.io`              |             |
-| Khala               | `khala.api.subscan.io`               |             |
-| KILT Mashnet        | `kilt-testnet.api.subscan.io`        |             |
-| Laminar TC2         | `laminar-testnet.api.subscan.io`     |             |
-| Litentry            | `litentry.api.subscan.io`            |             |
-| Manta               | `manta-testnet.api.subscan.io`       |             |
-| Moonbase            | `moonbase.api.subscan.io`            |             |
-| Pangolin            | `pangolin.api.subscan.io`            |             |
-| Phala Rorschach     | `phala.api.subscan.io`               |             |
-| Plasm               | `plasm.api.subscan.io`               |             |
-| Rococo              | `rococo.api.subscan.io`              |             |
-| Shiden              | `shiden.api.subscan.io`              |             |
-| Sora                | `sora.api.subscan.io`                |             |
-| Stafi               | `stafi.api.subscan.io`               |             |
-| Statemine           | `statemine.api.subscan.io`           |             |
-| Uniarts             | `uniarts.api.subscan.io`             |             |
-| Westend             | `westend.api.subscan.io`             |             |
+| Network             | API Host                             |
+| ------------------- | ------------------------------------ |
+| Polkadot            | `polkadot.api.subscan.io`            |
+| Kusama              | `kusama.api.subscan.io`              |
+| Darwinia            | `darwinia.api.subscan.io`            |
+| Crust               | `crust.api.subscan.io`               |
+| Acala               | `acala.api.subscan.io`               |
+| Acala Mandala       | `acala-testnet.api.subscan.io`       |
+| Alephzero           | `alephzero.api.subscan.io`           |
+| Astar               | `astar.api.subscan.io`               |
+| Bifrost Asgard      | `bifrost.api.subscan.io`             |
+| Calamari            | `calamari.api.subscan.io`            |
+| Centrifuge          | `centrifuge.api.subscan.io`          |
+| ChainX              | `chainx.api.subscan.io`              |
+| Clover              | `clover.api.subscan.io`              |
+| Clover Parachain    | `clv.api.subscan.io`                 |
+| Clover Testnet      | `clover-testnet.api.subscan.io`      |
+| Crust Maxwell       | `maxwell.api.subscan.io`             |
+| Crust Shadow        | `shadow.api.subscan.io`              |
+| Darwinia Crab       | `crab.api.subscan.io`                |
+| DataHighway         | `datahighway.api.subscan.io`         |
+| DataHighway Harbour | `datahighway-harbour.api.subscan.io` |
+| DeepBrain Chain     | `dbc.api.subscan.io`                 |
+| Dock                | `dock.api.subscan.io`                |
+| Dolphin             | `dolphin.api.subscan.io`             |
+| Edgeware            | `edgeware.api.subscan.io`            |
+| Equilibrium         | `equilibrium.api.subscan.io`         |
+| Gateway             | `gateway-testnet.api.subscan.io`     |
+| IntegriTEE          | `integritee.api.subscan.io`          |
+| Karura              | `karura.api.subscan.io`              |
+| Kulupu              | `kulupu.api.subscan.io`              |
+| Khala               | `khala.api.subscan.io`               |
+| KILT Peregrine      | `kilt-testnet.api.subscan.io`        |
+| KILT Spiritnet      | `spiritnet.api.subscan.io`           |
+| Laminar TC2         | `laminar-testnet.api.subscan.io`     |
+| Litentry            | `litentry.api.subscan.io`            |
+| Manta               | `manta-testnet.api.subscan.io`       |
+| Moonbase            | `moonbase.api.subscan.io`            |
+| Moonbeam            | `moonbeam.api.subscan.io`            |
+| Moonriver           | `moonriver.api.subscan.io`           |
+| Pangolin            | `pangolin.api.subscan.io`            |
+| Pangoro             | `pangoro.api.subscan.io`             |
+| Parallel            | `parallel.api.subscan.io`            |
+| Parallel Heiko      | `parallel-heiko.api.subscan.io`      |
+| Phala Rorschach     | `phala.api.subscan.io`               |
+| Picasso             | `picasso.api.subscan.io`             |
+| Polkadex            | `polkadex.api.subscan.io`            |
+| Polymesh            | `polymesh.api.subscan.io`            |
+| Polymesh Testnet    | `polymesh-testnet.api.subscan.io`    |
+| Plasm               | `plasm.api.subscan.io`               |
+| Reef                | `reef.api.subscan.io`                |
+| Robonomics          | `robonomics-testnet.api.subscan.io`  |
+| Rococo              | `rococo.api.subscan.io`              |
+| Sakura              | `sakura.api.subscan.io`              |
+| Shibuya             | `shibuya.api.subscan.io`             |
+| Shiden              | `shiden.api.subscan.io`              |
+| SORA                | `sora.api.subscan.io`                |
+| Subgame             | `subgame.api.subscan.io`             |
+| Stafi               | `stafi.api.subscan.io`               |
+| Statemine           | `statemine.api.subscan.io`           |
+| Uniarts             | `uniarts.api.subscan.io`             |
+| Westend             | `westend.api.subscan.io`             |

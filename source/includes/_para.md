@@ -34,6 +34,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
     "online_count": 0,
     "upcoming_count": 3,
     "lease_period": 300,
+    "lease_offset": 0,
     "ending_period": 50,
     "retirement_period": 0
   }
@@ -86,7 +87,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -185,7 +190,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -308,7 +317,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -409,7 +422,11 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "page": 0,
+    "row": 2
+  }'
 ```
 
 ### Request URL
@@ -420,11 +437,12 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
-| fund_id      | string  | no     |    0     | |
-| row     | int    | yes     |
-| page    | int    | yes     |
-| order   |string  |no| block_num desc|
-| from_history   |bool  |no| false|
+| fund_id | string  | no     |    0    | |
+| row     | int     | yes    |         | |
+| page    | int     | yes    |         | |
+| order   |string   | no     | block_num desc| |
+| who     |string   | no     |         |filter by contributor |
+| from_history |bool| no     | false   | |
 
 
 
@@ -508,8 +526,10 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
+    "page": 0,
+    "row": 2
   }'
 ```
 
@@ -710,8 +730,10 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
+    "page": 0,
+    "row": 2
   }'
 ```
 

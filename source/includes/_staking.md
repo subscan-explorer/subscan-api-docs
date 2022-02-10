@@ -399,6 +399,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
 | row     | int    | yes     |
 | page    | int    | yes     |
 | address | string | yes     |
+| is_stash| bool   | no      |
 
 > Example Response
 
@@ -477,4 +478,61 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/unbonding' \
     }
 }
 
+```
+
+
+## nominator
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/nominator' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/staking/nominator`
+
+### Payload
+
+| Name        | Type   | Require                   |
+| ----------- | ------ | ------------------------- |
+| address     | string | yes                       |
+
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1628671675,
+    "data": {
+        "nominator_stash": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22",
+        "stash_account_display": {
+            "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22",
+            "display": "xxx",
+            "judgements": null,
+            "account_index": "",
+            "identity": false,
+            "parent": null
+        },
+        "staking_info": {
+            "controller": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22",
+            "reward_account": "controller",
+            "controller_display": {
+                "address": "165LPQijvZdnmxcuCfxGWvcoSVtoJnCFm1UjjijzsSGGAk22",
+                "display": "xxx",
+                "judgements": null,
+                "account_index": "",
+                "identity": false,
+                "parent": null
+            }
+        },
+        "bonded": "8782323"
+    }
+}
 ```
