@@ -73,12 +73,13 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
 
 ### Payload
 
-| Name      | Type   | Require |
-|-----------|--------|---------|
-| block_num | int    | no      |
-| contract  | string | no      |
-| page      | int    | no      |
-| row       | int    | no      |
+| Name      | Type   | Require    |
+|-----------|--------|------------|
+| block_num | int    | no         |
+| contract  | string | no         |
+| address   | string | no(signer) |
+| page      | int    | no         |
+| row       | int    | no         |
 
 > Example Response
 
