@@ -283,7 +283,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/era_stat' \
 ### Payload
 
 | Name    | Type   | Require |
-| ------- | ------ | ------- |
+|---------|--------|---------|
 | address | string | yes     |
 | row     | int    | yes     |
 | page    | int    | yes     |
@@ -300,14 +300,11 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/era_stat' \
         "count": 1,
         "list": [
             {
-                "Id": 90,
-                "account": "0cb65fa997169ce0476e1e7c12717d4b2e74f1577ddae002dfb6763f57f2d803",
                 "era": 1,
                 "start_block_num": 1,
                 "end_block_num": 1000000,
-                "reward": "20",
-                "slash": "0",
-                "block_produced": "658988,659064"
+                "block_produced": "658988,659064",
+                "reward_point": 7760
             }
         ]
     }
