@@ -1227,109 +1227,49 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tip' \
 }
 ```
 
-## tippers
+## seconded
 
 ```shell
-curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tippers' \
+curl -X POST 'https://kusama.api.subscan.io/api/scan/democracy/seconded' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "hash": "0x6bf9d1bd28c5e88693a7b86548d9f05ead2813195f4d4771cd44e2b5ed31d181"
-  }'
+    "proposal_id": 58,
+    "page": 0,
+    "row": 10
+    }'
 ```
 
 ### Request URL
 
-`POST /api/scan/treasury/tippers`
+`POST /api/scan/democracy/seconded`
 
 ### payload
 
-| Name | Type   | Require |
-| ---- | ------ | ------- |
-| hash | string | yes     |
+| Name        | Type | Require |
+|-------------|------|---------|
+| proposal_id | int  | yes     |
+| page        | int  | yes     |
+| row         | int  | yes     |
 
 > Example Response
 
 ```json
 {
-    "code": 0,
-    "data": {
-        "list": [
-            {
-                "amount": "75000000000",
-                "extrinsic_index": "1939573-1",
-                "rewarder": {
-                    "account_index": "",
-                    "address": "12xGDBh6zSBc3D98Jhw9jgUVsK8jiwGWHaPTK21Pgb7PJyPn",
-                    "display": "Hypersphere",
-                    "identity": true,
-                    "judgements": [
-                        {
-                            "index": 0,
-                            "judgement": "KnownGood"
-                        }
-                    ],
-                    "parent": "",
-                    "parent_display": ""
-                }
-            },
-            {
-                "amount": "80000000000",
-                "extrinsic_index": "1853811-1",
-                "rewarder": {
-                    "account_index": "",
-                    "address": "16UJBPHVqQ3xYXnmhEpaQtvSRnrP9k1XeE7WxoyCxsrL9AvV",
-                    "display": "Jack",
-                    "identity": true,
-                    "judgements": [
-                        {
-                            "index": 0,
-                            "judgement": "KnownGood"
-                        }
-                    ],
-                    "parent": "",
-                    "parent_display": ""
-                }
-            },
-            {
-                "amount": "50000000000",
-                "extrinsic_index": "1549962-3",
-                "rewarder": {
-                    "account_index": "1kk",
-                    "address": "1363HWTPzDrzAQ6ChFiMU6mP4b6jmQid2ae55JQcKtZnpLGv",
-                    "display": "Jaco",
-                    "identity": true,
-                    "judgements": [
-                        {
-                            "index": 1,
-                            "judgement": "Reasonable"
-                        }
-                    ],
-                    "parent": "",
-                    "parent_display": ""
-                }
-            },
-            {
-                "amount": "100000000000",
-                "extrinsic_index": "1548505-3",
-                "rewarder": {
-                    "account_index": "",
-                    "address": "1hCMdtRsaRA4ZTEKpPKPvEjK9rZpGhyFnRHSDhqFMCEayRL",
-                    "display": "RTTI-5220 (POLKADOT)",
-                    "identity": true,
-                    "judgements": [
-                        {
-                            "index": 0,
-                            "judgement": "KnownGood"
-                        }
-                    ],
-                    "parent": "",
-                    "parent_display": ""
-                }
-            }
-        ]
-    },
-    "message": "Success",
-    "generated_at": 1628587129
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1647396883,
+  "data": {
+    "count": 1,
+    "list": [
+      {
+        "proposal_id": 58,
+        "block_num": 11574051,
+        "account": "0294d53df32ffcce69720bff43ef091c4bb98746625ccd872c83020b6e60b92b",
+        "extrinsic_index": "11574051-3",
+        "event_index": "11574051-30"
+      }
+    ]
+  }
 }
 ```
