@@ -57,18 +57,20 @@ Please notice before you get started:
 | Polkadot            | `polkadot.api.subscan.io`            |
 | Kusama              | `kusama.api.subscan.io`              |
 | Darwinia            | `darwinia.api.subscan.io`            |
-| Crust               | `crust.api.subscan.io`               |
 | Acala               | `acala.api.subscan.io`               |
 | Acala Mandala       | `acala-testnet.api.subscan.io`       |
 | Alephzero           | `alephzero.api.subscan.io`           |
 | Astar               | `astar.api.subscan.io`               |
-| Bifrost Asgard      | `bifrost.api.subscan.io`             |
+| Altair              | `altair.api.subscan.io`              |
+| Bifrost             | `bifrost.api.subscan.io`             |
 | Calamari            | `calamari.api.subscan.io`            |
 | Centrifuge          | `centrifuge.api.subscan.io`          |
+| Centrifuge Parachain| `centrifuge-parachain.api.subscan.io`|
 | ChainX              | `chainx.api.subscan.io`              |
 | Clover              | `clover.api.subscan.io`              |
 | Clover Parachain    | `clv.api.subscan.io`                 |
 | Clover Testnet      | `clover-testnet.api.subscan.io`      |
+| Crust               | `crust.api.subscan.io`               |
 | Crust Maxwell       | `maxwell.api.subscan.io`             |
 | Crust Shadow        | `shadow.api.subscan.io`              |
 | Darwinia Crab       | `crab.api.subscan.io`                |
@@ -82,12 +84,13 @@ Please notice before you get started:
 | Gateway             | `gateway-testnet.api.subscan.io`     |
 | IntegriTEE          | `integritee.api.subscan.io`          |
 | Karura              | `karura.api.subscan.io`              |
+| Kintsugi            | `kintsugi.api.subscan.io`            |
 | Kulupu              | `kulupu.api.subscan.io`              |
 | Khala               | `khala.api.subscan.io`               |
 | KILT Peregrine      | `kilt-testnet.api.subscan.io`        |
 | KILT Spiritnet      | `spiritnet.api.subscan.io`           |
 | Laminar TC2         | `laminar-testnet.api.subscan.io`     |
-| Litentry            | `litentry.api.subscan.io`            |
+| Litmus              | `litmus.api.subscan.io`              |
 | Manta               | `manta-testnet.api.subscan.io`       |
 | Moonbase            | `moonbase.api.subscan.io`            |
 | Moonbeam            | `moonbeam.api.subscan.io`            |
@@ -98,10 +101,12 @@ Please notice before you get started:
 | Parallel Heiko      | `parallel-heiko.api.subscan.io`      |
 | Phala Rorschach     | `phala.api.subscan.io`               |
 | Picasso             | `picasso.api.subscan.io`             |
+| Pioneer             | `pioneer.api.subscan.io`             |
 | Polkadex            | `polkadex.api.subscan.io`            |
 | Polymesh            | `polymesh.api.subscan.io`            |
 | Polymesh Testnet    | `polymesh-testnet.api.subscan.io`    |
 | Plasm               | `plasm.api.subscan.io`               |
+| Quartz              | `quartz.api.subscan.io`              |
 | Reef                | `reef.api.subscan.io`                |
 | Robonomics          | `robonomics-testnet.api.subscan.io`  |
 | Rococo              | `rococo.api.subscan.io`              |
@@ -112,5 +117,6 @@ Please notice before you get started:
 | Subgame             | `subgame.api.subscan.io`             |
 | Stafi               | `stafi.api.subscan.io`               |
 | Statemine           | `statemine.api.subscan.io`           |
+| Statemint           | `statemint.api.subscan.io`           |
 | Uniarts             | `uniarts.api.subscan.io`             |
 | Westend             | `westend.api.subscan.io`             |
