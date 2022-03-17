@@ -83,6 +83,7 @@ Please notice before you get started:
 | Equilibrium         | `equilibrium.api.subscan.io`         |
 | Gateway             | `gateway-testnet.api.subscan.io`     |
 | IntegriTEE          | `integritee.api.subscan.io`          |
+| Interlay            | `interlay.api.subscan.io`            |
 | Karura              | `karura.api.subscan.io`              |
 | Kintsugi            | `kintsugi.api.subscan.io`            |
 | Kulupu              | `kulupu.api.subscan.io`              |
@@ -95,6 +96,7 @@ Please notice before you get started:
 | Moonbase            | `moonbase.api.subscan.io`            |
 | Moonbeam            | `moonbeam.api.subscan.io`            |
 | Moonriver           | `moonriver.api.subscan.io`           |
+| Nodle               | `nodle.api.subscan.io`               |
 | Pangolin            | `pangolin.api.subscan.io`            |
 | Pangoro             | `pangoro.api.subscan.io`             |
 | Parallel            | `parallel.api.subscan.io`            |
