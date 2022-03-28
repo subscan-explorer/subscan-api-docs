@@ -195,10 +195,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/block' \
 
 ### Payload
 
-| Name       | Type   | Require |
-| ---------- | ------ | ------- |
-| block_num  | int    | no      |
-| block_hash | string | no      |
+| Name            | Type   | Require |
+|-----------------|--------|---------|
+| block_num       | int    | no      |
+| block_hash      | string | no      |
+| block_timestamp | int    | no      |
+| only_head       | bool   | no      |
 
 > Example Response
 
