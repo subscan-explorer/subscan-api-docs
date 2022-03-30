@@ -122,3 +122,4 @@ Please notice before you get started:
 | Statemint           | `statemint.api.subscan.io`           |
 | Uniarts             | `uniarts.api.subscan.io`             |
 | Westend             | `westend.api.subscan.io`             |
+| Zeitgeist           | `zeitgeist.api.subscan.io`           |
