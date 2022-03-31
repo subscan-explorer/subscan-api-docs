@@ -70,6 +70,7 @@ Please notice before you get started:
 | Clover              | `clover.api.subscan.io`              |
 | Clover Parachain    | `clv.api.subscan.io`                 |
 | Clover Testnet      | `clover-testnet.api.subscan.io`      |
+| Crab Parachain      | `crab-parachain.api.subscan.io`      |
 | Crust               | `crust.api.subscan.io`               |
 | Crust Maxwell       | `maxwell.api.subscan.io`             |
 | Crust Shadow        | `shadow.api.subscan.io`              |
