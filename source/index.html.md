@@ -81,6 +81,7 @@ Please notice before you get started:
 | Dock                | `dock.api.subscan.io`                |
 | Dolphin             | `dolphin.api.subscan.io`             |
 | Edgeware            | `edgeware.api.subscan.io`            |
+| Encointer           | `encointer.api.subscan.io`           |
 | Equilibrium         | `equilibrium.api.subscan.io`         |
 | Gateway             | `gateway-testnet.api.subscan.io`     |
 | IntegriTEE          | `integritee.api.subscan.io`          |
