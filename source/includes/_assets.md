@@ -1,0 +1,269 @@
+# assets 
+
+## assets
+
+assets list 
+
+```shell
+curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "row": 1,
+    "page": 0
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/assets/assets`
+
+> Example Response
+
+```json
+
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1650347429,
+  "data": {
+    "count": 139,
+    "list": [
+      {
+        "asset_id": 0,
+        "metadata": {
+          "deposit": "6692999670",
+          "name": "Polkadog",
+          "symbol": "DOG",
+          "decimals": 6
+        },
+        "owner": {
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+        },
+        "issuer": {
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+        },
+        "supply": "1000000000000000000",
+        "holders": 6
+      }
+    ]
+  }
+}
+```
+
+
+## asset
+
+asset info
+
+```shell
+curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "assert_id": 1,
+    "row": 1,
+    "page": 0
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/assets/asset`
+
+
+### Payload
+
+| Name     | Type | Require |
+|----------|------|---------|
+| asset_id | int  | yes     |
+
+
+> Example Response
+
+```json
+
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1650349279,
+  "data": {
+    "asset_id": 1,
+    "metadata": {
+      "deposit": "6694332990",
+      "name": "Listen Token",
+      "symbol": "L T",
+      "decimals": 14
+    },
+    "owner": {
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+    },
+    "issuer": {
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+    },
+    "admin": {
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+    },
+    "freezer": {
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+    },
+    "supply": "1000000000000000",
+    "min_balance": "1000000000000",
+    "is_frozen": false,
+    "is_destroyed": false,
+    "holders": 2
+  }
+}
+```
+
+
+## asset-holders
+
+asset holders
+
+```shell
+curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/holders' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "asset_id": 1,
+    "row": 1,
+    "page": 0
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/asset/holders`
+
+
+### Payload
+
+| Name     | Type | Require |
+|----------|------|---------|
+| asset_id | int  | yes     |
+
+
+> Example Response
+
+```json
+
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1650350389,
+  "data": {
+    "count": 6,
+    "list": [
+      {
+        "holder": {
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+        },
+        "balance": "999996000000000000"
+      }
+    ]
+  }
+}
+```
+
+
+## account-assets
+
+asset holders
+
+```shell
+curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/account/balances' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/asset/account/balances`
+
+
+### Payload
+
+| Name    | Type   | Require |
+|---------|--------|---------|
+| address | string | yes     |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1650351232,
+  "data": [
+    {
+      "asset_id": 0,
+      "balance": "999996000000000000",
+      "name": "Polkadog",
+      "symbol": "DOG"
+    },
+    {
+      "asset_id": 16,
+      "balance": "95000000000",
+      "name": "PolarisDAO",
+      "symbol": "ARIS"
+    }
+  ]
+}
+```
+
+
+## account-assets
+
+asset holders
+
+```shell
+curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/activities' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "asset_id": 20,
+    "row": 1,
+    "page": 0
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/asset/activities`
+
+
+### Payload
+
+| Name      | Type | Require |
+|-----------|------|---------|
+| asset_id  | int  | yes     |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1650352863,
+  "data": {
+    "count": 4,
+    "list": [
+      {
+        "event_index": "1164135-3",
+        "extrinsic_index": "1164135-2",
+        "block_num": 1164135,
+        "asset_id": 20,
+        "block_timestamp": 1637140176,
+        "module_id": "assets",
+        "event_id": "Issued"
+      }
+    ]
+  }
+}
+```
