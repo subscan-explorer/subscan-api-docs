@@ -18,6 +18,13 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
 
 `POST /api/scan/assets/assets`
 
+### Payload
+
+| Name   | Type   | Require                 |
+|--------|--------|-------------------------|
+| search | string | no(fuzzy search symbol) |
+
+
 > Example Response
 
 ```json
@@ -38,10 +45,10 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
           "decimals": 6
         },
         "owner": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
         },
         "issuer": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
         },
         "supply": "1000000000000000000",
         "holders": 6
@@ -96,16 +103,16 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
       "decimals": 14
     },
     "owner": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
     },
     "issuer": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
     },
     "admin": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
     },
     "freezer": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo",
+      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
     },
     "supply": "1000000000000000",
     "min_balance": "1000000000000",
