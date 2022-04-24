@@ -129,7 +129,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
 asset holders
 
 ```shell
-curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/holders' \
+curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset/holders' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -141,7 +141,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/holders' \
 
 ### Request URL
 
-`POST /api/scan/asset/holders`
+`POST /api/scan/assets/asset/holders`
 
 
 ### Payload
@@ -179,7 +179,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/holders' \
 asset holders
 
 ```shell
-curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/account/balances' \
+curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/account/balances' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -189,7 +189,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/account/balances' 
 
 ### Request URL
 
-`POST /api/scan/asset/account/balances`
+`POST /api/scan/assets/account/balances`
 
 
 ### Payload
@@ -229,7 +229,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/account/balances' 
 asset holders
 
 ```shell
-curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/activities' \
+curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/activities' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -241,7 +241,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/asset/activities' \
 
 ### Request URL
 
-`POST /api/scan/asset/activities`
+`POST /api/scan/assets/activities`
 
 
 ### Payload
