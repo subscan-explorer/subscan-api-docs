@@ -94,6 +94,7 @@ Please notice before you get started:
 | KILT Spiritnet      | `spiritnet.api.subscan.io`           |
 | Laminar TC2         | `laminar-testnet.api.subscan.io`     |
 | Litmus              | `litmus.api.subscan.io`              |
+| Mangata             | `mangata.api.subscan.io`             |
 | Manta               | `manta-testnet.api.subscan.io`       |
 | Moonbase            | `moonbase.api.subscan.io`            |
 | Moonbeam            | `moonbeam.api.subscan.io`            |
