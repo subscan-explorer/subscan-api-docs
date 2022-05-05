@@ -14,7 +14,6 @@ includes:
   - v2
   - para
   - evm
-  - gateway
   - crust
 
 search: false
@@ -83,7 +82,6 @@ Please notice before you get started:
 | Edgeware            | `edgeware.api.subscan.io`            |
 | Encointer           | `encointer.api.subscan.io`           |
 | Equilibrium         | `equilibrium.api.subscan.io`         |
-| Gateway             | `gateway-testnet.api.subscan.io`     |
 | IntegriTEE          | `integritee.api.subscan.io`          |
 | Interlay            | `interlay.api.subscan.io`            |
 | Karura              | `karura.api.subscan.io`              |
