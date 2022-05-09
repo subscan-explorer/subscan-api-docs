@@ -2,7 +2,6 @@
 
 ## meta
 
-
 ```shell
 curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
   --header 'Content-Type: application/json' \
@@ -545,7 +544,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
 | status      | string  | no     |    0     | Enum(Onboarding&#124;Parathread&#124;Parachain) |
 | row     | int    | yes     |
 | page    | int    | yes     |
-|order   |string  |no| |
+| order   | string | no| |
 
 > Example Response
 
@@ -882,7 +881,6 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/fundStat' \
 }
 ```
 
-
 ## best bid
 
 ```shell
@@ -925,6 +923,74 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/bestBid' \
         "block_timestamp": 1624237734,
         "extrinsic_index": "8004479-0",
         "event_index": "8004479-2"
+    }
+}
+```
+
+## account contributions
+
+```shell
+curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "who": "HxphiPhPEbXaqbjbbUDGdUtLLGq3dV3b4ETTFFqAWbEsttP",
+    "row": 100,
+    "page": 0
+}'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/bestBid`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                 |
+| --------- | ---- | ------- | ------- | --------------------------- |
+| who     | string   | yes     |      | account address |
+| row     | int    | yes     |
+| page    | int    | yes     |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1652085910,
+    "data": {
+        "count": 2,
+        "list": [
+            {
+                "fund_id": "2012-53",
+                "para_id": 2012,
+                "contributed": "200000000000000",
+                "block_num": 10573992,
+                "block_timestamp": 1639830408,
+                "extrinsic_index": "10573992-2",
+                "event_index": "10573992-19",
+                "status": 1,
+                "memo": "",
+                "fund_status": 2,
+                "fund_event_index": "10683439-25",
+                "unlocking_block": 15725400
+            },
+            {
+                "fund_id": "2009-21",
+                "para_id": 2009,
+                "contributed": "300000000000000",
+                "block_num": 9225088,
+                "block_timestamp": 1631642448,
+                "extrinsic_index": "9225088-4",
+                "event_index": "9225088-14",
+                "status": 1,
+                "memo": "",
+                "fund_status": 4,
+                "fund_event_index": "9678896-30",
+                "unlocking_block": 0
+            }
+        ]
     }
 }
 ```
