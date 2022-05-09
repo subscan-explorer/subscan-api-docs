@@ -933,7 +933,7 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
 
 ### Request URL
 
-`POST /api/scan/parachain/bestBid`
+`POST /api/scan/account/contributions`
 
 ### Payload
 
