@@ -59,7 +59,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
 
 | Parameter | Type | Require | Default | Description                            |
 |-----------|------|---------|---------|----------------------------------------|
-| status    | int  | no      | 0       | Enum(1:Proposal\|2:Upcoming\|3:Online) |
+| status    | int  | no      | 0       | Enum(1:Proposal&#124;2:Upcoming&#124;3:Online) |
 
 > Example Response
 
@@ -101,7 +101,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 | Parameter     | Type   | Require | Default            | Description                   |
 |---------------|--------|---------|--------------------|-------------------------------|
 | auction_index | int    | no      | 0                  |                               |
-| status        | int    | no      | 0                  | Enum(1:Started\|2:Closed) |
+| status        | int    | no      | 0                  | Enum(1:Started&#124;2:Closed) |
 | row           | int    | yes     |                    |                               |
 | page          | int    | yes     |                    |                               |
 | order         | string | no      | auction_index desc |                               |
@@ -208,8 +208,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 | para_id       | int    | no      | 0              |                                       |
 | from_block    | int    | no      | 0              | start blockNum of range query         |
 | to_block      | int    | no      | 0              | end blockNum of range query           |
-| status        | int    | no      | 0              | Enum(1:Accepted\|2:Leased\|3:Renewal) |
-| source        | int    | no      | 0              | Enum(1:Slot\|2:Crowdloan)             |
+| status        | int    | no      | 0              | Enum(1:Accepted&#124;2:Leased&#124;3:Renewal) |
+| source        | int    | no      | 0              | Enum(1:Slot&#124;2:Crowdloan)             |
 | from_history  | bool   | no      | false          |                                       |
 | bidder        | string | no      |                |                                       |
 | row           | int    | yes     |                |                                       |
@@ -334,7 +334,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 | para_id       | int    | no      | 0                               |                                                 |
 | from_block    | int    | no      | 0                               | start blockNum of range query                   |
 | to_block      | int    | no      | 0                               | end blockNum of range query                     |
-| status        | int    | no      | 0                               | Enum(1:Created\|2:Leased\|3:Ended\|4:Dissolved) |
+| status        | int    | no      | 0                               | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
 | from_history  | bool   | no      | false                           |                                                 |
 | row           | int    | yes     |                                 |                                                 |
 | page          | int    | yes     |                                 |                                                 |
@@ -535,7 +535,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
 | Parameter | Type   | Require | Default | Description                             |
 |-----------|--------|---------|---------|-----------------------------------------|
 | para_id   | int    | no      | 0       |                                         |
-| status    | string | no      | 0       | Enum(Onboarding\|Parathread\|Parachain) |
+| status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
 | row       | int    | yes     |         |                                         |
 | page      | int    | yes     |         |                                         |
 | order     | string | no      |         |                                         |
@@ -737,7 +737,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
 
 | Parameter | Type   | Require | Default | Description                             |
 |-----------|--------|---------|---------|-----------------------------------------|
-| status    | string | no      | 0       | Enum(Onboarding\|Parathread\|Parachain) |
+| status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
 | row       | int    | yes     |         |                                         |
 | page      | int    | yes     |         |                                         |
 | order     | string | no      |         |                                         |
