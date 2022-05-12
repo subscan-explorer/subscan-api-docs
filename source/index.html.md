@@ -69,10 +69,12 @@ Please notice before you get started:
 | Clover              | `clover.api.subscan.io`              |
 | Clover Parachain    | `clv.api.subscan.io`                 |
 | Clover Testnet      | `clover-testnet.api.subscan.io`      |
+| Composable          | `composable.api.subscan.io`          |
 | Crab Parachain      | `crab-parachain.api.subscan.io`      |
 | Crust               | `crust.api.subscan.io`               |
 | Crust Maxwell       | `maxwell.api.subscan.io`             |
 | Crust Shadow        | `shadow.api.subscan.io`              |
+| Dali                | `dali.api.subscan.io`                |
 | Darwinia Crab       | `crab.api.subscan.io`                |
 | DataHighway         | `datahighway.api.subscan.io`         |
 | DataHighway Harbour | `datahighway-harbour.api.subscan.io` |
@@ -99,6 +101,7 @@ Please notice before you get started:
 | Moonriver           | `moonriver.api.subscan.io`           |
 | Nodle               | `nodle.api.subscan.io`               |
 | Pangolin            | `pangolin.api.subscan.io`            |
+| Pangolin Parachain  | `pangolin-parachain.api.subscan.io`  |
 | Pangoro             | `pangoro.api.subscan.io`             |
 | Parallel            | `parallel.api.subscan.io`            |
 | Parallel Heiko      | `parallel-heiko.api.subscan.io`      |
