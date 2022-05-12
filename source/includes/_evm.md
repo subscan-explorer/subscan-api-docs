@@ -170,6 +170,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/tokens' \
 | page      | int    | no                        |
 | row       | int    | no                        |
 | search    | string | no (erc20 symbol or name) |
+| category  | string | no (erc20  or erc721)     |
 
 > Example Response
 
@@ -432,8 +433,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/token/holders' \
 }
 ```
 
-
-## contract list 
+## contract list
 
 Get contract list
 
@@ -486,7 +486,6 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contract/list' \
 }
 ```
 
-
 ## EVM meta
 
 ```shell
@@ -514,6 +513,111 @@ curl -X POST 'https://crab.webapi.subscan.io/api/scan/evm/meta' \
     "contracts_count": 189,
     "transaction_count": 8411,
     "verified_contracts_count": 11
+  }
+}
+```
+
+## erc721 collectibles
+
+Get erc721 collectibles by address
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/erc721/collectibles' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "contract": "0x735182c782cb8e7806f8903de7913e6880cbf82e",
+    "row":10,
+    "page":0
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/erc721/collectibles`
+
+### Payload
+
+| Name     | Type   | Require                |
+|----------|--------|------------------------|
+| address  | string | yes                    |
+| contract | string | no(filter by contract) |
+| row      | int    | yes                    |
+| page     | int    | no                     |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1652326236,
+  "data": {
+    "count": 1,
+    "list": [
+      {
+        "contract": "0x3788df4fdc026f5ea91a333fcf7ced7a52c92471",
+        "holder": "0x735182c782cb8e7806f8903de7913e6880cbf82e",
+        "token_id": "19002440208967408638871127175787856406121343993137770784825519484201934520789"
+      }
+    ]
+  }
+}
+
+
+```
+
+
+## erc721 transfers
+
+Get erc721 transfers by address
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/erc721/transfer' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "address": "0x735182c782cb8e7806f8903de7913e6880cbf82e"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/evm/erc721/transfer`
+
+### Payload
+
+| Name     | Type   | Require |
+|----------|--------|---------|
+| address  | string | no      |
+| contract | string | no      |
+| token_id | string | no      |
+| row      | int    | yes     |
+| page     | int    | no      |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1652326509,
+  "data": {
+    "count": 1,
+    "list": [
+      {
+        "contract": "0x3788df4fdc026f5ea91a333fcf7ced7a52c92471",
+        "hash": "0x45a527c2f5dcec99acaf46246c0a282ca0b4d5a2a9d66e522bfee290b4c0beda",
+        "create_at": 1652088708,
+        "from": "0xa0aaff128c1dcbb5fe95ff021927622fa165014e",
+        "to": "0x735182c782cb8e7806f8903de7913e6880cbf82e",
+        "value": "1",
+        "token_id": "19002440208967408638871127175787856406121343993137770784825519484201934520789",
+        "decimals": 0,
+        "symbol": "EVO",
+        "name": "Evolution Land Objects"
+      }
+    ]
   }
 }
 ```
