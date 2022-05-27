@@ -124,6 +124,7 @@ Please notice before you get started:
 | Stafi               | `stafi.api.subscan.io`               |
 | Statemine           | `statemine.api.subscan.io`           |
 | Statemint           | `statemint.api.subscan.io`           |
+| Turing              | `turing.api.subscan.io`              |
 | Uniarts             | `uniarts.api.subscan.io`             |
 | Westend             | `westend.api.subscan.io`             |
 | Zeitgeist           | `zeitgeist.api.subscan.io`           |
