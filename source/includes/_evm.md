@@ -1,6 +1,6 @@
 # EVM API
 
-**Tip:** Evm API only available the network supports pallet **Evm** and **ethereum** (like Moonbeam, Astar)
+**Tip:** Evm API is only available in the network supports pallet **Evm** and **ethereum** (like Moonbeam, Astar)
 
 ## evm block
 
@@ -79,7 +79,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
 |-------------|--------|------------------------|
 | block_num   | int    | no                     |
 | contract    | string | no                     |
-| address     | string | no(signer evm address) |
+| address     | string | no(signer, evm address)|
 | page        | int    | no                     |
 | row         | int    | no                     |
 | block_range | string | no                     |

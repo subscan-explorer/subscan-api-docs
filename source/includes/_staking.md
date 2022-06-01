@@ -1,6 +1,6 @@
 # Staking API
 
-**Tip:** Staking API only available the network supports pallet **staking** or **parachain staking** (like moonbeam, bifrost)
+**Tip:** Staking API is only available in the network supports pallet **staking** or **parachain staking** (like moonbeam, bifrost)
 
 ## validators
 

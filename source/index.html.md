@@ -51,7 +51,7 @@ Please notice before you get started:
 
 3. SLA covered endpoints are shown on our [service status page](https://subscan.statuspage.io/). Several networks are excluded from our SLA for now. It might because: 1) the network is a testnet, not as stable as a mainnet, or could be reset in a relatively higher chance; 2) the chain RPC that Subscan relied on is maintained by others (e.g. the chain developers). We may update the covered list in the future. Please let us know if you want to have other networks included in the SLA.
 
-4. The **Status** marked as **live** is production network, and it will be maintained continuously. The status marked as **test** is test network, which may be unstable. Some new features of subscan will be updated first. 
+4. The **Status** marked as **live** is production network, and it will be maintained continuously. The **Status** marked as **test** is test network, which may be unstable. Some new features of Subscan will be updated on testnet first.
 
 | Network              | API Host                              | Status |
 |----------------------|---------------------------------------|--------|
@@ -112,7 +112,7 @@ Please notice before you get started:
 | Pioneer              | `pioneer.api.subscan.io`              | live   |
 | Polkadex             | `polkadex.api.subscan.io`             | live   |
 | Polymesh             | `polymesh.api.subscan.io`             | live   |
-| Polymesh Testnet     | `polymesh-testnet.api.subscan.io`     | tests  |
+| Polymesh Testnet     | `polymesh-testnet.api.subscan.io`     | test   |
 | Plasm                | `plasm.api.subscan.io`                | live   |
 | Quartz               | `quartz.api.subscan.io`               | live   |
 | Reef                 | `reef.api.subscan.io`                 | live   |
