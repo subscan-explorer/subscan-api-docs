@@ -72,7 +72,7 @@ It is highly recommended to build your client with a backoff strategy to wait fo
 The table down below lists several HTTP status codes that Subscan might respond.
 
 | Code                      | Meaning                                                                                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | 200 OK                    | The request was handled without any error.                                                                                                      |
 | 401 Unauthorized          | The credentials is either not found or invalid. Please refer to the `message` field in the JSON response for more detail.                       |
 | 404 Not Found             | The HTTP method or request URI was most likely wrong.                                                                                           |
