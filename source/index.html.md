@@ -8,6 +8,7 @@ includes:
   - conventions
   - general
   - staking
+  - account
   - price
   - governance
   - runtime
