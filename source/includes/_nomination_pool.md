@@ -187,7 +187,8 @@ curl -X POST 'https://westend.api.subscan.io/api/scan/nomination_pool/rewards' \
 
 | Name    | Type   | Require |
 |---------|--------|---------|
-| address | string | yes     |
+| address | string | no      |
+| pool_id | int    | no      |
 | row     | int    | yes     |
 | page    | int    | no      |
 
@@ -197,7 +198,7 @@ curl -X POST 'https://westend.api.subscan.io/api/scan/nomination_pool/rewards' \
 {
   "code": 0,
   "message": "Success",
-  "generated_at": 1654764281,
+  "generated_at": 1654765478,
   "data": {
     "count": 1,
     "list": [
@@ -208,9 +209,11 @@ curl -X POST 'https://westend.api.subscan.io/api/scan/nomination_pool/rewards' \
         "extrinsic_index": "11180970-3",
         "event_index": "11180970-9",
         "block_timestamp": 1654587198,
-        "amount": "1390109349"
+        "amount": "1390109349",
+        "account_display": {
+          "address": "5ES1f2Q6PjK9DtZSKvRBCd2GeWfU1ExFjcmeA31jTqw1u8iK"
+        }
       }
     ]
   }
-}
 ```
