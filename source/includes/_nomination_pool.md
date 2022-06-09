@@ -188,6 +188,8 @@ curl -X POST 'https://westend.api.subscan.io/api/scan/nomination_pool/rewards' \
 | Name    | Type   | Require |
 |---------|--------|---------|
 | address | string | yes     |
+| row     | int    | yes     |
+| page    | int    | no      |
 
 > Example Response
 
