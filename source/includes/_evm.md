@@ -1,6 +1,6 @@
 # EVM API
 
-**Tip:** Evm API is only available in the network supports pallet **Evm** and **ethereum** (like Moonbeam, Astar)
+**Tip:** Evm API is only available in the network supports **evm** and **ethereum** pallet(like Moonbeam, Astar)
 
 ## evm block
 
@@ -107,7 +107,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
 }
 ```
 
-## account tokens
+## account evm tokens
 
 Get evm tokens by account address
 

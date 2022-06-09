@@ -48,7 +48,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/open/price' \
 
 ## price-converter
 
-The conversion calculator returns the amount of the target currency base on the amount of source currency given historical price
+The conversion calculator returns the amount of the target currency base on the amount of source currency and historical price
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/open/price_converter' \

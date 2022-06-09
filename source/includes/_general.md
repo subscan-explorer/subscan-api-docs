@@ -643,7 +643,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
 
 ~~Search block, account, extrinsic~~
 
-NOTICE: This was been deprecated, please using `v2/scan/search` instead
+NOTICE: This is deprecated, please use `v2/scan/search` instead
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/search' \
@@ -908,7 +908,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
 
 ## check-hash
 
-Judgment hash is a block | extrinsic
+Check whether it is block hash or extrinsic hash
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/check_hash' \
@@ -988,7 +988,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
 
 ## raw extrinsic
 
-Get Raw data of Extrinsic
+Get raw data of extrinsic
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/getRawTx' \
