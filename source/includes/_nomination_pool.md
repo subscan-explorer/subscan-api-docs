@@ -216,4 +216,51 @@ curl -X POST 'https://westend.api.subscan.io/api/scan/nomination_pool/rewards' \
       }
     ]
   }
+}
+```
+
+## pool-members
+
+```shell
+curl -X POST 'https://westend.api.subscan.io/api/scan/nomination_pool/pool/members' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+   "pool_id": "1"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/nomination_pool/pool/members`
+
+### Payload
+
+| Name    | Type   | Require |
+|---------|--------|---------|
+| pool_id | int    | no      |
+| row     | int    | yes     |
+| page    | int    | no      |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1655113061,
+  "data": {
+    "count": 7,
+    "list": [
+      {
+        "pool_id": 45,
+        "bonded": "3000000000000",
+        "point": "0",
+        "account_display": {
+          "address": "5D7zYmyEEmtTVg6RhUcCRP11J1Rc6FK2Xh2hUZQzD5K57bHF"
+        }
+      }
+    ]
+  }
+}
 ```
