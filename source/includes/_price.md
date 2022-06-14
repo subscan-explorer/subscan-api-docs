@@ -134,6 +134,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
     "generated_at": 1628587129,
     "data": {
         "average": "153.1241241",
+        "ema7_average": "0",
         "list": [
             {
                 "feed_at": 1594857864,
@@ -152,7 +153,7 @@ List of currencies that support price query and conversion
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/open/currencies' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY' \
+  --header 'X-API-Key: YOUR_KEY' 
 ```
 
 ### Request URL

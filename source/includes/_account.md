@@ -43,11 +43,16 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
         "account_display": {
           "account_index": "127Ac3",
           "address": "15fNZmAVqLdg6JMD9ZRtzhXrouzd2D4YTWdg3WYW8yZae6F2",
+          "display": "",
+          "identity": false,
+          "judgements": null,
+          "parent": null
         },
         "address": "15fNZmAVqLdg6JMD9ZRtzhXrouzd2D4YTWdg3WYW8yZae6F2",
         "balance": "8223.4312040139",
         "balance_lock": "8172.7073040139",
         "count_extrinsic": 10,
+        "derive_token": null,
         "is_erc20": false,
         "is_evm_contract": false,
         "kton_balance": "0",

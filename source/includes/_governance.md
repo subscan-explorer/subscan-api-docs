@@ -7,7 +7,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/proposals' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 2,
+    "row": 1,
     "page": 0
   }'
 ```
@@ -32,82 +32,31 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/proposals' \
     "count": 16,
     "list": [
       {
-        "beneficiary": {
-          "account_index": "",
-          "address": "1629Shw6w88GnyXyyUbRtX7YFipQnjScGKcWr1BaRiMhvmAg",
-          "display": "Patract Labs",
-          "identity": true,
-          "judgements": [
-            {
-              "index": 1,
-              "judgement": "Reasonable"
-            }
-          ],
-          "parent": "",
-          "parent_display": ""
-        },
-        "created_block": 1987642,
-        "proposal_id": 16,
-        "proposer": {
-          "account_index": "16eQvjDK",
-          "address": "13DgX3GSb1tAGCWjW4dcSnNZZDEaKrFceYtAMaEBMFfQH9rz",
-          "display": "Lipeng",
-          "identity": true,
-          "judgements": [
-            {
-              "index": 0,
-              "judgement": "FeePaid"
-            },
-            {
-              "index": 1,
-              "judgement": "Reasonable"
-            }
-          ],
-          "parent": "",
-          "parent_display": ""
-        },
-        "reward": "86000000000000",
+        "proposal_id": 133,
+        "created_block": 10701429,
+        "status": "proposed",
+        "reward": "26350000000000",
         "reward_extra": "0",
-        "status": "awarded"
-      },
-      {
         "beneficiary": {
-          "account_index": "",
-          "address": "1629Shw6w88GnyXyyUbRtX7YFipQnjScGKcWr1BaRiMhvmAg",
-          "display": "Patract Labs",
-          "identity": true,
-          "judgements": [
-            {
-              "index": 1,
-              "judgement": "Reasonable"
-            }
+          "address": "1Hzs7WqYz2T3EcXN1L4uGLHeE3h5rUuneVkLX5qmmUUvcNo",
+          "display": "Hashed Systems",
+          "judgements": [{
+            "index": 1,
+            "judgement": "Reasonable"
+          }
           ],
-          "parent": "",
-          "parent_display": ""
+          "account_index": "1D2Z",
+          "identity": true,
+          "parent": null
         },
-        "created_block": 1920117,
-        "proposal_id": 15,
         "proposer": {
-          "account_index": "16eQvjDK",
-          "address": "13DgX3GSb1tAGCWjW4dcSnNZZDEaKrFceYtAMaEBMFfQH9rz",
-          "display": "Lipeng",
+          "address": "1Hzs7WqYz2T3EcXN1L4uGLHeE3h5rUuneVkLX5qmmUUvcNo",
+          "display": "Hashed Systems",
+          "judgements": null,
+          "account_index": "1D2Z",
           "identity": true,
-          "judgements": [
-            {
-              "index": 0,
-              "judgement": "FeePaid"
-            },
-            {
-              "index": 1,
-              "judgement": "Reasonable"
-            }
-          ],
-          "parent": "",
-          "parent_display": ""
-        },
-        "reward": "94500000000000",
-        "reward_extra": "0",
-        "status": "awarded"
+          "parent": null
+        }
       }
     ]
   },
@@ -246,7 +195,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/techcomm/proposals' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 20,
+    "row": 1,
     "page": 0
   }'
 ```
@@ -378,7 +327,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/techcomm/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0x9806cd135fabbc986cfee9cc17fc5f1c5b4014e7ad40884cec039a3a15a8bfa4",
-          "extrinsic_index": "801924-3"
+          "extrinsic_index": "801924-3",
+          "voting_time": 1595334330
         }
       ],
       "timeline": [
@@ -422,7 +372,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposals' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 20,
+    "row": 1,
     "page": 1
   }'
 ```
@@ -537,7 +487,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0x04c051e22e6cc964666c075073c161fcc256405d08e4f7854e169e9e8cf7869b",
-          "extrinsic_index": "2022852-2"
+          "extrinsic_index": "2022852-2",
+          "voting_time": 1602697470
         },
         {
           "account": {
@@ -555,7 +506,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0xe1f56c5dd4a755ba43fe940ff9f907a4ae4aa2fc021164f17ea011e9a01c39b5",
-          "extrinsic_index": "2020976-1"
+          "extrinsic_index": "2020976-1",
+          "voting_time": 1602686184
         },
         {
           "account": {
@@ -573,7 +525,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0x32260880f92401dccffcc2c9386a9c84f3d237012f43be3ecd9546c73658182f",
-          "extrinsic_index": "2004597-2"
+          "extrinsic_index": "2004597-2",
+          "voting_time": 1602587208
         },
         {
           "account": {
@@ -591,7 +544,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0xc2a3d8711db3652bc5253ceafacf4fcfcd388a6ab72acfcca59217befce17820",
-          "extrinsic_index": "2004315-1"
+          "extrinsic_index": "2004315-1",
+          "voting_time": 1602585498
         },
         {
           "account": {
@@ -613,7 +567,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0x573fcfa1a03b16896a6781ee29c14947f0c8a7da7d9798a106e5b3aa20ad14a3",
-          "extrinsic_index": "2003877-1"
+          "extrinsic_index": "2003877-1",
+          "voting_time": 1602582864
         },
         {
           "account": {
@@ -631,7 +586,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0xf9ef9fece7674b8f811ccc5c19f087876d0cdf78f668ea1765f2cbccb06cbcfb",
-          "extrinsic_index": "2003431-2"
+          "extrinsic_index": "2003431-2",
+          "voting_time": 1602580164
         },
         {
           "account": {
@@ -649,7 +605,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
           },
           "passed": true,
           "extrinsic_hash": "0x9288fe170f9ad3feb4639fe6d84c85f7e87597de64e1a8f10c01ba43387c3a42",
-          "extrinsic_index": "2002969-1"
+          "extrinsic_index": "2002969-1",
+          "voting_time": 1602577374
         }
       ],
       "timeline": [
@@ -702,7 +659,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendums' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 20,
+    "row": 1,
     "page": 1
   }'
 ```
@@ -862,7 +819,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 20,
+    "row": 1,
     "page": 1
   }'
 ```
@@ -893,11 +850,17 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
         "account": {
           "display": "",
           "account_index": "4wkDy",
-          "address": "HRosoqFwj5XJUiTrFFFqpEzzuqTXWAczPyjm23JVmg9FTYu"
+          "address": "HRosoqFwj5XJUiTrFFFqpEzzuqTXWAczPyjm23JVmg9FTYu",
+          "judgements": null,
+          "identity": false,
+          "parent": null
         },
         "amount": "323446184712801",
         "passed": true,
-        "extrinsic_hash": "0xa02acc5a6dba2bb45c04cf8e73f52e1b0c1499587a9b8632d5c677632b8059ec"
+        "extrinsic_hash": "0xa02acc5a6dba2bb45c04cf8e73f52e1b0c1499587a9b8632d5c677632b8059ec",
+        "extrinsic_index": "795597-3",
+        "conviction": "1",
+        "voting_time": 1595296242
       }
     ]
   }
@@ -911,7 +874,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/proposals' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 2,
+    "row": 1,
     "page": 1
   }'
 ```
@@ -942,14 +905,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/proposals' \
         "proposal_id": 9,
         "status": "tabled",
         "call_module": "Staking",
-        "call_name": "increase_validator_count"
-      },
-      {
-        "created_block": 1678201,
-        "proposal_id": 8,
-        "status": "proposed",
-        "call_module": "Staking",
-        "call_name": "increase_validator_count"
+        "call_name": "increase_validator_count",
+        "seconded_count": 0
       }
     ]
   }
@@ -995,6 +952,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/proposal' \
       "call_module": "",
       "call_name": "",
       "params": "null",
+      "seconded_count": 0,
       "timeline": [
         {
           "block": 1612800,
@@ -1039,7 +997,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tips' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 2,
+    "row": 1,
     "page": 1
   }'
 ```
@@ -1076,8 +1034,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tips' \
               "judgement": "Reasonable"
             }
           ],
-          "parent": "a849437f5f8b602fc9a4210d6a9834af4adc6ce7492861bd0f5b88d11919cd7b",
-          "parent_display": "CRYPTO PLAZA"
+          "parent": "a849437f5f8b602fc9a4210d6a9834af4adc6ce7492861bd0f5b88d11919cd7b"
         },
         "block_num": 2131734,
         "close_block_num": 2131737,
@@ -1093,41 +1050,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tips' \
               "judgement": "KnownGood"
             }
           ],
-          "parent": "",
-          "parent_display": ""
+          "parent": ""
         },
         "hash": "0x8b750b6c5e3ad200506fb0f82caa57a7be7842ae12c32427c98ef23d18409487",
         "reason": "Statink on Polkadot with Ledger tutorial: https://youtu.be/-jxJ7jursA4",
         "status": "retract",
         "tipper_num": 0
-      },
-      {
-        "amount": "0",
-        "beneficiary": {
-          "account_index": "",
-          "address": "13fifm1SRPnbMyGV8MS1knKPjNcctmfKSyPS4B6C6yVKzyDo",
-          "display": "",
-          "identity": false,
-          "judgements": null,
-          "parent": "",
-          "parent_display": ""
-        },
-        "block_num": 2091893,
-        "close_block_num": 0,
-        "extrinsic_index": "2091893-2",
-        "finder": {
-          "account_index": "",
-          "address": "13fifm1SRPnbMyGV8MS1knKPjNcctmfKSyPS4B6C6yVKzyDo",
-          "display": "",
-          "identity": false,
-          "judgements": null,
-          "parent": "",
-          "parent_display": ""
-        },
-        "hash": "0x2bc70afd0e7864505bafe342e8dcfd1b4ce377fd7743e2c9033e3f99b66ff55a",
-        "reason": "Access the Acala Mandala App : https://youtu.be/AifEASVetJ8",
-        "status": "proposed",
-        "tipper_num": 2
       }
     ]
   },
@@ -1177,15 +1105,25 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tip' \
       "finder": {
         "address": "16YBdgR2NXVfcgVx8vmGimJMo8CFzULktruh1bTDUnY2Ss6Q",
         "display": "",
-        "judgements": null,
+        "judgements": [
+          {
+            "index": 0,
+            "judgement": "FeePaid"
+          }
+        ],
         "account_index": "",
         "identity": false,
         "parent": null
       },
       "beneficiary": {
         "address": "16YBdgR2NXVfcgVx8vmGimJMo8CFzULktruh1bTDUnY2Ss6Q",
-        "display": "",
-        "judgements": null,
+        "display": "Phala Network",
+        "judgements": [
+          {
+            "index": 0,
+            "judgement": "FeePaid"
+          }
+        ],
         "account_index": "",
         "identity": false,
         "parent": null
@@ -1224,7 +1162,7 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/democracy/seconded' \
   --data-raw '{
     "proposal_id": 58,
     "page": 0,
-    "row": 10
+    "row": 1
     }'
 ```
 
@@ -1270,7 +1208,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/bounties/proposals' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
     "page": 0,
-    "row": 10
+    "row": 1
     }'
 ```
 
@@ -1322,7 +1260,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/bounties/proposal' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "proposal_id": 0,
+    "proposal_id": 0
     }'
 ```
 

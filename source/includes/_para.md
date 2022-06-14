@@ -22,20 +22,16 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
   "message": "Success",
   "generated_at": 1628587129,
   "data": {
-    "total_slot_num": 100,
-    "proposed_count": 0,
-    "approved_count": 0,
-    "registered_count": 0,
-    "auction_count": 1,
-    "auction_index": 0,
+    "auction_count": 0,
     "auction_active": false,
-    "fund_count": 2,
-    "online_count": 0,
-    "upcoming_count": 3,
-    "lease_period": 300,
+    "online_count": 31,
+    "upcoming_count": 12,
+    "lease_period": 0,
     "lease_offset": 0,
-    "ending_period": 50,
-    "retirement_period": 0
+    "ending_period": 0,
+    "retirement_period": 0,
+    "lease_periods_per_slot": 0,
+    "total_slot_num": 100
   }
 }
 ```
@@ -190,7 +186,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
     "page": 0,
-    "row": 2
+    "row": 1
   }'
 ```
 

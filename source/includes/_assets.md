@@ -45,10 +45,20 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
           "decimals": 6
         },
         "owner": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
         },
         "issuer": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
         },
         "supply": "1000000000000000000",
         "holders": 6
@@ -103,16 +113,36 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
       "decimals": 14
     },
     "owner": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": null,
+      "account_index": "",
+      "identity": false,
+      "parent": null
     },
     "issuer": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": null,
+      "account_index": "",
+      "identity": false,
+      "parent": null
     },
     "admin": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": null,
+      "account_index": "",
+      "identity": false,
+      "parent": null
     },
     "freezer": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": null,
+      "account_index": "",
+      "identity": false,
+      "parent": null
     },
     "supply": "1000000000000000",
     "min_balance": "1000000000000",
@@ -164,7 +194,12 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset/holders' \
     "list": [
       {
         "holder": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "display": "",
+          "judgements": null,
+          "account_index": "",
+          "identity": false,
+          "parent": null
         },
         "balance": "999996000000000000"
       }
@@ -211,13 +246,15 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/account/balances'
       "asset_id": 0,
       "balance": "999996000000000000",
       "name": "Polkadog",
-      "symbol": "DOG"
+      "symbol": "DOG",
+      "decimals": 6
     },
     {
       "asset_id": 16,
       "balance": "95000000000",
       "name": "PolarisDAO",
-      "symbol": "ARIS"
+      "symbol": "ARIS",
+      "decimals": 8
     }
   ]
 }
