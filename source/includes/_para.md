@@ -57,8 +57,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
 
 ### Payload
 
-| Parameter | Type | Require | Default | Description                            |
-|-----------|------|---------|---------|----------------------------------------|
+| Parameter | Type | Require | Default | Description                                    |
+|-----------|------|---------|---------|------------------------------------------------|
 | status    | int  | no      | 0       | Enum(1:Proposal&#124;2:Upcoming&#124;3:Online) |
 
 > Example Response
@@ -200,23 +200,23 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 
 ### Payload
 
-| Parameter     | Type   | Require | Default        | Description                           |
-|---------------|--------|---------|----------------|---------------------------------------|
-| auction_index | int    | no      | 0              |                                       |
-| bid_id        | string | no      |                |                                       |
-| fund_id       | string | no      |                |                                       |
-| para_id       | int    | no      | 0              |                                       |
-| from_block    | int    | no      | 0              | start blockNum of range query         |
-| to_block      | int    | no      | 0              | end blockNum of range query           |
+| Parameter     | Type   | Require | Default        | Description                                   |
+|---------------|--------|---------|----------------|-----------------------------------------------|
+| auction_index | int    | no      | 0              |                                               |
+| bid_id        | string | no      |                |                                               |
+| fund_id       | string | no      |                |                                               |
+| para_id       | int    | no      | 0              |                                               |
+| from_block    | int    | no      | 0              | start blockNum of range query                 |
+| to_block      | int    | no      | 0              | end blockNum of range query                   |
 | status        | int    | no      | 0              | Enum(1:Accepted&#124;2:Leased&#124;3:Renewal) |
-| source        | int    | no      | 0              | Enum(1:Slot&#124;2:Crowdloan)             |
-| from_history  | bool   | no      | false          |                                       |
-| bidder        | string | no      |                |                                       |
-| row           | int    | yes     |                |                                       |
-| page          | int    | yes     |                |                                       |
-| order         | string | no      | block_num desc |                                       |
-| first_period  | int    | no      | first period   |                                       |
-| last_period   | int    | no      | last period    |                                       |
+| source        | int    | no      | 0              | Enum(1:Slot&#124;2:Crowdloan)                 |
+| from_history  | bool   | no      | false          |                                               |
+| bidder        | string | no      |                |                                               |
+| row           | int    | yes     |                |                                               |
+| page          | int    | yes     |                |                                               |
+| order         | string | no      | block_num desc |                                               |
+| first_period  | int    | no      | first period   |                                               |
+| last_period   | int    | no      | last period    |                                               |
 
 > Example Response
 
@@ -326,22 +326,22 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 
 ### Payload
 
-| Parameter     | Type   | Require | Default                         | Description                                     |
-|---------------|--------|---------|---------------------------------|-------------------------------------------------|
-| fund_id       | string | no      |                                 |                                                 |
-| bid_id        | string | no      |                                 |                                                 |
-| auction_index | int    | no      | 0                               |                                                 |
-| para_id       | int    | no      | 0                               |                                                 |
-| from_block    | int    | no      | 0                               | start blockNum of range query                   |
-| to_block      | int    | no      | 0                               | end blockNum of range query                     |
+| Parameter     | Type   | Require | Default                         | Description                                                 |
+|---------------|--------|---------|---------------------------------|-------------------------------------------------------------|
+| fund_id       | string | no      |                                 |                                                             |
+| bid_id        | string | no      |                                 |                                                             |
+| auction_index | int    | no      | 0                               |                                                             |
+| para_id       | int    | no      | 0                               |                                                             |
+| from_block    | int    | no      | 0                               | start blockNum of range query                               |
+| to_block      | int    | no      | 0                               | end blockNum of range query                                 |
 | status        | int    | no      | 0                               | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
-| from_history  | bool   | no      | false                           |                                                 |
-| row           | int    | yes     |                                 |                                                 |
-| page          | int    | yes     |                                 |                                                 |
-| order         | string | no      | last_change_block desc          |                                                 |
-| progress      | bool   | no      | Filtering in progress crowdloan |                                                 |
-| first_period  | int    | no      | first period                    |                                                 |
-| last_period   | int    | no      | last period                     |                                                 |
+| from_history  | bool   | no      | false                           |                                                             |
+| row           | int    | yes     |                                 |                                                             |
+| page          | int    | yes     |                                 |                                                             |
+| order         | string | no      | last_change_block desc          |                                                             |
+| progress      | bool   | no      | Filtering in progress crowdloan |                                                             |
+| first_period  | int    | no      | first period                    |                                                             |
+| last_period   | int    | no      | last period                     |                                                             |
 
 > Example Response
 
@@ -532,13 +532,13 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description                             |
-|-----------|--------|---------|---------|-----------------------------------------|
-| para_id   | int    | no      | 0       |                                         |
+| Parameter | Type   | Require | Default | Description                                     |
+|-----------|--------|---------|---------|-------------------------------------------------|
+| para_id   | int    | no      | 0       |                                                 |
 | status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
-| row       | int    | yes     |         |                                         |
-| page      | int    | yes     |         |                                         |
-| order     | string | no      |         |                                         |
+| row       | int    | yes     |         |                                                 |
+| page      | int    | yes     |         |                                                 |
+| order     | string | no      |         |                                                 |
 
 > Example Response
 
@@ -735,12 +735,12 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description                             |
-|-----------|--------|---------|---------|-----------------------------------------|
+| Parameter | Type   | Require | Default | Description                                     |
+|-----------|--------|---------|---------|-------------------------------------------------|
 | status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
-| row       | int    | yes     |         |                                         |
-| page      | int    | yes     |         |                                         |
-| order     | string | no      |         |                                         |
+| row       | int    | yes     |         |                                                 |
+| page      | int    | yes     |         |                                                 |
+| order     | string | no      |         |                                                 |
 
 > Example Response
 
@@ -927,7 +927,8 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
   --data-raw '{
     "who": "HxphiPhPEbXaqbjbbUDGdUtLLGq3dV3b4ETTFFqAWbEsttP",
     "row": 100,
-    "page": 0
+    "page": 0,
+    "include_total"
 }'
 ```
 
@@ -937,51 +938,50 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description     |
-|-----------|--------|---------|---------|-----------------|
-| who       | string | yes     |         | account address |
-| row       | int    | yes     |         |                 |
-| page      | int    | yes     |         |                 |
+| Parameter     | Type   | Require | Default | Description     |
+|---------------|--------|---------|---------|-----------------|
+| who           | string | yes     |         | account address |
+| row           | int    | yes     |         |                 |
+| page          | int    | yes     |         |                 |
+| include_total | bool   | no      | no      | include `total` |
 
 > Example Response
 
 ```json
 {
-    "code": 0,
-    "message": "Success",
-    "generated_at": 1652085910,
-    "data": {
-        "count": 2,
-        "list": [
-            {
-                "fund_id": "2012-53",
-                "para_id": 2012,
-                "contributed": "200000000000000",
-                "block_num": 10573992,
-                "block_timestamp": 1639830408,
-                "extrinsic_index": "10573992-2",
-                "event_index": "10573992-19",
-                "status": 1,
-                "memo": "",
-                "fund_status": 2,
-                "fund_event_index": "10683439-25",
-                "unlocking_block": 15725400
-            },
-            {
-                "fund_id": "2009-21",
-                "para_id": 2009,
-                "contributed": "300000000000000",
-                "block_num": 9225088,
-                "block_timestamp": 1631642448,
-                "extrinsic_index": "9225088-4",
-                "event_index": "9225088-14",
-                "status": 1,
-                "memo": "",
-                "fund_status": 4,
-                "fund_event_index": "9678896-30",
-                "unlocking_block": 0
-            }
-        ]
-    }
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1655277267,
+  "data": {
+    "count": 15,
+    "list": [{
+      "fund_id": "2012-53",
+      "para_id": 2012,
+      "contributed": "200000000000000",
+      "block_num": 10573992,
+      "block_timestamp": 1639830408,
+      "extrinsic_index": "10573992-2",
+      "event_index": "10573992-19",
+      "status": 1,
+      "memo": "",
+      "fund_status": 2,
+      "fund_event_index": "10683439-25",
+      "unlocking_block": 15725400
+    }, {
+      "fund_id": "2009-21",
+      "para_id": 2009,
+      "contributed": "300000000000000",
+      "block_num": 9225088,
+      "block_timestamp": 1631642448,
+      "extrinsic_index": "9225088-4",
+      "event_index": "9225088-14",
+      "status": 1,
+      "memo": "",
+      "fund_status": 4,
+      "fund_event_index": "9678896-30",
+      "unlocking_block": 0
+    }],
+    "total": "4715000000000000"
+  }
 }
 ```
