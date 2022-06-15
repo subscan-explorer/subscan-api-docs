@@ -961,29 +961,35 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
 
 ```json
 {
-    "code": 0,
-    "data": {
-        "detail": {
-            "DOT": {
-                "available_balance": "2948298540246292883",
-                "inflation": "0",
-                "locked_balance": "7081364054052265236",
-                "nominator_bonded": "6399312144594099143",
-                "price": "4.11357833428782",
-                "price_change": "-0.0318069412",
-                "symbol": "DOT",
-                "token_decimals": 10,
-                "total_issuance": "10029862596774158119",
-                "validator_bonded": "44013064008251701"
-            }
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1653025793,
+  "data": {
+      "detail": {
+          "DOT": {
+              "symbol": "DOT",
+              "token_decimals": 10,
+              "total_issuance": "11945725756744237657",
+              "price": "10.009164645959514",
+              "price_change": "0.0445982724",
+              "free_balance": "11945725756744237657",
+              "available_balance": "3691245740017229221",
+              "validator_bonded": "13839576821980600",
+              "nominator_bonded": "6368948811405157053",
+              "locked_balance": "7067469448725242952",
+              "bonded_locked_balance": "6591956840800188803",
+              "unbonded_locked_balance": "429114156202534584",
+              "democracy_locked_balance": "386737653748334913",
+              "reserved_balance": "1187010568001765484",
+              "election_locked_balance": "2493151026292462636",
+              "vesting_balance": "971193652176171988",
+              "inflation": "7.843156638786543",
+            },
         },
-        "token": [
-            "DOT"
-        ]
+      "token": ["DOT"],
     },
-    "message": "Success",
-    "generated_at": 1628587129
 }
+
 ```
 
 ## raw extrinsic
