@@ -21,6 +21,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/open/price' \
 
 | Parameter | Type | Require | Default | Description                 |
 | --------- | ---- | ------- | ------- | --------------------------- |
+| base      |string| no      |         |                             |
+| quote     |string| no      |         | Quote Currency, USD or current network token |
 | time      | int  | yes     |         | unix timestamp or block num |
 
 > Example Response
@@ -123,6 +125,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
 | ----- | ---------------- | ------- |
 | start | Date(2019-07-04) | yes     |
 | end   | Date(2019-07-04) | yes     |
+|currency| string          | no      |
 
 > Example Response
 
@@ -138,8 +141,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
         "list": [
             {
                 "feed_at": 1594857864,
-                "price": "152.42365362",
-                "block_num": 722727
+                "price": "152.42365362"
             }       
         ]
     }

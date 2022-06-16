@@ -46,8 +46,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/runtime/metadata' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "spec": 25,
-    "module": "Balances"
+    "spec": 25
   }'
 ```
 
@@ -60,8 +59,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/runtime/metadata' \
 | Name   | Type   | Require |
 | ------ | ------ | ------- |
 | spec   | int    | yes     |
-| module | string | yes     |
-
 
 > Example Response
 

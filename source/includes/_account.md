@@ -44,20 +44,39 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
           "account_index": "127Ac3",
           "address": "15fNZmAVqLdg6JMD9ZRtzhXrouzd2D4YTWdg3WYW8yZae6F2",
           "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
           "identity": false,
-          "judgements": null,
-          "parent": null
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
         },
         "address": "15fNZmAVqLdg6JMD9ZRtzhXrouzd2D4YTWdg3WYW8yZae6F2",
         "balance": "8223.4312040139",
         "balance_lock": "8172.7073040139",
         "count_extrinsic": 10,
-        "derive_token": null,
+        "derive_token": {
+          "string": {
+            "token": "",
+            "balance": "",
+            "locked": ""
+          }
+        },
         "is_erc20": false,
         "is_evm_contract": false,
         "kton_balance": "0",
         "kton_lock": "0",
-        "registrar_info": null,
+        "registrar_info": {
+          "registrar_index": 1,
+          "registrar_fee": "0"
+        },
         "ring_lock": "8172.7073040139"
       }
     ]

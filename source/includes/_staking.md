@@ -42,13 +42,51 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/validators' \
         "validator_prefs_value": 1000000000,
         "latest_mining": 10480520,
         "reward_point": 7620,
-        "session_key": null,
+        "session_key": {
+          "babe": "",
+          "grandpa": "",
+          "im_online": "",
+          "authority_discovery": ""
+        },
         "stash_account_display": {
-          "address": "111B8CxcmnWbuDLyGvgUmRezDCK1brRZmvUuQ6SrFdMyc3S"
+          "address": "13dqRWDWXp1ozd8vRoQTRpgvtnTgPMZ7YJkfvczMPJ1587wb",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
         },
         "controller_account_display": {
-          "address": "111B8CxcmnWbuDLyGvgUmRezDCK1brRZmvUuQ6SrFdMyc3S"
+          "address": "13dqRWDWXp1ozd8vRoQTRpgvtnTgPMZ7YJkfvczMPJ1587wb",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
         },
+        "node_name": "",
+        "reward_account": "",
+        "reward_pot_balance": "100000",
         "grandpa_vote": 17,
         "bonded_total": "20399801549815659"
       }
@@ -104,7 +142,10 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/waiting' \
             }
           ],
           "account_index": "12FDrF"
-        }
+        },
+        "node_name": "",
+        "reward_account": "",
+        "reward_pot_balance": "10000"
       }
     ]
   }
@@ -152,6 +193,15 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/voted' \
         "session_key": null,
         "stash_account_display": {
           "address": "13RENAu9cpMpxp3EYzWFGpZXgvMZGDrnconYugNdynQz1sDQ",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
           "parent": {
             "address": "14MceVAhD8moRWR3U3vLWBU5R9tqjSVWHA4sMfMuwSUPn3vb",
             "display": "Blockdaemon",
@@ -159,7 +209,27 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/voted' \
             "identity": true
           }
         },
-        "controller_account_display": null,
+        "controller_account_display": {
+          "address": "13dqRWDWXp1ozd8vRoQTRpgvtnTgPMZ7YJkfvczMPJ1587wb",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
+        },
+        "node_name": "",
+        "reward_account": "",
+        "reward_pot_balance": "",
         "grandpa_vote": 0,
         "bonded_total": "0",
         "bonded": "1220196079709868"
@@ -211,8 +281,24 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/nominators' \
         "nominator_stash": "16crvXKCK3T3ibTKBijCeBakkXLao4enFZ8b5wEVM96VtW1s",
         "bonded": "0",
         "account_display": {
-          "address": "16crvXKCK3T3ibTKBijCeBakkXLao4enFZ8b5wEVM96VtW1s"
-        }
+          "address": "13dqRWDWXp1ozd8vRoQTRpgvtnTgPMZ7YJkfvczMPJ1587wb",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
+        },
+        "validator_stash": ""
       }
     ]
   }
@@ -258,6 +344,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/era_stat' \
         "era": 285,
         "start_block_num": 4171582,
         "end_block_num": 4185803,
+        "reward": "100000",
+        "slash": "100000",
         "block_produced": "4171867,4172690",
         "reward_point": 0
       }
@@ -310,11 +398,44 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/validator' \
         "authority_discovery": "0x7c14e138770e2befbfe15592c2e0b485014bca2bb7731e5c634693501c1fe220"
       },
       "stash_account_display": {
-        "address": "111B8CxcmnWbuDLyGvgUmRezDCK1brRZmvUuQ6SrFdMyc3S"
+        "address": "13dqRWDWXp1ozd8vRoQTRpgvtnTgPMZ7YJkfvczMPJ1587wb",
+        "display": "",
+        "judgements": [
+          {
+            "index": 0,
+            "judgement": "FeePaid"
+          }
+        ],
+        "account_index": "",
+        "identity": false,
+        "parent": {
+          "address": "",
+          "display": "",
+          "sub_symbol": "",
+          "identity": true
+        }
       },
       "controller_account_display": {
-        "address": "111B8CxcmnWbuDLyGvgUmRezDCK1brRZmvUuQ6SrFdMyc3S"
+        "address": "13dqRWDWXp1ozd8vRoQTRpgvtnTgPMZ7YJkfvczMPJ1587wb",
+        "display": "",
+        "judgements": [
+          {
+            "index": 0,
+            "judgement": "FeePaid"
+          }
+        ],
+        "account_index": "",
+        "identity": false,
+        "parent": {
+          "address": "",
+          "display": "",
+          "sub_symbol": "",
+          "identity": true
+        }
       },
+      "node_name": "",
+      "reward_account": "",
+      "reward_pot_balance": "",
       "grandpa_vote": 0,
       "bonded_total": "0"
     }
@@ -341,8 +462,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/validator/bond_st
 
 | Name  | Type   | Require |
 |-------|--------|---------|
-| row   | int    | yes     |
-| page  | int    | yes     |
 | stash | string | yes     |
 
 > Example Response
@@ -416,6 +535,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
         "extrinsic_idx": 4,
         "extrinsic_index": "10473980-4",
         "module_id": "staking",
+        "slash_kton": "",
         "params": "[{\"type\":\"[U8; 32]\",\"type_name\":\"AccountId\",\"value\":\"0xce46eb5500a059797f47cf38f119ecb0eeb360b856f67fcb7a74e98f52b84157\"},{\"type\":\"U128\",\"type_name\":\"BalanceOf\",\"value\":\"470522486256\"}]",
         "stash": "15fTw39Ju2jJiHeGe1fJ5DtgugUauy9tr2HZuiRNFwqnGQ1Q"
       }
@@ -431,8 +551,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/unbonding' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-    "row": 20,
-    "page": 0,
     "address": "YOUR_STASH_ADDRESS"
   }'
 ```
@@ -497,13 +615,61 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/nominator' \
   "data": {
     "nominator_stash": "16crvXKCK3T3ibTKBijCeBakkXLao4enFZ8b5wEVM96VtW1s",
     "stash_account_display": {
-      "address": "16crvXKCK3T3ibTKBijCeBakkXLao4enFZ8b5wEVM96VtW1s"
+      "address": "16crvXKCK3T3ibTKBijCeBakkXLao4enFZ8b5wEVM96VtW1s",
+      "display": "",
+      "judgements": [
+        {
+          "index": 0,
+          "judgement": "FeePaid"
+        }
+      ],
+      "account_index": "",
+      "identity": false,
+      "parent": {
+        "address": "",
+        "display": "",
+        "sub_symbol": "",
+        "identity": true
+      }
     },
     "staking_info": {
       "controller": "16FUBfV1anDuq6bQqTKf7yYVHGwu3gWJcYzJBB9WJcu49jZN",
       "reward_account": "stash",
+      "reward_display": {
+        "address": "13dqRWDWXp1ozd8vRoQTRpgvtnTgPMZ7YJkfvczMPJ1587wb",
+        "display": "",
+        "judgements": [
+          {
+            "index": 0,
+            "judgement": "FeePaid"
+          }
+        ],
+        "account_index": "",
+        "identity": false,
+        "parent": {
+          "address": "",
+          "display": "",
+          "sub_symbol": "",
+          "identity": true
+        }
+      },
       "controller_display": {
-        "address": "16FUBfV1anDuq6bQqTKf7yYVHGwu3gWJcYzJBB9WJcu49jZN"
+        "address": "16FUBfV1anDuq6bQqTKf7yYVHGwu3gWJcYzJBB9WJcu49jZN",
+        "display": "",
+        "judgements": [
+          {
+            "index": 0,
+            "judgement": "FeePaid"
+          }
+        ],
+        "account_index": "",
+        "identity": false,
+        "parent": {
+          "address": "",
+          "display": "",
+          "sub_symbol": "",
+          "identity": true
+        }
       }
     },
     "bonded": "124017311547775"

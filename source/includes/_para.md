@@ -36,46 +36,6 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
 }
 ```
 
-## proposals
-
-```shell
-curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
-  --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
-  --data-raw '{
-    "status": 3
-  }'
-```
-
-### Request URL
-
-`POST /api/scan/parachain/proposals`
-
-### Payload
-
-| Parameter | Type | Require | Default | Description                            |
-|-----------|------|---------|---------|----------------------------------------|
-| status    | int  | no      | 0       | Enum(1:Proposal&#124;2:Upcoming&#124;3:Online) |
-
-> Example Response
-
-```json
-{
-  "code": 0,
-  "message": "Success",
-  "generated_at": 1628587129,
-  "data": {
-    "chains": [
-      {
-        "para_id": 12623,
-        "name": "KILT PC1"
-      }
-    ],
-    "count": 1
-  }
-}
-```
-
 ## auctions
 
 ```shell
@@ -100,7 +60,6 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 | status        | int    | no      | 0                  | Enum(1:Started&#124;2:Closed) |
 | row           | int    | yes     |                    |                               |
 | page          | int    | yes     |                    |                               |
-| order         | string | no      | auction_index desc |                               |
 
 > Example Response
 
@@ -131,10 +90,20 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
             "bidder_account_display": {
               "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
               "display": "",
-              "judgements": null,
+              "judgements": [
+                {
+                  "index": 1,
+                  "judgement": ""
+                }
+              ],
               "account_index": "",
               "identity": false,
-              "parent": null
+              "parent": {
+                "address": "",
+                "display": "",
+                "sub_symbol": "",
+                "identity": false
+              }
             },
             "bid_count": 0,
             "amount": "160000000000000",
@@ -211,6 +180,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 | row           | int    | yes     |                |                                       |
 | page          | int    | yes     |                |                                       |
 | order         | string | no      | block_num desc |                                       |
+| bidder        | string | no      |                |                                       |
 | first_period  | int    | no      | first period   |                                       |
 | last_period   | int    | no      | last period    |                                       |
 
@@ -234,10 +204,20 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
         "bidder_account_display": {
           "address": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
           "display": "",
-          "judgements": null,
+          "judgements": [
+            {
+              "index": 1,
+              "judgement": ""
+            }
+          ],
           "account_index": "",
           "identity": false,
-          "parent": null
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": false
+          }
         },
         "bid_count": 2,
         "amount": "20000000000000",
@@ -247,59 +227,9 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
         "block_timestamp": 1618484520,
         "extrinsic_index": "4224-2",
         "event_index": "4224-4"
-      },
-      {
-        "bid_id": "1-14-14",
-        "fund_id": "100-1",
-        "auction_index": 1,
-        "first_period": 14,
-        "last_period": 14,
-        "para_id": 100,
-        "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
-        "bidder_account_display": {
-          "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
-          "display": "modlpy/cfundd",
-          "judgements": null,
-          "account_index": "",
-          "identity": false,
-          "parent": null
-        },
-        "bid_count": 1,
-        "amount": "160000000000000",
-        "source": 2,
-        "status": 2,
-        "block_num": 4221,
-        "block_timestamp": 1618484502,
-        "extrinsic_index": "4221-0",
-        "event_index": "4221-2"
-      },
-      {
-        "bid_id": "1-15-16",
-        "fund_id": "",
-        "auction_index": 1,
-        "first_period": 15,
-        "last_period": 16,
-        "para_id": 200,
-        "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
-        "bidder_account_display": {
-          "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
-          "display": "",
-          "judgements": null,
-          "account_index": "",
-          "identity": false,
-          "parent": null
-        },
-        "bid_count": 1,
-        "amount": "10000000000000",
-        "source": 1,
-        "status": 2,
-        "block_num": 4184,
-        "block_timestamp": 1618484274,
-        "extrinsic_index": "4184-3",
-        "event_index": "4184-9"
       }
     ],
-    "count": 3
+    "count": 1
   }
 }
 ```
@@ -328,11 +258,14 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 | bid_id        | string | no      |                                 |                                                 |
 | auction_index | int    | no      | 0                               |                                                 |
 | para_id       | int    | no      | 0                               |                                                 |
+| para_ids      | array int  | no      | []                              |                                                 |
 | from_block    | int    | no      | 0                               | start blockNum of range query                   |
 | to_block      | int    | no      | 0                               | end blockNum of range query                     |
 | status        | int    | no      | 0                               | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
+| statuses      | array int  | no      | []                              | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
 | from_history  | bool   | no      | false                           |                                                 |
-| row           | int    | yes     |                                 |                                                 |
+| from_history  | bool   | no      | false                           |                                                 |
+| owner         | string | no      |                                 |                                                 |
 | page          | int    | yes     |                                 |                                                 |
 | order         | string | no      | last_change_block desc          |                                                 |
 | progress      | bool   | no      | Filtering in progress crowdloan |                                                 |
@@ -347,7 +280,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
   "message": "Success",
   "generated_at": 1628587129,
   "data": {
-    "count": 2,
+    "count": 1,
     "funds": [
       {
         "fund_id": "100-1",
@@ -365,42 +298,27 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
         "start_block": 4207,
         "start_block_at": 1618484418,
         "last_change_block": 4213,
+        "last_change_event_idx": 123,
         "last_change_timestamp": 1618484454,
         "extrinsic_index": "4207-3",
+        "contributors": 1,
         "owner_display": {
           "address": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
           "display": "",
-          "judgements": null,
+          "judgements": [
+            {
+              "index": 1,
+              "judgement": ""
+            }
+          ],
           "account_index": "",
           "identity": false,
-          "parent": null
-        }
-      },
-      {
-        "fund_id": "300-0",
-        "bid_id": "",
-        "para_id": 300,
-        "first_period": 14,
-        "last_period": 14,
-        "auction_index": 0,
-        "owner": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
-        "cap": "1000000000000000",
-        "end_block": 4250,
-        "raised": "0",
-        "balance": "0",
-        "status": 1,
-        "start_block": 4204,
-        "start_block_at": 1618484400,
-        "last_change_block": 4204,
-        "last_change_timestamp": 1618484400,
-        "extrinsic_index": "4204-2",
-        "owner_display": {
-          "address": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
-          "display": "",
-          "judgements": null,
-          "account_index": "",
-          "identity": false,
-          "parent": null
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": false
+          }
         }
       }
     ]
@@ -428,7 +346,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 
 | Parameter    | Type   | Require | Default        | Description           |
 |--------------|--------|---------|----------------|-----------------------|
-| fund_id      | string | no      | 0              |                       |
+| fund_id      | string | no      |               |                       |
+| para_id      | int    | no      | 0              |                       |
 | row          | int    | yes     |                |                       |
 | page         | int    | yes     |                |                       |
 | order        | string | no      | block_num desc |                       |
@@ -445,67 +364,38 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
   "data": {
     "contributes": [
       {
-        "ID": 3,
         "fund_id": "100-1",
         "para_id": 100,
         "who": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
         "who_display": {
           "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
           "display": "",
-          "judgements": null,
+          "judgements": [
+            {
+              "index": 1,
+              "judgement": ""
+            }
+          ],
           "account_index": "",
           "identity": false,
-          "parent": null
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": false
+          }
         },
         "contributed": "50000000000000",
+        "contributing": "1",
         "block_num": 4213,
         "block_timestamp": 1618484454,
         "extrinsic_index": "4213-2",
-        "status": 1,
-        "memo": ""
-      },
-      {
-        "ID": 2,
-        "fund_id": "100-1",
-        "para_id": 100,
-        "who": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
-        "who_display": {
-          "address": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
-          "display": "",
-          "judgements": null,
-          "account_index": "",
-          "identity": false,
-          "parent": null
-        },
-        "contributed": "10000000000000",
-        "block_num": 4210,
-        "block_timestamp": 1618484436,
-        "extrinsic_index": "4210-2",
-        "status": 1,
-        "memo": ""
-      },
-      {
-        "ID": 1,
-        "fund_id": "100-1",
-        "para_id": 100,
-        "who": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
-        "who_display": {
-          "address": "14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q",
-          "display": "",
-          "judgements": null,
-          "account_index": "",
-          "identity": false,
-          "parent": null
-        },
-        "contributed": "100000000000000",
-        "block_num": 4208,
-        "block_timestamp": 1618484424,
-        "extrinsic_index": "4208-2",
+        "event_index": "",
         "status": 1,
         "memo": ""
       }
     ],
-    "count": 3
+    "count": 1
   }
 }
 ```
@@ -532,6 +422,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
 |-----------|--------|---------|---------|-----------------------------------------|
 | para_id   | int    | no      | 0       |                                         |
 | status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
+| filter_anonymous | bool | no | false   |                                         |
 | row       | int    | yes     |         |                                         |
 | page      | int    | yes     |         |                                         |
 | order     | string | no      |         |                                         |
@@ -552,81 +443,73 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
         "validation_code_url": "",
         "manager": "",
         "deposit": "0",
-        "validators": "null",
+        "validators": ["",""],
         "source": 1,
         "first_period": 15,
         "last_period": 16,
         "auction_index": 1,
-        "manager_display": null,
-        "winner": {
-          "bid_id": "1-15-16",
-          "fund_id": "",
-          "auction_index": 1,
-          "first_period": 15,
-          "last_period": 16,
-          "para_id": 200,
-          "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
-          "bidder_account_display": {
-            "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
+        "reserved_extrinsic_index": "",
+        "manager_display":  {
+          "address": "",
+          "display": "",
+          "judgements": [
+            {
+              "index": 1,
+              "judgement": ""
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
             "display": "",
-            "judgements": null,
+            "sub_symbol": "",
+            "identity": false
+          }
+        },
+        "validators_display": [
+          {
+            "address": "",
+            "display": "",
+            "judgements": [
+              {
+                "index": 1,
+                "judgement": ""
+              }
+            ],
             "account_index": "",
             "identity": false,
-            "parent": null
-          },
-          "bid_count": 0,
-          "amount": "10000000000000",
-          "source": 1,
-          "status": 2,
-          "block_num": 4184,
-          "block_timestamp": 1618484274,
-          "extrinsic_index": "4184-3",
-          "event_index": "4184-9"
-        },
-        "validators_display": null
-      },
-      {
-        "para_id": 100,
-        "status": "Parathread",
-        "genesis_head": "524544495330303039fa0972656469732d76657205352e302e37fa0a72656469732d62697473c040fa056374696d65c2b901455efa08757365642d6d656dc2e0130f00fa0c616f662d707265616d626c65c000ff124071982090b917",
-        "validation_code_url": "",
-        "manager": "",
-        "deposit": "0",
-        "validators": "null",
-        "source": 2,
-        "first_period": 14,
-        "last_period": 14,
-        "auction_index": 1,
-        "manager_display": null,
-        "winner": {
-          "bid_id": "1-14-14",
-          "fund_id": "100-1",
-          "auction_index": 1,
-          "first_period": 14,
-          "last_period": 14,
-          "para_id": 100,
-          "bidder_account": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
-          "bidder_account_display": {
-            "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
-            "display": "modlpy/cfundd",
-            "judgements": null,
-            "account_index": "",
-            "identity": false,
-            "parent": null
-          },
-          "bid_count": 0,
-          "amount": "160000000000000",
-          "source": 2,
-          "status": 2,
-          "block_num": 4221,
-          "block_timestamp": 1618484502,
-          "extrinsic_index": "4221-0",
-          "event_index": "4221-2"
-        },
-        "validators_display": null
+            "parent": {
+              "address": "",
+              "display": "",
+              "sub_symbol": "",
+              "identity": false
+            }
+          }
+        ],
+        "fund_id": "",
+        "fund_account": "",
+        "fund_account_display":  {
+          "address": "",
+          "display": "",
+          "judgements": [
+            {
+              "index": 1,
+              "judgement": ""
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": false
+          }
+        }
       }
     ],
-    "count": 3
+    "count": 1
   }
 }
 ```
@@ -670,10 +553,20 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
       "bidder_account_display": {
         "address": "13UVJyLnbVp77Z2t6r2dFKqddAo3cATaBG6YMuEsWbbmFnpb",
         "display": "modlpy/cfundd",
-        "judgements": null,
+        "judgements": [
+          {
+            "index": 1,
+            "judgement": ""
+          }
+        ],
         "account_index": "",
         "identity": false,
-        "parent": null
+        "parent": {
+          "address": "",
+          "display": "",
+          "sub_symbol": "",
+          "identity": false
+        }
       },
       "bid_count": 1,
       "amount": "160000000000000",
@@ -683,31 +576,6 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/predict' \
       "block_timestamp": 1618484502,
       "extrinsic_index": "4221-0",
       "event_index": "4221-2"
-    },
-    {
-      "bid_id": "1-15-16",
-      "fund_id": "",
-      "auction_index": 1,
-      "first_period": 15,
-      "last_period": 16,
-      "para_id": 200,
-      "bidder_account": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
-      "bidder_account_display": {
-        "address": "14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3",
-        "display": "",
-        "judgements": null,
-        "account_index": "",
-        "identity": false,
-        "parent": null
-      },
-      "bid_count": 1,
-      "amount": "10000000000000",
-      "source": 1,
-      "status": 2,
-      "block_num": 4184,
-      "block_timestamp": 1618484274,
-      "extrinsic_index": "4184-3",
-      "event_index": "4184-9"
     }
   ]
 }
@@ -734,6 +602,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
 | Parameter | Type   | Require | Default | Description                             |
 |-----------|--------|---------|---------|-----------------------------------------|
 | status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
+| filter_anonymous | bool | no | false   |                                         |
 | row       | int    | yes     |         |                                         |
 | page      | int    | yes     |         |                                         |
 | order     | string | no      |         |                                         |
@@ -755,11 +624,23 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
                 "manager_display": {
                     "address": "5F2FJzwc8Ch6L5zejKh43DqXXCU3qSxeN8WTd3e3AwTfbCDe",
                     "display": "",
-                    "judgements": null,
-                    "account_index": "",
-                    "identity": false,
-                    "parent": null
-                }
+                  "judgements": [
+                    {
+                      "index": 1,
+                      "judgement": ""
+                    }
+                  ],
+                  "account_index": "",
+                  "identity": false,
+                  "parent": {
+                    "address": "",
+                    "display": "",
+                    "sub_symbol": "",
+                    "identity": false
+                  }
+                },
+                "reserved_extrinsic_index": "",
+                "fund_id": ""
             }
         ],
         "count": 9
@@ -808,10 +689,20 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctionCompetitor
         "bidder_account_display": {
           "address": "5EYCAe5ijiYdg22N9DSmHqUHxzP9hD2ufuM1Gtw5D43829Z8",
           "display": "",
-          "judgements": null,
+          "judgements": [
+            {
+              "index": 1,
+              "judgement": ""
+            }
+          ],
           "account_index": "",
           "identity": false,
-          "parent": null
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": false
+          }
         },
         "bid_count": 0,
         "amount": "25000000000000",
@@ -903,6 +794,25 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/parachain/bestBid' \
         "last_period": 20,
         "para_id": 2000,
         "bidder_account": "6d6f646c70792f6366756e64d007000000000000000000000000000000000000",
+        "bidder_account_display": {
+          "address": "5EYCAe5ijiYdg22N9DSmHqUHxzP9hD2ufuM1Gtw5D43829Z8",
+          "display": "",
+          "judgements": [
+            {
+              "index": 1,
+              "judgement": ""
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": false
+          }
+        },
+        "bid_count": 0,
         "amount": "491752906100722948",
         "source": 2,
         "status": 3,
@@ -938,6 +848,7 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
 | who       | string | yes     |         | account address |
 | row       | int    | yes     |         |                 |
 | page      | int    | yes     |         |                 |
+| include_total | bool | no    |         |                 |
 
 > Example Response
 
@@ -947,7 +858,7 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
     "message": "Success",
     "generated_at": 1652085910,
     "data": {
-        "count": 2,
+        "count": 1,
         "list": [
             {
                 "fund_id": "2012-53",
@@ -962,22 +873,9 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
                 "fund_status": 2,
                 "fund_event_index": "10683439-25",
                 "unlocking_block": 15725400
-            },
-            {
-                "fund_id": "2009-21",
-                "para_id": 2009,
-                "contributed": "300000000000000",
-                "block_num": 9225088,
-                "block_timestamp": 1631642448,
-                "extrinsic_index": "9225088-4",
-                "event_index": "9225088-14",
-                "status": 1,
-                "memo": "",
-                "fund_status": 4,
-                "fund_event_index": "9678896-30",
-                "unlocking_block": 0
             }
-        ]
+        ],
+        "total": "1"
     }
 }
 ```

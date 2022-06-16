@@ -963,6 +963,8 @@ curl -X POST 'https://shibuya.api.subscan.io/api/scan/evm/erc20/transfer' \
 | Name    | Type   | Require          |
 |---------|--------|------------------|
 | address | string | yes(evm address) |
+| contract | string |no(evm address ) |
+| token_id | string |                 |
 | row     | int    | yes              |
 | page    | int    | no               |
 
@@ -983,6 +985,7 @@ curl -X POST 'https://shibuya.api.subscan.io/api/scan/evm/erc20/transfer' \
         "from": "0x870a26caadb927c7bf94abbb40a2121a20fe1bf8",
         "to": "0x4bc5bda0908a786616c0f4d52a403113cb9cf71f",
         "value": "212140000000000",
+        "token_id": "",
         "decimals": 18,
         "symbol": "PLP",
         "name": "PolkaEx LP Token"
@@ -1015,7 +1018,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/token/holders' \
 
 | Name    | Type   | Require          |
 |---------|--------|------------------|
-| address | string | yes(evm address) |
+| contract | string | yes(evm address) |
 | row     | int    | yes              |
 | page    | int    | no               |
 
@@ -1031,13 +1034,8 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/token/holders' \
     "list": [
       {
         "contract": "0x8eb2281bbd90ea671c9f6cb1e51102b7fe3d480e",
-        "name": "Apostle",
-        "symbol": "APO",
-        "decimals": 0,
-        "totalSupply": "2100000000000000",
-        "holders": 76,
-        "transfer_count": 930,
-        "price": "0"
+        "holder": "",
+        "balance": "0"
       }
     ]
   }
@@ -1066,7 +1064,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contract/list' \
 
 | Name        | Type   | Require                               |
 |-------------|--------|---------------------------------------|
-| contracts   | array  | no (evm address)                      |
+| contracts   | array string  | no (evm address)                      |
 | verified    | bool   | no                                    |
 | row         | int    | yes                                   |
 | page        | int    | no                                    |
@@ -1090,7 +1088,8 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contract/list' \
         "evm_version": "istanbul",
         "balances": "0",
         "verify_status": "partial",
-        "verify_time": 0
+        "verify_time": 0,
+        "transaction_count": 0
       }
     ]
   }
@@ -1222,6 +1221,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/erc721/transfer' \
         "from": "0xa0aaff128c1dcbb5fe95ff021927622fa165014e",
         "to": "0x735182c782cb8e7806f8903de7913e6880cbf82e",
         "value": "1",
+        "token_id": "",
         "decimals": 0,
         "symbol": "EVO",
         "name": "Evolution Land Objects"
