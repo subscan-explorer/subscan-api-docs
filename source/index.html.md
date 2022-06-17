@@ -32,7 +32,7 @@ The documentation was created with [Slate](https://github.com/slatedocs/slate) a
 
 ## API Keys
 
-**Submit the form to get a free API key that includes higher quotas or start your trial with other available plans: <https://forms.gle/YegvB8S2VGhASMQi6>.**
+**Get a free API key that includes higher quotas or start your trial with other available plans at <https://pro.subscan.io/>.**
 
 ## Service Status
 
