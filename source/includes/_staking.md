@@ -1,6 +1,7 @@
 # Staking API
 
-**Tip:** Staking API is only available in the networks support **staking** or **parachain staking** pallet(like moonbeam, bifrost)
+**Tip:** Staking API is only available in the networks support **staking** or **parachain staking** pallet(like
+moonbeam, bifrost)
 
 ## validators
 
@@ -316,7 +317,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/validator' \
         "address": "111B8CxcmnWbuDLyGvgUmRezDCK1brRZmvUuQ6SrFdMyc3S"
       },
       "grandpa_vote": 0,
-      "bonded_total": "0"
+      "bonded_total": "0",
+      "status": "active"
     }
   }
 }
@@ -506,7 +508,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/nominator' \
         "address": "16FUBfV1anDuq6bQqTKf7yYVHGwu3gWJcYzJBB9WJcu49jZN"
       }
     },
-    "bonded": "124017311547775"
+    "bonded": "124017311547775",
+    "status": "active"
   }
 }
 ```
