@@ -8,6 +8,7 @@ includes:
   - conventions
   - general
   - staking
+  - nomination_pool
   - account
   - price
   - governance
@@ -16,7 +17,6 @@ includes:
   - para
   - evm
   - crust
-  - nomination_pool
 
 search: false
 

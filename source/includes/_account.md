@@ -1,4 +1,4 @@
-# account api
+# Account API
 
 ## accounts
 

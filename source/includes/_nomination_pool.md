@@ -1,4 +1,4 @@
-# nomination_pool
+# NominationPool API
 
 **Tip:** This API is only available in Polkadot,Kusama,Westend.
 
