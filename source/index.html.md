@@ -16,6 +16,7 @@ includes:
   - para
   - evm
   - crust
+  - nomination_pool
 
 search: false
 
