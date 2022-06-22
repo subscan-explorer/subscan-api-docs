@@ -86,6 +86,7 @@ Please notice before you get started:
 | Dock                 | `dock.api.subscan.io`                 | live   |
 | Dolphin              | `dolphin.api.subscan.io`              | test   |
 | Edgeware             | `edgeware.api.subscan.io`             | live   |
+| Efinity              | `efinity.api.subscan.io`              | live   |
 | Encointer            | `encointer.api.subscan.io`            | live   |
 | Equilibrium          | `equilibrium.api.subscan.io`          | live   |
 | IntegriTEE           | `integritee.api.subscan.io`           | live   |
