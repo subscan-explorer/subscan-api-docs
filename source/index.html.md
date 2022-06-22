@@ -109,7 +109,7 @@ Please notice before you get started:
 | Pangoro              | `pangoro.api.subscan.io`              | test   |
 | Parallel             | `parallel.api.subscan.io`             | live   |
 | Parallel Heiko       | `parallel-heiko.api.subscan.io`       | live   |
-| Phala Rorschach      | `phala.api.subscan.io`                | live   |
+| Phala                | `phala.api.subscan.io`                | live   |
 | Picasso              | `picasso.api.subscan.io`              | live   |
 | Pioneer              | `pioneer.api.subscan.io`              | live   |
 | Polkadex             | `polkadex.api.subscan.io`             | live   |
