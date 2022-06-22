@@ -8,6 +8,7 @@ includes:
   - conventions
   - general
   - staking
+  - nomination_pool
   - account
   - price
   - governance
@@ -32,7 +33,7 @@ The documentation was created with [Slate](https://github.com/slatedocs/slate) a
 
 ## API Keys
 
-**Submit the form to get a free API key that includes higher quotas or start your trial with other available plans: <https://forms.gle/YegvB8S2VGhASMQi6>.**
+**Get a free API key that includes higher quotas or start your trial with other available plans at <https://pro.subscan.io/>.**
 
 ## Service Status
 
@@ -108,7 +109,7 @@ Please notice before you get started:
 | Pangoro              | `pangoro.api.subscan.io`              | test   |
 | Parallel             | `parallel.api.subscan.io`             | live   |
 | Parallel Heiko       | `parallel-heiko.api.subscan.io`       | live   |
-| Phala Rorschach      | `phala.api.subscan.io`                | live   |
+| Phala                | `phala.api.subscan.io`                | live   |
 | Picasso              | `picasso.api.subscan.io`              | live   |
 | Pioneer              | `pioneer.api.subscan.io`              | live   |
 | Polkadex             | `polkadex.api.subscan.io`             | live   |

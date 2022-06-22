@@ -1,6 +1,7 @@
 # Staking API
 
-**Tip:** Staking API is only available in the networks support **staking** or **parachain staking** pallet(like moonbeam, bifrost)
+**Tip:** Staking API is only available in the networks support **staking** or **parachain staking** pallet(like
+moonbeam, bifrost)
 
 ## validators
 
@@ -433,11 +434,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/validator' \
           "identity": true
         }
       },
-      "node_name": "",
-      "reward_account": "",
-      "reward_pot_balance": "",
       "grandpa_vote": 0,
-      "bonded_total": "0"
+      "bonded_total": "0",
+      "status": "active"
     }
   }
 }
@@ -535,7 +534,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
         "extrinsic_idx": 4,
         "extrinsic_index": "10473980-4",
         "module_id": "staking",
-        "slash_kton": "",
         "params": "[{\"type\":\"[U8; 32]\",\"type_name\":\"AccountId\",\"value\":\"0xce46eb5500a059797f47cf38f119ecb0eeb360b856f67fcb7a74e98f52b84157\"},{\"type\":\"U128\",\"type_name\":\"BalanceOf\",\"value\":\"470522486256\"}]",
         "stash": "15fTw39Ju2jJiHeGe1fJ5DtgugUauy9tr2HZuiRNFwqnGQ1Q"
       }
@@ -672,7 +670,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/staking/nominator' \
         }
       }
     },
-    "bonded": "124017311547775"
+    "bonded": "124017311547775",
+    "status": "active"
   }
 }
 ```

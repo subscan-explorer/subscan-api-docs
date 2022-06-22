@@ -36,6 +36,46 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/meta' \
 }
 ```
 
+## proposals
+
+```shell
+curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/proposals' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+  --data-raw '{
+    "status": 3
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/proposals`
+
+### Payload
+
+| Parameter | Type | Require | Default | Description                                    |
+|-----------|------|---------|---------|------------------------------------------------|
+| status    | int  | no      | 0       | Enum(1:Proposal&#124;2:Upcoming&#124;3:Online) |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1628587129,
+  "data": {
+    "chains": [
+      {
+        "para_id": 12623,
+        "name": "KILT PC1"
+      }
+    ],
+    "count": 1
+  }
+}
+```
+
 ## auctions
 
 ```shell
@@ -298,10 +338,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
         "start_block": 4207,
         "start_block_at": 1618484418,
         "last_change_block": 4213,
-        "last_change_event_idx": 123,
         "last_change_timestamp": 1618484454,
         "extrinsic_index": "4207-3",
-        "contributors": 1,
         "owner_display": {
           "address": "15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5",
           "display": "",
@@ -418,14 +456,14 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description                             |
-|-----------|--------|---------|---------|-----------------------------------------|
-| para_id   | int    | no      | 0       |                                         |
+| Parameter | Type   | Require | Default | Description                                     |
+|-----------|--------|---------|---------|-------------------------------------------------|
+| para_id   | int    | no      | 0       |                                                 |
 | status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
-| filter_anonymous | bool | no | false   |                                         |
-| row       | int    | yes     |         |                                         |
-| page      | int    | yes     |         |                                         |
-| order     | string | no      |         |                                         |
+| filter_anonymous | bool | no | false   |                                                 |
+| row       | int    | yes     |         |                                                 |
+| page      | int    | yes     |         |                                                 |
+| order     | string | no      |         |                                                 |
 
 > Example Response
 
@@ -599,13 +637,13 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description                             |
-|-----------|--------|---------|---------|-----------------------------------------|
+| Parameter | Type   | Require | Default | Description                                     |
+|-----------|--------|---------|---------|-------------------------------------------------|
 | status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
-| filter_anonymous | bool | no | false   |                                         |
-| row       | int    | yes     |         |                                         |
-| page      | int    | yes     |         |                                         |
-| order     | string | no      |         |                                         |
+| filter_anonymous | bool | no | false   |                                                 |
+| row       | int    | yes     |         |                                                 |
+| page      | int    | yes     |         |                                                 |
+| order     | string | no      |         |                                                 |
 
 > Example Response
 
@@ -833,7 +871,8 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
   --data-raw '{
     "who": "HxphiPhPEbXaqbjbbUDGdUtLLGq3dV3b4ETTFFqAWbEsttP",
     "row": 100,
-    "page": 0
+    "page": 0,
+    "include_total"
 }'
 ```
 
@@ -843,39 +882,37 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description     |
-|-----------|--------|---------|---------|-----------------|
-| who       | string | yes     |         | account address |
-| row       | int    | yes     |         |                 |
-| page      | int    | yes     |         |                 |
-| include_total | bool | no    |         |                 |
+| Parameter     | Type   | Require | Default | Description     |
+|---------------|--------|---------|---------|-----------------|
+| who           | string | yes     |         | account address |
+| row           | int    | yes     |         |                 |
+| page          | int    | yes     |         |                 |
+| include_total | bool   | no      | no      | include `total` |
 
 > Example Response
 
 ```json
 {
-    "code": 0,
-    "message": "Success",
-    "generated_at": 1652085910,
-    "data": {
-        "count": 1,
-        "list": [
-            {
-                "fund_id": "2012-53",
-                "para_id": 2012,
-                "contributed": "200000000000000",
-                "block_num": 10573992,
-                "block_timestamp": 1639830408,
-                "extrinsic_index": "10573992-2",
-                "event_index": "10573992-19",
-                "status": 1,
-                "memo": "",
-                "fund_status": 2,
-                "fund_event_index": "10683439-25",
-                "unlocking_block": 15725400
-            }
-        ],
-        "total": "1"
-    }
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1655277267,
+  "data": {
+    "count": 1,
+    "list": [{
+      "fund_id": "2012-53",
+      "para_id": 2012,
+      "contributed": "200000000000000",
+      "block_num": 10573992,
+      "block_timestamp": 1639830408,
+      "extrinsic_index": "10573992-2",
+      "event_index": "10573992-19",
+      "status": 1,
+      "memo": "",
+      "fund_status": 2,
+      "fund_event_index": "10683439-25",
+      "unlocking_block": 15725400
+    }],
+    "total": "4715000000000000"
+  }
 }
 ```
