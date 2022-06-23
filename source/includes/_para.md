@@ -205,24 +205,24 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/bids' \
 
 ### Payload
 
-| Parameter     | Type   | Require | Default        | Description                           |
-|---------------|--------|---------|----------------|---------------------------------------|
-| auction_index | int    | no      | 0              |                                       |
-| bid_id        | string | no      |                |                                       |
-| fund_id       | string | no      |                |                                       |
-| para_id       | int    | no      | 0              |                                       |
-| from_block    | int    | no      | 0              | start blockNum of range query         |
-| to_block      | int    | no      | 0              | end blockNum of range query           |
+| Parameter     | Type   | Require | Default        | Description                                   |
+|---------------|--------|---------|----------------|-----------------------------------------------|
+| auction_index | int    | no      | 0              |                                               |
+| bid_id        | string | no      |                |                                               |
+| fund_id       | string | no      |                |                                               |
+| para_id       | int    | no      | 0              |                                               |
+| from_block    | int    | no      | 0              | start blockNum of range query                 |
+| to_block      | int    | no      | 0              | end blockNum of range query                   |
 | status        | int    | no      | 0              | Enum(1:Accepted&#124;2:Leased&#124;3:Renewal) |
-| source        | int    | no      | 0              | Enum(1:Slot&#124;2:Crowdloan)             |
-| from_history  | bool   | no      | false          |                                       |
-| bidder        | string | no      |                |                                       |
-| row           | int    | yes     |                |                                       |
-| page          | int    | yes     |                |                                       |
-| order         | string | no      | block_num desc |                                       |
-| bidder        | string | no      |                |                                       |
-| first_period  | int    | no      | first period   |                                       |
-| last_period   | int    | no      | last period    |                                       |
+| source        | int    | no      | 0              | Enum(1:Slot&#124;2:Crowdloan)                 |
+| from_history  | bool   | no      | false          |                                               |
+| bidder        | string | no      |                |                                               |
+| row           | int    | yes     |                |                                               |
+| page          | int    | yes     |                |                                               |
+| order         | string | no      | block_num desc |                                               |
+| bidder        | string | no      |                |                                               |
+| first_period  | int    | no      | first period   |                                               |
+| last_period   | int    | no      | last period    |                                               |
 
 > Example Response
 
@@ -292,25 +292,25 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/funds' \
 
 ### Payload
 
-| Parameter     | Type   | Require | Default                         | Description                                     |
-|---------------|--------|---------|---------------------------------|-------------------------------------------------|
-| fund_id       | string | no      |                                 |                                                 |
-| bid_id        | string | no      |                                 |                                                 |
-| auction_index | int    | no      | 0                               |                                                 |
-| para_id       | int    | no      | 0                               |                                                 |
-| para_ids      | array int  | no      | []                              |                                                 |
-| from_block    | int    | no      | 0                               | start blockNum of range query                   |
-| to_block      | int    | no      | 0                               | end blockNum of range query                     |
-| status        | int    | no      | 0                               | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
-| statuses      | array int  | no      | []                              | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
-| from_history  | bool   | no      | false                           |                                                 |
-| from_history  | bool   | no      | false                           |                                                 |
-| owner         | string | no      |                                 |                                                 |
-| page          | int    | yes     |                                 |                                                 |
-| order         | string | no      | last_change_block desc          |                                                 |
-| progress      | bool   | no      | Filtering in progress crowdloan |                                                 |
-| first_period  | int    | no      | first period                    |                                                 |
-| last_period   | int    | no      | last period                     |                                                 |
+| Parameter     | Type      | Require | Default                         | Description                                                 |
+|---------------|-----------|---------|---------------------------------|-------------------------------------------------------------|
+| fund_id       | string    | no      |                                 |                                                             |
+| bid_id        | string    | no      |                                 |                                                             |
+| auction_index | int       | no      | 0                               |                                                             |
+| para_id       | int       | no      | 0                               |                                                             |
+| para_ids      | array int | no      | []                              |                                                             |
+| from_block    | int       | no      | 0                               | start blockNum of range query                               |
+| to_block      | int       | no      | 0                               | end blockNum of range query                                 |
+| status        | int       | no      | 0                               | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
+| statuses      | array int | no      | []                              | Enum(1:Created&#124;2:Leased&#124;3:Ended&#124;4:Dissolved) |
+| from_history  | bool      | no      | false                           |                                                             |
+| from_history  | bool      | no      | false                           |                                                             |
+| owner         | string    | no      |                                 |                                                             |
+| page          | int       | yes     |                                 |                                                             |
+| order         | string    | no      | last_change_block desc          |                                                             |
+| progress      | bool      | no      | Filtering in progress crowdloan |                                                             |
+| first_period  | int       | no      | first period                    |                                                             |
+| last_period   | int       | no      | last period                     |                                                             |
 
 > Example Response
 
@@ -384,7 +384,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 
 | Parameter    | Type   | Require | Default        | Description           |
 |--------------|--------|---------|----------------|-----------------------|
-| fund_id      | string | no      |               |                       |
+| fund_id      | string | no      |                |                       |
 | para_id      | int    | no      | 0              |                       |
 | row          | int    | yes     |                |                       |
 | page         | int    | yes     |                |                       |
@@ -456,14 +456,14 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description                                     |
-|-----------|--------|---------|---------|-------------------------------------------------|
-| para_id   | int    | no      | 0       |                                                 |
-| status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
-| filter_anonymous | bool | no | false   |                                                 |
-| row       | int    | yes     |         |                                                 |
-| page      | int    | yes     |         |                                                 |
-| order     | string | no      |         |                                                 |
+| Parameter        | Type   | Require | Default | Description                                     |
+|------------------|--------|---------|---------|-------------------------------------------------|
+| para_id          | int    | no      | 0       |                                                 |
+| status           | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
+| filter_anonymous | bool   | no      | false   |                                                 |
+| row              | int    | yes     |         |                                                 |
+| page             | int    | yes     |         |                                                 |
+| order            | string | no      |         |                                                 |
 
 > Example Response
 
@@ -637,13 +637,13 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
 
 ### Payload
 
-| Parameter | Type   | Require | Default | Description                                     |
-|-----------|--------|---------|---------|-------------------------------------------------|
-| status    | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
-| filter_anonymous | bool | no | false   |                                                 |
-| row       | int    | yes     |         |                                                 |
-| page      | int    | yes     |         |                                                 |
-| order     | string | no      |         |                                                 |
+| Parameter        | Type   | Require | Default | Description                                     |
+|------------------|--------|---------|---------|-------------------------------------------------|
+| status           | string | no      | 0       | Enum(Onboarding&#124;Parathread&#124;Parachain) |
+| filter_anonymous | bool   | no      | false   |                                                 |
+| row              | int    | yes     |         |                                                 |
+| page             | int    | yes     |         |                                                 |
+| order            | string | no      |         |                                                 |
 
 > Example Response
 

@@ -79,34 +79,34 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/metadata' \
 
 ### Response Description
 
-| Attr/Prop               | Description                            |
-| ----------------------- | -------------------------------------- |
-| addressType             | substrate ss58 prefix                  |
-| avgBlockTime            |                                        |
-| blockNum                | best block num                         |
-| blockTime               | output block time(fixed)               |
-| commissionAccuracy      | staking commission accuracy            |
-| count_account           | account count                          |
-| count_event             | event count                            |
-| count_extrinsic         | extrinsic count                        |
-| count_signed_extrinsic  | signed extrinsic count                 |
-| count_transfer          | transfer count                         |
-| current_era             |                                        |
-| current_validator_count | session validator count                |
-| epochLength             | number of block nums per epoch         |
-| epochProcess            | current epoch progress                 |
-| eraLength               | number of block nums per era           |
-| eraProcess              | current era progress                   |
-| exist_roles             | current network exist role             |
-| finalized_blockNum      | finalized blockNum                     |
-| history_depth           |                                        |
-| implName                |                                        |
-| maxNominatorRewardedPerValidator|                                |
-| networkNode             | network name                           |
-| specVersion             | current runtime spec version           |
-| unbondDuration          | number of block nums unbond duration   |
-| validator_count         | current storage staking.validatorCount |
-| waiting_validator       | waiting validator count                |
+| Attr/Prop                        | Description                            |
+|----------------------------------|----------------------------------------|
+| addressType                      | substrate ss58 prefix                  |
+| avgBlockTime                     |                                        |
+| blockNum                         | best block num                         |
+| blockTime                        | output block time(fixed)               |
+| commissionAccuracy               | staking commission accuracy            |
+| count_account                    | account count                          |
+| count_event                      | event count                            |
+| count_extrinsic                  | extrinsic count                        |
+| count_signed_extrinsic           | signed extrinsic count                 |
+| count_transfer                   | transfer count                         |
+| current_era                      |                                        |
+| current_validator_count          | session validator count                |
+| epochLength                      | number of block nums per epoch         |
+| epochProcess                     | current epoch progress                 |
+| eraLength                        | number of block nums per era           |
+| eraProcess                       | current era progress                   |
+| exist_roles                      | current network exist role             |
+| finalized_blockNum               | finalized blockNum                     |
+| history_depth                    |                                        |
+| implName                         |                                        |
+| maxNominatorRewardedPerValidator |                                        |
+| networkNode                      | network name                           |
+| specVersion                      | current runtime spec version           |
+| unbondDuration                   | number of block nums unbond duration   |
+| validator_count                  | current storage staking.validatorCount |
+| waiting_validator                | waiting validator count                |
  
 
 ## blocks
@@ -130,7 +130,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/blocks' \
 ### Payload
 
 | Name | Type | Require |
-| ---- | ---- | ------- |
+|------|------|---------|
 | row  | int  | yes     |
 | page | int  | yes     |
 
@@ -324,20 +324,20 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsics' \
 
 ### Payload
 
-| Name    | Type   | Require |
-| ------- | ------ | ------- |
-| row     | int    | yes     |
-| page    | int    | yes     |
-| signed  | string | no      |
-| address | string | no      |
-| module  | string | no      |
-| no_params | bool | no      |
-| call    | string | no      |
-| from    | int    | no      |
-| to      | int    | no      |
-| block_num| int   | no      |
-| block_range|string| no     |
-| success | bool | no      |
+| Name        | Type   | Require |
+|-------------|--------|---------|
+| row         | int    | yes     |
+| page        | int    | yes     |
+| signed      | string | no      |
+| address     | string | no      |
+| module      | string | no      |
+| no_params   | bool   | no      |
+| call        | string | no      |
+| from        | int    | no      |
+| to          | int    | no      |
+| block_num   | int    | no      |
+| block_range | string | no      |
+| success     | bool   | no      |
 
 > Example Response
 
@@ -409,7 +409,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
 ### Payload
 
 | Name            | Type   | Require |
-| --------------- | ------ | ------- |
+|-----------------|--------|---------|
 | extrinsic_index | string | no      |
 | hash            | string | no      |
 | events_limit    | int    | no      |
@@ -547,21 +547,21 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/events' \
 
 ### Payload
 
-| Name   | Type   | Require |
-| ------ | ------ | ------- |
-| row    | int    | yes     |
-| page   | int    | yes     |
-| module | string | no      |
-| call   | string | no      |
-| from_block | int | no     |
-| from   | int    | no      |
-| to     | int    | no      |
-| address | string | no     |
-| finalized | bool | no     |
-| block_num | int | no      |
-| block_range | string | no |
+| Name            | Type   | Require |
+|-----------------|--------|---------|
+| row             | int    | yes     |
+| page            | int    | yes     |
+| module          | string | no      |
+| call            | string | no      |
+| from_block      | int    | no      |
+| from            | int    | no      |
+| to              | int    | no      |
+| address         | string | no      |
+| finalized       | bool   | no      |
+| block_num       | int    | no      |
+| block_range     | string | no      |
 | extrinsic_index | string | no      |
-| phase  | int    | no      |
+| phase           | int    | no      |
 
 > Example Response
 
@@ -611,7 +611,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/event' \
 ### Payload
 
 | Name        | Type   | Require |
-| ----------- | ------ | ------- |
+|-------------|--------|---------|
 | event_index | string | no      |
 
 > Example Response
@@ -668,16 +668,16 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/logs' \
 
 ### Payload
 
-| Name   | Type   | Require |
-| ------ | ------ | ------- |
-| row    | int    | yes     |
-| page   | int    | yes     |
-| engine | string | no      |
-| type   | string | no      |
-| block_num | int  | no      |
-| block_range | string | no |
-| from   | int    | no      |
-| to     | int    | no      |
+| Name        | Type   | Require |
+|-------------|--------|---------|
+| row         | int    | yes     |
+| page        | int    | yes     |
+| engine      | string | no      |
+| type        | string | no      |
+| block_num   | int    | no      |
+| block_range | string | no      |
+| from        | int    | no      |
+| to          | int    | no      |
 
 > Example Response
 
@@ -726,7 +726,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/search' \
 ### Payload
 
 | Name | Type   | Require |
-| ---- | ------ | ------- |
+|------|--------|---------|
 | key  | string | yes     |
 | row  | int    | yes     |
 | page | int    | yes     |
@@ -857,7 +857,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/daily' \
 ### Payload
 
 | Name     | Type             | Require                                                                                                         |
-| -------- | ---------------- | --------------------------------------------------------------------------------------------------------------- |
+|----------|------------------|-----------------------------------------------------------------------------------------------------------------|
 | start    | Date(2019-07-04) | yes                                                                                                             |
 | end      | Date(2019-07-04) | yes                                                                                                             |
 | format   | string           | yes(day hour 6hour)                                                                                             |
@@ -915,16 +915,16 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
 
 ### Payload
 
-| Name    | Type   | Require |
-| ------- | ------ | ------- |
-| row     | int    | yes     |
-| page    | int    | yes     |
-| address | string | no      |
-| from_block | int    | no     |
-| to_block   | int    | no     |
-| direction  | string | yes(all sent received)     |
-| include_total | bool | no     |
-| asset_symbol | string | no    |
+| Name          | Type   | Require                |
+|---------------|--------|------------------------|
+| row           | int    | yes                    |
+| page          | int    | yes                    |
+| address       | string | no                     |
+| from_block    | int    | no                     |
+| to_block      | int    | no                     |
+| direction     | string | yes(all sent received) |
+| include_total | bool   | no                     |
+| asset_symbol  | string | no                     |
 
 
 > Example Response
@@ -1015,7 +1015,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/check_hash' \
 ### Payload
 
 | Name | Type   | Require |
-| ---- | ------ | ------- |
+|------|--------|---------|
 | hash | string | yes     |
 
 
@@ -1050,9 +1050,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
 ### Payload
 
 | Name | Type   | Require |
-| ---- | ------ | ------- |
-| t    | string | no     |
-| q    | string | no     |
+|------|--------|---------|
+| t    | string | no      |
+| q    | string | no      |
 
 
 > Example Response
@@ -1108,10 +1108,10 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/getRawTx' \
 
 ### Payload
 
-| Name              | Type   | Require                      |
-| ----------------- | ------ | ---------------------------- |
-| extrinsic_index   | int    | yes(if hash empty)           |
-| hash              | int    | yes(if extrinsic_index empty)|
+| Name            | Type | Require                       |
+|-----------------|------|-------------------------------|
+| extrinsic_index | int  | yes(if hash empty)            |
+| hash            | int  | yes(if extrinsic_index empty) |
 
 
 ### Request URL

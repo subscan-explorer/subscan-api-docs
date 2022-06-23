@@ -56,9 +56,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/runtime/metadata' \
 
 ### Payload
 
-| Name   | Type   | Require |
-| ------ | ------ | ------- |
-| spec   | int    | yes     |
+| Name | Type | Require |
+|------|------|---------|
+| spec | int  | yes     |
 
 > Example Response
 

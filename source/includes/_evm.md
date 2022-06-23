@@ -76,14 +76,14 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
 
 ### Payload
 
-| Name        | Type   | Require                |
-|-------------|--------|------------------------|
-| block_num   | int    | no                     |
-| contract    | string | no                     |
-| address     | string | no(signer, evm address)|
-| page        | int    | no                     |
-| row         | int    | no                     |
-| block_range | string | no                     |
+| Name        | Type   | Require                 |
+|-------------|--------|-------------------------|
+| block_num   | int    | no                      |
+| contract    | string | no                      |
+| address     | string | no(signer, evm address) |
+| page        | int    | no                      |
+| row         | int    | no                      |
+| block_range | string | no                      |
 
 > Example Response
 
@@ -960,13 +960,13 @@ curl -X POST 'https://shibuya.api.subscan.io/api/scan/evm/erc20/transfer' \
 
 ### Payload
 
-| Name    | Type   | Require          |
-|---------|--------|------------------|
-| address | string | yes(evm address) |
-| contract | string |no(evm address ) |
-| token_id | string |                 |
-| row     | int    | yes              |
-| page    | int    | no               |
+| Name     | Type   | Require          |
+|----------|--------|------------------|
+| address  | string | yes(evm address) |
+| contract | string | no(evm address ) |
+| token_id | string |                  |
+| row      | int    | yes              |
+| page     | int    | no               |
 
 > Example Response
 
@@ -1016,11 +1016,11 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/token/holders' \
 
 ### Payload
 
-| Name    | Type   | Require          |
-|---------|--------|------------------|
+| Name     | Type   | Require          |
+|----------|--------|------------------|
 | contract | string | yes(evm address) |
-| row     | int    | yes              |
-| page    | int    | no               |
+| row      | int    | yes              |
+| page     | int    | no               |
 
 > Example Response
 
@@ -1062,15 +1062,15 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contract/list' \
 
 ### Payload
 
-| Name        | Type   | Require                               |
-|-------------|--------|---------------------------------------|
-| contracts   | array string  | no (evm address)                      |
-| verified    | bool   | no                                    |
-| row         | int    | yes                                   |
-| page        | int    | no                                    |
-| search      | string | no                                    |
-| order       | string | no(desc or asc)                       |
-| order_field | string | no(verify_time or transaction_count ) |
+| Name        | Type         | Require                               |
+|-------------|--------------|---------------------------------------|
+| contracts   | array string | no (evm address)                      |
+| verified    | bool         | no                                    |
+| row         | int          | yes                                   |
+| page        | int          | no                                    |
+| search      | string       | no                                    |
+| order       | string       | no(desc or asc)                       |
+| order_field | string       | no(verify_time or transaction_count ) |
 
 > Example Response
 

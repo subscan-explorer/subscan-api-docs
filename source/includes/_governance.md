@@ -19,7 +19,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/proposals' \
 ### payload
 
 | Name | Type | Require |
-| ---- | ---- | ------- |
+|------|------|---------|
 | row  | int  | yes     |
 | page | int  | yes     |
 
@@ -98,7 +98,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/proposal' \
 ### payload
 
 | Name        | Type | Require |
-| ----------- | ---- | ------- |
+|-------------|------|---------|
 | proposal_id | int  | yes     |
 
 > Example Response
@@ -233,7 +233,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/techcomm/proposals' \
 ### payload
 
 | Name | Type | Require |
-| ---- | ---- | ------- |
+|------|------|---------|
 | row  | int  | yes     |
 | page | int  | yes     |
 
@@ -280,7 +280,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/techcomm/proposal' \
 ### payload
 
 | Name        | Type | Require |
-| ----------- | ---- | ------- |
+|-------------|------|---------|
 | proposal_id | int  | yes     |
 
 > Example Response
@@ -423,7 +423,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposals' \
 ### payload
 
 | Name | Type | Require |
-| ---- | ---- | ------- |
+|------|------|---------|
 | row  | int  | yes     |
 | page | int  | yes     |
 
@@ -470,7 +470,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/council/proposal' \
 ### payload
 
 | Name        | Type | Require |
-| ----------- | ---- | ------- |
+|-------------|------|---------|
 | proposal_id | int  | yes     |
 
 > Example Response
@@ -613,7 +613,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendums' \
 ### payload
 
 | Name | Type | Require |
-| ---- | ---- | ------- |
+|------|------|---------|
 | row  | int  | yes     |
 | page | int  | yes     |
 
@@ -658,7 +658,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendum' \
 ### payload
 
 | Name             | Type | Require |
-| ---------------- | ---- | ------- |
+|------------------|------|---------|
 | referendum_index | int  | yes     |
 
 > Example Response
@@ -758,7 +758,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
 ### payload
 
 | Name             | Type | Require |
-| ---------------- | ---- | ------- |
+|------------------|------|---------|
 | row              | int  | yes     |
 | page             | int  | yes     |
 | referendum_index | int  | yes     |
@@ -822,12 +822,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/proposals' \
 
 ### payload
 
-| Name | Type | Require |
-| ---- | ---- | ------- |
-| row  | int  | yes     |
-| page | int  | yes     |
-| status | string  | no |
-| order_field | string | no |
+| Name        | Type   | Require |
+|-------------|--------|---------|
+| row         | int    | yes     |
+| page        | int    | yes     |
+| status      | string | no      |
+| order_field | string | no      |
 
 > Example Response
 
@@ -870,7 +870,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/proposal' \
 ### payload
 
 | Name         | Type | Require |
-| ------------ | ---- | ------- |
+|--------------|------|---------|
 | democracy_id | int  | yes     |
 
 > Example Response
@@ -966,7 +966,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tips' \
 ### payload
 
 | Name | Type | Require |
-| ---- | ---- | ------- |
+|------|------|---------|
 | row  | int  | yes     |
 | page | int  | yes     |
 
@@ -1049,7 +1049,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tip' \
 ### payload
 
 | Name | Type   | Require |
-| ---- | ------ | ------- |
+|------|--------|---------|
 | hash | string | yes     |
 
 > Example Response

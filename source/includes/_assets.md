@@ -1,8 +1,8 @@
-# assets 
+# assets
 
 ## assets
 
-assets list 
+assets list
 
 ```shell
 curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
@@ -20,12 +20,12 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
 
 ### Payload
 
-| Name   | Type   | Require                 |
-|--------|--------|-------------------------|
-| row    | int    | yes                     |
-| page   | int    | yes                     |
-| search | string | no(fuzzy search symbol) |
-| asset_id | int  | no                      |
+| Name     | Type   | Require                 |
+|----------|--------|-------------------------|
+| row      | int    | yes                     |
+| page     | int    | yes                     |
+| search   | string | no(fuzzy search symbol) |
+| asset_id | int    | no                      |
 
 > Example Response
 
@@ -90,7 +90,6 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
 }
 ```
 
-
 ## asset
 
 asset info
@@ -110,13 +109,11 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
 
 `POST /api/scan/assets/asset`
 
-
 ### Payload
 
 | Name     | Type | Require |
 |----------|------|---------|
 | asset_id | int  | yes     |
-
 
 > Example Response
 
@@ -215,7 +212,6 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
 }
 ```
 
-
 ## asset-holders
 
 asset holders
@@ -235,14 +231,13 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset/holders' \
 
 `POST /api/scan/assets/asset/holders`
 
-
 ### Payload
 
 | Name     | Type | Require |
 |----------|------|---------|
 | asset_id | int  | yes     |
 | row      | int  | yes     |
-| page     | int  | no     |
+| page     | int  | no      |
 
 > Example Response
 
@@ -281,7 +276,6 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset/holders' \
 }
 ```
 
-
 ## account-assets
 
 asset holders
@@ -299,13 +293,11 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/account/balances'
 
 `POST /api/scan/assets/account/balances`
 
-
 ### Payload
 
 | Name    | Type   | Require |
 |---------|--------|---------|
 | address | string | yes     |
-
 
 > Example Response
 
@@ -326,7 +318,6 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/account/balances'
 }
 ```
 
-
 ## account-assets
 
 asset holders
@@ -346,14 +337,13 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/activities' \
 
 `POST /api/scan/assets/activities`
 
-
 ### Payload
 
-| Name      | Type | Require |
-|-----------|------|---------|
-| asset_id  | int  | yes     |
-| row       | int  | yes     |
-| page      | int  | no     |
+| Name     | Type | Require |
+|----------|------|---------|
+| asset_id | int  | yes     |
+| row      | int  | yes     |
+| page     | int  | no      |
 
 > Example Response
 
