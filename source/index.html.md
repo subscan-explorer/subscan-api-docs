@@ -68,7 +68,7 @@ Please notice before you get started:
 | Bifrost              | `bifrost.api.subscan.io`              | live   |
 | Calamari             | `calamari.api.subscan.io`             | live   |
 | Centrifuge           | `centrifuge.api.subscan.io`           | live   |
-| Centrifuge Parachain | `centrifuge-parachain.api.subscan.io` | live   |
+| Centrifuge Solo      | `centrifuge-standalone-history.api.subscan.io` | live   |
 | ChainX               | `chainx.api.subscan.io`               | live   |
 | Clover               | `clover.api.subscan.io`               | live   |
 | Clover Parachain     | `clv.api.subscan.io`                  | live   |
