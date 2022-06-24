@@ -26,6 +26,8 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/groups' \
 | group_owner | string | no                                |
 | order       | string | no(desc,asc)                      |
 | order_field | string | no(power,total_stake,members,cap) |
+| row         | int    | yes                               |
+| page        | int    | no                                |
 
 > Example Response
 
@@ -72,9 +74,9 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/group' \
 
 ### Payload
 
-| Name        | Type   | Require   |
-| ----------- | ------ | --------- |
-| group_owner | string | no        |
+| Name        | Type   | Require |
+|-------------|--------|---------|
+| group_owner | string | no      |
 
 > Example Response
 
@@ -118,11 +120,11 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/group/members' \
 
 ### Payload
 
-| Name        | Type   | Require   |
-| ----------- | ------ | --------- |
-| group_owner | string | no        |
-| row         | int    | yes       |
-| page        | int    | yes       |
+| Name        | Type   | Require |
+|-------------|--------|---------|
+| group_owner | string | no      |
+| row         | int    | yes     |
+| page        | int    | yes     |
 
 > Example Response
 
@@ -140,6 +142,7 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/group/members' \
                 "used": "50493",
                 "spare": "1073741824",
                 "report_slot": 40200,
+                "punishment_deadline": 0,
                 "reported_files_size": "50493"
             }
         ]
@@ -168,9 +171,9 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member' \
 
 ### Payload
 
-| Name        | Type   | Require   |
-| ----------- | ------ | --------- |
-| address     | string | yes        |
+| Name    | Type   | Require |
+|---------|--------|---------|
+| address | string | yes     |
 
 > Example Response
 
@@ -186,6 +189,7 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member' \
         "used": "50493",
         "spare": "1073741824",
         "report_slot": 40200,
+        "punishment_deadline": 0,
         "reported_files_size": "50493"
     }
 }
@@ -215,11 +219,11 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/files' \
 
 ### Payload
 
-| Name        | Type   | Require   |
-| ----------- | ------ | --------- |
-| address     | string | yes       |
-| row         | int    | yes       |
-| page        | int    | yes       |
+| Name    | Type   | Require |
+|---------|--------|---------|
+| address | string | yes     |
+| row     | int    | yes     |
+| page    | int    | yes     |
 
 > Example Response
 
@@ -269,11 +273,11 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/orders' \
 
 ### Payload
 
-| Name        | Type   | Require   |
-| ----------- | ------ | --------- |
-| address     | string | yes       |
-| row         | int    | yes       |
-| page        | int    | yes       |
+| Name    | Type   | Require |
+|---------|--------|---------|
+| address | string | yes     |
+| row     | int    | yes     |
+| page    | int    | yes     |
 
 > Example Response
 
@@ -291,8 +295,11 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/orders' \
                 "stash": "cTHATJrSgZM2haKfn5e47NSP5Y5sqSCCToxrShtVifD2Nfxv5",
                 "file_size": "23710",
                 "expired_at": 2594488,
+                "block_timestamp": 1542109213,
                 "replicas": 0,
-                "status": ""
+                "status": "",
+                "prepaid": "0",
+                "amount": "0"
             }
         ]
     }
@@ -321,11 +328,11 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/daily' \
 
 ### Payload
 
-| Name        | Type   | Require   |
-| ----------- | ------ | --------- |
-| start       | string | yes       |
-| end         | string | yes       |
-| category    | string | yes(nodes,storage,files)       |
+| Name     | Type   | Require                  |
+|----------|--------|--------------------------|
+| start    | string | yes                      |
+| end      | string | yes                      |
+| category | string | yes(nodes,storage,files) |
 
 > Example Response
 
@@ -340,7 +347,8 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/daily' \
                 "time_utc": "2021-08-19T00:00:00+08:00",
                 "node_count": 1,
                 "storage": "1",
-                "file_count": 1
+                "file_count": 1,
+                "total_storage": "0"
             }
         ]
     }
@@ -369,13 +377,12 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/orders' \
 
 ### Payload
 
-| Name        | Type   | Require   |
-| ----------- | ------ | --------- |
-| row  | int  | yes     |
-| page | int  | yes     |
-| address     | array  | no       |
-| order       | string | no(desc,asc)|
-| expired_status | int | 1(not expired),2(expired less than 15 day),3(expired more than 15 day)|
+| Name           | Type  | Require                                                                |
+|----------------|-------|------------------------------------------------------------------------|
+| row            | int   | yes                                                                    |
+| page           | int   | yes                                                                    |
+| address        | array | no                                                                     |
+| expired_status | int   | 1(not expired),2(expired less than 15 day),3(expired more than 15 day) |
 
 > Example Response
 

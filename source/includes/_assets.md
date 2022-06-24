@@ -1,8 +1,8 @@
-# assets 
+# assets
 
 ## assets
 
-assets list 
+assets list
 
 ```shell
 curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
@@ -20,10 +20,12 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
 
 ### Payload
 
-| Name   | Type   | Require                 |
-|--------|--------|-------------------------|
-| search | string | no(fuzzy search symbol) |
-
+| Name     | Type   | Require                 |
+|----------|--------|-------------------------|
+| row      | int    | yes                     |
+| page     | int    | yes                     |
+| search   | string | no(fuzzy search symbol) |
+| asset_id | int    | no                      |
 
 > Example Response
 
@@ -37,7 +39,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
     "count": 139,
     "list": [
       {
-        "asset_id": 0,
+        "asset_id": "0",
         "metadata": {
           "deposit": "6692999670",
           "name": "Polkadog",
@@ -45,10 +47,40 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
           "decimals": 6
         },
         "owner": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
         },
         "issuer": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
         },
         "supply": "1000000000000000000",
         "holders": 6
@@ -57,7 +89,6 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
   }
 }
 ```
-
 
 ## asset
 
@@ -78,13 +109,11 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
 
 `POST /api/scan/assets/asset`
 
-
 ### Payload
 
 | Name     | Type | Require |
 |----------|------|---------|
 | asset_id | int  | yes     |
-
 
 > Example Response
 
@@ -95,7 +124,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
   "message": "Success",
   "generated_at": 1650349279,
   "data": {
-    "asset_id": 1,
+    "asset_id": "1",
     "metadata": {
       "deposit": "6694332990",
       "name": "Listen Token",
@@ -103,16 +132,76 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
       "decimals": 14
     },
     "owner": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": [
+        {
+          "index": 0,
+          "judgement": "FeePaid"
+        }
+      ],
+      "account_index": "",
+      "identity": false,
+      "parent": {
+        "address": "",
+        "display": "",
+        "sub_symbol": "",
+        "identity": true
+      }
     },
     "issuer": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": [
+        {
+          "index": 0,
+          "judgement": "FeePaid"
+        }
+      ],
+      "account_index": "",
+      "identity": false,
+      "parent": {
+        "address": "",
+        "display": "",
+        "sub_symbol": "",
+        "identity": true
+      }
     },
     "admin": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": [
+        {
+          "index": 0,
+          "judgement": "FeePaid"
+        }
+      ],
+      "account_index": "",
+      "identity": false,
+      "parent": {
+        "address": "",
+        "display": "",
+        "sub_symbol": "",
+        "identity": true
+      }
     },
     "freezer": {
-      "address": "FSUwnu7Ehf7sKByaXvSTYoAfuTxybwqhubeGfQkho94syqo"
+      "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+      "display": "",
+      "judgements": [
+        {
+          "index": 0,
+          "judgement": "FeePaid"
+        }
+      ],
+      "account_index": "",
+      "identity": false,
+      "parent": {
+        "address": "",
+        "display": "",
+        "sub_symbol": "",
+        "identity": true
+      }
     },
     "supply": "1000000000000000",
     "min_balance": "1000000000000",
@@ -122,7 +211,6 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
   }
 }
 ```
-
 
 ## asset-holders
 
@@ -143,13 +231,13 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset/holders' \
 
 `POST /api/scan/assets/asset/holders`
 
-
 ### Payload
 
 | Name     | Type | Require |
 |----------|------|---------|
 | asset_id | int  | yes     |
-
+| row      | int  | yes     |
+| page     | int  | no      |
 
 > Example Response
 
@@ -164,7 +252,22 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset/holders' \
     "list": [
       {
         "holder": {
-          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd"
+          "address": "HyBryanRsB1GGKa9ZfqvRc3XpTDipYyRvxNNyZYfWFcenhd",
+          "display": "",
+          "judgements": [
+            {
+              "index": 0,
+              "judgement": "FeePaid"
+            }
+          ],
+          "account_index": "",
+          "identity": false,
+          "parent": {
+            "address": "",
+            "display": "",
+            "sub_symbol": "",
+            "identity": true
+          }
         },
         "balance": "999996000000000000"
       }
@@ -172,7 +275,6 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset/holders' \
   }
 }
 ```
-
 
 ## account-assets
 
@@ -191,13 +293,11 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/account/balances'
 
 `POST /api/scan/assets/account/balances`
 
-
 ### Payload
 
 | Name    | Type   | Require |
 |---------|--------|---------|
 | address | string | yes     |
-
 
 > Example Response
 
@@ -208,21 +308,15 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/account/balances'
   "generated_at": 1650351232,
   "data": [
     {
-      "asset_id": 0,
+      "asset_id": "0",
       "balance": "999996000000000000",
       "name": "Polkadog",
-      "symbol": "DOG"
-    },
-    {
-      "asset_id": 16,
-      "balance": "95000000000",
-      "name": "PolarisDAO",
-      "symbol": "ARIS"
+      "symbol": "DOG",
+      "decimals": 6
     }
   ]
 }
 ```
-
 
 ## account-assets
 
@@ -243,13 +337,13 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/activities' \
 
 `POST /api/scan/assets/activities`
 
-
 ### Payload
 
-| Name      | Type | Require |
-|-----------|------|---------|
-| asset_id  | int  | yes     |
-
+| Name     | Type | Require |
+|----------|------|---------|
+| asset_id | int  | yes     |
+| row      | int  | yes     |
+| page     | int  | no      |
 
 > Example Response
 
@@ -265,7 +359,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/activities' \
         "event_index": "1164135-3",
         "extrinsic_index": "1164135-2",
         "block_num": 1164135,
-        "asset_id": 20,
+        "asset_id": "20",
         "block_timestamp": 1637140176,
         "module_id": "assets",
         "event_id": "Issued"

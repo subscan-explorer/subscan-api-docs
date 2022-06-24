@@ -19,9 +19,11 @@ curl -X POST 'https://polkadot.api.subscan.io/api/open/price' \
 
 ### Payload
 
-| Parameter | Type | Require | Default | Description                 |
-| --------- | ---- | ------- | ------- | --------------------------- |
-| time      | int  | yes     |         | unix timestamp or block num |
+| Parameter | Type   | Require | Default | Description                                  |
+|-----------|--------|---------|---------|----------------------------------------------|
+| base      | string | no      |         |                                              |
+| quote     | string | no      |         | Quote Currency, USD or current network token |
+| time      | int    | yes     |         | unix timestamp or block num                  |
 
 > Example Response
 
@@ -69,7 +71,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/open/price_converter' \
 ### Payload
 
 | Parameter | Type    | Require | Default | Description                                  |
-| --------- | ------- | ------- | ------- | -------------------------------------------- |
+|-----------|---------|---------|---------|----------------------------------------------|
 | value     | decimal | yes     |         | currency amount to convert                   |
 | from      | string  | yes     |         | Base Currency, USD or current network token  |
 | quote     | string  | yes     |         | Quote Currency, USD or current network token |
@@ -119,10 +121,11 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
 
 ### Payload
 
-| Name  | Type             | Require |
-| ----- | ---------------- | ------- |
-| start | Date(2019-07-04) | yes     |
-| end   | Date(2019-07-04) | yes     |
+| Name     | Type             | Require |
+|----------|------------------|---------|
+| start    | Date(2019-07-04) | yes     |
+| end      | Date(2019-07-04) | yes     |
+| currency | string           | no      |
 
 > Example Response
 
@@ -134,11 +137,11 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
     "generated_at": 1628587129,
     "data": {
         "average": "153.1241241",
+        "ema7_average": "0",
         "list": [
             {
                 "feed_at": 1594857864,
-                "price": "152.42365362",
-                "block_num": 722727
+                "price": "152.42365362"
             }       
         ]
     }
@@ -152,7 +155,7 @@ List of currencies that support price query and conversion
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/open/currencies' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY' \
+  --header 'X-API-Key: YOUR_KEY' 
 ```
 
 ### Request URL
