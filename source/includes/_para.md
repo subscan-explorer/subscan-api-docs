@@ -940,6 +940,7 @@ curl -X POST 'https://astar.api.subscan.io/api/scan/collator/meta'
         "invulnerables": 27,
         "candidates": 37,
         "candidates_total_bond": "0"
+        "candidacy_bond": "3200000000000000000000000"
     }
 }
 ```
