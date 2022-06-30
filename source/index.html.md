@@ -131,5 +131,6 @@ Please notice before you get started:
 | Statemint            | `statemint.api.subscan.io`            | live   |
 | Turing               | `turing.api.subscan.io`               | live   |
 | Uniarts              | `uniarts.api.subscan.io`              | live   |
+| Unique               | `unique.api.subscan.io`               | live   |
 | Westend              | `westend.api.subscan.io`              | test   |
 | Zeitgeist            | `zeitgeist.api.subscan.io`            | live   |
