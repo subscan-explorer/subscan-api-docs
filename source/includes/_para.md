@@ -94,12 +94,12 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 
 ### Payload
 
-| Parameter     | Type   | Require | Default            | Description                   |
-|---------------|--------|---------|--------------------|-------------------------------|
-| auction_index | int    | no      | 0                  |                               |
-| status        | int    | no      | 0                  | Enum(1:Started&#124;2:Closed) |
-| row           | int    | yes     |                    |                               |
-| page          | int    | yes     |                    |                               |
+| Parameter     | Type | Require | Default | Description                   |
+|---------------|------|---------|---------|-------------------------------|
+| auction_index | int  | no      | 0       |                               |
+| status        | int  | no      | 0       | Enum(1:Started&#124;2:Closed) |
+| row           | int  | yes     |         |                               |
+| page          | int  | yes     |         |                               |
 
 > Example Response
 
@@ -962,15 +962,15 @@ curl -X POST 'https://astar.api.subscan.io/api/scan/collator/list' \
 
 ### Payload
 
-| Parameter     | Type   | Require                              | Default | Description     |
-|---------------|--------|--------------------------------------|---------|-----------------|
-| row           | int    | yes                                  |         |                 |
-| page          | int    | yes                                  |         |                 |
-| account       | string | no                                   |         | account address |
-| status        | int    | no(0:ALL 1:Invulnerable 2:Candidate) | 0       |                 |
-| include_total | bool   | no                                   | no      | include `total` |
-| order         | string | no(desc,asc)                         |         |                 |
-| order_field   | string | no(bond,last_change_block)           |         |                 |
+| Parameter     | Type   | Require                                                | Default | Description     |
+|---------------|--------|--------------------------------------------------------|---------|-----------------|
+| row           | int    | yes                                                    |         |                 |
+| page          | int    | yes                                                    |         |                 |
+| account       | string | no                                                     |         | account address |
+| status        | int    | no(0:ALL 1:Invulnerable 2:Candidate)                   | 0       |                 |
+| include_total | bool   | no                                                     | no      | include `total` |
+| order         | string | no(desc,asc)                                           |         |                 |
+| order_field   | string | no(account,bond,last_change_block,last_authored_block) |         |                 |
 
 > Example Response
 
@@ -987,21 +987,24 @@ curl -X POST 'https://astar.api.subscan.io/api/scan/collator/list' \
         "address": "VxHuVq48qM8STAEm8G8P2VzRQL6RuEix5jqbfxDXp6rtgrs"
       },
       "bond": "3200000000000000000000000",
-      "last_change_block": 1322117
+      "last_change_block": 1322117,
+      "last_authored_block": 1366217
     }, {
       "status": 2,
       "account_display": {
         "address": "W3K8VwY4qqmAUAa3jB5Pbq5Q9zkTgGfdrh6vwyh63BohKX2"
       },
       "bond": "3200000000000000000000000",
-      "last_change_block": 1322117
+      "last_change_block": 1322117,
+      "last_authored_block": 1366218
     }, {
       "status": 2,
       "account_display": {
         "address": "W8PzksJcA1Ag82GNvuxT6Ejp4KXqQexNXqysJyuxSvHSmH9"
       },
       "bond": "3200000000000000000000000",
-      "last_change_block": 1322117
+      "last_change_block": 1322117,
+      "last_authored_block": 1366219
     }]
   }
 }
@@ -1040,7 +1043,8 @@ curl -X POST 'https://astar.api.subscan.io/api/scan/collator/info' \
           "address": "VxHuVq48qM8STAEm8G8P2VzRQL6RuEix5jqbfxDXp6rtgrs"
       },
       "bond": "3200000000000000000000000",
-      "last_change_block": 1322117
+      "last_change_block": 1322117,
+      "last_authored_block": 1366217
   }
 }
 ```
