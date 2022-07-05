@@ -44,9 +44,9 @@ jobs:
 
       - name: Build
         run: |
-          bundle config path vendor/bundle
           gem install bundler
-          bundle install
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
           bundle exec middleman build --clean --verbose
 
       - uses: ./.github/actions/smart-vercel
