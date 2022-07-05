@@ -94,12 +94,12 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctions' \
 
 ### Payload
 
-| Parameter     | Type   | Require | Default            | Description                   |
-|---------------|--------|---------|--------------------|-------------------------------|
-| auction_index | int    | no      | 0                  |                               |
-| status        | int    | no      | 0                  | Enum(1:Started&#124;2:Closed) |
-| row           | int    | yes     |                    |                               |
-| page          | int    | yes     |                    |                               |
+| Parameter     | Type | Require | Default | Description                   |
+|---------------|------|---------|---------|-------------------------------|
+| auction_index | int  | no      | 0       |                               |
+| status        | int  | no      | 0       | Enum(1:Started&#124;2:Closed) |
+| row           | int  | yes     |         |                               |
+| page          | int  | yes     |         |                               |
 
 > Example Response
 
@@ -913,6 +913,138 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
       "unlocking_block": 15725400
     }],
     "total": "4715000000000000"
+  }
+}
+```
+
+## collators meta
+
+```shell
+curl -X POST 'https://astar.api.subscan.io/api/scan/collator/meta'
+```
+
+### Request URL
+
+`POST /api/scan/collator/meta`
+
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1656556504,
+    "data": {
+        "desired_candidates": 47,
+        "invulnerables": 27,
+        "candidates": 37,
+        "candidates_total_bond": "0"
+        "candidacy_bond": "3200000000000000000000000"
+    }
+}
+```
+
+## collators list
+
+```shell
+curl -X POST 'https://astar.api.subscan.io/api/scan/collator/list' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "row": 3,
+    "page": 0
+}'
+```
+
+### Request URL
+
+`POST /api/scan/collator/list`
+
+### Payload
+
+| Parameter     | Type   | Require                                                | Default | Description     |
+|---------------|--------|--------------------------------------------------------|---------|-----------------|
+| row           | int    | yes                                                    |         |                 |
+| page          | int    | yes                                                    |         |                 |
+| account       | string | no                                                     |         | account address |
+| status        | int    | no(0:ALL 1:Invulnerable 2:Candidate)                   | 0       |                 |
+| include_total | bool   | no                                                     | no      | include `total` |
+| order         | string | no(desc,asc)                                           |         |                 |
+| order_field   | string | no(account,bond,last_change_block,last_authored_block) |         |                 |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1656553024,
+  "data": {
+    "count": 64,
+    "list": [{
+      "status": 2,
+      "account_display": {
+        "address": "VxHuVq48qM8STAEm8G8P2VzRQL6RuEix5jqbfxDXp6rtgrs"
+      },
+      "bond": "3200000000000000000000000",
+      "last_change_block": 1322117,
+      "last_authored_block": 1366217
+    }, {
+      "status": 2,
+      "account_display": {
+        "address": "W3K8VwY4qqmAUAa3jB5Pbq5Q9zkTgGfdrh6vwyh63BohKX2"
+      },
+      "bond": "3200000000000000000000000",
+      "last_change_block": 1322117,
+      "last_authored_block": 1366218
+    }, {
+      "status": 2,
+      "account_display": {
+        "address": "W8PzksJcA1Ag82GNvuxT6Ejp4KXqQexNXqysJyuxSvHSmH9"
+      },
+      "bond": "3200000000000000000000000",
+      "last_change_block": 1322117,
+      "last_authored_block": 1366219
+    }]
+  }
+}
+```
+
+## collator info
+
+```shell
+curl -X POST 'https://astar.api.subscan.io/api/scan/collator/info' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "account": "VxHuVq48qM8STAEm8G8P2VzRQL6RuEix5jqbfxDXp6rtgrs",
+}'
+```
+
+### Request URL
+
+`POST /api/scan/collator/info`
+
+### Payload
+
+| Parameter | Type   | Require | Default | Description     |
+|-----------|--------|---------|---------|-----------------|
+| account   | string | yes     |         | account address |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1656558754,
+  "data": {
+      "status": 2,
+      "account_display": {
+          "address": "VxHuVq48qM8STAEm8G8P2VzRQL6RuEix5jqbfxDXp6rtgrs"
+      },
+      "bond": "3200000000000000000000000",
+      "last_change_block": 1322117,
+      "last_authored_block": 1366217
   }
 }
 ```
