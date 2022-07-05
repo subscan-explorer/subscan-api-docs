@@ -2,8 +2,7 @@ name: Deploy production
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [main]
 
 jobs:
   deploy:
