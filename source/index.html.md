@@ -80,8 +80,6 @@ Please notice before you get started:
 | Crust Shadow         | `shadow.api.subscan.io`               | live   |
 | Dali                 | `dali.api.subscan.io`                 | live   |
 | Darwinia Crab        | `crab.api.subscan.io`                 | live   |
-| DataHighway          | `datahighway.api.subscan.io`          | live   |
-| DataHighway Harbour  | `datahighway-harbour.api.subscan.io`  | live   |
 | DeepBrain Chain      | `dbc.api.subscan.io`                  | live   |
 | Dock                 | `dock.api.subscan.io`                 | live   |
 | Dolphin              | `dolphin.api.subscan.io`              | test   |
