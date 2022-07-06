@@ -910,7 +910,8 @@ curl -X POST 'https://kusama.api.subscan.io/api/scan/account/contributions' \
       "memo": "",
       "fund_status": 2,
       "fund_event_index": "10683439-25",
-      "unlocking_block": 15725400
+      "unlocking_block": 15725400,
+      "fund_auction_status": 2
     }],
     "total": "4715000000000000"
   }
@@ -939,7 +940,7 @@ curl -X POST 'https://astar.api.subscan.io/api/scan/collator/meta'
         "desired_candidates": 47,
         "invulnerables": 27,
         "candidates": 37,
-        "candidates_total_bond": "0"
+        "candidates_total_bond": "0",
         "candidacy_bond": "3200000000000000000000000"
     }
 }
