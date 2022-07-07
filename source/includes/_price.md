@@ -52,6 +52,24 @@ curl -X POST 'https://polkadot.api.subscan.io/api/open/price' \
 
 The conversion calculator returns the amount of the target currency base on the amount of source currency and historical price
 
+Networks Supported Token
+
+| Network        | token     |
+|----------------|-----------|
+| kusama         | KSM       |
+| polkadot       | DOT       |
+| kulupu         | KLP       |
+| darwinia       | RING KTON |
+| dock           | DOCK      |
+| subgame        | SGB       |
+| spiritnet      | KILT      |
+| crab-parachain | CRAB      |
+| crab           | CRAB      |
+| phala          | PHA       |
+| khala          | PHA       |
+| bifrost-kusama | BNC       |
+| bifrost        | BNC       |
+
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/open/price_converter' \
   --header 'Content-Type: application/json' \
