@@ -438,6 +438,53 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/contributes' \
 }
 ```
 
+## fund timeline
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/parachain/fund_timeline' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "fund_id": "2032-15",
+    "order": "desc"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/fund_timeline`
+
+### Payload
+
+| Parameter | Type   | Require       | Default | Description |
+|-----------|--------|---------------|---------|-------------|
+| fund_id   | string | no            |         |             |
+| order     | string | no(desc, asc) | desc    |             |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1657182543,
+    "data": {
+        "count": 1,
+        "list": [
+            {
+                "fund_id": "2032-15",
+                "block_num": 8123870,
+                "block_timestamp": 1639446774,
+                "event_index": "8123870-19",
+                "extrinsic_index": "8123870-4",
+                "module_name": "crowdloan",
+                "event_name": "Created"
+            }
+        ]
+    }
+}
+```
+
 ## chain info
 
 ```shell
