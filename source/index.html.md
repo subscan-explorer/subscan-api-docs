@@ -129,6 +129,7 @@ Please notice before you get started:
 | Stafi              | `stafi.api.subscan.io`                         | live   |
 | Statemine          | `statemine.api.subscan.io`                     | live   |
 | Statemint          | `statemint.api.subscan.io`                     | live   |
+| Tanganika          | `datahighway.api.subscan.io`                   | live   |
 | Turing             | `turing.api.subscan.io`                        | live   |
 | Uniarts            | `uniarts.api.subscan.io`                       | live   |
 | Unique             | `unique.api.subscan.io`                        | live   |
