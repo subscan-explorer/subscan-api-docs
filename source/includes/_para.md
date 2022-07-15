@@ -756,6 +756,71 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/auctionCompetitor
 }
 ```
 
+## auction leading blocks
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/parachain/auction_leading_blocks' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{"auction_id": 21}'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/auction_leading_blocks`
+
+### Payload
+
+| Parameter  | Type | Require | Default | Description |
+|------------|------|---------|---------|-------------|
+| auction_id | int  | true    |         |             |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1657851930,
+  "data": [{
+      "bid_id": "21-9-16",
+      "para_id": 2046,
+      "fund_id": "",
+      "unique_key": "21-9-16-2046",
+      "leading_blocks": 31575
+    },
+    {
+      "bid_id": "21-9-16",
+      "para_id": 2044,
+      "fund_id": "",
+      "unique_key": "21-9-16-2044",
+      "leading_blocks": 11820
+    },
+    {
+      "bid_id": "21-9-16",
+      "para_id": 2045,
+      "fund_id": "",
+      "unique_key": "21-9-16-2045",
+      "leading_blocks": 10608
+    },
+    {
+      "bid_id": "21-9-16",
+      "para_id": 2048,
+      "fund_id": "",
+      "unique_key": "21-9-16-2048",
+      "leading_blocks": 5649
+    },
+    {
+      "bid_id": "21-9-16",
+      "para_id": 2003,
+      "fund_id": "",
+      "unique_key": "21-9-16-2003",
+      "leading_blocks": 3559
+    }
+  ]
+}
+```
+
 ## para fund Stat
 
 ```shell
