@@ -786,35 +786,30 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/parachain/auction_leading
       "bid_id": "21-9-16",
       "para_id": 2046,
       "fund_id": "",
-      "unique_key": "21-9-16-2046",
       "leading_blocks": 31575
     },
     {
       "bid_id": "21-9-16",
       "para_id": 2044,
       "fund_id": "",
-      "unique_key": "21-9-16-2044",
       "leading_blocks": 11820
     },
     {
       "bid_id": "21-9-16",
       "para_id": 2045,
       "fund_id": "",
-      "unique_key": "21-9-16-2045",
       "leading_blocks": 10608
     },
     {
       "bid_id": "21-9-16",
       "para_id": 2048,
       "fund_id": "",
-      "unique_key": "21-9-16-2048",
       "leading_blocks": 5649
     },
     {
       "bid_id": "21-9-16",
       "para_id": 2003,
       "fund_id": "",
-      "unique_key": "21-9-16-2003",
       "leading_blocks": 3559
     }
   ]
