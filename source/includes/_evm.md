@@ -105,6 +105,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
         "gas_price": "1000000000",
         "block_timestamp": 1620872100,
         "extrinsic_id": 522628700001,
+        "contract": "0x3b53d2c7b44d40be05fa5e2309ffeb6eb2492d88",
         "effective_gas_price": "1000000000"
       }
     ]
