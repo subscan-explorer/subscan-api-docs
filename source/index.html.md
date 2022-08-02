@@ -16,7 +16,6 @@ includes:
   - v2
   - para
   - evm
-  - xcm
   - crust
 
 search: false
