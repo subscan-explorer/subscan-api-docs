@@ -121,7 +121,7 @@ header {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -208,7 +208,7 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 40px;
+    line-height: 50px;
   }
 
   li {
@@ -243,11 +243,13 @@ header {
 
   .toc-h2 {
     padding-left: $nav-padding + $nav-indent;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    // height: 50px;
   }
 
   .toc-footer {
-    padding: 1em 0;
+    padding: 1.5em 0;
     margin-top: 1em;
     border-top: 1px dashed $nav-footer-border-color;
 
@@ -460,7 +462,8 @@ header {
     font-size: 25px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    margin-bottom: $h1-margin-bottom;
+    margin-bottom: 1em;
+    // margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
@@ -476,9 +479,9 @@ header {
   h2 {
     @extend %header-font;
     font-size: 19px;
-    margin-top: 4em;
+    margin-top: 1em;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #d8d8d8;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     background-image: linear-gradient(
@@ -487,12 +490,12 @@ header {
       rgba(#fff, 0)
     );
 
-    background-color: #f8e8c7 !important;
+    background-color: transparent !important;
   }
   h1 {
     position: relative;
-    border-top: 50px solid transparent !important;
-    margin-top: -50px !important;
+    // border-top: 50px solid transparent !important;
+    // margin-top: -50px !important;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
@@ -507,8 +510,8 @@ header {
   }
   h2 {
     position: relative;
-    border-top: 50px solid transparent !important;
-    margin-top: -50px;
+    // border-top: 50px solid transparent !important;
+    // margin-top: -50px;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
@@ -517,7 +520,7 @@ header {
   h2::before {
     content: "";
     position: absolute;
-    top: -25px;
+    // top: -25px;
     left: 0;
     right: 0;
   }
@@ -525,7 +528,7 @@ header {
   // against the h1s.
   h1 + h2,
   h1 + div + h2 {
-    margin-top: ($h1-margin-bottom + 50) * -1;
+    margin-top: -0.5em;
     border-top: none;
   }
 
@@ -636,7 +639,7 @@ header {
       background-color: $aside-success-bg;
     }
     &.info {
-      background-color: #f8e8c7;
+      background-color: transparent;
     }
   }
 
