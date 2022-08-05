@@ -448,3 +448,14 @@ a {
   //   border-left-width: 10px;
   //   border-left-style: solid;
 }
+
+.highlight {
+  highlight {
+    margin: 0 25px;
+    width: calc(50% - 50px);
+  }
+}
+
+.content h2 {
+  background-color: transparent !important;
+}
