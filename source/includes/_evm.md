@@ -244,6 +244,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transaction' \
     "success": true,
     "error_type": "",
     "error_msg": "Returned",
+    "trace_error_msg": "transaction error message",
     "from": "0xbb3e51d20ca651fbe19b1a1c2a6c8b1a4d950437",
     "to": {
       "address": "0xd6fc3e187da47e33774b25c3d0adc619032bf686",
