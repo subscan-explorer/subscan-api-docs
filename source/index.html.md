@@ -56,7 +56,7 @@ Please notice before you get started:
 4. The **Status** marked as **live** is production network, and it will be maintained continuously. The **Status** marked as **test** is test network, which may be unstable. Some new features of Subscan will be updated on testnet first.
 
 | Network            | API Host                                       | Status |
-|--------------------|------------------------------------------------|--------|
+| ------------------ | ---------------------------------------------- | ------ |
 | Polkadot           | `polkadot.api.subscan.io`                      | live   |
 | Kusama             | `kusama.api.subscan.io`                        | live   |
 | Darwinia           | `darwinia.api.subscan.io`                      | live   |
@@ -88,6 +88,7 @@ Please notice before you get started:
 | Efinity            | `efinity.api.subscan.io`                       | live   |
 | Encointer          | `encointer.api.subscan.io`                     | live   |
 | Equilibrium        | `equilibrium.api.subscan.io`                   | live   |
+| Genshiro           | `genshiro.api.subscan.io`                      | live   |
 | HydraDX            | `hydradx.api.subscan.io`                       | live   |
 | IntegriTEE         | `integritee.api.subscan.io`                    | live   |
 | Interlay           | `interlay.api.subscan.io`                      | live   |
