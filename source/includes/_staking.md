@@ -504,13 +504,14 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
 
 ### Payload
 
-| Name        | Type   | Require                              |
-|-------------|--------|--------------------------------------|
-| row         | int    | yes                                  |
-| page        | int    | yes                                  |
-| address     | string | yes                                  |
-| is_stash    | bool   | no                                   |
-| block_range | string | no (blockNum range like (1000-1200)) |
+| Name        | Type   | Require | Description                       |
+|-------------|--------|---------|-----------------------------------|
+| row         | int    | yes     |                                   |
+| page        | int    | yes     |                                   |
+| address     | string | yes     |                                   |
+| category    | string | no      | enum (Reward Slash)               |
+| is_stash    | bool   | no      |                                   |
+| block_range | string | no      | (blockNum range like (1000-1200)) |
 
 > Example Response
 
