@@ -754,6 +754,11 @@ header {
 @media (max-width: $phone-width) {
   header {
     height: 60px;
+    .left-container {
+      .logo {
+        margin-left: 30px;
+      }
+    }
     .right-menu {
       margin-right: 0;
       a {
