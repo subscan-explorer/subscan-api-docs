@@ -126,7 +126,6 @@ Please notice before you get started:
 | Shibuya            | `shibuya.api.subscan.io`                       | test   |
 | Shiden             | `shiden.api.subscan.io`                        | live   |
 | SORA               | `sora.api.subscan.io`                          | live   |
-| Subgame            | `subgame.api.subscan.io`                       | live   |
 | Stafi              | `stafi.api.subscan.io`                         | live   |
 | Statemine          | `statemine.api.subscan.io`                     | live   |
 | Statemint          | `statemint.api.subscan.io`                     | live   |

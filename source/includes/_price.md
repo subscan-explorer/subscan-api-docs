@@ -61,7 +61,6 @@ Networks Supported Token
 | kulupu         | KLP       |
 | darwinia       | RING KTON |
 | dock           | DOCK      |
-| subgame        | SGB       |
 | spiritnet      | KILT      |
 | crab-parachain | CRAB      |
 | crab           | CRAB      |
