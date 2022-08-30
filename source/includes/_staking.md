@@ -529,6 +529,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/account/reward_slash' \
         "block_num": 10473980,
         "block_timestamp": 1653580638,
         "event_id": "Reward",
+        "event_method": "Rewarded",
         "event_idx": 434,
         "event_index": "10473980-434",
         "extrinsic_hash": "0x7e869c950a6ab553f2ea12e3e4ed3f49f0fc41c006c6bda52ae600cac96ea073",
