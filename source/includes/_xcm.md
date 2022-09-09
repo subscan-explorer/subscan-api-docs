@@ -242,3 +242,66 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/stat' \
   }
 }
 ```
+
+
+## xcm info
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/info' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "origin_para_id": 2004,
+    "page":"1523869-036"}
+}'
+```
+
+### Request URL
+
+`POST /api/scan/xcm/info`
+
+### Payload
+
+| Parameter       | Type   | Require | Default | Description |
+|-----------------|--------|---------|---------|-------------|
+| origin_para_id  | INT    | yes     |         |             |
+| origin_event_id | string | yes     |         |             |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1662702180,
+  "data": {
+    "message_hash": "0x59200eea7a3a3578a29d9196389c5570addc73a7a7e1124dba09abf5c72a70bb",
+    "origin_event_index": "1523869-36",
+    "from_account_id": "0x3a531c90e52a02817c0d31794d0ac4ea35a66602",
+    "origin_para_id": 2004,
+    "origin_block_timestamp": 1658889546,
+    "relayed_block_timestamp": 0,
+    "block_num": 11338971,
+    "status": "success",
+    "relayed_event_index": "0-0",
+    "dest_event_index": "11338971-23",
+    "dest_para_id": 0,
+    "to_account_id": "c83bab32181ce772142dda747403916a41bd9cc59d0abe6621636bef36ca8e32",
+    "confirm_block_timestamp": 1658889558,
+    "extrinsic_index": "1523869-6",
+    "relayed_extrinsic_index": "",
+    "dest_extrinsic_index": "11338971-1",
+    "child_para_id": 0,
+    "child_dest": "",
+    "assets": [
+      {
+        "enum_key": "Concrete",
+        "asset_module": "Balances",
+        "amount": "40990048395687",
+        "decimals": 9,
+        "symbol": "CRAB"
+      }
+    ]
+  }
+}
+```
