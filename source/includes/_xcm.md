@@ -20,13 +20,14 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/list' \
 | Parameter       | Type   | Require | Default | Description                                               |
 |-----------------|--------|---------|---------|-----------------------------------------------------------|
 | row             | INT    | yes     |         |                                                           |
-| page            | INT    | yes     |         |                                                           |
-| address         | string | yes     |         | send or dest address(ss58 or h160)                        |
-| origin_para_id  | INT    | yes     |         |                                                           |
-| dest_para_id    | INT    | yes     |         |                                                           |
-| extrinsic_index | string | yes     |         |                                                           |
-| block_range     | string | yes     |         | block range(like 1-100 or 10000-20000)                    |
-| status          | string | yes     |         | status filter, it can be (pending relayed success failed) |
+| page            | INT    | NO      |         |                                                           |
+| address         | string | NO      |         | send or dest address(ss58 or h160)                        |
+| origin_para_id  | INT    | NO      |         |                                                           |
+| dest_para_id    | INT    | NO      |         |                                                           |
+| extrinsic_index | string | NO      |         |                                                           |
+| block_range     | string | NO      |         | block range(like 1-100 or 10000-20000)                    |
+| status          | string | NO      |         | status filter, it can be (pending relayed success failed) |
+| protocol        | string | NO      |         | protocol filter, it can be (VMP HRMP UMP DMP)             |
 
 > Example Response
 
