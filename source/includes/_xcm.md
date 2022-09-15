@@ -28,6 +28,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/list' \
 | block_range     | string | NO      |         | block range(like 1-100 or 10000-20000)                    |
 | status          | string | NO      |         | status filter, it can be (pending relayed success failed) |
 | protocol        | string | NO      |         | protocol filter, it can be (VMP HRMP UMP DMP)             |
+| filter_para_id  | INT    | no      | 0       | filter by para_id                                         |
 
 > Example Response
 
