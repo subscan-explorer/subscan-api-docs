@@ -1038,6 +1038,26 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/check_hash' \
 }
 ```
 
+xcm message 
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1663557135,
+    "data": {
+        "hash_type": "xcm_messages",
+        "messages": [
+            {
+                "origin_para_id": 2004,
+                "origin_event_index": "1670182-5"
+            }
+        ]
+    }
+}
+```
+
+
 ## token
 
 Current network tokens detail
