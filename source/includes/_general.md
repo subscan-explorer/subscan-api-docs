@@ -921,16 +921,17 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
 
 ### Payload
 
-| Name          | Type   | Require                |
-|---------------|--------|------------------------|
-| row           | int    | yes                    |
-| page          | int    | yes                    |
-| address       | string | no                     |
-| from_block    | int    | no                     |
-| to_block      | int    | no                     |
-| direction     | string | yes(all sent received) |
-| include_total | bool   | no                     |
-| asset_symbol  | string | no                     |
+| Name            | Type   | Require                |
+|-----------------|--------|------------------------|
+| row             | int    | yes                    |
+| page            | int    | yes                    |
+| address         | string | no                     |
+| extrinsic_index | string | no                     |
+| from_block      | int    | no                     |
+| to_block        | int    | no                     |
+| direction       | string | yes(all sent received) |
+| include_total   | bool   | no                     |
+| asset_symbol    | string | no                     |
 
 
 > Example Response
