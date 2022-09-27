@@ -121,6 +121,7 @@ Please notice before you get started:
 | Quartz             | `quartz.api.subscan.io`                        | live   |
 | Reef               | `reef.api.subscan.io`                          | live   |
 | Robonomics         | `robonomics-testnet.api.subscan.io`            | live   |
+| Rockmine           | `rockmine.api.subscan.io`                      | test   |
 | Rococo             | `rococo.api.subscan.io`                        | test   |
 | Sakura             | `sakura.api.subscan.io`                        | live   |
 | Shibuya            | `shibuya.api.subscan.io`                       | test   |
