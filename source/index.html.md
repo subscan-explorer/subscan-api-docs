@@ -63,10 +63,12 @@ Please notice before you get started:
 | Acala              | `acala.api.subscan.io`                         | live   |
 | Acala Mandala      | `acala-testnet.api.subscan.io`                 | test   |
 | Alephzero          | `alephzero.api.subscan.io`                     | live   |
-| Astar              | `astar.api.subscan.io`                         | live   |
 | Altair             | `altair.api.subscan.io`                        | live   |
+| Astar              | `astar.api.subscan.io`                         | live   |
 | Basilisk           | `basilisk.api.subscan.io`                      | live   |
 | Bifrost            | `bifrost.api.subscan.io`                       | live   |
+| Bifrost Kusama     | `bifrost-kusama.api.subscan.io`                | live   |
+| Bifrost Testnet    | `bifrost-testnet.api.subscan.io`               | live   |
 | Calamari           | `calamari.api.subscan.io`                      | live   |
 | Centrifuge         | `centrifuge.api.subscan.io`                    | live   |
 | Centrifuge Solo    | `centrifuge-standalone-history.api.subscan.io` | live   |
@@ -81,6 +83,7 @@ Please notice before you get started:
 | Crust Shadow       | `shadow.api.subscan.io`                        | live   |
 | Dali               | `dali.api.subscan.io`                          | live   |
 | Darwinia Crab      | `crab.api.subscan.io`                          | live   |
+| Darwinia Parachain | `darwinia-parachain.api.subscan.io`            | live   |
 | DeepBrain Chain    | `dbc.api.subscan.io`                           | live   |
 | Dock               | `dock.api.subscan.io`                          | live   |
 | Dolphin            | `dolphin.api.subscan.io`                       | test   |
@@ -88,8 +91,10 @@ Please notice before you get started:
 | Efinity            | `efinity.api.subscan.io`                       | live   |
 | Encointer          | `encointer.api.subscan.io`                     | live   |
 | Equilibrium        | `equilibrium.api.subscan.io`                   | live   |
+| Equilibrium Testnet| `equilibrium-beta.api.subscan.io`              | live   |
 | Genshiro           | `genshiro.api.subscan.io`                      | live   |
 | HydraDX            | `hydradx.api.subscan.io`                       | live   |
+| ICE Arctic         | `arctic.api.subscan.io`                        | live   |
 | IntegriTEE         | `integritee.api.subscan.io`                    | live   |
 | Interlay           | `interlay.api.subscan.io`                      | live   |
 | Karura             | `karura.api.subscan.io`                        | live   |
@@ -98,10 +103,9 @@ Please notice before you get started:
 | Khala              | `khala.api.subscan.io`                         | live   |
 | KILT Peregrine     | `kilt-testnet.api.subscan.io`                  | test   |
 | KILT Spiritnet     | `spiritnet.api.subscan.io`                     | live   |
-| Laminar TC2        | `laminar-testnet.api.subscan.io`               | live   |
 | Litmus             | `litmus.api.subscan.io`                        | live   |
-| Mangata            | `mangata.api.subscan.io`                       | live   |
-| Manta              | `manta-testnet.api.subscan.io`                 | test   |
+| Mangata            | `mangatax.api.subscan.io`                      | live   |
+| Mangata Testnet    | `mangata-testnet.api.subscan.io`               | live   |
 | Moonbase           | `moonbase.api.subscan.io`                      | test   |
 | Moonbeam           | `moonbeam.api.subscan.io`                      | live   |
 | Moonriver          | `moonriver.api.subscan.io`                     | live   |
@@ -120,7 +124,7 @@ Please notice before you get started:
 | Plasm              | `plasm.api.subscan.io`                         | live   |
 | Quartz             | `quartz.api.subscan.io`                        | live   |
 | Reef               | `reef.api.subscan.io`                          | live   |
-| Robonomics         | `robonomics-testnet.api.subscan.io`            | live   |
+| Robonomics         | `robonomics.api.subscan.io`                    | live   |
 | Rockmine           | `rockmine.api.subscan.io`                      | test   |
 | Rococo             | `rococo.api.subscan.io`                        | test   |
 | Sakura             | `sakura.api.subscan.io`                        | live   |
@@ -134,7 +138,6 @@ Please notice before you get started:
 | Statemint          | `statemint.api.subscan.io`                     | live   |
 | Tanganika          | `datahighway.api.subscan.io`                   | live   |
 | Turing             | `turing.api.subscan.io`                        | live   |
-| Uniarts            | `uniarts.api.subscan.io`                       | live   |
 | Unique             | `unique.api.subscan.io`                        | live   |
 | Westend            | `westend.api.subscan.io`                       | test   |
 | Zeitgeist          | `zeitgeist.api.subscan.io`                     | live   |
