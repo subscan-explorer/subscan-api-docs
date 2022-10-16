@@ -1156,3 +1156,78 @@ curl -X POST 'https://astar.api.subscan.io/api/scan/collator/info' \
   }
 }
 ```
+
+## parachain timeline
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/parachain/timeline' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "para_id": 2007,
+    "order": "asc"
+}'
+```
+
+### Request URL
+
+`POST /api/scan/parachain/timeline`
+
+### Payload
+
+| Parameter | Type   | Require      | Default | Description  |
+|-----------|--------|--------------|---------|--------------|
+| para_id   | int    | yes          |         | parachain id |
+| order     | string | no(asc,desc) | desc    |              |
+
+### Statuses
+
+| Module    | Status             | Extra Params |
+|-----------|--------------------|--------------|
+| registrar | registered         |              |
+| registrar | reserved           |              |
+| registrar | deregistered       |              |
+| crowdloan | created            | fund_id      |
+| crowdloan | partially_refunded | fund_id      |
+| crowdloan | all_refunded       | fund_id      |
+| crowdloan | dissolved          | fund_id      |
+| crowdloan | edited             | fund_id      |
+| auction   | participated       | auction_id   |
+| auction   | won                | auction_id   |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1658303867,
+  "data": {
+    "count": 2,
+    "list": [{
+        "para_id": 2007,
+        "block_num": 10809400,
+        "block_timestamp": 111,
+        "event_index": "10809400-2",
+        "extrinsic_index": "10809400-0",
+        "module": "auctions",
+        "status": "participated",
+        "params": {
+          "auction_id": 20
+        }
+      },
+      {
+        "para_id": 2007,
+        "block_num": 10882495,
+        "block_timestamp": 111,
+        "event_index": "10882495-8",
+        "extrinsic_index": "10882495-0",
+        "module": "auctions",
+        "status": "won",
+        "params": {
+          "auction_id": 20
+        }
+      }
+    ]
+  }
+}
+```
