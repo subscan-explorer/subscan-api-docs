@@ -530,6 +530,68 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
 }
 ```
 
+## batch extrinsic params
+
+Get extrinsic param data in batches
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/extrinsic/params' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "extrinsic_index":["10170970-1"]
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/extrinsic/params`
+
+### Payload
+
+| Name            | Type         | Require |
+|-----------------|--------------|---------|
+| extrinsic_index | array string | yes     |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1666144850,
+  "data": [
+    {
+      "extrinsic_index": "10170970-1",
+      "params": [
+        {
+          "name":"transaction",
+          "type":"ethereum:transaction:TransactionV2",
+          "type_name":"Transaction",
+          "value":{
+            "Legacy":{
+              "action":{
+                "Call":"0xa546f42beb3dea617b0f3ca6995c7df5dfcad29d"
+              },
+              "gas_limit":"0x808d5b0000000000000000000000000000000000000000000000000000000000",
+              "gas_price":"0x008c864700000000000000000000000000000000000000000000000000000000",
+              "input":"e38335e500000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000003000000000000000000000000e7578598aac020abfb918f33a20fad5b71d670b4000000000000000000000000e7578598aac020abfb918f33a20fad5b71d670b4000000000000000000000000f3c1444cd449bd66ef6da7ca6c3e7884840a3995000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000026f10de3c80f5dd586420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022b1c8c1227a000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000000004d0e30db0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000044095ea7b3000000000000000000000000f3c1444cd449bd66ef6da7ca6c3e7884840a399500000000000000000000000000000000000000000026f10de3c80f5dd58642000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a4be856d3600000000000000000000000000000000000000000000000000000000000004d900000000000000000000000000000000000000000000000000000000004c4b40000000000000000000000000e7578598aac020abfb918f33a20fad5b71d670b4000000000000000000000000ded6edd731f5f59feb2555ec3f1b6c085dc6e42e00000000000000000000000000000000000000000026f10de3c80f5dd586420000000000000000000000000000000000000000000000000000000000",
+              "nonce":"0x0b00000000000000000000000000000000000000000000000000000000000000",
+              "signature":{
+                "r":"0x5e4b8e8c728807ff6c8b1dfff7987773e6599ebd4a4a0000ca8cef458c10cdcc",
+                "s":"0x2f253d4f7ab62901c56dc6893bd33cc87dc8031d6cf4622b148b1ce87e94b3a7",
+                "v":127
+              },
+              "value":"0x0000000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
 ## events
 
 Event list
@@ -645,6 +707,77 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/event' \
     "phase": 0,
     "es_params": ["",""]
   }
+}
+```
+
+## batch event params
+
+Get event param data in batches
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/event/params' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "event_index":["134084-6","134084-4"]
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/event/params`
+
+### Payload
+
+| Name        | Type         | Require |
+|-------------|--------------|---------|
+| event_index | array string | yes     |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1666144850,
+  "data": [
+    {
+      "event_index": "134084-4",
+      "params": [
+        {
+          "type": "frame_support:weights:DispatchInfo",
+          "type_name": "DispatchInfo",
+          "value": {
+            "class": "Mandatory",
+            "pays_fee": "Yes",
+            "weight": 158080000
+          }
+        }
+      ]
+    },
+    {
+      "event_index": "134084-6",
+      "params": [
+        {
+          "type": "acala_primitives:currency:CurrencyId",
+          "type_name": "CurrencyId",
+          "value": {
+            "Token": "AUSD"
+          }
+        },
+        {
+          "type": "[U8; 32]",
+          "type_name": "AccountId",
+          "value": "0x6d6f646c6163612f636470740000000000000000000000000000000000000000"
+        },
+        {
+          "type": "U128",
+          "type_name": "Balance",
+          "value": "206156739"
+        }
+      ]
+    }
+  ]
 }
 ```
 
