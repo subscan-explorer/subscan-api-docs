@@ -29,6 +29,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/list' \
 | status          | string | NO      |         | status filter, it can be (pending relayed success failed) |
 | protocol        | string | NO      |         | protocol filter, it can be (VMP HRMP UMP DMP)             |
 | filter_para_id  | INT    | no      | 0       | filter by para_id                                         |
+| message_hash    | string | no      |         | filter by message_hash                                    |
 
 > Example Response
 
