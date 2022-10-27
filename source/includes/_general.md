@@ -1049,8 +1049,7 @@ xcm message
         "hash_type": "xcm_messages",
         "messages": [
             {
-                "origin_para_id": 2004,
-                "origin_event_index": "1670182-5"
+                "unique_id": "2be37445d2c64b8042447117715f3d070fcdc297"
             }
         ]
     }

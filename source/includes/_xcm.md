@@ -30,6 +30,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/list' \
 | protocol        | string | NO      |         | protocol filter, it can be (VMP HRMP UMP DMP)             |
 | filter_para_id  | INT    | no      | 0       | filter by para_id                                         |
 | message_hash    | string | no      |         | filter by message_hash                                    |
+| message_type    | string | no      |         | filter by message_type(transfer message)                  |
 
 > Example Response
 
@@ -253,8 +254,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/stat' \
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/info' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "origin_para_id": 2004,
-    "page":"1523869-036"}
+    "unique_id": "2be37445d2c64b8042447117715f3d070fcdc297"
 }'
 ```
 
@@ -264,10 +264,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/info' \
 
 ### Payload
 
-| Parameter       | Type   | Require | Default | Description |
-|-----------------|--------|---------|---------|-------------|
-| origin_para_id  | INT    | yes     |         |             |
-| origin_event_id | string | yes     |         |             |
+| Parameter | Type   | Require | Default | Description |
+|-----------|--------|---------|---------|-------------|
+| unique_id | string | yes     |         |             |
 
 
 > Example Response
