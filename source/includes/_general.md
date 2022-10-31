@@ -525,10 +525,110 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
     },
     "crosschain_op": null,
     "block_hash": "",
-    "pending": false
+    "pending": false,
+    "proxy":{
+      "account_id":"5FUDpEsB8s4Fb5imiGeb7c94vaRHvYNGnNpdxT3QJRBHaMNe",
+      "call_module_function":"withdraw_unbonded",
+      "call_module":"Staking",
+      "params":[
+        {
+          "name":"num_slashing_spans",
+          "type":"U32",
+          "value":0
+        }
+      ],
+      "success":true
+    }
   }
 }
 ```
+
+## proxy Extrinsics
+
+account proxy Extrinsic list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/proxy/extrinsics' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "row": 1,
+      "account": "12YK3LD8FzVgyBuN6mQkCaZUHyExQdjyvX1Fn67DJ5A4rL2R"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/proxy/extrinsics`
+
+### Payload
+
+| Name    | Type   | Require |
+|---------|--------|---------|
+| row     | int    | yes     |
+| page    | int    | no      |
+| order   | int    | no      |
+| account | string | yes     |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1667201598,
+  "data": {
+    "count": 17,
+    "extrinsics": [
+      {
+        "block_timestamp": 1666682088,
+        "block_num": 13037746,
+        "extrinsic_index": "13037746-2",
+        "call_module_function": "vested_transfer",
+        "call_module": "Vesting",
+        "account_id": "5D5LmAQdw3SHCmr3tX61uKbHi82XmQmQArqDJ2EerPoruhBn",
+        "signature": "0x486ebeea7bf574e0a4a8c5c0627fe2b4f024bd1d213efdb6e582a02be0cd5920f1c9b6120cabd7b73a69b809e8915dcf3c422cfbea45f7aab261bf599ab46985",
+        "nonce": 10,
+        "extrinsic_hash": "0xe49751669dead32b91c88f0fdfdb9ac45e129b59497dcae75da7dd7762130050",
+        "success": true,
+        "params": [
+          {
+            "name": "target",
+            "type": "sp_runtime:multiaddress:MultiAddress",
+            "value": {
+              "Id": "0x6e8be6a3e3d573453bbed426bea35653334e9b95972c9a9f3b821125cb80e520"
+            }
+          },
+          {
+            "name": "schedule",
+            "type": "pallet_vesting:vesting_info:VestingInfo",
+            "value": {
+              "locked": "1000000000000",
+              "per_block": "100",
+              "starting_block": 13100000
+            }
+          }
+        ],
+        "transfer": null,
+        "event": null,
+        "event_count": 0,
+        "fee": "22959093667",
+        "fee_used": "23059093666",
+        "error": null,
+        "finalized": true,
+        "lifetime": null,
+        "tip": "0",
+        "account_display": null,
+        "crosschain_op": null,
+        "block_hash": "",
+        "pending": false,
+        "real_account_id": "5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+      }
+    ]
+  }
+}
+```
+
 
 ## batch extrinsic params
 
