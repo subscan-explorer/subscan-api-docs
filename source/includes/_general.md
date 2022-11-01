@@ -526,18 +526,28 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
     "crosschain_op": null,
     "block_hash": "",
     "pending": false,
-    "proxy":{
-      "account_id":"5FUDpEsB8s4Fb5imiGeb7c94vaRHvYNGnNpdxT3QJRBHaMNe",
-      "call_module_function":"withdraw_unbonded",
-      "call_module":"Staking",
+    "proxy": {
+      "account_id":"5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP",
+      "account_display":{
+        "address":"5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+      },
+      "call_module_function":"transfer",
+      "call_module":"Balances",
       "params":[
         {
-          "name":"num_slashing_spans",
-          "type":"U32",
-          "value":0
+          "name":"dest",
+          "type":"sp_runtime:multiaddress:MultiAddress",
+          "value":{
+            "Id":"0x387aed21a43ed189c8f0d14aab6f05f715f1adfe670efa6090208ddd4efe991f"
+          }
+        },
+        {
+          "name":"value",
+          "type":"compact\u003cU128\u003e",
+          "value":"90"
         }
       ],
-      "success":true
+      "success":false
     }
   }
 }
@@ -581,48 +591,45 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/proxy/extrinsics' \
     "count": 17,
     "extrinsics": [
       {
-        "block_timestamp": 1666682088,
-        "block_num": 13037746,
-        "extrinsic_index": "13037746-2",
-        "call_module_function": "vested_transfer",
-        "call_module": "Vesting",
-        "account_id": "5D5LmAQdw3SHCmr3tX61uKbHi82XmQmQArqDJ2EerPoruhBn",
-        "signature": "0x486ebeea7bf574e0a4a8c5c0627fe2b4f024bd1d213efdb6e582a02be0cd5920f1c9b6120cabd7b73a69b809e8915dcf3c422cfbea45f7aab261bf599ab46985",
-        "nonce": 10,
-        "extrinsic_hash": "0xe49751669dead32b91c88f0fdfdb9ac45e129b59497dcae75da7dd7762130050",
+        "block_timestamp": 1666268856,
+        "block_num": 12968878,
+        "extrinsic_index": "12968878-2",
+        "extrinsic_hash": "0x5b7acc06ae92e71194f4e35554ea25251e8c5d0a42e300814ea069eada0b8c43",
+        "call_module_function": "remove_proxy",
+        "call_module": "Proxy",
+        "account_id": "5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP",
+        "account_display": {
+          "address": "5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+        },
+        "real_account_id": "5DFZVETNPHpbwWYDVxmWPpEbCr8PrZKeXkDD29ySV1v3QTXY",
+        "real_account_display": {
+          "address": "5DFZVETNPHpbwWYDVxmWPpEbCr8PrZKeXkDD29ySV1v3QTXY"
+        },
+        "signature": "0x7a6eeb1de31c26b7f8758d0af1276d5f758a0d0fb4756d4820fbc1e4dc46992397fab02fc2715974008514f4723a5fb1c90e7e59ee59af8fe432796ea7910784",
+        "nonce": 104,
         "success": true,
         "params": [
           {
-            "name": "target",
+            "name": "delegate",
             "type": "sp_runtime:multiaddress:MultiAddress",
             "value": {
-              "Id": "0x6e8be6a3e3d573453bbed426bea35653334e9b95972c9a9f3b821125cb80e520"
+              "Id": "0x441d91d745c133fd3fb6c816d12d1138a81debd567d8047a177a3d515345392b"
             }
           },
           {
-            "name": "schedule",
-            "type": "pallet_vesting:vesting_info:VestingInfo",
-            "value": {
-              "locked": "1000000000000",
-              "per_block": "100",
-              "starting_block": 13100000
-            }
+            "name": "proxy_type",
+            "type": "westend_runtime:ProxyType",
+            "value": "Any"
+          },
+          {
+            "name": "delay",
+            "type": "U32",
+            "value": 0
           }
         ],
-        "transfer": null,
-        "event": null,
-        "event_count": 0,
-        "fee": "22959093667",
-        "fee_used": "23059093666",
-        "error": null,
-        "finalized": true,
-        "lifetime": null,
-        "tip": "0",
-        "account_display": null,
-        "crosschain_op": null,
-        "block_hash": "",
-        "pending": false,
-        "real_account_id": "5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+        "fee": "19615456200",
+        "fee_used": "19715456199",
+        "finalized": true
       }
     ]
   }
