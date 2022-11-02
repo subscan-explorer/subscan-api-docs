@@ -527,7 +527,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
     "block_hash": "",
     "pending": false,
     "proxy": {
-      "account_id":"5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP",
       "account_display":{
         "address":"5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
       },
@@ -597,11 +596,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/proxy/extrinsics' \
         "extrinsic_hash": "0x5b7acc06ae92e71194f4e35554ea25251e8c5d0a42e300814ea069eada0b8c43",
         "call_module_function": "remove_proxy",
         "call_module": "Proxy",
-        "account_id": "5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP",
         "account_display": {
           "address": "5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
         },
-        "real_account_id": "5DFZVETNPHpbwWYDVxmWPpEbCr8PrZKeXkDD29ySV1v3QTXY",
         "real_account_display": {
           "address": "5DFZVETNPHpbwWYDVxmWPpEbCr8PrZKeXkDD29ySV1v3QTXY"
         },
