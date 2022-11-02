@@ -368,3 +368,35 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/activities' \
   }
 }
 ```
+
+
+## assets-list-all
+
+```shell
+curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/all' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/assets/all`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1667352665,
+  "data": {
+    "list": [
+      {
+        "asset_id": "101",
+        "symbol": "DOT",
+        "decimals": 10
+      }
+    ]
+  }
+}
+```
