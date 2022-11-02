@@ -307,3 +307,42 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/xcm/info' \
   }
 }
 ```
+
+## xcm-check-hash
+
+```shell
+curl -X POST 'https://kusama.api.subscan.io/api/scan/xcm/check_hash' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+   "dest_event_id":"2344759-4",
+   "dest_para_id":2001,
+   "message_hash":"0x8421ad7e06bade144621069fd70d25ec71dcac3bf3d0703447a3bbc72e248850"
+}'
+```
+
+### Request URL
+
+`POST /api/scan/xcm/check_hash`
+
+### Payload
+
+| Parameter       | Type   | Require | Default | Description |
+|-----------------|--------|---------|---------|-------------|
+| message_hash    | string | yes     |         |             |
+| dest_event_id   | string | no      |         |             |
+| dest_para_id    | int    | no      | 0       |             |
+| origin_event_id | string | no      |         |             |
+| origin_para_id  | int    | no      | 0       |             |
+
+
+> Example Response
+
+Will return xcm message unique id
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1667373481,
+  "data": "29b1e4d077e4f29213cf331bed714787ad43452b" 
+}
+```
