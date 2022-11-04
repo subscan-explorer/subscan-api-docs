@@ -525,10 +525,114 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
     },
     "crosschain_op": null,
     "block_hash": "",
-    "pending": false
+    "pending": false,
+    "proxy": {
+      "account_display":{
+        "address":"5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+      },
+      "call_module_function":"transfer",
+      "call_module":"Balances",
+      "params":[
+        {
+          "name":"dest",
+          "type":"sp_runtime:multiaddress:MultiAddress",
+          "value":{
+            "Id":"0x387aed21a43ed189c8f0d14aab6f05f715f1adfe670efa6090208ddd4efe991f"
+          }
+        },
+        {
+          "name":"value",
+          "type":"compact\u003cU128\u003e",
+          "value":"90"
+        }
+      ],
+      "success":false
+    }
   }
 }
 ```
+
+## proxy Extrinsics
+
+account proxy Extrinsic list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/proxy/extrinsics' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "row": 1,
+      "account": "12YK3LD8FzVgyBuN6mQkCaZUHyExQdjyvX1Fn67DJ5A4rL2R"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/proxy/extrinsics`
+
+### Payload
+
+| Name    | Type   | Require |
+|---------|--------|---------|
+| row     | int    | yes     |
+| page    | int    | no      |
+| order   | int    | no      |
+| account | string | yes     |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1667201598,
+  "data": {
+    "count": 17,
+    "extrinsics": [
+      {
+        "block_timestamp": 1666268856,
+        "block_num": 12968878,
+        "extrinsic_index": "12968878-2",
+        "extrinsic_hash": "0x5b7acc06ae92e71194f4e35554ea25251e8c5d0a42e300814ea069eada0b8c43",
+        "call_module_function": "remove_proxy",
+        "call_module": "Proxy",
+        "account_display": {
+          "address": "5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+        },
+        "real_account_display": {
+          "address": "5DFZVETNPHpbwWYDVxmWPpEbCr8PrZKeXkDD29ySV1v3QTXY"
+        },
+        "signature": "0x7a6eeb1de31c26b7f8758d0af1276d5f758a0d0fb4756d4820fbc1e4dc46992397fab02fc2715974008514f4723a5fb1c90e7e59ee59af8fe432796ea7910784",
+        "nonce": 104,
+        "success": true,
+        "params": [
+          {
+            "name": "delegate",
+            "type": "sp_runtime:multiaddress:MultiAddress",
+            "value": {
+              "Id": "0x441d91d745c133fd3fb6c816d12d1138a81debd567d8047a177a3d515345392b"
+            }
+          },
+          {
+            "name": "proxy_type",
+            "type": "westend_runtime:ProxyType",
+            "value": "Any"
+          },
+          {
+            "name": "delay",
+            "type": "U32",
+            "value": 0
+          }
+        ],
+        "fee": "19615456200",
+        "fee_used": "19715456199",
+        "finalized": true
+      }
+    ]
+  }
+}
+```
+
 
 ## batch extrinsic params
 
