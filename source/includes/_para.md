@@ -1,4 +1,4 @@
-# ParaChain API (Unstable)
+# ParaChain API (beta)
 
 ## meta
 
