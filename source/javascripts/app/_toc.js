@@ -29,6 +29,7 @@
     var pageHeight = 0;
     var windowHeight = 0;
     var originalTitle = document.title;
+    var $langSelector = $('.lang-selector');
 
     var recacheHeights = function() {
       headerHeights = {};
@@ -77,6 +78,11 @@
         $best.siblings(tocListSelector).addClass("active");
         $toc.find(tocListSelector).filter(":not(.active)").slideUp(150);
         $toc.find(tocListSelector).filter(".active").slideDown(150);
+        if ($best.parents('.fullwidth').length > 0) {
+          $langSelector.addClass('lang-selector--hidden');
+        } else {
+          $langSelector.removeClass('lang-selector--hidden');
+        }
         if (window.history.replaceState) {
           window.history.replaceState(null, "", best);
         }

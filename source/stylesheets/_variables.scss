@@ -62,6 +62,7 @@ $code-annotation-padding: 13px !default; // padding inside code annotations
 $h1-margin-bottom: 21px !default; // padding under the largest header tags
 $tablet-width: 930px !default; // min width before reverting to tablet size
 $phone-width: $tablet-width - $nav-width !default; // min width before reverting to mobile size
+$nav-height: 51px !default; // height of the navbar
 
 // FONTS
 ////////////////////
