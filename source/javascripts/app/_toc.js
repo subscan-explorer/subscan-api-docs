@@ -68,7 +68,7 @@
       }
 
       var $best = $toc.find("[href='" + best + "']").first();
-      if (!$best.hasClass("active")) {
+      if (best && !$best.hasClass("active")) {
         // .active is applied to the ToC link we're currently on, and its parent <ul>s selected by tocListSelector
         // .active-expanded is applied to the ToC links that are parents of this one
         $toc.find(".active").removeClass("active");
