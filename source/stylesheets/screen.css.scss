@@ -433,6 +433,9 @@ header {
   & > dl {
     margin-right: 0;
   }
+  pre, blockquote {
+    width: 100%;
+  }
 }
 
 .content-inner {
