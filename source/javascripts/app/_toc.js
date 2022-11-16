@@ -29,6 +29,7 @@
     var pageHeight = 0;
     var windowHeight = 0;
     var originalTitle = document.title;
+    var $langSelector = $('.lang-selector');
 
     var recacheHeights = function() {
       headerHeights = {};
@@ -67,7 +68,7 @@
       }
 
       var $best = $toc.find("[href='" + best + "']").first();
-      if (!$best.hasClass("active")) {
+      if (best && !$best.hasClass("active")) {
         // .active is applied to the ToC link we're currently on, and its parent <ul>s selected by tocListSelector
         // .active-expanded is applied to the ToC links that are parents of this one
         $toc.find(".active").removeClass("active");
@@ -77,6 +78,11 @@
         $best.siblings(tocListSelector).addClass("active");
         $toc.find(tocListSelector).filter(":not(.active)").slideUp(150);
         $toc.find(tocListSelector).filter(".active").slideDown(150);
+        if ($best.parents('.fullwidth').length > 0) {
+          $langSelector.addClass('lang-selector--hidden');
+        } else {
+          $langSelector.removeClass('lang-selector--hidden');
+        }
         if (window.history.replaceState) {
           window.history.replaceState(null, "", best);
         }

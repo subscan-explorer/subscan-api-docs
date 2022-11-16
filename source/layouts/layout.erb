@@ -14,7 +14,17 @@ License for the specific language governing permissions and limitations
 under the License.
 %>
 <% language_tabs = current_page.data.language_tabs || [] %>
-<% page_content = yield %>
+<% page_content_fullwidth = yield %>
+<% page_content = '' %>
+
+<%
+  if current_page.data.includes_fullwidth
+    current_page.data.includes_fullwidth.each do |include|
+      page_content_fullwidth += partial("includes/#{include}")
+    end
+  end
+%>
+
 <%
   if current_page.data.includes
     current_page.data.includes.each do |include|
@@ -93,6 +103,20 @@ under the License.
           <ul class="search-results"></ul>
         <% end %>
         <ul id="toc" class="toc-list-h1">
+          <% toc_data(page_content_fullwidth).each do |h1| %>
+            <li class="fullwidth">
+              <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:title] %>"><%= h1[:content] %></a>
+              <% if h1[:children].length > 0 %>
+                <ul class="toc-list-h2">
+                  <% h1[:children].each do |h2| %>
+                    <li>
+                      <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:title] %>"><%= h2[:content] %></a>
+                    </li>
+                  <% end %>
+                </ul>
+              <% end %>
+            </li>
+          <% end %>
           <% toc_data(page_content).each do |h1| %>
             <li>
               <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:title] %>"><%= h1[:content] %></a>
@@ -161,11 +185,16 @@ under the License.
       <div class="page-wrapper">
         <div class="dark-box"></div>
         <div class="content">
-          <%= page_content %>
+          <div class="content-inner content-inner--fullwidth">
+            <%= page_content_fullwidth %>
+          </div>
+          <div class="content-inner">
+            <%= page_content %>
+          </div>
         </div>
         <div class="dark-box">
           <% if language_tabs.any? %>
-            <div class="lang-selector">
+            <div class="lang-selector lang-selector--hidden">
               <% language_tabs.each do |lang| %>
                 <% if lang.is_a? Hash %>
                   <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>

@@ -370,7 +370,12 @@ header {
   .lang-selector {
     position: fixed;
     z-index: 50;
+    top: $nav-height;
     border-bottom: 5px solid $lang-select-active-bg;
+    transition: top .2s;
+  }
+  .lang-selector.lang-selector--hidden {
+    top: 0;
   }
 }
 
@@ -411,8 +416,29 @@ header {
 // CONTENT STYLES
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff with the light background in the left half of the page
+.content-inner.content-inner--fullwidth {
+  background-color: #fff;
 
-.content {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > p,
+  & > table,
+  & > ul,
+  & > ol,
+  & > aside,
+  & > dl {
+    margin-right: 0;
+  }
+  pre, blockquote {
+    width: 100%;
+  }
+}
+
+.content-inner {
   // fixes webkit rendering bug for some: see #538
   -webkit-transform: translateZ(0);
   // to place content above the dark box
