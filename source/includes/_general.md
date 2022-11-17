@@ -553,6 +553,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
         "multisig_account_display": {
           "address":"5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
         },
+        "call_module": "balance",
+        "call_module_func": "trasfer",
         "processing": 1,
         "threshold": 3,
         "multisig_status": "Approval #(Approval,Executed,Cancelled,Failed)"
@@ -561,6 +563,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
         "multisig_account_display": {
           "address":"4Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
         },
+        "call_module": "balance",
+        "call_module_func": "trasfer",
         "processing": 2,
         "threshold": 2,
         "multisig_status": "Executed"
@@ -592,11 +596,11 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisigs' \
 
 ### Payload
 
-| Name        | Type   | Require |
-|-------------|--------|---------|
-| row         | int    | yes     |
-| page        | int    | no      |
-| address     | string | yes     |
+| Name    | Type   | Require |
+|---------|--------|---------|
+| row     | int    | yes     |
+| page    | int    | no      |
+| account | string | yes     |
 
 > Example Response
 
@@ -656,8 +660,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisig' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
-      "row": 1,
-      "account": "12YK3LD8FzVgyBuN6mQkCaZUHyExQdjyvX1Fn67DJ5A4rL2R"
+      "multi_id": "12323-2",
+      "call_hash": "0xf506158acd47414967f0dbd894ece3715880ed4edf525bcc2fff267ff3fcd4a4"
   }'
 ```
 
@@ -669,10 +673,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisig' \
 
 | Name        | Type   | Require |
 |-------------|--------|---------|
-| row         | int    | yes     |
-| page        | int    | no      |
-| address     | string | yes     |
-| call_hash   | string | yes     |
+| multi_id    | string | yes     |
+| call_hash   | string | no      |
 
 > Example Response
 
