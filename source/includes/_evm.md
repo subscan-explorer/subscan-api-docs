@@ -59,7 +59,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/block' \
 
 ## transactions
 
-Get evm transactions by blockNum
+Get evm transaction list
 
 ```shell
 curl -X POST 'https://crab.api.subscan.io/api/scan/evm/transactions' \
