@@ -706,6 +706,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
             {
                 "para_id": 1983,
                 "status": "Parachain",
+                "begin_period": 11,
                 "first_period": 12,
                 "last_period": 13,
                 "manager_display": {
@@ -728,6 +729,7 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/list' \
                 },
                 "reserved_extrinsic_index": "",
                 "fund_id": ""
+                "bid_id": "10-11-13"
             }
         ],
         "count": 9
