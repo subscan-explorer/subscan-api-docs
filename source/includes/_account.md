@@ -20,13 +20,13 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 
 ### Payload
 
-| Name        | Type   | Require                                                                                          |
-|-------------|--------|--------------------------------------------------------------------------------------------------|
-| row         | int    | yes                                                                                              |
-| page        | int    | yes                                                                                              |
-| order       | string | no (desc,asc)                                                                                    |
-| order_field | string | no(balance)                                                                                      |
-| filter      | string | no(validator nominator councilMember techcomm registrar system evm nominationPool proxy proxies) |
+| Name        | Type   | Require                                                                                                                  |
+|-------------|--------|--------------------------------------------------------------------------------------------------------------------------|
+| row         | int    | yes                                                                                                                      |
+| page        | int    | yes                                                                                                                      |
+| order       | string | no (desc,asc)                                                                                                            |
+| order_field | string | no(balance)                                                                                                              |
+| filter      | string | no(validator nominator councilMember techcomm registrar system evm nominationPool proxy proxies multisig multisigMember) |
 
 
 > Example Response
