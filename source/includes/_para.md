@@ -530,6 +530,8 @@ curl -X POST 'https://rococo.api.subscan.io/api/scan/parachain/info' \
         "deposit": "0",
         "validators": ["",""],
         "source": 1,
+        "bid_id": "1-14-14",
+        "begin_period": 14,
         "first_period": 15,
         "last_period": 16,
         "auction_index": 1,
