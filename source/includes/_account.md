@@ -164,3 +164,49 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
 }
 
 ```
+
+
+## account info
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/account/info' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "address": ["162NZmCZ8d2koaQqnFb5t9GCPE4UXFELjiCE5kWxDWnZPBMC"]
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/account/info`
+
+### Payload
+
+| Name    | Type         | Require                   |
+|---------|--------------|---------------------------|
+| address | array string | yes (ss58 or eth_address) |
+
+
+> Example Response
+
+```json
+
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1653375440,
+  "data": {
+    "accounts": [
+      {
+        "account_display": {
+          "address": "162NZmCZ8d2koaQqnFb5t9GCPE4UXFELjiCE5kWxDWnZPBMC"
+        },
+        "nonce": 9,
+        "balance": "1.2"
+      }
+    ]
+  }
+}
+
+```
