@@ -689,7 +689,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisig' \
       "account_display": {
         "address": "12H7nsDUrJUSCQQJrTKAFfyCWSactiSdjoVUixqcd9CZHTGt",
       },
-      "call_hash": "0x20377a6b3b58a6811febe2c8943b00856879e0675ac0f93aa58248932b00ad7a"，
+      "call_hash": "0x20377a6b3b58a6811febe2c8943b00856879e0675ac0f93aa58248932b00ad7a",
+      "call_data": "1703121",
       "call_module": "Balances",
       "call_module_func": "transfer_keep_alive",
       "params": [
