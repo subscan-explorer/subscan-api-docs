@@ -26,3 +26,4 @@ doc/
 
 # Vagrant artifacts
 ubuntu-*-console.log
+vendor/

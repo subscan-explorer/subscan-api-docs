@@ -18,9 +18,9 @@ jobs:
           persist-credentials: false
           ssh-key: "${{ secrets.ITERING_ACTIONS_DEPLOY_KEY }}"
 
-      - uses: actions/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'
+          ruby-version: '3.1'
 
       - name: Ruby gem cache
         uses: actions/cache@v2
@@ -30,9 +30,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: 16
 
       - name: Node packages cache
         uses: actions/cache@v2
