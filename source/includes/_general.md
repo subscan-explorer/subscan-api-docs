@@ -621,26 +621,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisigs' \
               "threshold": 2,
               "call_hash": "0x20377a6b3b58a6811febe2c8943b00856879e0675ac0f93aa58248932b00ad7a",
               "call_module": "Balances",
-              "call_module_func": "transfer_keep_alive",
-              "params": [
-                {
-                  "name": "delegate",
-                  "type": "sp_runtime:multiaddress:MultiAddress",
-                  "value": {
-                    "Id": "0x441d91d745c133fd3fb6c816d12d1138a81debd567d8047a177a3d515345392b"
-                  }
-                },
-                {
-                  "name": "proxy_type",
-                  "type": "westend_runtime:ProxyType",
-                  "value": "Any"
-                },
-                {
-                  "name": "delay",
-                  "type": "U32",
-                  "value": 0
-                }
-              ],
+              "call_module_function": "transfer_keep_alive",
               "status":"Approval",
               "block_timestamp": 1602732510
             }
@@ -691,7 +672,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisig' \
         "address": "12H7nsDUrJUSCQQJrTKAFfyCWSactiSdjoVUixqcd9CZHTGt"
       },
       "call_hash": "0x20377a6b3b58a6811febe2c8943b00856879e0675ac0f93aa58248932b00ad7a",
-      "call_data": "1703121",
+      "call_data": "0x63002200fe66e97151ecbd91beb3455d3dc35e70fba36e39d09924fad444143e4046176701fabb8542b14bb78670db4ae030872df5692cb1e38c88ff92d794cebcfcd97a7d",
       "call_module": "Balances",
       "call_module_function": "transfer_keep_alive",
       "threshold": 2,
