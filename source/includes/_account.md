@@ -20,14 +20,14 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 
 ### Payload
 
-| Name        | Type   | Require                                                                                          |
-|-------------|--------|--------------------------------------------------------------------------------------------------|
-| row         | int    | yes                                                                                              |
-| page        | int    | yes                                                                                              |
-| order       | string | no (desc,asc)                                                                                    |
-| order_field | string | no(balance)                                                                                      |
-| filter      | string | no(validator nominator councilMember techcomm registrar system evm nominationPool proxy proxies) |
-
+| Name        | Type         | Require                                                                                                                  |
+|-------------|--------------|--------------------------------------------------------------------------------------------------------------------------|
+| row         | int          | yes                                                                                                                      |
+| page        | int          | yes                                                                                                                      |
+| order       | string       | no (desc,asc)                                                                                                            |
+| order_field | string       | no(balance)                                                                                                              |
+| filter      | string       | no(validator nominator councilMember techcomm registrar system evm nominationPool proxy proxies multisig multisigMember) |
+| address     | array string | no (max:100)                                                                                                             |
 
 > Example Response
 
@@ -84,7 +84,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 }
 ```
 
-
 ## account-tokens
 
 ```shell
@@ -105,7 +104,6 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
 | Name    | Type   | Require                   |
 |---------|--------|---------------------------|
 | address | string | yes (ss58 or eth_address) |
-
 
 > Example Response
 
@@ -162,5 +160,4 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     ]
   }
 }
-
 ```

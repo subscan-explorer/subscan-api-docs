@@ -547,10 +547,187 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/extrinsic' \
         }
       ],
       "success":false
-    }
+    },
+    "multisig": [
+      {
+        "multisig_account_display": {
+          "address":"5Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+        },
+        "call_module": "balance",
+        "call_module_function": "trasfer",
+        "processing": 1,
+        "threshold": 3,
+        "multisig_status": "Approval #(Approval,Executed,Cancelled,Failed)"
+      },
+      {
+        "multisig_account_display": {
+          "address":"4Dc1tzx4QDEDXetr98Mk4RjKSMFJiLBqr2Gmco7rjz8YfwMP"
+        },
+        "call_module": "balance",
+        "call_module_function": "trasfer",
+        "processing": 2,
+        "threshold": 2,
+        "multisig_status": "Executed"
+      }
+    ]
   }
 }
 ```
+
+
+
+## multisigs
+
+account multisig list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisigs' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "row": 1,
+      "account": "12YK3LD8FzVgyBuN6mQkCaZUHyExQdjyvX1Fn67DJ5A4rL2R"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/multisigs`
+
+### Payload
+
+| Name    | Type   | Require |
+|---------|--------|---------|
+| row     | int    | yes     |
+| page    | int    | no      |
+| account | string | yes     |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "data": {
+        "count": 1,
+        "multisig": [
+            {
+              "multi_id": "198023-2",
+              "multi_account_display": {
+                "address": "HCGtRS5EhDuNK4ox1B3VWrRNB1efSYXmtysy5u2SeWdK1WF"
+              },
+              "account_display": {
+                "address": "12H7nsDUrJUSCQQJrTKAFfyCWSactiSdjoVUixqcd9CZHTGt"
+              },
+              "threshold": 2,
+              "call_hash": "0x20377a6b3b58a6811febe2c8943b00856879e0675ac0f93aa58248932b00ad7a",
+              "call_module": "Balances",
+              "call_module_function": "transfer_keep_alive",
+              "status":"Approval",
+              "block_timestamp": 1602732510
+            }
+        ]
+    },
+    "message": "Success",
+    "generated_at": 1628587129
+}
+```
+
+
+## multisig
+
+account multisig info and process list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisig' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "multi_id": "12323-2",
+      "call_hash": "0xf506158acd47414967f0dbd894ece3715880ed4edf525bcc2fff267ff3fcd4a4"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/multisig`
+
+### Payload
+
+| Name        | Type   | Require |
+|-------------|--------|---------|
+| multi_id    | string | yes     |
+| call_hash   | string | no      |
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "data": {
+      "multi_id": "198023-2",
+      "multi_account_display": {
+        "address": "HCGtRS5EhDuNK4ox1B3VWrRNB1efSYXmtysy5u2SeWdK1WF"
+      },
+      "account_display": {
+        "address": "12H7nsDUrJUSCQQJrTKAFfyCWSactiSdjoVUixqcd9CZHTGt"
+      },
+      "call_hash": "0x20377a6b3b58a6811febe2c8943b00856879e0675ac0f93aa58248932b00ad7a",
+      "call_data": "0x63002200fe66e97151ecbd91beb3455d3dc35e70fba36e39d09924fad444143e4046176701fabb8542b14bb78670db4ae030872df5692cb1e38c88ff92d794cebcfcd97a7d",
+      "call_module": "Balances",
+      "call_module_function": "transfer_keep_alive",
+      "threshold": 2,
+      "params": [
+        {
+          "name": "delegate",
+          "type": "sp_runtime:multiaddress:MultiAddress",
+          "value": {
+            "Id": "0x441d91d745c133fd3fb6c816d12d1138a81debd567d8047a177a3d515345392b"
+          }
+        },
+        {
+          "name": "proxy_type",
+          "type": "westend_runtime:ProxyType",
+          "value": "Any"
+        },
+        {
+          "name": "delay",
+          "type": "U32",
+          "value": 0
+        }
+      ],
+      "status":"Executed",
+      "block_timestamp": 1602732510,
+      "process": [
+        {
+          "account_display": {
+            "address": "H1GtRS5EhDuNK4ox1B3VWrRNB1efSYXmtysy5u2SeWdK1WF"
+          },
+          "extrinsic_index": "123456-2",
+          "status": "Approval",
+          "timestamp": 1602732511
+        },
+        {
+          "account_display": {
+            "address": "H2GtRS5EhDuNK4ox1B3VWrRNB1efSYXmtysy5u2SeWdK1WF"
+          },
+          "extrinsic_index": "123489-2",
+          "status": "Executed",
+          "timestamp": 1602732901
+        },
+        {
+          "account_display": {
+            "address": "H2GtRS5EhDuNK4ox1B3VWrRNB1efSYXmtysy5u2SeWdK1WF"
+          }
+        }
+      ]
+    },
+    "message": "Success",
+    "generated_at": 1628587129
+}
+```
+
+
+
 
 ## proxy Extrinsics
 
