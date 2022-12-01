@@ -695,7 +695,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisig' \
           "value": 0
         }
       ],
-      "status":"",
+      "status":"Executed",
       "block_timestamp": 1602732510,
       "process": [
         {
