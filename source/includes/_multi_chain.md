@@ -79,7 +79,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/account' \
 
 
 
-## Multi-chain-
+## Multi-chain-identities
 
 ```shell
 curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/identities' \
@@ -92,7 +92,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/identities' \
 
 ### Request URL
 
-`POST /api/scan/multiChain/account`
+`POST /api/scan/multiChain/identities`
 
 ### Payload
 
