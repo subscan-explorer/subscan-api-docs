@@ -1377,3 +1377,535 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/bounties/proposal' \
   }
 }
 ```
+
+
+
+## referendumV2 list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendums' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "row":10,
+      "status":"completed"
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/referendums`
+
+### payload
+
+| Name   | Type   | Require       |
+|--------|--------|---------------|
+| page   | int    | no            |
+| row    | int    | yes           |
+| status | string | no(completed) |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672219941,
+  "data": {
+    "count": 2,
+    "list": [
+      {
+        "referendum_index": 1,
+        "created_block": 15438787,
+        "origins": "treasurer",
+        "account": {
+          "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+        },
+        "call_module": "",
+        "call_name": "",
+        "status": "Rejected",
+        "latest_block_num": 15684998,
+        "latest_block_timestamp": 1670615070
+      },
+      {
+        "referendum_index": 0,
+        "created_block": 15426832,
+        "origins": "general_admin",
+        "account": {
+          "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+        },
+        "call_module": "System",
+        "call_name": "remark",
+        "status": "Rejected",
+        "latest_block_num": 15682703,
+        "latest_block_timestamp": 1670598540
+      }
+    ]
+  }
+}
+```
+
+## referendumV2 info
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendum' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+        "referendum_index":0
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/referendum`
+
+### payload
+
+| Name             | Type | Require |
+|------------------|------|---------|
+| referendum_index | int  | yes     |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672220177,
+  "data": {
+    "info": {
+      "referendum_index": 0,
+      "created_block": 15426832,
+      "origins": "general_admin",
+      "account": {
+        "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+      },
+      "decision_deposit_account": {
+        "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+      },
+      "deposit_balance": "16666666500000",
+      "status": "Rejected",
+      "latest_block_num": 15682703,
+      "latest_block_timestamp": 1670598540,
+      "pre_image": {
+        "hash": "0xb54d0e07521b04f5d3ef54bf3c4cc4c0866b65873b38eafe58d3d754cb08bf89",
+        "created_block": 15426506,
+        "updated_block": 0,
+        "status": "Noted",
+        "amount": "0",
+        "call_module": "System",
+        "call_name": "remark",
+        "params":"[{\"name\":\"remark\",\"type\":\"Vec\<U8\>\",\"value\":\"Expect chaos.\"}]",
+        "author": {
+          "address": "JFArxqV6rqPSwBok3zQDnj5jL6vwsZQDwYXXqb1cFygnYVt"
+        }
+      },
+      "aye_amount": "108082948108529261",
+      "nay_amount": "132030760176079098",
+      "support_amount": "46157291462146854",
+      "aye_without_conviction": "0",
+      "nay_without_conviction": "0",
+      "timeline": [
+        {
+          "block": 15426840,
+          "status": "Decision",
+          "time": 1669046460,
+          "prophecy": false,
+          "index": 53,
+          "extrinsic_index": "",
+          "params": null
+        },
+        {
+          "block": 15682703,
+          "status": "Rejected",
+          "time": 1670598540,
+          "prophecy": false,
+          "index": 1,
+          "extrinsic_index": "",
+          "params": null
+        },
+        {
+          "block": 15426832,
+          "status": "Submitted",
+          "time": 1669046412,
+          "prophecy": false,
+          "index": 66,
+          "extrinsic_index": "",
+          "params": null
+        }
+      ]
+    }
+  }
+}
+```
+
+
+## referendumV2 track
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/tracks`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672220221,
+  "data": {
+    "0": {
+      "name": "root",
+      "max_deciding": 1,
+      "decision_deposit": "3333333333300000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 1800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "1": {
+      "name": "whitelisted_caller",
+      "max_deciding": 30,
+      "decision_deposit": "3333333333300000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 100,
+      "min_enactment_period": 300,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "270899180",
+          "x_offset": "389830523",
+          "y_offset": "305084738"
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "8650766",
+          "x_offset": "18867926",
+          "y_offset": "41509433"
+        }
+      }
+    },
+    "10": {
+      "name": "staking_admin",
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "11": {
+      "name": "treasurer",
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "12": {
+      "name": "lease_admin",
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "13": {
+      "name": "fellowship_admin",
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "14": {
+      "name": "general_admin",
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "49586777",
+          "x_offset": "90909091",
+          "y_offset": "-45454546"
+        }
+      }
+    },
+    "15": {
+      "name": "auction_admin",
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "49586777",
+          "x_offset": "90909091",
+          "y_offset": "-45454546"
+        }
+      }
+    },
+    "20": {
+      "name": "referendum_canceller",
+      "max_deciding": 1000,
+      "decision_deposit": "1666666666650000",
+      "prepare_period": 2400,
+      "decision_period": 100800,
+      "confirm_period": 1800,
+      "min_enactment_period": 100,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "21": {
+      "name": "referendum_killer",
+      "max_deciding": 1000,
+      "decision_deposit": "1666666666650000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 100,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "30": {
+      "name": "small_tipper",
+      "max_deciding": 200,
+      "decision_deposit": "166666666665",
+      "prepare_period": 2400,
+      "decision_period": 100800,
+      "confirm_period": 1800,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 357142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "1620729",
+          "x_offset": "3231018",
+          "y_offset": "-1615509"
+        }
+      }
+    },
+    "31": {
+      "name": "big_tipper",
+      "max_deciding": 100,
+      "decision_deposit": "1666666666650",
+      "prepare_period": 2400,
+      "decision_period": 100800,
+      "confirm_period": 3600,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 357142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "4149097",
+          "x_offset": "8230453",
+          "y_offset": "-4115227"
+        }
+      }
+    },
+    "32": {
+      "name": "small_spender",
+      "max_deciding": 50,
+      "decision_deposit": "16666666666500",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 7200,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "33": {
+      "name": "medium_spender",
+      "max_deciding": 20,
+      "decision_deposit": "49999999999500",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 14400,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 821428571,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "14377233",
+          "x_offset": "27972031",
+          "y_offset": "-13986016"
+        }
+      }
+    },
+    "34": {
+      "name": "big_spender",
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 28800,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "28326977",
+          "x_offset": "53763445",
+          "y_offset": "-26881723"
+        }
+      }
+    }
+  }
+}
+```
