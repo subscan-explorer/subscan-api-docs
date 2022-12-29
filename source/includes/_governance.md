@@ -1398,11 +1398,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendums' \
 
 ### payload
 
-| Name   | Type   | Require       |
-|--------|--------|---------------|
-| page   | int    | no            |
-| row    | int    | yes           |
-| status | string | no(completed) |
+| Name    | Type   | Require       |
+|---------|--------|---------------|
+| page    | int    | no            |
+| row     | int    | yes           |
+| status  | string | no(completed) |
+| Origins | string | no            |
 
 > Example Response
 
