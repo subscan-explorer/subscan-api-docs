@@ -20,14 +20,14 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 
 ### Payload
 
-| Name        | Type         | Require                                                                                                                  |
-|-------------|--------------|--------------------------------------------------------------------------------------------------------------------------|
-| row         | int          | yes                                                                                                                      |
-| page        | int          | yes                                                                                                                      |
-| order       | string       | no (desc,asc)                                                                                                            |
-| order_field | string       | no(balance)                                                                                                              |
-| filter      | string       | no(validator nominator councilMember techcomm registrar system evm nominationPool proxy proxies multisig multisigMember) |
-| address     | array string | no (max:100)                                                                                                             |
+| Name        | Type         | Require                                                                                                                             |
+|-------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| row         | int          | yes                                                                                                                                 |
+| page        | int          | yes                                                                                                                                 |
+| order       | string       | no (desc,asc)                                                                                                                       |
+| order_field | string       | no(balance)                                                                                                                         |
+| filter      | string       | no(validator nominator councilMember techcomm registrar system evm nominationPool proxy proxies multisig multisigMember fellowship) |
+| address     | array string | no (max:100)                                                                                                                        |
 
 > Example Response
 
@@ -73,6 +73,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
         "is_evm_contract": false,
         "kton_balance": "0",
         "kton_lock": "0",
+        "rank": 1,
         "registrar_info": {
           "registrar_index": 1,
           "registrar_fee": "0"
