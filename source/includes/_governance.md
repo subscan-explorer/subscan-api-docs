@@ -1406,6 +1406,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendums' \
 
 > Example Response
 
+### status enum
+Submitted Decision Confirm Approved ConfirmAborted Rejected Cancelled Timeout Killed Executed ExecutedFailed
+
 ```json
 {
   "code": 0,
@@ -1467,6 +1470,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendum' \
 | referendum_index | int  | yes     |
 
 > Example Response
+
+### timeline.status enum
+Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cancelled Timeout Killed Executed ExecutedFailed
 
 ```json
 {
@@ -1540,6 +1546,59 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendum' \
 }
 ```
 
+
+
+## referendumV2 votes
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/votes' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+        "row":10,
+        "referendum_index":0
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/votes`
+
+### payload
+
+| Name             | Type | Require |
+|------------------|------|---------|
+| referendum_index | int  | yes     |
+| page             | int  | no      |
+| row              | int  | yes     |
+
+> Example Response
+
+### status enum
+Aye Nay Abstains
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672281811,
+  "data": {
+    "count": 1,
+    "list": [
+      {
+        "account": {
+          "address": "D8DtYYJUUBoACJwJrLNyn8aYArumdViVWAcZRUKcxnSoV9D"
+        },
+        "amount": "2000000000000",
+        "status": "Aye",
+        "extrinsic_index": "15426860-6",
+        "conviction": "0.1",
+        "voting_time": 1669046580
+      }
+    ]
+  }
+}
+```
 
 ## referendumV2 track
 
