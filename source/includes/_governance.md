@@ -1508,14 +1508,16 @@ Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cance
         "address": "JFArxqV6rqPSwBok3zQDnj5jL6vwsZQDwYXXqb1cFygnYVt"
       }
     },
+    "beneficiary": {
+      "address": "HHK8Yy2gtAUydPGGzotH5mzPe6u1iG8m5nnAxdqb9r99iCU"
+    },
+    "beneficiary_amount": "7300000000000",
     "ayes_amount": "267410000000",
     "ayes_count": 2,
     "nays_amount": "0",
     "nays_count": 0,
     "abstains_count": 0,
     "support_amount": "2674100000000",
-    "aye_without_conviction": "0",
-    "nay_without_conviction": "0",
     "timeline": [
       {
         "block": 15426832,
@@ -2137,6 +2139,8 @@ Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cance
         "address": "JFArxqV6rqPSwBok3zQDnj5jL6vwsZQDwYXXqb1cFygnYVt"
       }
     },
+    "beneficiary": null,
+    "beneficiary_amount": "",
     "ayes_amount": "13",
     "ayes_count": 2,
     "nays_amount": "0",
@@ -2144,8 +2148,6 @@ Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cance
     "abstains_count": 0,
     "support_amount": "0",
     "bare_ayes": "2",
-    "aye_without_conviction": "0",
-    "nay_without_conviction": "0",
     "timeline": [
       {
         "block": 15598169,
