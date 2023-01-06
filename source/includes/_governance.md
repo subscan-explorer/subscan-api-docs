@@ -1625,6 +1625,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
   "data": {
     "0": {
       "name": "root",
+      "current_deciding": 0,
       "max_deciding": 1,
       "decision_deposit": "3333333333300000",
       "prepare_period": 2400,
@@ -1648,6 +1649,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "1": {
       "name": "whitelisted_caller",
+      "current_deciding": 0,
       "max_deciding": 30,
       "decision_deposit": "3333333333300000",
       "prepare_period": 2400,
@@ -1671,6 +1673,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "10": {
       "name": "staking_admin",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "166666666665000",
       "prepare_period": 2400,
@@ -1694,6 +1697,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "11": {
       "name": "treasurer",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "166666666665000",
       "prepare_period": 2400,
@@ -1717,6 +1721,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "12": {
       "name": "lease_admin",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "166666666665000",
       "prepare_period": 2400,
@@ -1740,6 +1745,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "13": {
       "name": "fellowship_admin",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "166666666665000",
       "prepare_period": 2400,
@@ -1763,6 +1769,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "14": {
       "name": "general_admin",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "166666666665000",
       "prepare_period": 2400,
@@ -1786,6 +1793,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "15": {
       "name": "auction_admin",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "166666666665000",
       "prepare_period": 2400,
@@ -1809,6 +1817,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "20": {
       "name": "referendum_canceller",
+      "current_deciding": 0,
       "max_deciding": 1000,
       "decision_deposit": "1666666666650000",
       "prepare_period": 2400,
@@ -1832,6 +1841,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "21": {
       "name": "referendum_killer",
+      "current_deciding": 0,
       "max_deciding": 1000,
       "decision_deposit": "1666666666650000",
       "prepare_period": 2400,
@@ -1855,6 +1865,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "30": {
       "name": "small_tipper",
+      "current_deciding": 0,
       "max_deciding": 200,
       "decision_deposit": "166666666665",
       "prepare_period": 2400,
@@ -1878,6 +1889,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "31": {
       "name": "big_tipper",
+      "current_deciding": 0,
       "max_deciding": 100,
       "decision_deposit": "1666666666650",
       "prepare_period": 2400,
@@ -1901,6 +1913,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "32": {
       "name": "small_spender",
+      "current_deciding": 0,
       "max_deciding": 50,
       "decision_deposit": "16666666666500",
       "prepare_period": 2400,
@@ -1924,6 +1937,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "33": {
       "name": "medium_spender",
+      "current_deciding": 0,
       "max_deciding": 20,
       "decision_deposit": "49999999999500",
       "prepare_period": 2400,
@@ -1947,6 +1961,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
     },
     "34": {
       "name": "big_spender",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "166666666665000",
       "prepare_period": 2400,
@@ -2276,6 +2291,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
   "data": {
     "0": {
       "name": "candidates",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "3333333333300",
       "prepare_period": 300,
@@ -2299,6 +2315,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "1": {
       "name": "members",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "333333333330",
       "prepare_period": 300,
@@ -2322,6 +2339,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "2": {
       "name": "proficients",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "333333333330",
       "prepare_period": 300,
@@ -2345,6 +2363,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "3": {
       "name": "fellows",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "333333333330",
       "prepare_period": 300,
@@ -2368,6 +2387,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "4": {
       "name": "senior fellows",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "333333333330",
       "prepare_period": 300,
@@ -2391,6 +2411,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "5": {
       "name": "experts",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "33333333333",
       "prepare_period": 300,
@@ -2414,6 +2435,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "6": {
       "name": "senior experts",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "33333333333",
       "prepare_period": 300,
@@ -2437,6 +2459,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "7": {
       "name": "masters",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "33333333333",
       "prepare_period": 300,
@@ -2460,6 +2483,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "8": {
       "name": "senior masters",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "33333333333",
       "prepare_period": 300,
@@ -2483,6 +2507,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
     },
     "9": {
       "name": "grand masters",
+      "current_deciding": 0,
       "max_deciding": 10,
       "decision_deposit": "33333333333",
       "prepare_period": 300,
