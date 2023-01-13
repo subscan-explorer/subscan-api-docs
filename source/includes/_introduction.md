@@ -85,6 +85,8 @@ Please notice before you get started:
 | Moonbeam           | `moonbeam.api.subscan.io`                      | live   |
 | Moonriver          | `moonriver.api.subscan.io`                     | live   |
 | Nodle              | `nodle.api.subscan.io`                         | live   |
+| Origintrail        | `origintrail.api.subscan.io`                   | live   |
+| Origintrail Testnet| `origintrail-testnet.api.subscan.io`           | test   |
 | Pangolin           | `pangolin.api.subscan.io`                      | test   |
 | Pangolin Parachain | `pangolin-parachain.api.subscan.io`            | test   |
 | Pangoro            | `pangoro.api.subscan.io`                       | test   |
