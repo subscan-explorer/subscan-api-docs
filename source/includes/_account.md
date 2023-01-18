@@ -73,7 +73,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
         "is_evm_contract": false,
         "kton_balance": "0",
         "kton_lock": "0",
-        "rank": 1,
+        "fellowship_rank": 1,
         "registrar_info": {
           "registrar_index": 1,
           "registrar_fee": "0"
