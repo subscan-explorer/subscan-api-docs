@@ -1278,12 +1278,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/daily' \
 
 ### Payload
 
-| Name     | Type             | Require                                                                                                                      |
-|----------|------------------|------------------------------------------------------------------------------------------------------------------------------|
-| start    | Date(2019-07-04) | yes                                                                                                                          |
-| end      | Date(2019-07-04) | yes                                                                                                                          |
-| format   | string           | yes(day hour 6hour)                                                                                                          |
-| category | string           | yes(transfer extrinsic NewAccount ActiveAccount Treasury TreasurySpend Unbond UnbondKton Fee Bonded BondedKton AvgBlockTime) |
+| Name     | Type             | Require                                                                                                                                         |
+|----------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| start    | Date(2019-07-04) | yes                                                                                                                                             |
+| end      | Date(2019-07-04) | yes                                                                                                                                             |
+| format   | string           | yes(day hour 6hour)                                                                                                                             |
+| category | string           | yes(transfer extrinsic NewAccount ActiveAccount Treasury TreasurySpend Unbond UnbondKton Fee Bonded BondedKton AvgBlockTime AccountHolderTotal) |
 
 
 > Example Response

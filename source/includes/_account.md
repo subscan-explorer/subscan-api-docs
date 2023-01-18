@@ -85,6 +85,62 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 }
 ```
 
+## account-statistics
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/accounts/statistics' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/accounts/statistics`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1674012922,
+  "data": [
+    {
+      "role": "registrar",
+      "count": 1
+    },
+    {
+      "role": "proxies",
+      "count": 1140
+    },
+    {
+      "role": "multisig",
+      "count": 413
+    },
+    {
+      "role": "multisigMember",
+      "count": 865
+    },
+    {
+      "role": "validator",
+      "count": 16
+    },
+    {
+      "role": "nominator",
+      "count": 22429
+    },
+    {
+      "role": "proxy",
+      "count": 1107
+    },
+    {
+      "role": "nominationPool",
+      "count": 416
+    }
+  ]
+}
+```
+
 ## account-tokens
 
 ```shell
