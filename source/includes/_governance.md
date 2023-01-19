@@ -1377,3 +1377,1204 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/bounties/proposal' \
   }
 }
 ```
+
+
+
+## referendumV2 list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendums' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "row":10,
+      "status":"completed"
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/referendums`
+
+### payload
+
+| Name    | Type   | Require              |
+|---------|--------|----------------------|
+| page    | int    | no                   |
+| row     | int    | yes                  |
+| status  | string | no(completed active) |
+| Origins | string | no                   |
+
+> Example Response
+
+### status enum
+Submitted Decision Confirm Approved ConfirmAborted Rejected Cancelled Timeout Killed Executed ExecutedFailed
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672219941,
+  "data": {
+    "count": 2,
+    "list": [
+      {
+        "referendum_index": 1,
+        "created_block": 15438787,
+        "created_block_timestamp": "1670615070",
+        "origins": "treasurer",
+        "account": {
+          "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+        },
+        "call_module": "",
+        "call_name": "",
+        "status": "Rejected",
+        "latest_block_num": 15684998,
+        "latest_block_timestamp": 1670615070
+      },
+      {
+        "referendum_index": 0,
+        "created_block": 15426832,
+        "origins": "general_admin",
+        "account": {
+          "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+        },
+        "call_module": "System",
+        "call_name": "remark",
+        "status": "Rejected",
+        "latest_block_num": 15682703,
+        "latest_block_timestamp": 1670598540
+      }
+    ]
+  }
+}
+```
+
+## referendumV2 info
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/referendum' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+        "referendum_index":0
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/referendum`
+
+### payload
+
+| Name             | Type | Require |
+|------------------|------|---------|
+| referendum_index | int  | yes     |
+
+> Example Response
+
+### timeline.status enum
+Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cancelled Timeout Killed Executed ExecutedFailed
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672305439,
+  "data": {
+    "referendum_index": 0,
+    "created_block": 15426832,
+    "created_block_timestamp": "1670615070",
+    "origins": "general_admin",
+    "account": {
+      "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+    },
+    "deposit_balance": "100000000000000",
+    "decision_deposit_account": {
+      "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+    },
+    "decision_deposit_balance": "16666666500000",
+    "status": "Rejected",
+    "latest_block_num": 15682703,
+    "latest_block_timestamp": 1670598540,
+    "pre_image": {
+      "hash": "0xb54d0e07521b04f5d3ef54bf3c4cc4c0866b65873b38eafe58d3d754cb08bf89",
+      "created_block": 15426506,
+      "updated_block": 0,
+      "status": "Noted",
+      "amount": "0",
+      "call_module": "System",
+      "call_name": "remark",
+      "params":"[{\"name\":\"remark\",\"type\":\"Vec\<U8\>\",\"value\":\"Expect chaos.\"}]",
+      "author": {
+        "address": "JFArxqV6rqPSwBok3zQDnj5jL6vwsZQDwYXXqb1cFygnYVt"
+      }
+    },
+    "beneficiary": {
+      "address": "HHK8Yy2gtAUydPGGzotH5mzPe6u1iG8m5nnAxdqb9r99iCU"
+    },
+    "beneficiary_amount": "7300000000000",
+    "ayes_amount": "267410000000",
+    "ayes_count": 2,
+    "nays_amount": "0",
+    "nays_count": 0,
+    "abstains_count": 0,
+    "support_amount": "2674100000000",
+    "timeline": [
+      {
+        "block": 15426832,
+        "status": "Submitted",
+        "time": 1669046412,
+        "prophecy": false,
+        "index": 66,
+        "extrinsic_index": "",
+        "params": null
+      },
+      {
+        "block": 15426840,
+        "status": "Decision",
+        "time": 1669046460,
+        "prophecy": false,
+        "index": 53,
+        "extrinsic_index": "",
+        "params": null
+      },
+      {
+        "block": 15682703,
+        "status": "Rejected",
+        "time": 1670598540,
+        "prophecy": false,
+        "index": 1,
+        "extrinsic_index": "",
+        "params": null
+      }
+    ]
+  }
+}
+```
+
+## referendumV2 votes
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/votes' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+        "row":10,
+        "referendum_index":0
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/votes`
+
+### payload
+
+| Name             | Type | Require |
+|------------------|------|---------|
+| referendum_index | int  | yes     |
+| page             | int  | no      |
+| row              | int  | yes     |
+
+> Example Response
+
+### status enum
+Ayes Nays Abstains
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672281811,
+  "data": {
+    "count": 1,
+    "list": [
+      {
+        "account": {
+          "address": "D8DtYYJUUBoACJwJrLNyn8aYArumdViVWAcZRUKcxnSoV9D"
+        },
+        "amount": "2000000000000",
+        "status": "Aye",
+        "extrinsic_index": "15426860-6",
+        "conviction": "0.1",
+        "voting_time": 1669046580
+      }
+    ]
+  }
+}
+```
+
+## referendumV2 track
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/tracks' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/tracks`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672220221,
+  "data": {
+    "0": {
+      "name": "root",
+      "current_deciding": 0,
+      "max_deciding": 1,
+      "decision_deposit": "3333333333300000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 1800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "1": {
+      "name": "whitelisted_caller",
+      "current_deciding": 0,
+      "max_deciding": 30,
+      "decision_deposit": "3333333333300000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 100,
+      "min_enactment_period": 300,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "270899180",
+          "x_offset": "389830523",
+          "y_offset": "305084738"
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "8650766",
+          "x_offset": "18867926",
+          "y_offset": "41509433"
+        }
+      }
+    },
+    "10": {
+      "name": "staking_admin",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "11": {
+      "name": "treasurer",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "12": {
+      "name": "lease_admin",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "13": {
+      "name": "fellowship_admin",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "14": {
+      "name": "general_admin",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "49586777",
+          "x_offset": "90909091",
+          "y_offset": "-45454546"
+        }
+      }
+    },
+    "15": {
+      "name": "auction_admin",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 28800,
+      "min_approval": {
+        "Reciprocal": {
+          "factor": "222222224",
+          "x_offset": "333333335",
+          "y_offset": "333333332"
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "49586777",
+          "x_offset": "90909091",
+          "y_offset": "-45454546"
+        }
+      }
+    },
+    "20": {
+      "name": "referendum_canceller",
+      "current_deciding": 0,
+      "max_deciding": 1000,
+      "decision_deposit": "1666666666650000",
+      "prepare_period": 2400,
+      "decision_period": 100800,
+      "confirm_period": 1800,
+      "min_enactment_period": 100,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "21": {
+      "name": "referendum_killer",
+      "current_deciding": 0,
+      "max_deciding": 1000,
+      "decision_deposit": "1666666666650000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 1800,
+      "min_enactment_period": 100,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "30": {
+      "name": "small_tipper",
+      "current_deciding": 0,
+      "max_deciding": 200,
+      "decision_deposit": "166666666665",
+      "prepare_period": 2400,
+      "decision_period": 100800,
+      "confirm_period": 1800,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 357142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "1620729",
+          "x_offset": "3231018",
+          "y_offset": "-1615509"
+        }
+      }
+    },
+    "31": {
+      "name": "big_tipper",
+      "current_deciding": 0,
+      "max_deciding": 100,
+      "decision_deposit": "1666666666650",
+      "prepare_period": 2400,
+      "decision_period": 100800,
+      "confirm_period": 3600,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 357142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "4149097",
+          "x_offset": "8230453",
+          "y_offset": "-4115227"
+        }
+      }
+    },
+    "32": {
+      "name": "small_spender",
+      "current_deciding": 0,
+      "max_deciding": 50,
+      "decision_deposit": "16666666666500",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 7200,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 607142857,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "7892829",
+          "x_offset": "15544040",
+          "y_offset": "-7772020"
+        }
+      }
+    },
+    "33": {
+      "name": "medium_spender",
+      "current_deciding": 0,
+      "max_deciding": 20,
+      "decision_deposit": "49999999999500",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 14400,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 821428571,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "14377233",
+          "x_offset": "27972031",
+          "y_offset": "-13986016"
+        }
+      }
+    },
+    "34": {
+      "name": "big_spender",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "166666666665000",
+      "prepare_period": 2400,
+      "decision_period": 201600,
+      "confirm_period": 28800,
+      "min_enactment_period": 14400,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "Reciprocal": {
+          "factor": "28326977",
+          "x_offset": "53763445",
+          "y_offset": "-26881723"
+        }
+      }
+    }
+  }
+}
+```
+
+## referendumV2 statistics
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/statistics' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/referenda/statistics`
+
+> Example Response
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1672303761,
+    "data": {
+      "referendum_locked": "7908180276500000",
+      "referendum_participate": "7910854376500000",
+      "voting_total": 1,
+      "confirm_total": 0,
+      "origins": [
+        {
+          "ID": 0,
+          "Origins": "root",
+          "Count": 1
+        },
+        {
+          "ID": 11,
+          "Origins": "treasurer",
+          "Count": 1
+        },
+        {
+          "ID": 14,
+          "Origins": "general_admin",
+          "Count": 1
+        },
+        {
+          "ID": 34,
+          "Origins": "big_spender",
+          "Count": 1
+        }
+      ],
+      "OriginsCount": 4
+    }
+}
+```
+
+
+
+## fellowship referendum list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/referendums' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "row":10,
+      "status":"completed"
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/fellowship/referendums`
+
+### payload
+
+| Name    | Type   | Require              |
+|---------|--------|----------------------|
+| page    | int    | no                   |
+| row     | int    | yes                  |
+| status  | string | no(completed active) |
+| Origins | string | no                   |
+
+> Example Response
+
+### status enum
+Submitted Decision Confirm Approved ConfirmAborted Rejected Cancelled Timeout Killed Executed ExecutedFailed
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672815270,
+  "data": {
+    "count": 1,
+    "list": [
+      {
+        "referendum_index": 0,
+        "created_block": 15598169,
+        "created_block_timestamp": "1670615070",
+        "origins": "fellows",
+        "account": {
+          "address": "GcDZZCVPwkPqoWxx8vfLb4Yfpz9yQ1f4XEyqngSH8ygsL9p"
+        },
+        "call_module": "",
+        "call_name": "",
+        "status": "Approved",
+        "latest_block_num": 15602369,
+        "latest_block_timestamp": 1670104026
+      }
+    ]
+  }
+}
+```
+
+## fellowship referendum info
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/referendum' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+        "referendum_index":0
+    }'
+```
+### Request URL
+
+`POST /api/scan/fellowship/referendum`
+
+### payload
+
+| Name             | Type | Require |
+|------------------|------|---------|
+| referendum_index | int  | yes     |
+
+> Example Response
+
+### timeline.status enum
+Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cancelled Timeout Killed Executed ExecutedFailed
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672814873,
+  "data": {
+    "referendum_index": 0,
+    "created_block": 15598169,
+    "created_block_timestamp": "1670615070",
+    "origins": "fellows",
+    "account": {
+      "address": "GcDZZCVPwkPqoWxx8vfLb4Yfpz9yQ1f4XEyqngSH8ygsL9p"
+    },
+    "deposit_balance": "0",
+    "decision_deposit_account": {
+      "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
+    },
+    "decision_deposit_balance": "33333333000",
+    "status": "Approved",
+    "latest_block_num": 15602369,
+    "latest_block_timestamp": 1670104026,
+    "pre_image": {
+      "hash": "0xb54d0e07521b04f5d3ef54bf3c4cc4c0866b65873b38eafe58d3d754cb08bf89",
+      "created_block": 15426506,
+      "updated_block": 0,
+      "status": "Noted",
+      "amount": "0",
+      "call_module": "System",
+      "call_name": "remark",
+      "params":"[{\"name\":\"remark\",\"type\":\"Vec\<U8\>\",\"value\":\"Expect chaos.\"}]",
+      "author": {
+        "address": "JFArxqV6rqPSwBok3zQDnj5jL6vwsZQDwYXXqb1cFygnYVt"
+      }
+    },
+    "beneficiary": null,
+    "beneficiary_amount": "",
+    "ayes_amount": "13",
+    "ayes_count": 2,
+    "nays_amount": "0",
+    "nays_count": 0,
+    "abstains_count": 0,
+    "support_amount": "0",
+    "bare_ayes": "2",
+    "timeline": [
+      {
+        "block": 15598169,
+        "status": "Submitted",
+        "time": 1670078742,
+        "prophecy": false,
+        "index": 50,
+        "extrinsic_index": "",
+        "params": null
+      },
+      {
+        "block": 15598469,
+        "status": "Decision",
+        "time": 1670080548,
+        "prophecy": false,
+        "index": 0,
+        "extrinsic_index": "",
+        "params": null
+      },
+      {
+        "block": 15602069,
+        "status": "ConfirmStarted",
+        "time": 1670102214,
+        "prophecy": false,
+        "index": 0,
+        "extrinsic_index": "",
+        "params": null
+      },
+      {
+        "block": 15602369,
+        "status": "Confirm",
+        "time": 1670104026,
+        "prophecy": false,
+        "index": 2,
+        "extrinsic_index": "",
+        "params": null
+      }
+    ]
+  }
+}
+```
+
+
+## fellowship referendum votes
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/votes' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+        "row":10,
+        "referendum_index":0
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/fellowship/votes`
+
+### payload
+
+| Name             | Type | Require |
+|------------------|------|---------|
+| referendum_index | int  | yes     |
+| page             | int  | no      |
+| row              | int  | yes     |
+
+> Example Response
+
+### status enum
+Ayes Nays
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672815678,
+  "data": {
+    "count": 2,
+    "list": [
+      {
+        "account": {
+          "address": "HL8bEp8YicBdrUmJocCAWVLKUaR2dd1y6jnD934pbre3un1"
+        },
+        "amount": "3",
+        "status": "Ayes",
+        "extrinsic_index": "15598438-2",
+        "conviction": "0",
+        "voting_time": 1670080362
+      },
+      {
+        "account": {
+          "address": "FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL"
+        },
+        "amount": "10",
+        "status": "Ayes",
+        "extrinsic_index": "15598379-4",
+        "conviction": "0",
+        "voting_time": 1670080008
+      }
+    ]
+  }
+}
+```
+
+## fellowship referendum track
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/tracks' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+
+### Request URL
+
+`POST /api/scan/fellowship/tracks`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672814526,
+  "data": {
+    "0": {
+      "name": "candidates",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "3333333333300",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "1": {
+      "name": "members",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "333333333330",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "2": {
+      "name": "proficients",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "333333333330",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "3": {
+      "name": "fellows",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "333333333330",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "4": {
+      "name": "senior fellows",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "333333333330",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "5": {
+      "name": "experts",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "33333333333",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "6": {
+      "name": "senior experts",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "33333333333",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "7": {
+      "name": "masters",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "33333333333",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "8": {
+      "name": "senior masters",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "33333333333",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    },
+    "9": {
+      "name": "grand masters",
+      "current_deciding": 0,
+      "max_deciding": 10,
+      "decision_deposit": "33333333333",
+      "prepare_period": 300,
+      "decision_period": 100800,
+      "confirm_period": 300,
+      "min_enactment_period": 10,
+      "min_approval": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 500000000,
+          "ceil": 1000000000
+        }
+      },
+      "min_support": {
+        "LinearDecreasing": {
+          "length": 1000000000,
+          "floor": 0,
+          "ceil": 500000000
+        }
+      }
+    }
+  }
+}
+```
+
+
+## fellowship referendum statistics
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/statistics' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/fellowship/statistics`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1672815437,
+  "data": {
+    "fellowship_members": 45,
+    "active_fellowship_members": 45,
+    "voting_total": 0,
+    "confirm_total": 0,
+    "origins": [
+      {
+        "ID": 0,
+        "Origins": "candidates",
+        "Count": 1
+      },
+      {
+        "ID": 3,
+        "Origins": "fellows",
+        "Count": 1
+      }
+    ],
+    "OriginsCount": 2
+  }
+}
+```
