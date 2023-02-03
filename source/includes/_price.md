@@ -138,11 +138,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
 
 ### Payload
 
-| Name     | Type             | Require |
-|----------|------------------|---------|
-| start    | Date(2019-07-04) | yes     |
-| end      | Date(2019-07-04) | yes     |
-| currency | string           | no      |
+| Name     | Type                      | Require |
+|----------|---------------------------|---------|
+| start    | Date(2019-07-04)          | yes     |
+| end      | Date(2019-07-04)          | yes     |
+| format   | no(hour 6hour 12hour day) | no      |
+| currency | string                    | no      |
 
 > Example Response
 

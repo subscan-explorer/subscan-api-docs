@@ -612,12 +612,16 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendums' \
 
 ### payload
 
-| Name | Type | Require |
-|------|------|---------|
-| row  | int  | yes     |
-| page | int  | yes     |
+| Name   | Type   | Require              |
+|--------|--------|----------------------|
+| status | string | no(completed active) |
+| row    | int    | yes                  |
+| page   | int    | yes                  |
 
 > Example Response
+
+### status enum
+started executed notPassed cancelled Passed
 
 ```json
 {
@@ -630,7 +634,11 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/referendums' \
       {
         "referendum_index": 29,
         "created_block": 1209600,
+        "author": {
+          "address": "1KvKReVmUiTc2LW2a4qyHsaJJ9eE9LRsywZkMk5hyBeyHgw",
+        },
         "vote_threshold": "SuperMajorityApprove",
+        "end": 1302328,
         "status": "started",
         "call_module": "Staking",
         "call_name": "increase_validator_count"
@@ -1422,6 +1430,7 @@ Submitted Decision Confirm Approved ConfirmAborted Rejected Cancelled Timeout Ki
         "referendum_index": 1,
         "created_block": 15438787,
         "created_block_timestamp": "1670615070",
+        "origins_id": 10,
         "origins": "treasurer",
         "account": {
           "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
@@ -1485,6 +1494,7 @@ Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cance
     "referendum_index": 0,
     "created_block": 15426832,
     "created_block_timestamp": "1670615070",
+    "origins_id": 3,
     "origins": "general_admin",
     "account": {
       "address": "GLVeryFRbg5hEKvQZcAnLvXZEXhiYaBjzSDwrXBXrfPF7wj"
@@ -2084,6 +2094,7 @@ Submitted Decision Confirm Approved ConfirmAborted Rejected Cancelled Timeout Ki
         "referendum_index": 0,
         "created_block": 15598169,
         "created_block_timestamp": "1670615070",
+        "origins_id": 10,
         "origins": "fellows",
         "account": {
           "address": "GcDZZCVPwkPqoWxx8vfLb4Yfpz9yQ1f4XEyqngSH8ygsL9p"
@@ -2133,6 +2144,7 @@ Submitted Decision ConfirmStarted Confirm Approved ConfirmAborted Rejected Cance
     "referendum_index": 0,
     "created_block": 15598169,
     "created_block_timestamp": "1670615070",
+    "origins_id": 8,
     "origins": "fellows",
     "account": {
       "address": "GcDZZCVPwkPqoWxx8vfLb4Yfpz9yQ1f4XEyqngSH8ygsL9p"
