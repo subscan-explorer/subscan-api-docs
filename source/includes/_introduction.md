@@ -41,6 +41,7 @@ Please notice before you get started:
 | Alephzero          | `alephzero.api.subscan.io`                     | live   |
 | Altair             | `altair.api.subscan.io`                        | live   |
 | Astar              | `astar.api.subscan.io`                         | live   |
+| Bajun              | `bajun.api.subscan.io`                         | live   |
 | Basilisk           | `basilisk.api.subscan.io`                      | live   |
 | Bifrost            | `bifrost.api.subscan.io`                       | live   |
 | Bifrost Kusama     | `bifrost-kusama.api.subscan.io`                | live   |
