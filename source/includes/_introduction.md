@@ -81,7 +81,6 @@ Please notice before you get started:
 | KILT Spiritnet     | `spiritnet.api.subscan.io`                     | live   |
 | Litmus             | `litmus.api.subscan.io`                        | live   |
 | Mangata            | `mangatax.api.subscan.io`                      | live   |
-| Mangata Testnet    | `mangata-testnet.api.subscan.io`               | live   |
 | Moonbase           | `moonbase.api.subscan.io`                      | test   |
 | Moonbeam           | `moonbeam.api.subscan.io`                      | live   |
 | Moonriver          | `moonriver.api.subscan.io`                     | live   |
