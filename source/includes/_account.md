@@ -222,7 +222,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
 ## tokens holders list
 
 ```shell
-curl -X POST 'https://crab.api.subscan.io/api/scan/token/hodlers' \
+curl -X POST 'https://crab.api.subscan.io/api/scan/token/holders' \
   --header 'Content-Type: application/json' \
   --header 'X-API-Key: YOUR_KEY' \
   --data-raw '{
@@ -233,7 +233,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/token/hodlers' \
 
 ### Request URL
 
-`POST /api/scan/token/hodlers`
+`POST /api/scan/token/holders`
 
 ### Payload
 
@@ -260,7 +260,8 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/token/hodlers' \
           "address": "15fNZmAVqLdg6JMD9ZRtzhXrouzd2D4YTWdg3WYW8yZae6F2"
         },
         "ring_lock": "1",
-        "balance": "1"
+        "balance": "1",
+        "count_extrinsic": 4
       }
     ]
   }
