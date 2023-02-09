@@ -237,11 +237,13 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/token/hodlers' \
 
 ### Payload
 
-| Name  | Type   | Require |
-|-------|--------|---------|
-| token | string | yes     |
-| row   | int    | yes     |
-| page  | int    | no      |
+| Name        | Type   | Require               |
+|-------------|--------|-----------------------|
+| token       | string | yes                   |
+| order       | string | no(asc desc)          |
+| order_field | string | no(balance ring_lock) |
+| row         | int    | yes                   |
+| page        | int    | no                    |
 
 > Example Response
 
