@@ -237,13 +237,13 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/token/holders' \
 
 ### Payload
 
-| Name        | Type   | Require               |
-|-------------|--------|-----------------------|
-| token       | string | yes                   |
-| order       | string | no(asc desc)          |
-| order_field | string | no(balance ring_lock) |
-| row         | int    | yes                   |
-| page        | int    | no                    |
+| Name        | Type   | Require            |
+|-------------|--------|--------------------|
+| token       | string | yes                |
+| order       | string | no(asc desc)       |
+| order_field | string | no(balance locked) |
+| row         | int    | yes                |
+| page        | int    | no                 |
 
 > Example Response
 
