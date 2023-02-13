@@ -218,3 +218,52 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
   }
 }
 ```
+
+## tokens holders list
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/token/holders' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "token": "DOT",
+    "row":20
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/token/holders`
+
+### Payload
+
+| Name        | Type   | Require            |
+|-------------|--------|--------------------|
+| token       | string | yes                |
+| order       | string | no(asc desc)       |
+| order_field | string | no(balance locked) |
+| row         | int    | yes                |
+| page        | int    | no                 |
+
+> Example Response
+
+```json
+
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1653375440,
+  "data": {
+    "list": [
+      {
+        "account_display": {
+          "address": "15fNZmAVqLdg6JMD9ZRtzhXrouzd2D4YTWdg3WYW8yZae6F2"
+        },
+        "ring_lock": "1",
+        "balance": "1",
+        "count_extrinsic": 4
+      }
+    ]
+  }
+}
+```
