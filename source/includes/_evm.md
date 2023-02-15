@@ -938,7 +938,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/contract' \
     "optimize": true,
     "optimization_runs": 200,
     "extrinsic_index": "",
-    "transaction_hash": "",,
+    "transaction_hash": "",
     "verify_time": 0,
     "transaction_count": 57
   }
