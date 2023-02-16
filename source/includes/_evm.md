@@ -1197,7 +1197,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/erc721/transfer' \
 
 ### Request URL
 
-`POST /api/scan/evm/erc721/transfer`
+`POST /api/scan/evm/token/transfer`
 
 ### Payload
 
@@ -1209,6 +1209,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/erc721/transfer' \
 | token_id | string | no               |
 | row      | int    | yes              |
 | page     | int    | no               |
+| category | string | no(erc20,erc721) |
 
 > Example Response
 
