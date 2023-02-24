@@ -95,7 +95,10 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 ```shell
 curl -X POST 'https://crab.api.subscan.io/api/scan/accounts/statistics' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "type":"role"
+  }'
 ```
 
 ### Request URL
