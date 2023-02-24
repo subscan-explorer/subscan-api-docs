@@ -161,24 +161,28 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/accounts/statistics' \
   "generated_at": 1677207181,
   "data": [
     {
+      "name": "Whale",
       "max_balance": "0",
       "min_balance": "13281536626674830",
       "total": "2651412049964972151481434",
       "account_count": 97
     },
     {
+      "name": "Dolphin",
       "max_balance": "13281536626674830",
       "min_balance": "1328153662667480",
       "total": "847270455523017511",
       "account_count": 224
     },
     {
+      "name": "Fish",
       "max_balance": "1328153662667480",
       "min_balance": "132815366270",
       "total": "431931610772807017",
       "account_count": 7596
     },
     {
+      "name": "Shrimp",
       "max_balance": "132815366270",
       "min_balance": "0",
       "total": "36788464394507",
