@@ -26,6 +26,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 | page        | int          | yes                                                                                                                                                        |
 | order       | string       | no (desc,asc)                                                                                                                                              |
 | order_field | string       | no(balance)                                                                                                                                                |
+| min_balance | string       | no                                                                                                                                                         |
+| max_balance | string       | no                                                                                                                                                         |
 | filter      | string       | no(validator nominator councilMember techcomm registrar system module evm nominationPool proxy proxies multisig multisigMember fellowship onChainIdentity) |
 | address     | array string | no (max:100)                                                                                                                                               |
 
@@ -74,6 +76,9 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
         "kton_balance": "0",
         "kton_lock": "0",
         "fellowship_rank": 1,
+        "assets_tag": [
+          "Whale"
+        ],
         "registrar_info": {
           "registrar_index": 1,
           "registrar_fee": "0"
@@ -90,14 +95,23 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/accounts' \
 ```shell
 curl -X POST 'https://crab.api.subscan.io/api/scan/accounts/statistics' \
   --header 'Content-Type: application/json' \
-  --header 'X-API-Key: YOUR_KEY'
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "type":"role"
+  }'
 ```
 
 ### Request URL
 
 `POST /api/scan/accounts/statistics`
 
-> Example Response
+### Payload
+
+| Name | Type   | Require         |
+|------|--------|-----------------|
+| type | string | no(assets,role) |
+
+> Example Role type Response
 
 ```json
 {
@@ -136,6 +150,46 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/accounts/statistics' \
     {
       "role": "nominationPool",
       "count": 416
+    }
+  ]
+}
+```
+
+> Example Assets type Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1677207181,
+  "data": [
+    {
+      "name": "Whale",
+      "max_balance": "0",
+      "min_balance": "13281536626674830",
+      "total": "2651412049964972151481434",
+      "account_count": 97
+    },
+    {
+      "name": "Dolphin",
+      "max_balance": "13281536626674830",
+      "min_balance": "1328153662667480",
+      "total": "847270455523017511",
+      "account_count": 224
+    },
+    {
+      "name": "Fish",
+      "max_balance": "1328153662667480",
+      "min_balance": "132815366270",
+      "total": "431931610772807017",
+      "account_count": 7596
+    },
+    {
+      "name": "Shrimp",
+      "max_balance": "132815366270",
+      "min_balance": "0",
+      "total": "36788464394507",
+      "account_count": 885
     }
   ]
 }
