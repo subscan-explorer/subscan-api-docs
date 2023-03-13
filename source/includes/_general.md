@@ -1348,6 +1348,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
 | direction       | string | yes(all sent received) |
 | include_total   | bool   | no                     |
 | asset_symbol    | string | no                     |
+| asset_unique_id | string | no                     |
 
 
 > Example Response
@@ -1373,7 +1374,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
         "amount_v2": "0",
         "fee": "157000015",
         "nonce": 2387,
-        "asset_symbol": "",
+        "asset_symbol": "DOT",
+        "asset_unique_id": "DOT",
         "asset_type": "",
         "from_account_display": {
           "address": "12WNUbjKPfezJdSUL5vWJV95wPtBhFPQyKV9jpe4tcfyTmED",

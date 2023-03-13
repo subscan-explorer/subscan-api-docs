@@ -228,6 +228,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "native": [
       {
         "symbol": "CRAB",
+        "unique_id": "CRAB",
         "decimals": 9,
         "balance": "1000000000",
         "lock": "3",
@@ -239,6 +240,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
       },
       {
         "symbol": "CKTON",
+        "unique_id": "CKTON",
         "decimals": 9,
         "balance": "2000000000",
         "lock": "4",
@@ -251,6 +253,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "builtin": [
       {
         "symbol": "AUSD",
+        "unique_id": "AUSD",
         "decimals": 9,
         "balance": "1000000"
       }
