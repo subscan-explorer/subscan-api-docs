@@ -203,3 +203,74 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/price' \
   }
 }
 ```
+
+
+## Account-Balance-Value-History
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/balance_value_history' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{"address":"16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD","start":"2023-03-02","end":"2023-03-06"}'
+```
+
+### Request URL
+
+`POST /api/scan/multiChain/balance_value_history`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1678064218,
+  "data": [
+    {
+      "value": "360869420.87649341776722409771",
+      "date": "2023-03-03"
+    },
+    {
+      "value": "351910124.13481868517570873308",
+      "date": "2023-03-04"
+    },
+    {
+      "value": "359678332.94665222578832769618",
+      "date": "2023-03-05"
+    },
+    {
+      "value": "357288443.69898240792533718947",
+      "date": "2023-03-06"
+    }
+  ]
+}
+```
+
+
+## Account-Balance-Value-Stat
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/balance_value_stat' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{"address":"16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD"}'
+```
+
+### Request URL
+
+`POST /api/scan/multiChain/balance_value_stat`
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1678064884,
+  "data": {
+    "max": "360869420.87649341776722409771",
+    "min": "351910124.13481868517570873308",
+    "prev24H": "359678332.94665222578832769618"
+  }
+}
+```
