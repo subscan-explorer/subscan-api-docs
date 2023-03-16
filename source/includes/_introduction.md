@@ -54,12 +54,11 @@ Please notice before you get started:
 | Clover Parachain   | `clv.api.subscan.io`                           | live   |
 | Clover Testnet     | `clover-testnet.api.subscan.io`                | test   |
 | Composable         | `composable.api.subscan.io`                    | live   |
-| Crab Parachain     | `crab-parachain.api.subscan.io`                | live   |
+| Crab2              | `crab.api.subscan.io`                          | live   |
 | Crust              | `crust.api.subscan.io`                         | live   |
 | Crust Maxwell      | `maxwell.api.subscan.io`                       | test   |
 | Crust Shadow       | `shadow.api.subscan.io`                        | live   |
 | Dali               | `dali.api.subscan.io`                          | live   |
-| Darwinia Crab      | `crab.api.subscan.io`                          | live   |
 | Darwinia Parachain | `darwinia-parachain.api.subscan.io`            | live   |
 | DeepBrain Chain    | `dbc.api.subscan.io`                           | live   |
 | Dock               | `dock.api.subscan.io`                          | live   |
@@ -75,7 +74,6 @@ Please notice before you get started:
 | Interlay           | `interlay.api.subscan.io`                      | live   |
 | Karura             | `karura.api.subscan.io`                        | live   |
 | Kintsugi           | `kintsugi.api.subscan.io`                      | live   |
-| Kulupu             | `kulupu.api.subscan.io`                        | live   |
 | Khala              | `khala.api.subscan.io`                         | live   |
 | KILT Peregrine     | `kilt-testnet.api.subscan.io`                  | test   |
 | KILT Spiritnet     | `spiritnet.api.subscan.io`                     | live   |
