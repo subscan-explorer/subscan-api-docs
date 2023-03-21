@@ -298,7 +298,8 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/token/holders' \
 
 | Name        | Type   | Require            |
 |-------------|--------|--------------------|
-| token       | string | yes                |
+| token       | string | no                 |
+| unique_id   | string | no                 |
 | order       | string | no(asc desc)       |
 | order_field | string | no(balance locked) |
 | row         | int    | yes                |
