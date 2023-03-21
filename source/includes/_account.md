@@ -261,6 +261,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "assets": [
       {
         "symbol": "MARK",
+        "unique_id": "(String)",
         "decimals": 10,
         "balance": "10000000000"
       }
@@ -268,6 +269,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "ERC20": [
       {
         "symbol": "EVO",
+        "unique_id": "EVO(String)",
         "decimals": 0,
         "balance": "1"
       }
