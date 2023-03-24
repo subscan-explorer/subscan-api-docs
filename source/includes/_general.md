@@ -634,6 +634,121 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisigs' \
 }
 ```
 
+## multisigs Details
+
+account multisig list
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisigs/details' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+      "row": 1,
+      "account": "12YK3LD8FzVgyBuN6mQkCaZUHyExQdjyvX1Fn67DJ5A4rL2R"
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/multisigs/details`
+
+### Payload
+
+| Name    | Type        | Require                                |
+|---------|-------------|----------------------------------------|
+| row     | int         | yes                                    |
+| page    | int         | no                                     |
+| status  | enum string | no(Approval Executed Cancelled Failed) |
+| account | string      | yes                                    |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1678780944,
+  "data": {
+    "count": 2,
+    "multisig": [
+      {
+        "multi_id": "12539327-1(string create Extrinsic index)",
+        "multi_account_display": {
+          "address": "2pmrnGHy1H2oGuw2sCdCXVyVsMTUcMfN9QY1o4fTbDqBcg2a"
+        },
+        "account_display": {
+          "address": "2pp5aVQahtcN3TgAtiJ1DCi2rg9rSXm3UzUc2Z84CsP7aC8e"
+        },
+        "threshold": 3,
+        "call_hash": "0x63e8e1d2c7b1e29c9b59bef202e67c142a8b7a7b6bc61f75e9740eff22f9914f",
+        "call_data": "0x04030070f4429de1415ed8ef3e55a9c1942926d9df851e10838e78f9dab42127858c7c025a6202",
+        "call_module": "Balances",
+        "call_module_function": "transfer_keep_alive",
+        "status": "Approval(enum Approval Executed Cancelled Failed)",
+        "block_timestamp": 1676963868,
+        "confirm_extrinsic_idx": "(string (Executed extrinsic index))",
+        "cancel_extrinsic_idx": "(String)",
+        "approve_record": [
+          {
+            "account_display": {
+              "address": "2pp5aVQahtcN3TgAtiJ1DCi2rg9rSXm3UzUc2Z84CsP7aC8e"
+            },
+            "extrinsic_index": "12539327-1",
+            "approve_type": "Initialize (enum Initialize Approval Executed)",
+            "timestamp": 1676963868
+          },
+          {
+            "account_display": {
+              "address": "2qMskW9mrrdUcFS5s7a3Pq5PxoTa1NTirDEggPUNmaCEJ5Ch",
+              "display": "你好达尔文",
+              "judgements": [
+                {
+                  "index": 0,
+                  "judgement": "Reasonable"
+                }
+              ],
+              "identity": true
+            },
+            "extrinsic_index": "12539335-1",
+            "approve_type": "Approval",
+            "timestamp": 1676963916
+          }
+        ],
+        "cancel_record": null
+      },
+      {
+        "multi_id": "7732208-1",
+        "multi_account_display": {
+          "address": "2tksdyLYpjp11BRre3QthYcWTomaepMhkWvFj25LoNZNkknm"
+        },
+        "account_display": {
+          "address": "2odJPxNLYkr1GKXTg7S3tEFhot3ndtcm9GqAFum4LjNZH9SR"
+        },
+        "threshold": 2,
+        "call_hash": "0x73b71daeb2499239344a3d4b1b27d0ce74e15abca0a7f623cabe29168d23f119",
+        "call_module": "",
+        "call_module_function": "",
+        "status": "Approval",
+        "block_timestamp": 1647920964,
+        "confirm_extrinsic_idx": "",
+        "cancel_extrinsic_idx": "",
+        "approve_record": [
+          {
+            "account_display": {
+              "address": "2odJPxNLYkr1GKXTg7S3tEFhot3ndtcm9GqAFum4LjNZH9SR"
+            },
+            "extrinsic_index": "7732208-1",
+            "approve_type": "Initialize",
+            "timestamp": 1647920964
+          }
+        ],
+        "cancel_record": null
+      }
+    ]
+  }
+}
+```
+
 
 ## multisig
 
