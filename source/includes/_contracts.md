@@ -106,10 +106,12 @@ curl -X POST 'https://shibuya.api.subscan.io/api/scan/contracts/list' \
 
 ### Payload
 
-| Name        | Type   | Require | Description            |
-|-------------|--------|---------|------------------------|
-| row         | int    | yes     |                        |
-| page        | int    | yes     |                        |
+| Name        | Type   | Require | Description                   |
+|-------------|--------|---------|-------------------------------|
+| row         | int    | yes     |                               |
+| page        | int    | yes     |                               |
+| order       | string | no      | desc or asc                   |
+| order_field | string | no      | verify_time,transaction_count |
 
 > Example Response
 
