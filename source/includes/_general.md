@@ -1463,6 +1463,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
 | direction       | string | yes(all sent received) |
 | include_total   | bool   | no                     |
 | asset_symbol    | string | no                     |
+| asset_unique_id | string | no                     |
 
 
 > Example Response
@@ -1488,7 +1489,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/transfers' \
         "amount_v2": "0",
         "fee": "157000015",
         "nonce": 2387,
-        "asset_symbol": "",
+        "asset_symbol": "DOT",
+        "asset_unique_id": "DOT",
         "asset_type": "",
         "from_account_display": {
           "address": "12WNUbjKPfezJdSUL5vWJV95wPtBhFPQyKV9jpe4tcfyTmED",
@@ -1630,6 +1632,73 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
   }
 }
 ```
+
+## unique_id token
+
+Current network unique_id tokens detail
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/token' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY'
+```
+
+### Request URL
+
+`POST /api/scan/token/unique_id`
+
+
+### Payload
+
+| Name | Type   | Require |
+|------|--------|---------|
+| t    | string | no      |
+| id   | string | no      |
+| q    | string | no      |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1655186752,
+  "data": {
+    "detail": {
+      "DOT(unique_id)": {
+        "asset_type": "native",
+        "symbol": "DOT",
+        "unique_id": "DOT",
+        "display_name": "DOT",
+        "token_decimals": 10,
+        "total_issuance": "12024561209662193946",
+        "price": "7.356993258680762",
+        "price_change": "0.060211543",
+        "free_balance": "12024561209662193946",
+        "available_balance": "3706341287445350079",
+        "validator_bonded": "13991575634473639",
+        "nominator_bonded": "6317969551956084800",
+        "locked_balance": "7125816069416346666",
+        "bonded_locked_balance": "6580877179128054003",
+        "unbonded_locked_balance": "501402167800562548",
+        "democracy_locked_balance": "369132339396910446",
+        "reserved_balance": "1192403852800497201",
+        "election_locked_balance": "2463856597140462636",
+        "vesting_balance": "954348641353258444",
+        "inflation": "7.765856289627089"
+      }
+    },
+    "token": [
+      "DOT"
+    ],
+    "unique_id": [
+      "DOT"
+    ]
+  }
+}
+```
+
 
 ## raw extrinsic
 

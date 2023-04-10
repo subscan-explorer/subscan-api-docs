@@ -228,6 +228,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "native": [
       {
         "symbol": "CRAB",
+        "unique_id": "CRAB",
         "decimals": 9,
         "balance": "1000000000",
         "lock": "3",
@@ -239,6 +240,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
       },
       {
         "symbol": "CKTON",
+        "unique_id": "CKTON",
         "decimals": 9,
         "balance": "2000000000",
         "lock": "4",
@@ -251,6 +253,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "builtin": [
       {
         "symbol": "AUSD",
+        "unique_id": "AUSD",
         "decimals": 9,
         "balance": "1000000"
       }
@@ -258,6 +261,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "assets": [
       {
         "symbol": "MARK",
+        "unique_id": "(String)",
         "decimals": 10,
         "balance": "10000000000"
       }
@@ -265,6 +269,7 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
     "ERC20": [
       {
         "symbol": "EVO",
+        "unique_id": "EVO(String)",
         "decimals": 0,
         "balance": "1"
       }
@@ -293,7 +298,8 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/token/holders' \
 
 | Name        | Type   | Require            |
 |-------------|--------|--------------------|
-| token       | string | yes                |
+| token       | string | no                 |
+| unique_id   | string | no                 |
 | order       | string | no(asc desc)       |
 | order_field | string | no(balance locked) |
 | row         | int    | yes                |
