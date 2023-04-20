@@ -154,7 +154,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/price/history' \
     "message": "Success",
     "generated_at": 1628587129,
     "data": {
-        "average": "153.1241241",
+        "ema30_average": "153.1241241",
         "ema7_average": "0",
         "list": [
             {
