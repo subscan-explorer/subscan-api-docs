@@ -68,6 +68,7 @@ Please notice before you get started:
 | Encointer          | `encointer.api.subscan.io`                     | live   |
 | Equilibrium        | `equilibrium.api.subscan.io`                   | live   |
 | Genshiro           | `genshiro.api.subscan.io`                      | live   |
+| Humanode           | `humanode.api.subscan.io`                      | live   |
 | HydraDX            | `hydradx.api.subscan.io`                       | live   |
 | ICE Arctic         | `arctic.api.subscan.io`                        | live   |
 | IntegriTEE         | `integritee.api.subscan.io`                    | live   |
