@@ -253,7 +253,7 @@ curl -X POST 'https://westend.api.subscan.io/api/scan/nomination_pool/pool/membe
       {
         "pool_id": 45,
         "bonded": "3000000000000",
-        "point": "0",
+        "claimable": "0",
         "account_display": {
           "address": "5D7zYmyEEmtTVg6RhUcCRP11J1Rc6FK2Xh2hUZQzD5K57bHF"
         }
