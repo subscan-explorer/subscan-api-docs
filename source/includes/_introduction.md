@@ -70,7 +70,6 @@ Please notice before you get started:
 | Genshiro           | `genshiro.api.subscan.io`                      | live   |
 | Humanode           | `humanode.api.subscan.io`                      | live   |
 | HydraDX            | `hydradx.api.subscan.io`                       | live   |
-| ICE Arctic         | `arctic.api.subscan.io`                        | live   |
 | IntegriTEE         | `integritee.api.subscan.io`                    | live   |
 | Interlay           | `interlay.api.subscan.io`                      | live   |
 | Karura             | `karura.api.subscan.io`                        | live   |
