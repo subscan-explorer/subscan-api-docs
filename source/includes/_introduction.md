@@ -105,7 +105,6 @@ Please notice before you get started:
 | Sakura             | `sakura.api.subscan.io`                        | live   |
 | Shibuya            | `shibuya.api.subscan.io`                       | test   |
 | Shiden             | `shiden.api.subscan.io`                        | live   |
-| SNOW               | `snow.api.subscan.io`                          | live   |
 | SORA               | `sora.api.subscan.io`                          | live   |
 | Subspace           | `subspace.api.subscan.io`                      | live   |
 | Stafi              | `stafi.api.subscan.io`                         | live   |
