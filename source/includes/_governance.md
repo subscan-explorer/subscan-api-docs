@@ -214,6 +214,55 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/proposal' \
 }
 ```
 
+
+## treasury tippers
+
+```shell
+curl -X POST 'https://polkadot.api.subscan.io/api/scan/treasury/tippers' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+        "hash":"0xc576ed3af7ceae72a694551b788165339de488bc038e334453b1d66c4e720d11",
+    }'
+```
+
+### Request URL
+
+`POST /api/scan/treasury/tippers`
+
+### payload
+
+| Name | Type   | Require |
+|------|--------|---------|
+| hash | string | yes     |
+
+
+> Example Response
+```json
+
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1683253168,
+  "data": {
+    "list": [
+      {
+        "extrinsic_index": "14958998-2",
+        "amount": "1000000000000",
+        "rewarder": {
+          "address": "14mR4xpU4BwYTTFNwMJ7KJ81yqNiNxGUFL4e3GxVsN27YNTE",
+          "display": "Fabi",
+          "identity": true,
+          "merkle": {}
+        }
+      }
+    ]
+  }
+}
+
+```
+
+
 ## techcomm-proposals
 
 ```shell
@@ -635,7 +684,7 @@ started executed notPassed cancelled Passed
         "referendum_index": 29,
         "created_block": 1209600,
         "author": {
-          "address": "1KvKReVmUiTc2LW2a4qyHsaJJ9eE9LRsywZkMk5hyBeyHgw",
+          "address": "1KvKReVmUiTc2LW2a4qyHsaJJ9eE9LRsywZkMk5hyBeyHgw"
         },
         "vote_threshold": "SuperMajorityApprove",
         "end": 1302328,
@@ -2590,3 +2639,5 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/fellowship/statistics' \
   }
 }
 ```
+
+
