@@ -83,7 +83,8 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/assets' \
           }
         },
         "supply": "1000000000000000000",
-        "holders": 6
+        "holders": 6,
+        "unique_id": "standard_assets/0"
       }
     ]
   }
@@ -207,7 +208,8 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/assets/asset' \
     "min_balance": "1000000000000",
     "is_frozen": false,
     "is_destroyed": false,
-    "holders": 2
+    "holders": 2,
+    "unique_id": "standard_assets/1"
   }
 }
 ```
