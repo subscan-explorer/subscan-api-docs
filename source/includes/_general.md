@@ -598,11 +598,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multisigs' \
 
 ### Payload
 
-| Name    | Type   | Require |
-|---------|--------|---------|
-| row     | int    | yes     |
-| page    | int    | no      |
-| account | string | yes     |
+| Name    | Type   | Require                       |
+|---------|--------|-------------------------------|
+| row     | int    | yes                           |
+| page    | int    | no                            |
+| account | string | yes                           |
+| type    | string | no (all signator) default:all |
 
 > Example Response
 
