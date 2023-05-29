@@ -35,7 +35,7 @@ Please notice before you get started:
 | ------------------ | ---------------------------------------------- | ------ |
 | Polkadot           | `polkadot.api.subscan.io`                      | live   |
 | Kusama             | `kusama.api.subscan.io`                        | live   |
-| Darwinia           | `darwinia.api.subscan.io`                      | live   |
+| Darwinia2          | `darwinia.api.subscan.io`                      | live   |
 | Acala              | `acala.api.subscan.io`                         | live   |
 | Acala Mandala      | `acala-testnet.api.subscan.io`                 | test   |
 | Alephzero          | `alephzero.api.subscan.io`                     | live   |
@@ -58,8 +58,6 @@ Please notice before you get started:
 | Crust              | `crust.api.subscan.io`                         | live   |
 | Crust Maxwell      | `maxwell.api.subscan.io`                       | test   |
 | Crust Shadow       | `shadow.api.subscan.io`                        | live   |
-| Dali               | `dali.api.subscan.io`                          | live   |
-| Darwinia Parachain | `darwinia-parachain.api.subscan.io`            | live   |
 | DeepBrain Chain    | `dbc.api.subscan.io`                           | live   |
 | Dock               | `dock.api.subscan.io`                          | live   |
 | Dolphin            | `dolphin.api.subscan.io`                       | test   |
@@ -92,6 +90,7 @@ Please notice before you get started:
 | Parallel Heiko     | `parallel-heiko.api.subscan.io`                | live   |
 | Phala              | `phala.api.subscan.io`                         | live   |
 | Picasso            | `picasso.api.subscan.io`                       | live   |
+| Picasso Rococo     | `picasso-rococo.api.subscan.io`                | test   |
 | Pioneer            | `pioneer.api.subscan.io`                       | live   |
 | Polkadex           | `polkadex.api.subscan.io`                      | live   |
 | Polymesh           | `polymesh.api.subscan.io`                      | live   |
