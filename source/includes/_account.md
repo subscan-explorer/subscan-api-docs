@@ -222,17 +222,6 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/tokens' \
         "unbonding": "11",
         "democracy_lock": "13",
         "election_lock": "14"
-      },
-      {
-        "symbol": "CKTON",
-        "unique_id": "CKTON",
-        "decimals": 9,
-        "balance": "2000000000",
-        "lock": "4",
-        "reserved": "8",
-        "bonded": "10",
-        "unbonding": "12",
-        "democracy_lock": "15"
       }
     ],
     "builtin": [

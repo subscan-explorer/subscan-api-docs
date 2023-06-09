@@ -224,7 +224,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/block' \
         "extrinsic_index": "5-0",
         "call_module_function": "set",
         "call_module": "timestamp",
-        "params":"[{\"name\":\"now\",\"type\":\"Compact\<Moment\>\",\"value\":1590507438}]",
+        "params":"[{\"name\":\"now\",\"type\":\"Compact<Moment>\",\"value\":1590507438}]",
         "account_id": "",
         "account_index": "",
         "signature": "",
@@ -1041,7 +1041,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/events' \
         "extrinsic_idx": 2,
         "module_id": "treasury",
         "event_id": "Deposit",
-        "params":"[{\"type\":\"polkadot_primitives:v2:CandidateReceipt\",\"type_name\":\"CandidateReceipt\<Hash\>\",\"value\":{\"commitments_hash\":\"0x2224b7e631eb8addf943254af43307cdd255f54ed6c5a8f8272fbf44ec602405\",\"descriptor\":{\"collator\":\"0x34f3c837224e7e37ddeaeebf59b4dbcf0bc962a5bd4c5c212467fb071798b73e\",\"erasure_root\":\"0x298d4f8f664c76f852aae2326ce0b122d96fed47228024df6cc27b9a9545153a\",\"para_head\":\"0x2456275af702fa43f7041321b472bc1e3f2526c747a4edbc12871382b0c4eba6\",\"para_id\":2021,\"persisted_validation_data_hash\":\"0x7db5544d9262a08fd4d9836902486f2cb653f30b13b3d2d63de73fde195c28c9\",\"pov_hash\":\"0x4c9182dcaa156aaf0d9431a00677a4f90fda38b2552baa6978bd5eafdc22d79c\",\"relay_parent\":\"0x05d7675732faa8a1d7ed188e8333ab41978cc16ad2a7b1ff89e4a5e07e8480b4\",\"signature\":\"0x68643314f7368006e89896e9d375a3fdcb5784195cb0d0a4e29b791f9bb294303eca06e33ad1a8c1e28a1a4287d3f4db96e7aeed3c339396dc60a2b9d171c787\",\"validation_code_hash\":\"0x04f5e7d46ee5392c5846b3488e8d42048ca133919f4a4c9a039d1b5906f8c091\"}}},{\"type\":\"Vec\<U8\>\",\"type_name\":\"HeadData\",\"value\":\"16598b4a2aad3dd06fdb7d11684deabbcb205bc231cbd6096048ceb3371660345a8a25008c53ea94f7ae5be9d1697edf060ed9b4585105e90a21d6ffb52ec3ec3d8b929d7c5cdf1d4cadf4cfa822827bc567d28503285a851cab5a39a13ed9a302809a270c06617572612097ad3808000000000470726f64800278e3d862f1628d70fe631e0ad1c3af24f208ba7cb7dc932576fdfe77eace33056175726101015077ab522d7c96e159e2bc456ed7e9d8c3687f636a1bbc3489e4d21711da4f6d86aa8a81e47ea33dd21771ba92d34c0ee1168800e16d34b6edb63be041cfd984\"},{\"type\":\"U32\",\"type_name\":\"CoreIndex\",\"value\":9},{\"type\":\"U32\",\"type_name\":\"GroupIndex\",\"value\":24}]",
+        "params":"[{\"type\":\"polkadot_primitives:v2:CandidateReceipt\",\"type_name\":\"CandidateReceipt<Hash>\",\"value\":{\"commitments_hash\":\"0x2224b7e631eb8addf943254af43307cdd255f54ed6c5a8f8272fbf44ec602405\",\"descriptor\":{\"collator\":\"0x34f3c837224e7e37ddeaeebf59b4dbcf0bc962a5bd4c5c212467fb071798b73e\",\"erasure_root\":\"0x298d4f8f664c76f852aae2326ce0b122d96fed47228024df6cc27b9a9545153a\",\"para_head\":\"0x2456275af702fa43f7041321b472bc1e3f2526c747a4edbc12871382b0c4eba6\",\"para_id\":2021,\"persisted_validation_data_hash\":\"0x7db5544d9262a08fd4d9836902486f2cb653f30b13b3d2d63de73fde195c28c9\",\"pov_hash\":\"0x4c9182dcaa156aaf0d9431a00677a4f90fda38b2552baa6978bd5eafdc22d79c\",\"relay_parent\":\"0x05d7675732faa8a1d7ed188e8333ab41978cc16ad2a7b1ff89e4a5e07e8480b4\",\"signature\":\"0x68643314f7368006e89896e9d375a3fdcb5784195cb0d0a4e29b791f9bb294303eca06e33ad1a8c1e28a1a4287d3f4db96e7aeed3c339396dc60a2b9d171c787\",\"validation_code_hash\":\"0x04f5e7d46ee5392c5846b3488e8d42048ca133919f4a4c9a039d1b5906f8c091\"}}},{\"type\":\"Vec<U8>\",\"type_name\":\"HeadData\",\"value\":\"16598b4a2aad3dd06fdb7d11684deabbcb205bc231cbd6096048ceb3371660345a8a25008c53ea94f7ae5be9d1697edf060ed9b4585105e90a21d6ffb52ec3ec3d8b929d7c5cdf1d4cadf4cfa822827bc567d28503285a851cab5a39a13ed9a302809a270c06617572612097ad3808000000000470726f64800278e3d862f1628d70fe631e0ad1c3af24f208ba7cb7dc932576fdfe77eace33056175726101015077ab522d7c96e159e2bc456ed7e9d8c3687f636a1bbc3489e4d21711da4f6d86aa8a81e47ea33dd21771ba92d34c0ee1168800e16d34b6edb63be041cfd984\"},{\"type\":\"U32\",\"type_name\":\"CoreIndex\",\"value\":9},{\"type\":\"U32\",\"type_name\":\"GroupIndex\",\"value\":24}]",
         "phase": 0,
         "event_idx": 5,
         "extrinsic_hash": "",
@@ -1394,12 +1394,12 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/daily' \
 
 ### Payload
 
-| Name     | Type             | Require                                                                                                                                         |
-|----------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| start    | Date(2019-07-04) | yes                                                                                                                                             |
-| end      | Date(2019-07-04) | yes                                                                                                                                             |
-| format   | string           | yes(day hour 6hour)                                                                                                                             |
-| category | string           | yes(transfer extrinsic NewAccount ActiveAccount Treasury TreasurySpend Unbond UnbondKton Fee Bonded BondedKton AvgBlockTime AccountHolderTotal) |
+| Name     | Type             | Require                                                                                                                   |
+|----------|------------------|---------------------------------------------------------------------------------------------------------------------------|
+| start    | Date(2019-07-04) | yes                                                                                                                       |
+| end      | Date(2019-07-04) | yes                                                                                                                       |
+| format   | string           | yes(day hour 6hour)                                                                                                       |
+| category | string           | yes(transfer extrinsic NewAccount ActiveAccount Treasury TreasurySpend Unbond Fee Bonded AvgBlockTime AccountHolderTotal) |
 
 
 > Example Response

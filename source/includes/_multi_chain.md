@@ -61,17 +61,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/account' \
       "locked": "0",
       "reserved": "0",
       "bonded": "0"
-    },
-    {
-      "network": "darwinia-canary",
-      "symbol": "CKTON",
-      "decimal": 9,
-      "price": "0",
-      "category": "builtin",
-      "balance": "32346810789236",
-      "locked": "0",
-      "reserved": "0",
-      "bonded": "0"
     }
   ]
 }
@@ -182,7 +171,6 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/multiChain/price' \
     "KLP": "0.00190924",
     "KMA": "0.00180232",
     "KSM": "24.31",
-    "KTON": "5.87",
     "LIT": "0.711405",
     "MOVR": "6.21",
     "NEER": "0.23506",
