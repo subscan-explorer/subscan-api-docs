@@ -92,9 +92,10 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/accounts/statistics' \
 
 ### Payload
 
-| Name | Type   | Require         |
-|------|--------|-----------------|
-| type | string | no(assets,role) |
+| Name           | Type   | Require         |
+|----------------|--------|-----------------|
+| type           | string | no(assets,role) |
+| exclude_system | bool   | no              |
 
 > Example Role type Response
 
