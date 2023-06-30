@@ -1630,11 +1630,13 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/votes' \
 
 ### payload
 
-| Name             | Type | Require |
-|------------------|------|---------|
-| referendum_index | int  | yes     |
-| page             | int  | no      |
-| row              | int  | yes     |
+| Name             | Type   | Require                     |
+|------------------|--------|-----------------------------|
+| referendum_index | int    | yes                         |
+| sort             | string | no(conviction amount votes) |
+| valid            | bool   | no                          |
+| page             | int    | no                          |
+| row              | int    | yes                         |
 
 > Example Response
 
@@ -1651,10 +1653,15 @@ Ayes Nays Abstains
     "list": [
       {
         "account": {
-          "address": "D8DtYYJUUBoACJwJrLNyn8aYArumdViVWAcZRUKcxnSoV9D"
+          "address": "12pJGRmrWoZohZVFnGK2hhoMwzCVkjmEjwv3C5wxdnbCAiEk"
+        },
+        "delegate": {
+          "address": "15tfUt4iQNjMyhZiJGBf4EpETE2KqtW1nfJwbBT1MvWjvcK9"
         },
         "amount": "2000000000000",
+        "votes": "200000000000",
         "status": "Aye",
+        "valid": true,
         "extrinsic_index": "15426860-6",
         "conviction": "0.1",
         "voting_time": 1669046580
