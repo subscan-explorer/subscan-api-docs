@@ -1634,6 +1634,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/votes' \
 |------------------|--------|-----------------------------|
 | referendum_index | int    | yes                         |
 | sort             | string | no(conviction amount votes) |
+| order            | string | no(asc desc)                |
 | valid            | string | no(valid invalid)           |
 | page             | int    | no                          |
 | row              | int    | yes                         |
@@ -1655,7 +1656,7 @@ Ayes Nays Abstains
         "account": {
           "address": "12pJGRmrWoZohZVFnGK2hhoMwzCVkjmEjwv3C5wxdnbCAiEk"
         },
-        "delegate": {
+        "delegate_account": {
           "address": "15tfUt4iQNjMyhZiJGBf4EpETE2KqtW1nfJwbBT1MvWjvcK9"
         },
         "amount": "2000000000000",
