@@ -2323,6 +2323,7 @@ Ayes Nays
         },
         "amount": "3",
         "status": "Ayes",
+        "valid": true,
         "extrinsic_index": "15598438-2",
         "conviction": "0",
         "voting_time": 1670080362
@@ -2333,6 +2334,7 @@ Ayes Nays
         },
         "amount": "10",
         "status": "Ayes",
+        "valid": true,
         "extrinsic_index": "15598379-4",
         "conviction": "0",
         "voting_time": 1670080008
