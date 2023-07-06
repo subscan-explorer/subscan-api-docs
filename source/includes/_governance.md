@@ -1636,6 +1636,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/votes' \
 | sort             | string | no(conviction amount votes) |
 | order            | string | no(asc desc)                |
 | valid            | string | no(valid invalid)           |
+| status           | string | no(Ayes Nays Abstains)      |
 | page             | int    | no                          |
 | row              | int    | yes                         |
 
