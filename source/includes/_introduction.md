@@ -36,6 +36,9 @@ Please notice before you get started:
 | Polkadot           | `polkadot.api.subscan.io`                      | live   |
 | Kusama             | `kusama.api.subscan.io`                        | live   |
 | Darwinia2          | `darwinia.api.subscan.io`                      | live   |
+| Assethub Polkadot  | `assethub-polkadot.api.subscan.io`             | live   |
+| Assethub Kusama    | `assethub-kusama.api.subscan.io`               | live   |
+| Assethub Rococo    | `assethub-rococo.api.subscan.io`               | test   |
 | Acala              | `acala.api.subscan.io`                         | live   |
 | Acala Mandala      | `acala-testnet.api.subscan.io`                 | test   |
 | Alephzero          | `alephzero.api.subscan.io`                     | live   |
@@ -99,7 +102,6 @@ Please notice before you get started:
 | Quartz             | `quartz.api.subscan.io`                        | live   |
 | Reef               | `reef.api.subscan.io`                          | live   |
 | Robonomics         | `robonomics.api.subscan.io`                    | live   |
-| Rockmine           | `rockmine.api.subscan.io`                      | test   |
 | Rococo             | `rococo.api.subscan.io`                        | test   |
 | Sakura             | `sakura.api.subscan.io`                        | live   |
 | Shibuya            | `shibuya.api.subscan.io`                       | test   |
@@ -107,10 +109,9 @@ Please notice before you get started:
 | SORA               | `sora.api.subscan.io`                          | live   |
 | Subspace           | `subspace.api.subscan.io`                      | live   |
 | Stafi              | `stafi.api.subscan.io`                         | live   |
-| Statemine          | `statemine.api.subscan.io`                     | live   |
-| Statemint          | `statemint.api.subscan.io`                     | live   |
 | Tanganika          | `datahighway.api.subscan.io`                   | live   |
 | Turing             | `turing.api.subscan.io`                        | live   |
 | Unique             | `unique.api.subscan.io`                        | live   |
+| Vara               | `vara.api.subscan.io`                          | live   |
 | Westend            | `westend.api.subscan.io`                       | test   |
 | Zeitgeist          | `zeitgeist.api.subscan.io`                     | live   |
