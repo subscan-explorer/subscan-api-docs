@@ -302,3 +302,49 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/token/holders' \
   }
 }
 ```
+
+## account referendum list
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/account/referendum' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "account": "15fNZmAVqLdg6JMD9ZRtzhXrouzd2D4YTWdg3WYW8yZae6F2",
+    "row":20
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/account/referendum`
+
+### Payload
+
+| Name    | Type   | Require                  |
+|---------|--------|--------------------------|
+| account | string | yes                      |
+| module  | string | no(referendum democracy) |
+| row     | int    | yes                      |
+| page    | int    | no                       |
+
+> Example Response
+
+```json
+
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1653375440,
+  "data": {
+    "list": [
+      {
+        "referendum_index": 1,
+        "value": "2500000000",
+        "conviction": "1"
+      }
+    ],
+    "count": 1
+  }
+}
+```

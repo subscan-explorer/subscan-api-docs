@@ -814,11 +814,15 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
 
 ### payload
 
-| Name             | Type | Require |
-|------------------|------|---------|
-| row              | int  | yes     |
-| page             | int  | yes     |
-| referendum_index | int  | yes     |
+| Name             | Type   | Require                     |
+|------------------|--------|-----------------------------|
+| row              | int    | yes                         |
+| page             | int    | yes                         |
+| referendum_index | int    | yes                         |
+| sort             | string | no(conviction amount votes) |
+| order            | string | no(asc desc)                |
+| valid            | string | no(valid invalid)           |
+| status           | string | no(Ayes Nays)               |
 
 > Example Response
 
@@ -849,11 +853,16 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
             "identity": true
           }
         },
+        "delegate_account": {
+          "address": "HRosoqFwj5XJUiTrFFFqpEzzuqTXWAczPyjm23JVmg9FTYu",
+        },
         "amount": "323446184712801",
         "passed": true,
         "extrinsic_hash": "0xa02acc5a6dba2bb45c04cf8e73f52e1b0c1499587a9b8632d5c677632b8059ec",
         "extrinsic_index": "795597-3",
         "conviction": "1",
+        "votes": "1",
+        "valid": true,
         "voting_time": 1595296242
       }
     ]
