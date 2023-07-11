@@ -263,7 +263,7 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/orders' \
   --data-raw '{
     "row": 2,
     "page": 0,
-    "address": "address"
+    "address": "cTLsLhtBx1iE7tz6o8enkBSca3RpmosqGNn3tiNZKgwJJQadm"
   }'
 ```
 
@@ -273,36 +273,39 @@ curl -X POST 'https://crust.api.subscan.io/api/scan/swork/member/orders' \
 
 ### Payload
 
-| Name    | Type   | Require |
-|---------|--------|---------|
-| address | string | yes     |
-| row     | int    | yes     |
-| page    | int    | yes     |
+| Name       | Type   | Require |
+|------------|--------|---------|
+| address    | string | yes     |
+| all_orders | bool   | no      |
+| row        | int    | yes     |
+| page       | int    | yes     |
 
 > Example Response
 
 ```json
 
 {
-    "code": 0,
-    "message": "Success",
-    "generated_at": 1629345848,
-    "data": {
-        "count": 1,
-        "list": [
-            {
-                "cid": "QmSeb8GXpkRiAb4yd8SpWsDCSXVjvcpnjZgiQ3ocgrPnSp",
-                "stash": "cTHATJrSgZM2haKfn5e47NSP5Y5sqSCCToxrShtVifD2Nfxv5",
-                "file_size": "23710",
-                "expired_at": 2594488,
-                "block_timestamp": 1542109213,
-                "replicas": 0,
-                "status": "",
-                "prepaid": "0",
-                "amount": "0"
-            }
-        ]
-    }
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1689054080,
+  "data": {
+    "count": 1,
+    "list": [
+      {
+        "cid": "bafkreidzzi7fyf7kzxierrg4um7mtcfsyihack7hiudiksbzsynccu7dke",
+        "stash": "cTLsLhtBx1iE7tz6o8enkBSca3RpmosqGNn3tiNZKgwJJQadm",
+        "file_size": "88390",
+        "expired_at": 13017572,
+        "block_timestamp": 1688962896,
+        "memo": "{\"txHash\":\"0x31a0cf5018a7e477a46d8ddef556b4d28827be6c9ef6b2bd0c6e56ecb6516615\",\"chainType\":\"optimism\"}",
+        "replicas": 106,
+        "status": "",
+        "prepaid": "100000000",
+        "amount": "1757544",
+        "extrinsic_index": "10425572-1"
+      }
+    ]
+  }
 }
 
 ```
