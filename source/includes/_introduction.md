@@ -92,7 +92,7 @@ Please notice before you get started:
 | Pangoro            | `pangoro.api.subscan.io`                       | test   |
 | Parallel           | `parallel.api.subscan.io`                      | live   |
 | Parallel Heiko     | `parallel-heiko.api.subscan.io`                | live   |
-| peaq               | `peaq-testnet.api.subscan.io`                  | live   |
+| peaq               | `peaq-testnet.api.subscan.io`                  | test   |
 | Phala              | `phala.api.subscan.io`                         | live   |
 | Picasso            | `picasso.api.subscan.io`                       | live   |
 | Picasso Rococo     | `picasso-rococo.api.subscan.io`                | test   |
