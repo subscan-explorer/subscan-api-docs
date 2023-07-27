@@ -76,6 +76,7 @@ Please notice before you get started:
 | Karura             | `karura.api.subscan.io`                        | live   |
 | Kintsugi           | `kintsugi.api.subscan.io`                      | live   |
 | Khala              | `khala.api.subscan.io`                         | live   |
+| krest              | `krest.api.subscan.io`                         | live   |
 | KILT Peregrine     | `kilt-testnet.api.subscan.io`                  | test   |
 | KILT Spiritnet     | `spiritnet.api.subscan.io`                     | live   |
 | Litmus             | `litmus.api.subscan.io`                        | live   |
@@ -91,6 +92,7 @@ Please notice before you get started:
 | Pangoro            | `pangoro.api.subscan.io`                       | test   |
 | Parallel           | `parallel.api.subscan.io`                      | live   |
 | Parallel Heiko     | `parallel-heiko.api.subscan.io`                | live   |
+| peaq               | `peaq-testnet.api.subscan.io`                  | live   |
 | Phala              | `phala.api.subscan.io`                         | live   |
 | Picasso            | `picasso.api.subscan.io`                       | live   |
 | Picasso Rococo     | `picasso-rococo.api.subscan.io`                | test   |
