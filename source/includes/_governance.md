@@ -2681,7 +2681,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/preimage/list' \
 
 | Name   | Type   | Require                      |
 |--------|--------|------------------------------|
-| status | string | no(historical active)        |
+| status | string | no(cleared unrequested requested)        |
 | source | string | no(inline preimage(default)) |
 | page   | int    | no                           |
 | row    | int    | yes                          |
