@@ -45,6 +45,7 @@ curl -X POST 'https://statemine.api.subscan.io/api/scan/uniques/uniques' \
         },
         "items": 1,
         "holders": 1,
+        "transfer_count": 1,
         "collection_name": "test for ref 99"
       }
     ]
