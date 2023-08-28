@@ -1307,3 +1307,94 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/evm/erc721/collectible' \
 
 
 ```
+
+## evm-abi 
+
+```shell
+curl -X POST 'https://crab.api.subscan.io/api/scan/evm/abi' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{"id":["0x0175e69f","0x092ceb581c4f2b483a493ffbd996e71e4a91826f63f49e0ae247270b34685804"]}'
+```
+
+### Request URL
+
+`POST /api/scan/evm/abi`
+
+### Payload
+
+| Name | Type  | Require                       |
+|------|-------|-------------------------------|
+| id   | array | yes (methodId or event topic) |
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1693195873,
+  "data": [
+    {
+      "id": "0x0175e69f",
+      "abi_func": {
+        "name": "remoteIssuingFailure",
+        "type": "function",
+        "inputs": [
+          {
+            "name": "transferId",
+            "type": "uint256",
+            "indexed": false
+          },
+          {
+            "name": "mappingToken",
+            "type": "address",
+            "indexed": false
+          },
+          {
+            "name": "originalSender",
+            "type": "address",
+            "indexed": false
+          },
+          {
+            "name": "amount",
+            "type": "uint256",
+            "indexed": false
+          }
+        ],
+        "outputs": [],
+        "payable": false,
+        "constant": false,
+        "stateMutability": "payable"
+      },
+      "abi_type": "method"
+    },
+    {
+      "id": "0x092ceb581c4f2b483a493ffbd996e71e4a91826f63f49e0ae247270b34685804",
+      "abi_func": {
+        "name": "Registry",
+        "type": "event",
+        "inputs": [
+          {
+            "name": "pos",
+            "type": "uint256",
+            "indexed": false
+          },
+          {
+            "name": "committer",
+            "type": "address",
+            "indexed": false
+          }
+        ],
+        "outputs": [],
+        "payable": false,
+        "constant": false,
+        "anonymous": false,
+        "stateMutability": ""
+      },
+      "abi_type": "event"
+    }
+  ]
+}
+
+```
