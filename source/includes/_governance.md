@@ -818,7 +818,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
 |------------------|--------|-----------------------------|
 | row              | int    | yes                         |
 | page             | int    | yes                         |
-| referendum_index | int    | yes                         |
+| referendum_index | int    | no                          |
+| account          | string | no                          |
 | sort             | string | no(conviction amount votes) |
 | order            | string | no(asc desc)                |
 | valid            | string | no(valid invalid)           |
@@ -835,6 +836,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
     "count": 1,
     "list": [
       {
+        "referendum_index": 3,
         "account": {
           "display": "",
           "account_index": "4wkDy",
@@ -863,6 +865,7 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/democracy/votes' \
         "conviction": "1",
         "votes": "1",
         "valid": true,
+        "unlock_block": 15052122,
         "voting_time": 1595296242
       }
     ]
@@ -1641,7 +1644,8 @@ curl -X POST 'https://polkadot.api.subscan.io/api/scan/referenda/votes' \
 
 | Name             | Type   | Require                     |
 |------------------|--------|-----------------------------|
-| referendum_index | int    | yes                         |
+| referendum_index | int    | no                          |
+| account          | string | no                          |
 | sort             | string | no(conviction amount votes) |
 | order            | string | no(asc desc)                |
 | valid            | string | no(valid invalid)           |
@@ -1663,6 +1667,7 @@ Ayes Nays Abstains
     "count": 1,
     "list": [
       {
+        "referendum_index": 3,
         "account": {
           "address": "12pJGRmrWoZohZVFnGK2hhoMwzCVkjmEjwv3C5wxdnbCAiEk"
         },
@@ -1675,6 +1680,7 @@ Ayes Nays Abstains
         "valid": true,
         "extrinsic_index": "15426860-6",
         "conviction": "0.1",
+        "unlock_block": 16052122,
         "voting_time": 1669046580
       }
     ]
