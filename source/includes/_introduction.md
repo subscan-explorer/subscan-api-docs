@@ -41,6 +41,7 @@ Please notice before you get started:
 | Assethub Rococo    | `assethub-rococo.api.subscan.io`               | test   |
 | Acala              | `acala.api.subscan.io`                         | live   |
 | Acala Mandala      | `acala-testnet.api.subscan.io`                 | test   |
+| agung              | `agung-testnet.api.subscan.io`                 | test   |
 | Alephzero          | `alephzero.api.subscan.io`                     | live   |
 | Altair             | `altair.api.subscan.io`                        | live   |
 | Astar              | `astar.api.subscan.io`                         | live   |
@@ -64,7 +65,6 @@ Please notice before you get started:
 | DeepBrain Chain    | `dbc.api.subscan.io`                           | live   |
 | Dock               | `dock.api.subscan.io`                          | live   |
 | Dolphin            | `dolphin.api.subscan.io`                       | test   |
-| Edgeware           | `edgeware.api.subscan.io`                      | live   |
 | Efinity            | `efinity.api.subscan.io`                       | live   |
 | Encointer          | `encointer.api.subscan.io`                     | live   |
 | Equilibrium        | `equilibrium.api.subscan.io`                   | live   |
@@ -92,12 +92,12 @@ Please notice before you get started:
 | Pangoro            | `pangoro.api.subscan.io`                       | test   |
 | Parallel           | `parallel.api.subscan.io`                      | live   |
 | Parallel Heiko     | `parallel-heiko.api.subscan.io`                | live   |
-| peaq               | `peaq-testnet.api.subscan.io`                  | test   |
 | Phala              | `phala.api.subscan.io`                         | live   |
 | Picasso            | `picasso.api.subscan.io`                       | live   |
 | Picasso Rococo     | `picasso-rococo.api.subscan.io`                | test   |
 | Pioneer            | `pioneer.api.subscan.io`                       | live   |
 | Polkadex           | `polkadex.api.subscan.io`                      | live   |
+| Polkadex Parachain | `polkadex-parachain.api.subscan.io`            | live   |
 | Polymesh           | `polymesh.api.subscan.io`                      | live   |
 | Polymesh Testnet   | `polymesh-testnet.api.subscan.io`              | test   |
 | Plasm              | `plasm.api.subscan.io`                         | live   |
