@@ -348,3 +348,72 @@ curl -X POST 'https://crab.api.subscan.io/api/scan/account/referendum' \
   }
 }
 ```
+
+## account balance history
+
+```shell
+curl -X POST 'https://westend.api.subscan.io/api/scan/account/balance_history' \
+  --header 'Content-Type: application/json' \
+  --header 'X-API-Key: YOUR_KEY' \
+  --data-raw '{
+    "account": "5DJcEbkNxsnNwHGrseg7cgbfUG8eiKzpuZqgSph5HqHrjgf6",
+    "recent_block":100
+  }'
+```
+
+### Request URL
+
+`POST /api/scan/account/balance_history`
+
+### Payload
+
+| Name         | Type   | Require                |
+|--------------|--------|------------------------|
+| address      | string | yes                    |
+| recent_block | int    | no                     |
+| start        | string | no (2023-09-01)        |
+| end          | string | no (2023-09-20)        |
+| block_range  | string | no (15000000-16000000) |
+
+
+> Example Response
+
+```json
+{
+  "code": 0,
+  "message": "Success",
+  "generated_at": 1695032420,
+  "data": {
+    "history": [
+      {
+        "block": 17515985,
+        "balance": "44287402116368662"
+      },
+      {
+        "block": 17516012,
+        "balance": "44295504311256278"
+      }
+    ]
+  }
+}
+```
+
+```json
+{
+    "code": 0,
+    "message": "Success",
+    "generated_at": 1695032453,
+    "data": {
+        "history": [
+            {
+                "date": "2023-09-16",
+                "balance": "44252928565950158"
+            },
+            {
+                "date": "2023-09-17",
+                "balance": "44281546961026821"
+            }
+        ]
+    }
+}
+```
